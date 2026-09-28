@@ -8,6 +8,7 @@
   --mint: #ebf3ee;
   --clay: #e8a24c;
   --cream: #fbf7ef;
+  --cream-alt: #f3f9ed;
   --ink: #20291f;
   --slate: #5b6660;
 
@@ -22,6 +23,7 @@
   --color-mint: var(--mint);
   --color-clay: var(--clay);
   --color-cream: var(--cream);
+  --color-cream-alt: var(--cream-alt);
   --color-ink: var(--ink);
   --color-slate: var(--slate);
 

@@ -1,26 +1,32 @@
 export type Testimonial = {
   name: string;
   quote: string;
+  avatar: string;
 };
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Analeigh Lippert",
-    quote: "Absolutely love the work that Open Arms Foster Care does! What a great company!",
+    name: "Kamryn Bass",
+    quote:
+      "Open Arms has incredible vision with an amazing foundation for what their company represents. An amazing staff and people you want on your side and to just walk with through life!",
+    avatar: "/unnamed-1.png",
   },
   {
-    name: "Kenzy Osgood",
+    name: "Jency Mathew",
     quote:
-      "I continue to be amazed at the work that Open Arms is doing for the foster care system. Thank you to all of the staff for your hard work, dedication and love that you have for helping children.",
+      "The owner & staff are caring, supportive, and dedicated to helping both the children and foster families succeed. You can tell they genuinely care and truly make a difference.",
+    avatar: "/unnamed (8).png",
   },
   {
-    name: "Gabriella Long",
+    name: "Amber Price",
     quote:
-      "The dedication and support that Open Arms showcases for the foster care community is remarkable and inspiring. The staff are friendly and supportive and create a positive experience for everyone involved!",
+      "If you are looking for mental health services, please look no further. Do your self a favor and contact this agency! The services they provide are second to none. Their hearts are rooted in helping people become their best selves regardless of any background.",
+    avatar: "/unnamed-3.png",
   },
   {
-    name: "Wendy Long",
+    name: "Shines Mathew",
     quote:
-      "It was a pleasure meeting the staff at Open Arms. Thank you for the services you provide to children and foster parents in Oklahoma.",
+      "Open Arms Initiative truly lives up to its name. I've known the owner for many years, and her passion and genuine care for others shows in everything she does. That same care carries through the entire organization and its staff. The work they're doing for the community is truly inspiring, and I highly recommend Open Arms Initiative to anyone looking to support or connect with a compassionate, people-centered organization.",
+    avatar: "/unnamed-2.png",
   },
 ];

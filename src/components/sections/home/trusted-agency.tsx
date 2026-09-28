@@ -18,7 +18,7 @@ const points = [
 
 export function TrustedAgency() {
   return (
-    <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8 sm:py-28">
+    <section className="bg-cream-alt mx-auto max-w-[1400px] px-5 py-20 sm:px-8 sm:py-28">
       <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div>
           <SectionHeading

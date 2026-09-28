@@ -16,32 +16,52 @@ const steps = [
 
 export function ProcessSteps() {
   return (
-    <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8 sm:py-28">
-      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+    <section className="relative bg-mint py-20 sm:py-28">
+      <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <SectionHeading
           eyebrow="How to Become a Foster Parent"
           title="A meaningful commitment, with support at every stage"
+          align="center"
+          className="mx-auto"
         />
-        <ButtonLink href="/sign-up-now" variant="secondary" className="hidden sm:inline-flex">
-          Take the First Step
-        </ButtonLink>
+
+        <ol className="relative mt-16 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="pointer-events-none absolute left-0 right-0 top-6 hidden h-px bg-[linear-gradient(to_right,transparent,var(--color-leaf-deep)_8%,var(--color-leaf-deep)_92%,transparent)] opacity-40 lg:block" />
+
+          {steps.slice(0, 4).map((step, i) => (
+            <li key={step.title} className="group relative flex flex-col items-center text-center">
+              <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-pine font-display text-lg font-medium text-cream shadow-[0_0_0_6px_var(--color-mint)] transition-colors duration-300 group-hover:bg-leaf-deep">
+                {i + 1}
+              </span>
+              <h3 className="mt-5 font-display text-lg font-medium leading-snug text-pine">{step.title}</h3>
+              <p className="mt-2 max-w-[15rem] text-sm leading-relaxed text-slate">{step.body}</p>
+            </li>
+          ))}
+        </ol>
+
+        <ol className="relative mx-auto mt-14 grid max-w-3xl gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="pointer-events-none absolute left-0 right-0 top-6 hidden h-px bg-[linear-gradient(to_right,transparent,var(--color-leaf-deep)_8%,var(--color-leaf-deep)_92%,transparent)] opacity-40 lg:block" />
+
+          {steps.slice(4).map((step, i) => (
+            <li key={step.title} className="group relative flex flex-col items-center text-center">
+              <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-pine font-display text-lg font-medium text-cream shadow-[0_0_0_6px_var(--color-mint)] transition-colors duration-300 group-hover:bg-leaf-deep">
+                {i + 5}
+              </span>
+              <h3 className="mt-5 font-display text-lg font-medium leading-snug text-pine">{step.title}</h3>
+              <p className="mt-2 max-w-[15rem] text-sm leading-relaxed text-slate">{step.body}</p>
+            </li>
+          ))}
+        </ol>
+
+        <div className="mt-20 flex flex-col items-center gap-8 rounded-[2rem_2rem_2rem_0.5rem] bg-pine px-8 py-10 text-center sm:px-16">
+          <p className="max-w-2xl font-display text-xl font-medium italic leading-snug text-cream sm:text-2xl">
+            Fostering is not always easy — but you will never do it without guidance.
+          </p>
+          <ButtonLink href="/sign-up-now" variant="secondary">
+            Take the First Step
+          </ButtonLink>
+        </div>
       </div>
-
-      <ol className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-        {steps.map((step, i) => (
-          <li key={step.title} className="relative border-l-2 border-leaf/40 pl-6">
-            <span className="absolute -left-[11px] top-0 flex h-5 w-5 items-center justify-center rounded-full bg-leaf font-sans text-[0.65rem] font-bold text-pine-deep">
-              {i + 1}
-            </span>
-            <h3 className="font-display text-lg font-medium leading-snug text-pine">{step.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-slate">{step.body}</p>
-          </li>
-        ))}
-      </ol>
-
-      <ButtonLink href="/sign-up-now" variant="secondary" className="mt-10 inline-flex sm:hidden">
-        Take the First Step
-      </ButtonLink>
     </section>
   );
 }

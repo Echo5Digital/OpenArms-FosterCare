@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { ButtonLink } from "@/components/ui/button-link";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-cream pb-20 pt-14 sm:pb-28 sm:pt-20">
+    <section className="relative overflow-hidden bg-cream-alt pb-20 pt-14 sm:pb-28 sm:pt-20">
       <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-leaf/15 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-mint blur-3xl" />
 
@@ -36,22 +37,15 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="arch-mask relative aspect-[4/5] w-full overflow-hidden bg-pine">
+            <Image
+              src="/beautiful-boy-playing-with-bubbles-sunny-day-garden-100kb.jpg"
+              alt="Father and son blowing bubbles together in a garden"
+              fill
+              sizes="(min-width: 1024px) 45vw, 90vw"
+              priority
+              className="object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/70 via-pine/10 to-transparent" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <svg viewBox="0 0 200 200" className="h-2/3 w-2/3 text-cream/90" fill="none">
-                <path
-                  d="M100 170c-30-20-65-48-65-88a35 35 0 0 1 65-19 35 35 0 0 1 65 19c0 40-35 68-65 88Z"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                />
-                <path
-                  d="M40 95c15-25 45-25 60 0M100 95c15-25 45-25 60 0"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
           </div>
 
           <div className="blob-mask absolute -bottom-8 -left-8 w-40 bg-leaf p-5 shadow-xl sm:w-48">

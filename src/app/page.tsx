@@ -3,10 +3,17 @@ import { siteConfig } from "@/lib/site-config";
 import { graph, webPageSchema, serviceCatalogSchema, faqPageSchema } from "@/lib/schema";
 import { homeFaqs } from "@/lib/content/faqs";
 import { Hero } from "@/components/sections/home/hero";
+import { TrustedAgencyBanner } from "@/components/sections/home/trusted-agency-banner";
 import { TrustedAgency } from "@/components/sections/home/trusted-agency";
 import { Services } from "@/components/sections/home/services";
 import { ProcessSteps } from "@/components/sections/home/process-steps";
-import { Growth } from "@/components/sections/home/growth";
+import { FosterFamilySupport } from "@/components/sections/foster-family-support";
+import { PlantWaterGrow } from "@/components/sections/home/plant-water-grow";
+import { NurturingFutures } from "@/components/sections/home/nurturing-futures";
+import { OurProcessVideos } from "@/components/sections/home/our-process-videos";
+import { WhatIsFosterCare } from "@/components/sections/home/what-is-foster-care";
+import { FosterCarePrograms } from "@/components/sections/home/foster-care-programs";
+import { WhyOpenArms } from "@/components/sections/home/why-open-arms";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { TeamSection } from "@/components/sections/team-section";
@@ -49,12 +56,27 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Hero />
+      <TrustedAgencyBanner />
       <TrustedAgency />
       <Services />
       <ProcessSteps />
-      <Growth />
+      <FosterFamilySupport />
+      <PlantWaterGrow />
+      <NurturingFutures />
+      <OurProcessVideos />
+      <WhatIsFosterCare />
+      <FosterCarePrograms />
+      <WhyOpenArms />
       <TestimonialsSection />
-      <FaqSection faqs={homeFaqs} eyebrow="Ask a Question" title="Answers to your questions about our programs" />
+      <FaqSection
+        faqs={homeFaqs}
+        eyebrow="Ask a Question"
+        title="Answers to your questions about our programs"
+        image={{
+          src: "/fs4 (2).jpg",
+          alt: "A family talking with a caseworker during a supportive foster care consultation",
+        }}
+      />
       <TeamSection />
       <HealingHopeSection />
       <OfficesSection />

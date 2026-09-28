@@ -1,40 +1,39 @@
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { teamMembers } from "@/lib/content/team";
 
-function initials(name: string) {
-  return name
-    .split(" ")
-    .map((p) => p[0])
-    .join("")
-    .slice(0, 2);
-}
-
 export function TeamSection() {
   return (
-    <section className="grain relative bg-pine py-20 sm:py-28">
+    <section className="relative bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
-        <SectionHeading
-          eyebrow="Our Team"
-          title="The people behind our success"
-          tone="light"
-          align="center"
-          className="mx-auto"
-        />
-        <p className="mx-auto mt-5 max-w-xl text-center text-[1.05rem] leading-relaxed text-cream/75">
-          A group of caring individuals dedicated to supporting children and families in their foster care journey.
-        </p>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+          <SectionHeading eyebrow="Our Team" title="The People Behind Our Success" className="sm:max-w-md" />
+          <p className="max-w-md text-[1.05rem] leading-relaxed text-ink/70 sm:pt-1">
+            Our team is a group of caring individuals dedicated to supporting children and families in their foster
+            care journey. With warmth and understanding, we strive to create brighter futures for every child we
+            serve.
+          </p>
+        </div>
 
-        <div className="mt-14 grid gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {teamMembers.map((member) => (
-            <div key={member.name} className="text-center">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-leaf/90 font-display text-xl font-medium text-pine-deep">
-                {initials(member.name)}
+            <div key={member.name} className="relative overflow-hidden rounded-2xl">
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                  className="object-cover"
+                />
               </div>
-              <h3 className="mt-4 font-sans text-sm font-semibold text-cream">{member.name}</h3>
-              <p className="mt-1 text-xs leading-snug text-cream/60">
-                {member.credential ? `${member.credential} · ` : ""}
-                {member.title}
-              </p>
+              <div className="bg-pine px-4 py-3.5">
+                <h3 className="font-sans text-sm font-semibold leading-snug text-cream sm:text-base">
+                  {member.name}
+                  {member.credential ? ` – ${member.credential}` : ""}
+                </h3>
+                <p className="mt-1 text-xs leading-snug text-cream/85">{member.title}</p>
+              </div>
             </div>
           ))}
         </div>

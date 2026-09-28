@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { mainNav, siteConfig } from "@/lib/site-config";
+import { LogoLink } from "@/components/layout/logo-link";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { NavDropdown } from "@/components/layout/nav-dropdown";
 
@@ -8,16 +8,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-pine/10 bg-cream/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-5 py-3 sm:px-8">
-        <Link href="/" className="flex shrink-0 items-center gap-2.5">
-          <Image
-            src="/images/logo.png"
-            alt="Open Arms Foster Care"
-            width={168}
-            height={56}
-            priority
-            className="h-11 w-auto sm:h-12"
-          />
-        </Link>
+        <LogoLink />
 
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
           {mainNav.map((item) =>
