@@ -1,0 +1,57 @@
+import Link from "next/link";
+import Image from "next/image";
+import { mainNav, siteConfig } from "@/lib/site-config";
+import { MobileNav } from "@/components/layout/mobile-nav";
+import { NavDropdown } from "@/components/layout/nav-dropdown";
+
+export function SiteHeader() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-pine/10 bg-cream/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-5 py-3 sm:px-8">
+        <Link href="/" className="flex shrink-0 items-center gap-2.5">
+          <Image
+            src="/images/logo.png"
+            alt="Open Arms Foster Care"
+            width={168}
+            height={56}
+            priority
+            className="h-11 w-auto sm:h-12"
+          />
+        </Link>
+
+        <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
+          {mainNav.map((item) =>
+            item.children ? (
+              <NavDropdown key={item.label} label={item.label} items={item.children} />
+            ) : (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="relative px-4 py-2 font-sans text-[0.95rem] font-medium text-ink/85 transition-colors hover:text-pine"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
+        </nav>
+
+        <div className="hidden shrink-0 items-center gap-5 lg:flex">
+          <a
+            href={siteConfig.phoneHref}
+            className="font-display text-lg font-medium text-pine underline decoration-leaf decoration-2 underline-offset-4"
+          >
+            {siteConfig.phone}
+          </a>
+          <Link
+            href="/sign-up-now"
+            className="group relative inline-flex items-center gap-2 bg-pine px-5 py-2.5 font-sans text-sm font-semibold text-cream transition-colors hover:bg-pine-deep [clip-path:polygon(0_0,100%_0,100%_calc(100%-10px),calc(100%-10px)_100%,0_100%)]"
+          >
+            Start Fostering
+          </Link>
+        </div>
+
+        <MobileNav />
+      </div>
+    </header>
+  );
+}

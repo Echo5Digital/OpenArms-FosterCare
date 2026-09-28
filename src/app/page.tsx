@@ -1,69 +1,64 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { siteConfig } from "@/lib/site-config";
+import { graph, webPageSchema, serviceCatalogSchema, faqPageSchema } from "@/lib/schema";
+import { homeFaqs } from "@/lib/content/faqs";
+import { Hero } from "@/components/sections/home/hero";
+import { TrustedAgency } from "@/components/sections/home/trusted-agency";
+import { Services } from "@/components/sections/home/services";
+import { ProcessSteps } from "@/components/sections/home/process-steps";
+import { Growth } from "@/components/sections/home/growth";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { FaqSection } from "@/components/sections/faq-section";
+import { TeamSection } from "@/components/sections/team-section";
+import { HealingHopeSection } from "@/components/sections/healing-hope-section";
+import { OfficesSection } from "@/components/sections/offices-section";
+import { ClosingCta } from "@/components/sections/home/closing-cta";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Foster Care in Oklahoma City | Become a Foster Parent | Open Arms",
+  description: siteConfig.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Foster Care Agency in Oklahoma City | Open Arms Foster Care",
+    description:
+      "Open Arms is a foster care agency serving Oklahoma City, Tulsa, and Lawton — with foster parent training, ongoing support, and therapeutic foster care. Call (405) 894-0320.",
+    url: "/",
+    images: [
+      {
+        url: "/images/og/home.jpg",
+        width: 512,
+        height: 269,
+        alt: "Foster Care Agency Oklahoma City",
+      },
+    ],
+  },
+};
+
+export default function HomePage() {
+  const schema = graph(
+    webPageSchema({
+      url: `${siteConfig.url}/`,
+      name: "Foster Care in Oklahoma City | Become a Foster Parent | Open Arms",
+      description: siteConfig.description,
+    }),
+    serviceCatalogSchema(),
+    faqPageSchema(homeFaqs),
+  );
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <Hero />
+      <TrustedAgency />
+      <Services />
+      <ProcessSteps />
+      <Growth />
+      <TestimonialsSection />
+      <FaqSection faqs={homeFaqs} eyebrow="Ask a Question" title="Answers to your questions about our programs" />
+      <TeamSection />
+      <HealingHopeSection />
+      <OfficesSection />
+      <ClosingCta />
+    </>
   );
 }
