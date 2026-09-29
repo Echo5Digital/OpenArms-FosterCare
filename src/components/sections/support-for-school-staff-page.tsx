@@ -21,6 +21,7 @@ const features = [
     imageSrc: "/7d777914526136d901afc867c3cf8bbb.jpg",
     imageAlt: "An educator working one-on-one with a child",
     imagePosition: "object-top",
+    imagePlacement: "bottom",
   },
   {
     title: "Interactive Learning and Resources",
@@ -55,6 +56,8 @@ const features = [
     ),
     imageSrc: "/cute-family-walking-sunset-summer-park-100kb.jpg",
     imageAlt: "A family and caregiver network supporting a child together",
+    imagePosition: "object-center",
+    imagePlacement: "bottom",
   },
 ] as const;
 
@@ -176,7 +179,7 @@ export function SupportForSchoolStaffPage({ faqs }: { faqs: Faq[] }) {
                 key={card.title}
                 className="group flex flex-col overflow-hidden rounded-2xl bg-white text-center shadow-sm ring-1 ring-pine/8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
               >
-                <div className={`p-8 ${"imagePlacement" in card && card.imagePlacement === "top" ? "order-2" : "order-1"}`}>
+                <div className={`p-8 ${card.imagePlacement === "top" ? "order-2" : "order-1"}`}>
                   <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-mint text-pine transition-transform duration-300 group-hover:scale-110 group-hover:bg-leaf group-hover:text-pine-deep">
                     <svg viewBox="0 0 24 24" className="h-6 w-6">
                       {card.icon}
@@ -186,15 +189,13 @@ export function SupportForSchoolStaffPage({ faqs }: { faqs: Faq[] }) {
                   <p className="mt-2.5 text-sm leading-relaxed text-slate">{card.body}</p>
                 </div>
 
-                <div
-                  className={`relative aspect-[4/3] w-full ${"imagePlacement" in card && card.imagePlacement === "top" ? "order-1" : "order-2"}`}
-                >
+                <div className={`relative aspect-[4/3] w-full ${card.imagePlacement === "top" ? "order-1" : "order-2"}`}>
                   <Image
                     src={card.imageSrc}
                     alt={card.imageAlt}
                     fill
                     sizes="(min-width: 640px) 33vw, 90vw"
-                    className={`object-cover ${"imagePosition" in card ? card.imagePosition : "object-center"}`}
+                    className={`object-cover ${card.imagePosition}`}
                   />
                 </div>
               </div>

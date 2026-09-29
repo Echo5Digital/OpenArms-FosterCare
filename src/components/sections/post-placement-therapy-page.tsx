@@ -20,6 +20,7 @@ const approachCards = [
     ),
     imageSrc: "/child-doing-therapy-session-with-psychologist-100kb.jpg",
     imageAlt: "A child during a therapy session with a psychologist",
+    imagePosition: "bottom",
   },
   {
     title: "Ongoing Support for Families",
@@ -53,6 +54,7 @@ const approachCards = [
     ),
     imageSrc: "/mother-son-looking-tablet-100kb.jpg",
     imageAlt: "A mother and son looking at a tablet together at home",
+    imagePosition: "bottom",
   },
 ] as const;
 
