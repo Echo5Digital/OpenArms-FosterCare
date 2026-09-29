@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Public_Sans } from "next/font/google";
+import { Fraunces, Public_Sans, Baloo_2 } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
 import { graph, organizationSchema, websiteSchema } from "@/lib/schema";
@@ -15,6 +15,12 @@ const fraunces = Fraunces({
 
 const publicSans = Public_Sans({
   variable: "--font-public-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const baloo2 = Baloo_2({
+  variable: "--font-baloo",
   subsets: ["latin"],
   display: "swap",
 });
@@ -40,7 +46,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${publicSans.variable} h-full`}>
+    <html lang="en" className={`${fraunces.variable} ${publicSans.variable} ${baloo2.variable} h-full`}>
       <body className="min-h-full flex flex-col antialiased" suppressHydrationWarning>
         <script
           type="application/ld+json"

@@ -90,8 +90,8 @@ export function FosterFamilySupport() {
             <span className="h-1.5 w-1.5 rounded-full bg-current" />
             Foster Parent Support
           </span>
-          <h2 className="mx-auto mt-4 max-w-2xl font-display text-2xl font-medium leading-tight text-pine sm:text-4xl">
-            Support for Foster Families — Before, During, and <span className="italic text-leaf-deep">After Placement</span>
+          <h2 className="mx-auto mt-4 max-w-2xl font-sans text-2xl font-bold leading-tight tracking-tight text-pine sm:text-4xl">
+            Support for Foster Families — Before, During, and <span className="text-leaf-deep">After Placement</span>
           </h2>
           <div className="mx-auto mt-5 h-0.5 w-16 bg-leaf" />
           <p className="mx-auto mt-5 max-w-2xl text-[1.05rem] leading-relaxed text-slate">
@@ -104,7 +104,7 @@ export function FosterFamilySupport() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group w-full rounded-2xl border border-white/60 bg-white/70 p-6 text-center shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-leaf/40 hover:shadow-xl sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]"
+              className="group w-full rounded-2xl border-2 border-white/60 bg-white/70 p-6 text-center shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-leaf hover:shadow-xl hover:shadow-leaf/20 sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]"
             >
               <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-pine shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-leaf group-hover:text-pine-deep">
                 <svg viewBox="0 0 24 24" className="h-6 w-6">

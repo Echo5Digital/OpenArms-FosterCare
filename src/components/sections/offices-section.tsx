@@ -5,7 +5,13 @@ import { offices } from "@/lib/site-config";
 export function OfficesSection() {
   return (
     <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8 sm:py-28">
-      <SectionHeading eyebrow="Office Locations" title="Local presence across Oklahoma" align="center" className="mx-auto" />
+      <SectionHeading
+        eyebrow="Office Locations"
+        title="Local presence across Oklahoma"
+        align="center"
+        className="mx-auto"
+        titleClassName="font-sans text-[2.1rem] font-bold leading-tight tracking-tight text-pine sm:text-[2.6rem]"
+      />
 
       <div className="mt-14 grid gap-6 sm:grid-cols-3">
         {offices.map((office) => (

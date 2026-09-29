@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 type Props = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "ghost-light";
   className?: string;
 };
 
@@ -22,6 +22,7 @@ export function ButtonLink({ href, children, variant = "primary", className = ""
     primary: `${shape} bg-pine text-cream hover:bg-pine-deep`,
     secondary: `${shape} bg-leaf text-pine-deep hover:bg-leaf-deep`,
     ghost: `${shape} bg-transparent text-pine ring-1 ring-inset ring-pine/25 hover:ring-pine/60`,
+    "ghost-light": `${shape} bg-transparent text-cream ring-1 ring-inset ring-cream/40 hover:ring-cream/70`,
   };
 
   return (

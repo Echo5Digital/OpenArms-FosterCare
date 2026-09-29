@@ -6,7 +6,7 @@ export function ClosingCta() {
       <div className="pointer-events-none absolute -bottom-16 -right-16 h-64 w-64 rounded-full bg-cream/20 blur-2xl" />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
-        <h2 className="font-display text-3xl font-medium leading-tight text-pine-deep sm:text-4xl">
+        <h2 className="font-sans text-3xl font-bold leading-tight tracking-tight text-pine-deep sm:text-4xl">
           Ready to open your home?
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-pine-deep/80">
