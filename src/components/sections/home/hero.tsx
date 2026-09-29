@@ -25,6 +25,7 @@ const cards = [
 
 const ROTATE_MS = 2000;
 const RESET_MS = 700;
+const HERO_VIDEO_ID = "X4SzWVxBvZI";
 
 const track = [...cards, cards[0]];
 
@@ -79,25 +80,20 @@ export function Hero() {
           />
         </div>
 
-        <div className="relative grid gap-8 p-6 pb-10 sm:p-10 lg:grid-cols-[0.62fr_1fr] lg:items-center lg:gap-16 lg:p-16">
-          <div className="relative mx-auto w-full max-w-sm lg:mx-0 lg:max-w-none lg:justify-self-end">
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[1.5rem] lg:aspect-auto lg:h-[580px]">
-              <Image
-                src="/beautiful-boy-playing-with-bubbles-sunny-day-garden-100kb.jpg"
-                alt="Father and son blowing bubbles together in a garden"
-                fill
-                sizes="(min-width: 1024px) 32vw, 90vw"
-                priority
-                className="object-cover grayscale contrast-125"
+        <div className="relative grid grid-cols-1 gap-8 p-6 pb-10 sm:p-10 lg:grid-cols-[0.62fr_1fr] lg:items-center lg:gap-16 lg:p-16">
+          <div className="relative mx-auto hidden w-full max-w-sm lg:mx-0 lg:block lg:max-w-none lg:justify-self-end">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[1.5rem] bg-pine-deep lg:aspect-auto lg:h-[580px]">
+              <iframe
+                src={`https://www.youtube.com/embed/${HERO_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${HERO_VIDEO_ID}&controls=0&modestbranding=1&rel=0&playsinline=1&disablekb=1&iv_load_policy=3`}
+                title="Open Arms Foster Care"
+                className="pointer-events-none absolute left-1/2 top-1/2 h-[177.78vw] min-h-full w-[100%] min-w-[177.78vh] -translate-x-1/2 -translate-y-1/2"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                loading="eager"
               />
-              <div className="absolute inset-0 bg-pine-deep/20 mix-blend-multiply" />
             </div>
 
-            <div className="absolute -top-5 -left-5 flex h-20 w-20 flex-col items-center justify-center rounded-full bg-leaf p-2 text-center shadow-lg sm:h-24 sm:w-24">
-              <p className="font-display text-base font-semibold leading-none text-pine-deep sm:text-lg">300+</p>
-              <p className="mt-1 font-sans text-[0.55rem] font-medium uppercase leading-tight tracking-wide text-pine-deep/80">
-                Kids Placed
-              </p>
+            <div className="absolute -top-5 -left-5 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full shadow-lg sm:h-24 sm:w-24">
+              <Image src="/images/fav.png" alt="" width={96} height={96} className="h-full w-full object-cover" />
             </div>
           </div>
 
@@ -106,7 +102,7 @@ export function Hero() {
               Foster Care in Oklahoma City,
               <br />
               Helping Children and Foster Families Thrive
-              <span className="ml-3 inline-flex h-14 w-14 shrink-0 translate-y-2 items-center justify-center overflow-hidden rounded-full align-middle sm:h-16 sm:w-16">
+              <span className="ml-3 hidden h-14 w-14 shrink-0 translate-y-2 items-center justify-center overflow-hidden rounded-full align-middle sm:inline-flex sm:h-16 sm:w-16">
                 <Image src="/images/fav.png" alt="" width={64} height={64} className="h-full w-full object-cover" />
               </span>
             </h1>
