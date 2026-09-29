@@ -32,13 +32,13 @@ const stats = [
 
 export function WhyOpenArms() {
   return (
-    <section className="relative overflow-hidden bg-pine py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <Reveal>
-          <span className="inline-block rounded-full bg-gradient-to-r from-leaf to-pine-deep px-6 py-2.5 font-display text-lg font-medium text-cream shadow-sm sm:text-xl">
+          <span className="inline-block rounded-full bg-gradient-to-r from-leaf to-leaf-deep px-6 py-2.5 font-sans text-lg font-bold text-pine-deep shadow-sm sm:text-xl">
             Why Choose Open Arms Foster Care in Oklahoma City?
           </span>
-          <p className="mt-6 max-w-3xl text-[1.05rem] leading-relaxed text-cream/75">
+          <p className="mt-6 max-w-3xl text-[1.05rem] leading-relaxed text-ink/70">
             When it comes to selecting a foster care agency in Oklahoma, it is important to find an agency that
             understands the unique needs of both children and foster parents. Open Arms Foster Care is proud to be
             recognized as one of the best foster care agencies in Oklahoma City, and here&rsquo;s why:
@@ -49,35 +49,38 @@ export function WhyOpenArms() {
           <Reveal className="lg:sticky lg:top-28 lg:self-start" delay={100}>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-2xl">
               <Image
-                src="/teen-girl-participates-drawing-activity-as-part-psychotherapy-100kb.jpg"
-                alt="Therapist and foster parent reviewing a child's drawing during a supportive session"
+                src="/father-spending-time-with-his-daughter-outdoors-father-s-day 1-100kb.jpg"
+                alt="A father spending time outdoors with his daughter"
                 fill
                 sizes="(min-width: 1024px) 40vw, 90vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/60 via-transparent to-transparent" />
             </div>
 
             <div className="mt-6 grid grid-cols-3 gap-4">
               {stats.map((stat) => (
-                <div key={stat.label} className="rounded-2xl bg-cream/5 p-4 text-center ring-1 ring-cream/10">
-                  <p className="font-display text-2xl font-semibold text-leaf sm:text-3xl">{stat.value}</p>
-                  <p className="mt-1 text-[0.7rem] leading-snug text-cream/70">{stat.label}</p>
+                <div
+                  key={stat.label}
+                  className="rounded-2xl bg-mint p-4 text-center shadow-sm ring-1 ring-pine/8"
+                >
+                  <p className="font-display text-2xl font-semibold text-leaf-deep sm:text-3xl">{stat.value}</p>
+                  <p className="mt-1 text-[0.7rem] leading-snug text-ink/65">{stat.label}</p>
                 </div>
               ))}
             </div>
           </Reveal>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-5">
             {reasons.map((reason, i) => (
               <Reveal key={reason.title} delay={i * 80}>
-                <div className="group flex gap-6 border-b border-cream/10 py-7 first:pt-0 last:border-0">
-                  <span className="font-display text-4xl font-light leading-none text-leaf/50 transition-colors duration-300 group-hover:text-leaf">
+                <div className="group flex gap-6 rounded-[1.75rem] bg-cream-alt p-7 shadow-[0_4px_20px_-8px_rgba(15,33,27,0.1)] ring-1 ring-pine/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-16px_rgba(15,33,27,0.18)] sm:p-8">
+                  <span className="font-display text-4xl font-light leading-none text-leaf/60 transition-colors duration-300 group-hover:text-leaf-deep">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="font-sans text-lg font-semibold text-cream">{reason.title}</h3>
-                    <p className="mt-2.5 text-[0.98rem] leading-relaxed text-cream/70">{reason.body}</p>
+                    <h3 className="font-sans text-lg font-semibold text-pine">{reason.title}</h3>
+                    <p className="mt-2.5 text-[0.98rem] leading-relaxed text-ink/70">{reason.body}</p>
                   </div>
                 </div>
               </Reveal>

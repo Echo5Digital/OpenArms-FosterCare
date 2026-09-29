@@ -16,7 +16,7 @@ export function NurturingFutures() {
         <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/80 via-pine-deep/10 to-transparent" />
 
         <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-6 px-6 pb-10 text-center sm:px-12 sm:pb-14">
-          <h2 className="max-w-3xl font-display text-3xl font-medium leading-tight text-cream sm:text-5xl">
+          <h2 className="max-w-3xl font-sans text-3xl font-bold leading-tight tracking-tight text-cream sm:text-5xl">
             Nurturing Futures with Expert Foster Care Solutions
           </h2>
           <p className="max-w-xl text-base leading-relaxed text-cream/90 sm:text-lg">

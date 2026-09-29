@@ -72,9 +72,15 @@ export default function HomePage() {
         faqs={homeFaqs}
         eyebrow="Ask a Question"
         title="Answers to your questions about our programs"
+        titleClassName="font-sans text-[2.1rem] font-bold leading-tight tracking-tight text-pine sm:text-[2.6rem]"
         image={{
-          src: "/fs4 (2).jpg",
-          alt: "A family talking with a caseworker during a supportive foster care consultation",
+          src: "/handsome-father-with-cute-little-son-100kb.jpg",
+          alt: "A father joyfully lifting his son into the air outdoors",
+          position: "object-[center_30%]",
+        }}
+        secondaryImage={{
+          src: "/side-view-grandmother-grandson-playing-sticking-their-tongues-out-100kb.jpg",
+          alt: "A grandmother sharing a warm, playful moment with her grandson at home",
         }}
       />
       <TeamSection />

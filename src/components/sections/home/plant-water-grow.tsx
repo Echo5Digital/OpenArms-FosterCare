@@ -5,7 +5,7 @@ export function PlantWaterGrow() {
         <span className="font-sans text-sm font-semibold uppercase tracking-[0.2em] text-leaf">
           Growth Starts Here
         </span>
-        <h2 className="mt-4 font-sans text-4xl font-bold leading-tight text-cream sm:text-6xl lg:text-7xl">
+        <h2 className="mt-4 font-sans text-4xl font-bold leading-tight tracking-tight text-cream sm:text-6xl lg:text-7xl">
           Plant. Water. Grow.
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">

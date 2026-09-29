@@ -23,6 +23,7 @@ export function ProcessSteps() {
           title="A meaningful commitment, with support at every stage"
           align="center"
           className="mx-auto"
+          titleClassName="font-sans text-[2.1rem] font-bold leading-tight tracking-tight text-pine sm:text-[2.6rem]"
         />
 
         <ol className="relative mt-16 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">

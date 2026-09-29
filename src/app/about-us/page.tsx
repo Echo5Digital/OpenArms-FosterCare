@@ -5,6 +5,7 @@ import { aboutFaqs } from "@/lib/content/faqs";
 import { PageHero } from "@/components/sections/page-hero";
 import { ProseBlock } from "@/components/ui/prose-block";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { FeaturedVideoSection } from "@/components/sections/featured-video-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { TeamSection } from "@/components/sections/team-section";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -100,6 +101,12 @@ export default function AboutUsPage() {
 
       <TeamSection />
       <TestimonialsSection />
+      <FeaturedVideoSection
+        videoId="-91IhSDY3OU"
+        title="Foster Care + Mental Health Counseling | Open Arms Foster Care, OK"
+        eyebrow="Watch"
+        heading="Foster Care + Mental Health Counseling"
+      />
       <FaqSection faqs={aboutFaqs} eyebrow="Common Questions" title="Answers about our foster care programs" />
     </>
   );

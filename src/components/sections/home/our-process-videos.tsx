@@ -30,7 +30,7 @@ export function OurProcessVideos() {
         <span className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-pine">
           Work Process
         </span>
-        <h2 className="mt-3 font-display text-4xl font-medium text-pine sm:text-5xl">Our Process</h2>
+        <h2 className="mt-3 font-sans text-4xl font-bold tracking-tight text-pine sm:text-5xl">Our Process</h2>
 
         <div className="mt-14 flex flex-col gap-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

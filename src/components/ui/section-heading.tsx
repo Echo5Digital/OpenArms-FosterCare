@@ -4,9 +4,17 @@ type Props = {
   align?: "left" | "center";
   tone?: "dark" | "light";
   className?: string;
+  titleClassName?: string;
 };
 
-export function SectionHeading({ eyebrow, title, align = "left", tone = "dark", className = "" }: Props) {
+export function SectionHeading({
+  eyebrow,
+  title,
+  align = "left",
+  tone = "dark",
+  className = "",
+  titleClassName,
+}: Props) {
   return (
     <div className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""} ${className}`}>
       {eyebrow && (
@@ -20,9 +28,12 @@ export function SectionHeading({ eyebrow, title, align = "left", tone = "dark", 
         </span>
       )}
       <h2
-        className={`font-display text-[2.1rem] font-medium leading-[1.12] tracking-tight sm:text-[2.6rem] ${
-          tone === "dark" ? "text-pine" : "text-cream"
-        }`}
+        className={
+          titleClassName ??
+          `font-display text-[2.1rem] font-medium leading-[1.25] tracking-tight sm:text-[2.6rem] ${
+            tone === "dark" ? "text-pine" : "text-cream"
+          }`
+        }
       >
         {title}
       </h2>

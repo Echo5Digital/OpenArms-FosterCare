@@ -47,7 +47,7 @@ export function WhatIsFosterCare() {
         </div>
 
         <div>
-          <span className="inline-block rounded-full bg-gradient-to-r from-leaf to-pine px-6 py-2.5 font-display text-lg font-medium text-cream shadow-sm sm:text-xl">
+          <span className="inline-block rounded-full bg-gradient-to-r from-leaf to-pine px-6 py-2.5 font-sans text-lg font-bold text-cream shadow-sm sm:text-xl">
             What is Foster Care?
           </span>
 

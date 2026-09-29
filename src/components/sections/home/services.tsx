@@ -44,6 +44,7 @@ export function Services() {
           title="Foster Care Services Tailored to Your Needs"
           align="center"
           className="mx-auto"
+          titleClassName="font-sans text-[2.1rem] font-bold leading-tight tracking-tight text-pine sm:text-[2.6rem]"
         />
         <p className="mx-auto mt-5 max-w-xl text-center text-[1.05rem] leading-relaxed text-slate">
           Open Arms Foster Care is proud to offer a range of services designed to support both children and foster
