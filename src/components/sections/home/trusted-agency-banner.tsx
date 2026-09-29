@@ -9,8 +9,8 @@ export function TrustedAgencyBanner() {
         <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-leaf/15 blur-3xl" />
         <div className="pointer-events-none absolute -left-16 bottom-10 h-56 w-56 rounded-full bg-leaf/10 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-[1400px] items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
-          <div className="order-1 lg:order-2 lg:col-start-2">
+        <div className="relative mx-auto grid max-w-[1400px] items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-x-10 lg:gap-y-0">
+          <div className="order-1 lg:col-start-1">
             <span className="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-leaf-deep">
               <span className="h-1.5 w-1.5 rounded-full bg-current" />
               Serving Oklahoma
@@ -21,7 +21,7 @@ export function TrustedAgencyBanner() {
             </h2>
           </div>
 
-          <div className="relative order-2 mx-auto w-full max-w-sm lg:order-1 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:max-w-md">
+          <div className="relative order-2 mx-auto w-full max-w-sm self-start lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-md">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_20px_45px_rgba(15,33,27,0.22)]">
               <Image
                 src="/medium-shot-girl-holding-toy-100kb.jpg"
@@ -33,15 +33,23 @@ export function TrustedAgencyBanner() {
             </div>
             <span
               aria-hidden
-              className="absolute -left-3 -top-3 h-16 w-16 rounded-full border-4 border-white bg-[rgb(225,244,212)] shadow-sm sm:h-[4.5rem] sm:w-[4.5rem]"
-            />
+              className="absolute -left-3 -top-3 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-[rgb(225,244,212)] shadow-sm sm:h-[4.5rem] sm:w-[4.5rem]"
+            >
+              <Image
+                src="/images/fav.png"
+                alt=""
+                width={120}
+                height={120}
+                className="h-[160%] w-[160%] max-w-none object-contain"
+              />
+            </span>
             <div className="absolute -bottom-4 -right-3 max-w-[10.5rem] rounded-2xl bg-[rgb(141,197,64)] px-4 py-3 text-pine shadow-lg sm:-right-5 sm:px-5 sm:py-4">
               <p className="font-display text-lg font-medium leading-tight">Oklahoma Care</p>
               <p className="mt-1 font-sans text-xs font-semibold leading-snug">Support for every family</p>
             </div>
           </div>
 
-          <div className="order-3 lg:order-2 lg:col-start-2">
+          <div className="order-3 mt-6 lg:col-start-1 lg:mt-5">
             <p className="max-w-2xl text-[1.125rem] leading-relaxed text-ink/75">
               Open Arms Foster Care supports children who need a safe, stable home and the families who open their
               doors to them. As an Oklahoma City foster care agency, we recruit, train, and walk alongside foster

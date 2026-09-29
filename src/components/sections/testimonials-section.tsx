@@ -25,15 +25,63 @@ export function TestimonialsSection() {
   const active = testimonials[index];
 
   return (
-    <section className="bg-[rgb(6,48,39)] px-5 py-20 sm:px-8 sm:py-28">
-      <div className="mx-auto max-w-[900px] text-center">
-        <h2 className="font-sans text-3xl font-bold tracking-tight text-cream sm:text-4xl">Hear from our clients</h2>
+    <section className="relative overflow-hidden bg-gradient-to-br from-pine-deep via-[rgb(6,48,39)] to-pine-deep px-5 py-20 sm:px-8 sm:py-28">
+      <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-leaf/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-leaf/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-leaf/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-leaf/10 blur-3xl" />
+
+      {[
+        { key: "tl", className: "left-0 top-0 -scale-x-100 -scale-y-100" },
+        { key: "tr", className: "right-0 top-0 -scale-y-100" },
+        { key: "br", className: "bottom-0 right-0" },
+        { key: "bl", className: "bottom-0 left-0 -scale-x-100" },
+      ].map(({ key, className }) => (
+        <svg
+          key={key}
+          className={`pointer-events-none absolute h-[260px] w-[400px] opacity-60 ${className}`}
+          viewBox="0 0 400 260"
+          fill="none"
+          aria-hidden
+        >
+          <path
+            d="M440 90 C 340 90, 320 90, 280 130 C 240 170, 200 170, 160 170"
+            stroke={`url(#testimonialLine1-${key})`}
+            strokeWidth="1.5"
+          />
+          <path
+            d="M440 190 C 360 190, 330 240, 250 240 C 160 240, 140 190, 40 190"
+            stroke={`url(#testimonialLine2-${key})`}
+            strokeWidth="1.5"
+          />
+          <circle cx="160" cy="170" r="4" fill="var(--leaf)" />
+          <circle cx="250" cy="240" r="4" fill="var(--leaf)" />
+          <defs>
+            <linearGradient id={`testimonialLine1-${key}`} x1="400" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
+              <stop stopColor="var(--leaf)" stopOpacity="0" />
+              <stop offset="1" stopColor="var(--leaf)" stopOpacity="0.5" />
+            </linearGradient>
+            <linearGradient id={`testimonialLine2-${key}`} x1="400" y1="0" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+              <stop stopColor="var(--leaf)" stopOpacity="0" />
+              <stop offset="1" stopColor="var(--leaf)" stopOpacity="0.35" />
+            </linearGradient>
+          </defs>
+        </svg>
+      ))}
+
+      <div className="relative mx-auto max-w-[900px] text-center">
+        <span className="inline-flex items-center rounded-full bg-leaf px-5 py-2 font-sans text-sm font-semibold text-pine-deep shadow-sm">
+          Testimonials
+        </span>
+        <h2 className="mt-6 font-display text-4xl font-medium tracking-tight text-cream sm:text-5xl">
+          Hear from our clients
+        </h2>
         <p className="mt-4 text-lg text-cream/70">Our clients love working with us, just read what they have to say!</p>
 
         <div className="relative mt-14 overflow-hidden">
           <figure
             key={active.name}
-            className={`mx-auto w-full max-w-2xl rounded-2xl bg-white p-8 text-left shadow-xl sm:p-10 ${
+            className={`mx-auto w-full max-w-2xl rounded-2xl bg-white p-8 text-left shadow-[0_40px_90px_-30px_rgba(0,0,0,0.5)] ring-1 ring-leaf/20 sm:p-10 ${
               direction === "right" ? "animate-slide-in-right" : "animate-slide-in-left"
             }`}
           >

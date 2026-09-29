@@ -117,7 +117,7 @@ export function AppointmentRequestForm() {
       </div>
       <button
         type="submit"
-        className="mt-2 inline-flex items-center justify-center gap-2.5 self-start rounded-xl bg-pine-deep px-7 py-3.5 font-sans text-sm font-semibold text-leaf transition-colors hover:bg-pine sm:col-span-2"
+        className="mt-2 inline-flex items-center justify-center gap-2.5 self-start rounded-full bg-pine-deep px-7 py-3.5 font-sans text-sm font-semibold text-leaf transition-colors hover:bg-pine sm:col-span-2"
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" aria-hidden>
           <path

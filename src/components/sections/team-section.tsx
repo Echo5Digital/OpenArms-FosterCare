@@ -6,19 +6,16 @@ export function TeamSection() {
   return (
     <section className="relative bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
-          <SectionHeading
-            eyebrow="Our Team"
-            title="The People Behind Our Success"
-            className="sm:max-w-md"
-            titleClassName="font-sans text-[2.1rem] font-bold leading-tight tracking-tight text-pine sm:text-[2.6rem]"
-          />
-          <p className="max-w-md text-[1.05rem] leading-relaxed text-ink/70 sm:pt-1">
-            Our team is a group of caring individuals dedicated to supporting children and families in their foster
-            care journey. With warmth and understanding, we strive to create brighter futures for every child we
-            serve.
-          </p>
-        </div>
+        <SectionHeading
+          eyebrow="Our Team"
+          title="The People Behind Our Success"
+          titleClassName="font-sans text-[2.1rem] font-bold leading-tight tracking-tight text-pine sm:text-[2.6rem]"
+        />
+        <p className="mt-5 max-w-2xl text-[1.05rem] leading-relaxed text-ink/70">
+          Our team is a group of caring individuals dedicated to supporting children and families in their foster
+          care journey. With warmth and understanding, we strive to create brighter futures for every child we
+          serve.
+        </p>
 
         <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {teamMembers.map((member) => (

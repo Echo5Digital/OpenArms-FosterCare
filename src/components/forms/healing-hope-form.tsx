@@ -75,7 +75,7 @@ export function HealingHopeForm({ compact = false }: { compact?: boolean }) {
       </div>
       <button
         type="submit"
-        className={`mt-2 inline-flex items-center justify-center bg-pine px-7 py-3.5 font-sans text-sm font-semibold text-cream transition-colors hover:bg-pine-deep [clip-path:polygon(0_0,100%_0,100%_calc(100%-12px),calc(100%-12px)_100%,0_100%)] ${compact ? "" : "sm:col-span-2"}`}
+        className={`mt-2 inline-flex items-center justify-center rounded-full bg-pine px-7 py-3.5 font-sans text-sm font-semibold text-cream transition-colors hover:bg-pine-deep ${compact ? "" : "sm:col-span-2"}`}
       >
         Make an Appointment
       </button>

@@ -9,20 +9,17 @@ type Props = {
 };
 
 /**
- * Signature "notch" button: a single corner is cut at an angle instead of the
- * generic rounded-rectangle CTA, with an underline-sweep hover instead of a
- * flat color-swap or drop-shadow lift.
+ * Pill-shaped button matching the navbar's "Start Fostering" CTA shape.
  */
 export function ButtonLink({ href, children, variant = "primary", className = "" }: Props) {
   const base =
-    "group relative inline-flex items-center gap-2.5 px-7 py-3.5 font-sans text-[0.95rem] font-semibold tracking-tight transition-colors duration-300";
-  const shape = "[clip-path:polygon(0_0,100%_0,100%_calc(100%-14px),calc(100%-14px)_100%,0_100%)]";
+    "group relative inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 font-sans text-[0.95rem] font-semibold tracking-tight transition-colors duration-300";
 
   const variants: Record<string, string> = {
-    primary: `${shape} bg-pine text-cream hover:bg-pine-deep`,
-    secondary: `${shape} bg-leaf text-pine-deep hover:bg-leaf-deep`,
-    ghost: `${shape} bg-transparent text-pine ring-1 ring-inset ring-pine/25 hover:ring-pine/60`,
-    "ghost-light": `${shape} bg-transparent text-cream ring-1 ring-inset ring-cream/40 hover:ring-cream/70`,
+    primary: "bg-pine text-cream hover:bg-pine-deep",
+    secondary: "bg-leaf text-pine-deep hover:bg-leaf-deep",
+    ghost: "bg-transparent text-pine ring-1 ring-inset ring-pine/25 hover:ring-pine/60",
+    "ghost-light": "bg-transparent text-cream ring-1 ring-inset ring-cream/40 hover:ring-cream/70",
   };
 
   return (
