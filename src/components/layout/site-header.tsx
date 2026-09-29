@@ -35,7 +35,7 @@ export function SiteHeader() {
           </a>
           <Link
             href="/sign-up-now"
-            className="group relative inline-flex items-center gap-2 bg-pine px-5 py-2.5 font-sans text-sm font-semibold text-cream transition-colors hover:bg-pine-deep [clip-path:polygon(0_0,100%_0,100%_calc(100%-10px),calc(100%-10px)_100%,0_100%)]"
+            className="group relative inline-flex items-center gap-2 rounded-full bg-pine px-5 py-2.5 font-sans text-sm font-semibold text-cream transition-colors hover:bg-pine-deep"
           >
             Start Fostering
           </Link>

@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -6,24 +9,33 @@ const services = [
   {
     title: "Foster Parent Training",
     href: "/foster-parent-training",
-    image: "/clmn_4.png",
-    tone: "dark",
-  },
-  {
-    title: "Support for School Staff",
-    href: "/support-for-school-staff",
-    image: "/clmn_3.png",
-    tone: "light",
+    image: "/handsome-father-with-cute-little-son-100kb.jpg",
   },
   {
     title: "Post-Placement Therapy",
     href: "/post-placement-therapy",
-    image: "/clmn_2.png",
-    tone: "dark",
+    image: "/teen-girl-participates-drawing-activity-as-part-psychotherapy-100kb.jpg",
+  },
+  {
+    title: "Support for School Staff",
+    href: "/support-for-school-staff",
+    image: "/mother-son-looking-tablet-100kb.jpg",
   },
 ] as const;
 
+const ROTATE_MS = 2000;
+
 export function Services() {
+  const [page, setPage] = useState(0);
+  const pageCount = services.length - 1;
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setPage((p) => (p + 1) % pageCount);
+    }, ROTATE_MS);
+    return () => clearInterval(id);
+  }, [pageCount]);
+
   return (
     <section className="relative bg-mint py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
@@ -38,54 +50,41 @@ export function Services() {
           parents.
         </p>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2">
-          {services.map((service, i) => (
-            <Link
-              key={service.href}
-              href={service.href}
-              className={`group relative flex min-h-[30rem] flex-col overflow-hidden rounded-[1.75rem] p-10 transition-transform duration-300 hover:-translate-y-1 sm:min-h-[34rem] ${
-                service.tone === "dark"
-                  ? "bg-gradient-to-b from-[#6b8479] to-[#4c6058]"
-                  : "bg-gradient-to-b from-[#a9d94a] to-[#7ab332]"
-              } ${i === 2 ? "sm:col-span-2 sm:mx-auto sm:w-1/2" : ""}`}
-            >
-              <div className="relative z-10">
-                <h3
-                  className={`font-display text-[1.75rem] font-medium leading-snug sm:text-3xl ${
-                    service.tone === "dark" ? "text-cream" : "text-pine-deep"
-                  }`}
-                >
-                  {service.title}
-                </h3>
-                <span
-                  className={`mt-2 inline-flex items-center gap-2 font-sans text-sm font-semibold underline decoration-1 underline-offset-4 ${
-                    service.tone === "dark" ? "text-cream" : "text-pine-deep"
-                  }`}
-                >
-                  Learn More
-                  <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1">
-                    <path
-                      d="M2 8h11m0 0-5-5m5 5-5 5"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={1.8}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <div className="relative mt-auto flex flex-1 items-end justify-center pt-8">
+        <div className="mt-14 overflow-hidden">
+          <div
+            className="flex gap-6 transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(calc((-100% - 1.5rem) * ${page} / 2))` }}
+          >
+            {services.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group relative flex h-40 w-[calc(50%-0.75rem)] shrink-0 items-end overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1 sm:h-48"
+              >
                 <Image
                   src={service.image}
                   alt=""
-                  width={520}
-                  height={520}
-                  className="h-auto w-full max-w-[440px] object-contain object-bottom transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </div>
-            </Link>
+                <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/85 via-pine-deep/30 to-pine-deep/10" />
+                <h3 className="relative z-10 p-6 font-sans text-lg font-bold text-cream sm:text-xl">
+                  {service.title}
+                </h3>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 flex justify-center gap-2">
+          {Array.from({ length: pageCount }).map((_, i) => (
+            <span
+              key={i}
+              className={`h-1.5 rounded-full transition-all ${
+                i === page ? "w-6 bg-pine" : "w-1.5 bg-pine/25"
+              }`}
+            />
           ))}
         </div>
       </div>
