@@ -71,11 +71,14 @@ export default function ContactUsPage() {
             </div>
           </div>
 
-          <div className="rounded-[2rem_2rem_4rem_2rem] border border-pine/10 bg-white p-8 sm:p-10">
-            <h2 className="font-display text-2xl font-medium text-pine">Get in Touch</h2>
-            <p className="mt-2 text-sm text-slate">Reach out to us for any questions or support.</p>
-            <div className="mt-8">
-              <ContactForm />
+          <div className="relative overflow-hidden rounded-[2rem_2rem_4rem_2rem] bg-gradient-to-br from-white via-mint/30 to-leaf/10 p-8 shadow-[0_40px_90px_-30px_rgba(15,33,27,0.35)] ring-1 ring-pine/8 sm:p-10">
+            <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-leaf/15 blur-3xl" />
+            <div className="relative">
+              <h2 className="font-display text-2xl font-medium text-pine">Get in Touch</h2>
+              <p className="mt-2 text-sm text-slate">Reach out to us for any questions or support.</p>
+              <div className="mt-8">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>

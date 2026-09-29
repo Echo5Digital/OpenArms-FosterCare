@@ -83,7 +83,6 @@ export const mainNav: (NavLink & { children?: NavLink[] })[] = [
     href: "/foster-parent-training",
     children: [
       { label: "Foster Parent Training", href: "/foster-parent-training" },
-      { label: "Child Welfare Advocacy", href: "/child-welfare-advocacy" },
       { label: "Post-Placement Therapy", href: "/post-placement-therapy" },
       { label: "Support for School Staff", href: "/support-for-school-staff" },
     ],
