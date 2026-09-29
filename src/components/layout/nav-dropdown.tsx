@@ -4,7 +4,15 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import type { NavLink } from "@/lib/site-config";
 
-export function NavDropdown({ label, items }: { label: string; items: NavLink[] }) {
+export function NavDropdown({
+  label,
+  items,
+  light = false,
+}: {
+  label: string;
+  items: NavLink[];
+  light?: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -20,7 +28,9 @@ export function NavDropdown({ label, items }: { label: string; items: NavLink[] 
     <div className="relative" onMouseEnter={show} onMouseLeave={hide}>
       <button
         type="button"
-        className="flex items-center gap-1.5 px-4 py-2 font-sans text-[0.95rem] font-medium text-ink/85 transition-colors hover:text-pine"
+        className={`flex items-center gap-1.5 px-4 py-2 font-sans text-[0.95rem] font-medium transition-colors ${
+          light ? "text-cream/90 hover:text-cream" : "text-ink/85 hover:text-pine"
+        }`}
         aria-expanded={open}
       >
         {label}

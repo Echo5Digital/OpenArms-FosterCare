@@ -60,16 +60,12 @@ export function Hero() {
   }, [pageCount]);
 
   return (
-    <section className="bg-cream p-5">
-      <div className="relative overflow-hidden rounded-[2rem] bg-[#f4f1ea] lg:flex lg:min-h-[calc(100vh-5.5rem)] lg:flex-col lg:justify-center">
-        <Image
-          src="/echo5-image-1790661911908.png"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
+    <section className="relative isolate overflow-hidden bg-cream p-5 pt-0">
+      <div className="absolute inset-0 -z-10">
+        <Image src="/echo5-image-1790661911908.png" alt="" fill sizes="100vw" className="object-cover" />
+      </div>
 
+      <div className="relative overflow-hidden rounded-[2rem] pt-[5.5rem] lg:mt-[5.5rem] lg:flex lg:min-h-[calc(100vh-5.5rem)] lg:flex-col lg:justify-center lg:pt-0">
         <div className="absolute inset-y-0 left-0 hidden w-[22%] overflow-hidden rounded-[2rem] bg-[#111a16] lg:block">
           <Image
             src="/bgbanner.png"

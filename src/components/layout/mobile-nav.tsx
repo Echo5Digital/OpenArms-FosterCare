@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { mainNav, siteConfig } from "@/lib/site-config";
 
-export function MobileNav() {
+export function MobileNav({ dark = false }: { dark?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -15,8 +15,8 @@ export function MobileNav() {
         aria-label="Open menu"
         className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
       >
-        <span className="h-0.5 w-6 bg-pine" />
-        <span className="h-0.5 w-6 bg-pine" />
+        <span className={`h-0.5 w-6 ${dark ? "bg-cream" : "bg-pine"}`} />
+        <span className={`h-0.5 w-6 ${dark ? "bg-cream" : "bg-pine"}`} />
         <span className="h-0.5 w-4 self-end bg-leaf" />
       </button>
 

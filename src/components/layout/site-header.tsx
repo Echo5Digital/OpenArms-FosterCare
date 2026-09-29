@@ -1,12 +1,24 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { mainNav, siteConfig } from "@/lib/site-config";
 import { LogoLink } from "@/components/layout/logo-link";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { NavDropdown } from "@/components/layout/nav-dropdown";
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const isHomeOverlay = pathname === "/";
+
   return (
-    <header className="sticky top-0 z-50 border-b border-pine/10 bg-cream/95 shadow-[0_2px_16px_-8px_rgba(15,33,27,0.15)] backdrop-blur-md">
+    <header
+      className={
+        isHomeOverlay
+          ? "absolute inset-x-0 top-0 z-50"
+          : "sticky top-0 z-50 border-b border-pine/10 bg-cream/95 shadow-[0_2px_16px_-8px_rgba(15,33,27,0.15)] backdrop-blur-md"
+      }
+    >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-5 py-3 sm:px-8">
         <LogoLink />
 
