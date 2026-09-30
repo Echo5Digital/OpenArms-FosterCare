@@ -48,11 +48,14 @@ export function SupportShowcase({
   intro,
   lead,
   items,
+  alignHeader = false,
 }: {
   heading: string;
   intro?: string;
   lead?: string;
   items: Item[];
+  /** Puts the heading row on the same columns as the panel below and shares the first baseline. */
+  alignHeader?: boolean;
 }) {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(true);
@@ -132,14 +135,22 @@ export function SupportShowcase({
         onBlur={() => setPaused(false)}
       >
         {/* heading */}
-        <Reveal className={intro ? "grid items-start gap-6 lg:grid-cols-[1fr_1fr] lg:gap-14" : ""}>
+        <Reveal
+          className={
+            intro
+              ? alignHeader
+                ? "grid items-start gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-baseline lg:gap-8"
+                : "grid items-start gap-6 lg:grid-cols-[1fr_1fr] lg:gap-14"
+              : ""
+          }
+        >
           <div>
             <span className="mb-5 block h-1 w-14 rounded-full bg-leaf" />
             <h2 className="font-sans text-[2rem] font-bold leading-tight tracking-tight text-pine sm:text-[2.6rem]">
               {heading}
             </h2>
           </div>
-          {intro && <p className="text-[1.02rem] leading-relaxed text-ink/75 lg:mt-6">{intro}</p>}
+          {intro && <p className={`text-[1.02rem] leading-relaxed text-ink/75 ${alignHeader ? "" : "lg:mt-6"}`}>{intro}</p>}
         </Reveal>
 
         {lead && (

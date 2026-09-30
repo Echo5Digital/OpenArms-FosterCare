@@ -54,25 +54,97 @@ export default function TulsaPage() {
           "Therapeutic foster care is a specialized service that focuses on helping children who have experienced trauma or have complex emotional and behavioral needs. These children often require additional support and attention to manage the effects of their past experiences.",
           "At Open Arms Foster Care, our therapeutic foster care services are designed to help children process their emotions and behaviors in a safe and supportive environment. Our trained foster parents work with our team of professionals to help the child develop healthy coping mechanisms and create a sense of stability and security.",
         ]}
+        supportHeading="Best Foster Care Programs in Tulsa, OK"
+        supportAlignHeader
+        supportIntro="At Open Arms Foster Care, we offer some of the best foster care programs in Tulsa, designed to cater to the unique needs of both children and foster parents. Whether you’re looking to become a foster parent, need emergency foster care, or want to provide long-term care for a child, our programs are designed to make the process smooth and supportive."
+        supportLead="Some of the programs offer include:"
         supportFeatures={[
-          { title: "Emergency Foster Care", body: "Temporary housing for children who need to be placed in a safe environment right away." },
-          { title: "Long-Term Foster Care", body: "A stable, nurturing environment for children who cannot safely return home." },
-          { title: "Specialized Foster Care", body: "Pairing children with unique needs to families equipped to meet them." },
-          { title: "Respite Care", body: "Short-term relief for foster parents who need a break, while children continue to receive care." },
-          { title: "Case Management", body: "Case managers work closely with foster parents to coordinate every service the family needs." },
+          {
+            title: "Emergency Foster Care in Tulsa, OK",
+            body: "Sometimes, children need immediate placement due to unsafe conditions in their homes. Our emergency foster care program provides temporary housing for children who need to be placed in a safe environment right away. We ensure that children are placed in loving homes while they wait for long-term placement.",
+          },
+          {
+            title: "Long-Term Foster Care",
+            body: "Our long-term foster care program is designed for children who cannot safely return home and need to be placed in a stable, nurturing environment for an extended period. We support foster parents with the resources they need to provide consistent care for children in their homes.",
+          },
+          {
+            title: "Specialized Foster Care",
+            body: "Some children have unique needs that require specialized care, such as children with disabilities or behavioral issues. Our specialized foster care program pairs children with families who are equipped to meet those specific needs.",
+          },
+          {
+            title: "Respite Care",
+            body: "We also offer respite care, which provides short-term relief for foster parents who need a break from their caregiving responsibilities. This allows foster families to recharge while ensuring children continue to receive the care and support they need.",
+          },
         ]}
-        emergency={[
-          "Sometimes, children need immediate placement due to unsafe conditions in their homes. Our emergency foster care program provides temporary housing for children who need to be placed in a safe environment right away, and we ensure that children are placed in loving homes while they wait for long-term placement.",
-          "Our foster parent training in Tulsa equips you with the skills and knowledge needed to provide the best care for children in foster care, including understanding trauma, behavioral techniques, legal and ethical guidelines, and self-care for foster parents.",
-        ]}
+        becomeHeading="Foster Parent Training in Tulsa, OK"
+        becomeVariant="topics"
+        becomeIntro={
+          <>
+            <p>
+              Becoming a foster parent is a rewarding but challenging experience. At Open Arms Foster Care, we
+              recognize the importance of providing thorough training and support to ensure that our foster parents
+              feel confident and prepared.
+            </p>
+            <p>
+              Our <strong>foster parent training in Tulsa</strong> equips you with the skills and knowledge needed to
+              provide the best care for children in foster care. Training includes topics such as:
+            </p>
+          </>
+        }
         becomeParentSteps={[
-          { title: "Initial Application", body: "Share your contact info and interest with our Tulsa team." },
-          { title: "Background Checks & Home Study", body: "We confirm your home is a safe, supportive environment." },
-          { title: "Foster Parent Training", body: "Understand the requirements and responsibilities of fostering." },
-          { title: "Ongoing Support", body: "Case management, therapeutic support, and peer connection." },
-          { title: "Placement", body: "Welcome a child into your home with full support from our team." },
+          {
+            title: "Understanding Trauma",
+            body: "We help foster parents understand the impact of trauma on children and how to respond to children who may be dealing with emotional and behavioral challenges.",
+          },
+          {
+            title: "Behavioral Techniques",
+            body: "Learn effective methods for managing difficult behaviors in children and providing a calm, structured environment.",
+          },
+          {
+            title: "Legal and Ethical Guidelines",
+            body: "Understanding the legal process and your rights as a foster parent is critical. Our training includes guidance on navigating the foster care system.",
+          },
+          {
+            title: "Self-Care for Foster Parents",
+            body: "We emphasize the importance of self-care, as fostering can be emotionally taxing. We offer tips for maintaining your well-being while caring for others.",
+          },
         ]}
-        closing="If you are ready to make a difference in the life of a child, we invite you to learn more about becoming a foster parent or accessing our foster care services in Tulsa. Together, we can provide children in Tulsa with the safe, loving homes they deserve."
+        closing="Our comprehensive training programs ensure that our foster parents are well-equipped to provide the best possible care for the children in their homes."
+        ongoing={{
+          heading: "Ongoing Support for Foster Parents",
+          headingHighlight: "Foster Parents",
+          intro:
+            "At Open Arms Foster Care, we believe that fostering doesn’t end with training. We offer continuous support to our foster parents, including:",
+          items: [
+            {
+              title: "Case Management",
+              body: "Our case managers work closely with foster parents to ensure that both children and families receive the services they need.",
+              image: "/fs4 (2).jpg",
+              imageAlt: "A family meeting with their case manager",
+              imagePosition: "object-[center_35%]",
+            },
+            {
+              title: "Therapeutic Support",
+              body: "For children in our therapeutic foster care program, we provide ongoing therapy and counseling to address emotional and behavioral issues.",
+              image: "/child-doing-therapy-session-with-psychologist-100kb.jpg",
+              imageAlt: "A young child drawing during a therapy session",
+              imagePosition: "object-[center_52%]",
+            },
+            {
+              title: "Peer Support",
+              body: "Connecting with other foster parents can provide valuable insights and support. We facilitate support groups where foster parents can share experiences and advice.",
+              image: "/family-with-binoculars (1).jpg",
+              imageAlt: "A family laughing together outdoors",
+              imagePosition: "object-[center_30%]",
+            },
+          ],
+          startHeading: "How to Get Started with Open Arms Foster Care in Tulsa",
+          startHighlight: "Tulsa",
+          startParagraphs: [
+            "If you’re ready to make a difference in the life of a child, getting started with Open Arms Foster Care is easy. We’ll guide you through the process of becoming a foster parent, including completing your application, undergoing background checks, and participating in training.",
+            "Our team will walk you through the steps of becoming a foster parent in Tulsa, ensuring that you’re well-prepared for the journey ahead. Whether you’re interested in emergency foster care or therapeutic foster care, we are here to help you every step of the way.",
+          ],
+        }}
       />
     </>
   );

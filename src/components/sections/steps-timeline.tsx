@@ -10,7 +10,10 @@ type Step = { title: string; body: string };
  *   reaches them and each card slides in.
  * - sm and up: cards fade up one after another.
  */
-export function StepsTimeline({ steps }: { steps: Step[] }) {
+export function StepsTimeline({ steps, variant = "steps" }: { steps: Step[]; variant?: "steps" | "topics" }) {
+  // "topics" = a short list of topics (check badges) instead of numbered steps
+  const colsClass =
+    variant === "topics" ? (steps.length <= 3 ? "lg:grid-cols-3" : "lg:grid-cols-4") : "lg:grid-cols-5";
   const olRef = useRef<HTMLOListElement>(null);
   const liRefs = useRef<(HTMLLIElement | null)[]>([]);
   const [seen, setSeen] = useState<boolean[]>(() => steps.map(() => false));
@@ -73,7 +76,7 @@ export function StepsTimeline({ steps }: { steps: Step[] }) {
   return (
     <ol
       ref={olRef}
-      className="relative mt-12 grid gap-x-6 gap-y-7 sm:mt-14 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-5"
+      className={`relative mt-12 grid gap-x-6 gap-y-7 sm:mt-14 sm:grid-cols-2 sm:gap-y-12 ${colsClass}`}
     >
       {/* timeline track + scroll fill (phones) */}
       <span
@@ -120,7 +123,24 @@ export function StepsTimeline({ steps }: { steps: Step[] }) {
                 {i === current && (
                   <span className="animate-pulse-ring absolute inset-0 rounded-full bg-leaf/60 sm:hidden" aria-hidden />
                 )}
-                <span className="relative">{i + 1}</span>
+                <span className="relative">
+                  {variant === "topics" ? (
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden
+                    >
+                      <path d="m5 12.5 4.5 4.5L19 7.5" />
+                    </svg>
+                  ) : (
+                    i + 1
+                  )}
+                </span>
               </span>
               <h3 className="font-sans text-[1.05rem] font-bold leading-snug text-pine">{step.title}</h3>
               <p className="mt-3 text-[0.95rem] leading-relaxed text-ink/70">{step.body}</p>

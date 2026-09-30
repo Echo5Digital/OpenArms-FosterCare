@@ -259,3 +259,48 @@ body {
     animation-fill-mode: both;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes dash-flow {
+    to {
+      stroke-dashoffset: -32;
+    }
+  }
+  .animate-dash-flow {
+    animation: dash-flow 2s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes typing-dot {
+    0%,
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.4;
+    }
+    30% {
+      transform: translateY(-7px);
+      opacity: 1;
+    }
+  }
+  @keyframes cta-glow {
+    0% {
+      box-shadow:
+        0 18px 34px -14px rgba(0, 0, 0, 0.6),
+        0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+    70%,
+    100% {
+      box-shadow:
+        0 18px 34px -14px rgba(0, 0, 0, 0.6),
+        0 0 0 20px rgba(255, 255, 255, 0);
+    }
+  }
+  .animate-typing-dot {
+    animation: typing-dot 1.3s ease-in-out infinite;
+  }
+  .animate-cta-glow {
+    animation: cta-glow 2.6s ease-out infinite;
+  }
+}

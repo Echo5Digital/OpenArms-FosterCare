@@ -17,6 +17,7 @@ export function LocationHero({
   image,
   imageAlt,
   imagePosition = "object-center",
+  imageFit = "zoom",
 }: {
   title: string;
   intro: string;
@@ -24,6 +25,8 @@ export function LocationHero({
   image: string;
   imageAlt: string;
   imagePosition?: string;
+  /** "full" keeps the photo's full width inside the pin instead of the default zoomed crop. */
+  imageFit?: "zoom" | "full";
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-br from-pine-deep via-pine to-[#1c4a3a]">
@@ -96,7 +99,7 @@ export function LocationHero({
           <div className="relative mx-auto w-[min(21rem,72vw)] lg:w-[min(24rem,100%)]">
             <div className="animate-gentle-bob relative aspect-square w-full">
               <div className="absolute inset-0 rotate-[-45deg] overflow-hidden rounded-[50%_50%_50%_0] border-[6px] border-white/30 shadow-[0_40px_80px_-25px_rgba(0,0,0,0.65)]">
-                <div className="absolute -inset-[22%] rotate-45">
+                <div className={`absolute rotate-45 ${imageFit === "full" ? "inset-x-0 -inset-y-[20.7%]" : "-inset-[22%]"}`}>
                   <Image
                     src={image}
                     alt={imageAlt}

@@ -2,7 +2,8 @@ import Image from "next/image";
 import { LocationHero } from "@/components/sections/location-hero";
 import { SupportShowcase } from "@/components/sections/support-showcase";
 import { StepsTimeline } from "@/components/sections/steps-timeline";
-import { HealingHopeSection } from "@/components/sections/healing-hope-section";
+import { OngoingSupportSection, type OngoingSupportProps } from "@/components/sections/ongoing-support-section";
+import { LocationCta } from "@/components/sections/location-cta";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Reveal } from "@/components/ui/reveal";
 import { siteConfig, type Office } from "@/lib/site-config";
@@ -29,7 +30,7 @@ const reasonIcons = [
   <path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3Z" />,
 ];
 
-const heroPhotos: Record<string, { src: string; alt: string; position?: string }> = {
+const heroPhotos: Record<string, { src: string; alt: string; position?: string; fit?: "full" }> = {
   "oklahoma-city": {
     src: "/cute-family-walking-sunset-summer-park-100kb.jpg",
     alt: "A family walking together through a park at sunset",
@@ -37,6 +38,8 @@ const heroPhotos: Record<string, { src: string; alt: string; position?: string }
   tulsa: {
     src: "/cute-family-playing-summer-field-100kb.jpg",
     alt: "A family playing together in a sunlit field",
+    position: "object-[center_35%]",
+    fit: "full",
   },
   lawton: {
     src: "/smiling-man-carrying-his-cute-daughter-park-100kb.jpg",
@@ -50,8 +53,13 @@ export function LocationPageTemplate({
   intro,
   heroBreadcrumb,
   therapeuticLocation,
+  supportHeading,
+  supportAlignHeader,
   supportIntro,
   supportLead,
+  ongoing,
+  becomeHeading,
+  becomeVariant,
   becomeIntro,
   becomeLead,
   whyChoose,
@@ -66,18 +74,29 @@ export function LocationPageTemplate({
   heroBreadcrumb?: { label: string; href?: string }[];
   /** Overrides the highlighted part of the therapeutic section heading (default: "<city>, OK"). */
   therapeuticLocation?: string;
+  /** Overrides the support-services heading (default: "Foster Parent Support Services in <city>"). */
+  supportHeading?: string;
+  /** Aligns the support heading row with the showcase panel below (default: off). */
+  supportAlignHeader?: boolean;
   /** Optional paragraph shown under the support-services heading. */
   supportIntro?: string;
   /** Optional line shown just above the support-service cards. */
   supportLead?: string;
-  /** Optional paragraph under the "How to Become a Foster Parent" heading. */
-  becomeIntro?: string;
+  /** Optional "Ongoing Support" + "How to Get Started" section shown after the steps (default: hidden). */
+  ongoing?: OngoingSupportProps;
+  /** Overrides the steps-section heading (default: "How to Become a Foster Parent in <city>"). */
+  becomeHeading?: string;
+  /** "topics" shows check badges and up to four columns instead of numbered steps (default: "steps"). */
+  becomeVariant?: "steps" | "topics";
+  /** Optional text under the steps-section heading: a string, or paragraphs (JSX). */
+  becomeIntro?: ReactNode;
   /** Optional line just above the step cards. */
   becomeLead?: string;
   whyChoose: { title: string; body: string }[];
   therapeutic: ReactNode[];
   supportFeatures: Feature[];
-  emergency: ReactNode[];
+  /** Text for the dark "Emergency Foster Care" section. Leave out to hide the section on that page. */
+  emergency?: ReactNode[];
   becomeParentSteps: Feature[];
   closing?: string;
 }) {
@@ -90,6 +109,7 @@ export function LocationPageTemplate({
         image={heroPhotos[office.id]?.src ?? "/happy-family-outdoors-spending-time-together-100kb.jpg"}
         imageAlt={heroPhotos[office.id]?.alt ?? `Families supported by Open Arms Foster Care in ${office.city}`}
         imagePosition={heroPhotos[office.id]?.position}
+        imageFit={heroPhotos[office.id]?.fit}
       />
 
       <section className="relative overflow-x-clip bg-[rgb(243,249,237)]">
@@ -400,137 +420,140 @@ export function LocationPageTemplate({
       </section>
 
       <SupportShowcase
-        heading={`Foster Parent Support Services in ${office.city}`}
+        heading={supportHeading ?? `Foster Parent Support Services in ${office.city}`}
         intro={supportIntro}
         lead={supportLead}
         items={supportFeatures}
+        alignHeader={supportAlignHeader}
       />
 
-      <section className="grain relative overflow-x-clip bg-pine py-20 sm:py-28">
-        <div className="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-leaf/15 blur-3xl" />
-        <div className="pointer-events-none absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-red-500/10 blur-3xl" />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.1]"
-          style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1.4px)",
-            backgroundSize: "30px 30px",
-            maskImage: "radial-gradient(ellipse at 70% 50%, black 10%, transparent 70%)",
-            WebkitMaskImage: "radial-gradient(ellipse at 70% 50%, black 10%, transparent 70%)",
-          }}
-        />
+      {emergency && emergency.length > 0 && (
+        <section className="grain relative overflow-x-clip bg-pine py-20 sm:py-28">
+          <div className="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-leaf/15 blur-3xl" />
+          <div className="pointer-events-none absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-red-500/10 blur-3xl" />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 opacity-[0.1]"
+            style={{
+              backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1.4px)",
+              backgroundSize: "30px 30px",
+              maskImage: "radial-gradient(ellipse at 70% 50%, black 10%, transparent 70%)",
+              WebkitMaskImage: "radial-gradient(ellipse at 70% 50%, black 10%, transparent 70%)",
+            }}
+          />
 
-        {/* rounded house silhouette used to crop the photo */}
-        <svg aria-hidden width="0" height="0" className="absolute">
-          <defs>
-            <clipPath id="emergency-house" clipPathUnits="objectBoundingBox">
-              <path d="M0.5 0.015Q0.525 0.015 0.548 0.035L0.962 0.285Q1 0.308 1 0.35V0.93Q1 1 0.93 1H0.07Q0 1 0 0.93V0.35Q0 0.308 0.038 0.285L0.452 0.035Q0.475 0.015 0.5 0.015Z" />
-            </clipPath>
-          </defs>
-        </svg>
+          {/* rounded house silhouette used to crop the photo */}
+          <svg aria-hidden width="0" height="0" className="absolute">
+            <defs>
+              <clipPath id="emergency-house" clipPathUnits="objectBoundingBox">
+                <path d="M0.5 0.015Q0.525 0.015 0.548 0.035L0.962 0.285Q1 0.308 1 0.35V0.93Q1 1 0.93 1H0.07Q0 1 0 0.93V0.35Q0 0.308 0.038 0.285L0.452 0.035Q0.475 0.015 0.5 0.015Z" />
+              </clipPath>
+            </defs>
+          </svg>
 
-        <div className="relative mx-auto grid max-w-[1400px] items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
-          {/* copy */}
-          <Reveal from="left">
-            <div className="flex items-center gap-3" aria-hidden>
-              <span className="relative flex h-3.5 w-3.5">
-                <span className="animate-pulse-ring absolute inset-0 rounded-full bg-red-500" />
-                <span className="relative h-3.5 w-3.5 rounded-full bg-red-500" />
-              </span>
-              <span className="h-px w-16 bg-gradient-to-r from-cream/50 to-transparent" />
-            </div>
-
-            <h2 className="mt-5 max-w-xl font-sans text-[2rem] font-bold leading-[1.12] tracking-tight text-cream sm:text-[2.8rem]">
-              Emergency Foster Care in <span className="text-leaf">{office.city}</span>
-            </h2>
-
-            <div className="mt-8 max-w-xl space-y-5">
-              {emergency.map((p, i) => {
-                const last = i === emergency.length - 1 && emergency.length > 1;
-                if (last) {
-                  return (
-                    <div
-                      key={i}
-                      className="flex gap-4 rounded-2xl border border-white/15 border-l-4 border-l-leaf bg-white/[0.07] p-5 backdrop-blur-sm"
-                    >
-                      <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-leaf text-pine-deep">
-                        <svg
-                          viewBox="0 0 24 24"
-                          className="h-5 w-5"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth={1.9}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden
-                        >
-                          <path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z" /><path d="m9 12 2 2 4-4" />
-                        </svg>
-                      </span>
-                      <p className="text-[1.02rem] leading-relaxed text-cream/90">{p}</p>
-                    </div>
-                  );
-                }
-                return (
-                  <p key={i} className={i === 0 ? "text-[1.1rem] leading-relaxed text-cream/85" : "text-[1.05rem] leading-relaxed text-cream/75"}>
-                    {p}
-                  </p>
-                );
-              })}
-            </div>
-          </Reveal>
-
-          {/* safe-haven scene */}
-          <Reveal from="right" delay={120} className="order-first lg:order-last">
-            <div className="relative mx-auto flex w-full max-w-[30rem] items-center justify-center py-6">
-              {/* beacon rings */}
-              <div className="absolute left-1/2 top-1/2 aspect-square w-[88%] -translate-x-1/2 -translate-y-1/2">
-                <span className="absolute inset-0 rounded-full border border-leaf/30" />
-                <span className="absolute inset-[11%] rounded-full border border-dashed border-leaf/30" />
-                <span className="animate-pulse-ring absolute inset-[22%] rounded-full border-2 border-leaf/50" />
-                <span className="animate-pulse-ring absolute inset-[22%] rounded-full border-2 border-leaf/50 [animation-delay:-1.2s]" />
-                <span className="absolute inset-[30%] rounded-full bg-leaf/15 blur-2xl" />
+          <div className="relative mx-auto grid max-w-[1400px] items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+            {/* copy */}
+            <Reveal from="left">
+              <div className="flex items-center gap-3" aria-hidden>
+                <span className="relative flex h-3.5 w-3.5">
+                  <span className="animate-pulse-ring absolute inset-0 rounded-full bg-red-500" />
+                  <span className="relative h-3.5 w-3.5 rounded-full bg-red-500" />
+                </span>
+                <span className="h-px w-16 bg-gradient-to-r from-cream/50 to-transparent" />
               </div>
 
-              <div className="relative w-[min(23rem,82%)] [filter:drop-shadow(0_30px_40px_rgba(0,0,0,0.45))]">
-                <div className="relative aspect-[4/4.6] w-full">
-                  <div
-                    className="absolute inset-0 bg-gradient-to-br from-leaf via-[#a3d455] to-leaf-deep"
-                    style={{ clipPath: "url(#emergency-house)" }}
-                  />
-                  <div className="absolute inset-[7px]" style={{ clipPath: "url(#emergency-house)" }}>
-                    <Image
-                      src="/father-spending-time-with-his-daughter-outdoors-father-s-day 1-100kb.jpg"
-                      alt="A caring adult’s arms wrapped protectively around a young child"
-                      fill
-                      sizes="(min-width: 1024px) 24rem, 80vw"
-                      className="object-cover object-[50%_38%]"
+              <h2 className="mt-5 max-w-xl font-sans text-[2rem] font-bold leading-[1.12] tracking-tight text-cream sm:text-[2.8rem]">
+                Emergency Foster Care in <span className="text-leaf">{office.city}</span>
+              </h2>
+
+              <div className="mt-8 max-w-xl space-y-5">
+                {emergency.map((p, i) => {
+                  const last = i === emergency.length - 1 && emergency.length > 1;
+                  if (last) {
+                    return (
+                      <div
+                        key={i}
+                        className="flex gap-4 rounded-2xl border border-white/15 border-l-4 border-l-leaf bg-white/[0.07] p-5 backdrop-blur-sm"
+                      >
+                        <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-leaf text-pine-deep">
+                          <svg
+                            viewBox="0 0 24 24"
+                            className="h-5 w-5"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={1.9}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden
+                          >
+                            <path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z" /><path d="m9 12 2 2 4-4" />
+                          </svg>
+                        </span>
+                        <p className="text-[1.02rem] leading-relaxed text-cream/90">{p}</p>
+                      </div>
+                    );
+                  }
+                  return (
+                    <p key={i} className={i === 0 ? "text-[1.1rem] leading-relaxed text-cream/85" : "text-[1.05rem] leading-relaxed text-cream/75"}>
+                      {p}
+                    </p>
+                  );
+                })}
+              </div>
+            </Reveal>
+
+            {/* safe-haven scene */}
+            <Reveal from="right" delay={120} className="order-first lg:order-last">
+              <div className="relative mx-auto flex w-full max-w-[30rem] items-center justify-center py-6">
+                {/* beacon rings */}
+                <div className="absolute left-1/2 top-1/2 aspect-square w-[88%] -translate-x-1/2 -translate-y-1/2">
+                  <span className="absolute inset-0 rounded-full border border-leaf/30" />
+                  <span className="absolute inset-[11%] rounded-full border border-dashed border-leaf/30" />
+                  <span className="animate-pulse-ring absolute inset-[22%] rounded-full border-2 border-leaf/50" />
+                  <span className="animate-pulse-ring absolute inset-[22%] rounded-full border-2 border-leaf/50 [animation-delay:-1.2s]" />
+                  <span className="absolute inset-[30%] rounded-full bg-leaf/15 blur-2xl" />
+                </div>
+
+                <div className="relative w-[min(23rem,82%)] [filter:drop-shadow(0_30px_40px_rgba(0,0,0,0.45))]">
+                  <div className="relative aspect-[4/4.6] w-full">
+                    <div
+                      className="absolute inset-0 bg-gradient-to-br from-leaf via-[#a3d455] to-leaf-deep"
+                      style={{ clipPath: "url(#emergency-house)" }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/45 via-transparent to-transparent" />
+                    <div className="absolute inset-[7px]" style={{ clipPath: "url(#emergency-house)" }}>
+                      <Image
+                        src="/father-spending-time-with-his-daughter-outdoors-father-s-day 1-100kb.jpg"
+                        alt="A caring adult’s arms wrapped protectively around a young child"
+                        fill
+                        sizes="(min-width: 1024px) 24rem, 80vw"
+                        className="object-cover object-[50%_38%]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/45 via-transparent to-transparent" />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <svg
-                aria-hidden
-                viewBox="0 0 24 24"
-                className="animate-twinkle absolute left-[6%] top-[22%] h-7 w-7 text-cream"
-                fill="currentColor"
-              >
-                <path d="M12 1.5 14.3 9.7 22.5 12 14.3 14.3 12 22.5 9.7 14.3 1.5 12 9.7 9.7Z" />
-              </svg>
-              <svg
-                aria-hidden
-                viewBox="0 0 24 24"
-                className="animate-twinkle absolute bottom-[10%] right-[8%] h-5 w-5 text-leaf [animation-delay:-1.4s]"
-                fill="currentColor"
-              >
-                <path d="M12 1.5 14.3 9.7 22.5 12 14.3 14.3 12 22.5 9.7 14.3 1.5 12 9.7 9.7Z" />
-              </svg>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+                <svg
+                  aria-hidden
+                  viewBox="0 0 24 24"
+                  className="animate-twinkle absolute left-[6%] top-[22%] h-7 w-7 text-cream"
+                  fill="currentColor"
+                >
+                  <path d="M12 1.5 14.3 9.7 22.5 12 14.3 14.3 12 22.5 9.7 14.3 1.5 12 9.7 9.7Z" />
+                </svg>
+                <svg
+                  aria-hidden
+                  viewBox="0 0 24 24"
+                  className="animate-twinkle absolute bottom-[10%] right-[8%] h-5 w-5 text-leaf [animation-delay:-1.4s]"
+                  fill="currentColor"
+                >
+                  <path d="M12 1.5 14.3 9.7 22.5 12 14.3 14.3 12 22.5 9.7 14.3 1.5 12 9.7 9.7Z" />
+                </svg>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       <section className="relative overflow-x-clip bg-[rgb(232,241,235)]">
         <div className="pointer-events-none absolute -left-24 top-1/3 h-80 w-80 rounded-full bg-leaf/20 blur-3xl" />
@@ -540,11 +563,16 @@ export function LocationPageTemplate({
           <Reveal>
             <span className="mb-5 block h-1 w-14 rounded-full bg-leaf" />
             <h2 className="max-w-3xl font-sans text-[2rem] font-bold leading-tight tracking-tight text-pine sm:text-[2.6rem]">
-              How to Become a Foster Parent in {office.city}
+              {becomeHeading ?? `How to Become a Foster Parent in ${office.city}`}
             </h2>
-            {becomeIntro && (
-              <p className="mt-6 max-w-3xl text-[1.05rem] leading-relaxed text-ink/75">{becomeIntro}</p>
-            )}
+            {becomeIntro &&
+              (typeof becomeIntro === "string" ? (
+                <p className="mt-6 max-w-3xl text-[1.05rem] leading-relaxed text-ink/75">{becomeIntro}</p>
+              ) : (
+                <div className="mt-6 max-w-3xl space-y-4 text-[1.05rem] leading-relaxed text-ink/75 [&_strong]:font-bold [&_strong]:text-pine">
+                  {becomeIntro}
+                </div>
+              ))}
             {becomeLead && (
               <p className="mt-6 inline-flex items-center gap-3 rounded-full bg-white/90 px-5 py-2.5 font-sans text-base font-semibold text-pine shadow-sm sm:text-lg">
                 <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-leaf" />
@@ -553,7 +581,7 @@ export function LocationPageTemplate({
             )}
           </Reveal>
 
-          <StepsTimeline steps={becomeParentSteps} />
+          <StepsTimeline steps={becomeParentSteps} variant={becomeVariant} />
 
           {closing && (
             <Reveal className="mt-14">
@@ -565,7 +593,9 @@ export function LocationPageTemplate({
         </div>
       </section>
 
-      <HealingHopeSection />
+      {ongoing && <OngoingSupportSection {...ongoing} />}
+
+      <LocationCta city={office.city} />
     </>
   );
 }
