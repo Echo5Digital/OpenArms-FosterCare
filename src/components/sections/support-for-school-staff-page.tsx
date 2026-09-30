@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { ServiceHero } from "@/components/sections/service-hero";
 import { FaqSection } from "@/components/sections/faq-section";
 import { AppointmentRequestForm } from "@/components/forms/appointment-request-form";
 import type { Faq } from "@/lib/content/faqs";
@@ -66,49 +67,15 @@ const headingFont = "font-sans text-[2.1rem] font-bold leading-tight tracking-ti
 export function SupportForSchoolStaffPage({ faqs }: { faqs: Faq[] }) {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[420px] w-full overflow-hidden sm:min-h-[480px]">
-        <Image
-          src="/close-up-girl-therapy-session-with-parents-100kb.jpg"
-          alt="A caring adult supporting a child, reflecting the trust school staff help build"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-pine-deep/85 via-pine-deep/45 to-pine-deep/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/70 via-transparent to-transparent" />
-
-        <div className="relative mx-auto flex h-full min-h-[420px] w-full max-w-[1400px] flex-col justify-center px-5 py-16 sm:min-h-[480px] sm:px-8">
-          <nav
-            aria-label="Breadcrumb"
-            className="mb-8 inline-flex w-fit items-center gap-2 rounded-full bg-pine-deep/80 px-5 py-2 font-sans text-sm font-semibold text-cream backdrop-blur-sm"
-          >
-            <a href="/" className="hover:text-leaf">Home</a>
-            <span className="text-cream/50">&gt;</span>
-            <a href="/services" className="hover:text-leaf">Services</a>
-            <span className="text-cream/50">&gt;</span>
-            <span>Support for School Staff</span>
-          </nav>
-
-          <h1 className="max-w-2xl font-sans text-5xl font-bold leading-tight text-white sm:text-6xl">
-            Support for School Staff
-          </h1>
-          <p className="mt-5 max-w-xl font-sans text-lg leading-relaxed text-cream/90">
-            Open Arms Initiative provides training to help school staff understand foster children&rsquo;s unique
-            challenges and create a supportive classroom environment.
-          </p>
-
-          <div className="mt-8">
-            <a
-              href="/sign-up-now"
-              className="inline-flex items-center rounded-full bg-leaf px-7 py-3.5 font-sans text-base font-semibold text-white shadow-lg transition-colors duration-300 hover:bg-leaf-deep"
-            >
-              Start Your Journey Today
-            </a>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        title="Support for School Staff"
+        highlight="School Staff"
+        intro={"Open Arms Initiative provides training to help school staff understand foster children’s unique challenges and create a supportive classroom environment."}
+        image="/close-up-girl-therapy-session-with-parents-100kb.jpg"
+        imageAlt="A caring adult supporting a child, reflecting the trust school staff help build"
+        imagePosition="object-center"
+        crumb="Support for School Staff"
+      />
 
       {/* What to Expect */}
       <section className="bg-[rgb(235,243,238)] px-5 py-20 sm:px-8 sm:py-28">
@@ -125,11 +92,11 @@ export function SupportForSchoolStaffPage({ faqs }: { faqs: Faq[] }) {
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-xl lg:aspect-auto lg:h-full lg:min-h-[420px]">
                 <Image
-                  src="/medium-shot-girl-holding-toy-100kb.jpg"
-                  alt="A child in a supportive learning environment"
+                  src="/cheerful-little-black-haired-girl-standing-city-park-kid-enjoying-leisure-time-outdoors-summer-medium-shot-vertical-childhood-concept-100kb.jpg"
+                  alt="A cheerful little girl standing in a city park on a summer day"
                   fill
                   sizes="(min-width: 1024px) 45vw, 90vw"
-                  className="object-contain"
+                  className="object-cover object-[center_20%]"
                 />
               </div>
 

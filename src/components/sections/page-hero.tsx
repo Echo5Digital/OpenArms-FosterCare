@@ -43,10 +43,12 @@ export function PageHero({
             ))}
           </nav>
         )}
-        <span className="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-leaf">
-          {eyebrow}
-        </span>
-        <h1 className="mt-4 max-w-2xl font-display text-[2.4rem] font-medium leading-[1.08] tracking-tight text-cream sm:text-[3.1rem]">
+        {eyebrow && (
+          <span className="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-leaf">
+            {eyebrow}
+          </span>
+        )}
+        <h1 className={`${eyebrow ? "mt-4" : ""} max-w-2xl font-display text-[2.4rem] font-medium leading-[1.08] tracking-tight text-cream sm:text-[3.1rem]`}>
           {title}
         </h1>
         {intro && <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/75">{intro}</p>}

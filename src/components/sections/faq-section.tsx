@@ -37,7 +37,11 @@ export function FaqSection({
                   />
                 </div>
 
-                <div className="absolute -right-4 top-10 flex items-center gap-3 rounded-full bg-pine py-2.5 pl-4 pr-2.5 shadow-lg sm:-right-8">
+                <a
+                  href={siteConfig.phoneHref}
+                  aria-label={`Call us at ${siteConfig.phone}`}
+                  className="absolute bottom-4 right-3 flex items-center gap-3 rounded-full bg-pine py-2.5 pl-4 pr-2.5 shadow-lg transition-transform duration-300 hover:scale-105 sm:bottom-auto sm:-right-8 sm:top-10"
+                >
                   <span className="font-sans text-xs leading-tight text-cream/70">
                     Call Us Anytime
                     <br />
@@ -55,7 +59,7 @@ export function FaqSection({
                       />
                     </svg>
                   </span>
-                </div>
+                </a>
 
                 {secondaryImage && (
                   <div className="absolute -bottom-10 -left-6 h-32 w-28 overflow-hidden rounded-[1.5rem] border-4 border-cream-alt shadow-xl sm:-left-10 sm:h-40 sm:w-36">

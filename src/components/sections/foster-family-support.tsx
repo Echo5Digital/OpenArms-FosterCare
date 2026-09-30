@@ -104,7 +104,7 @@ export function FosterFamilySupport() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group w-full rounded-2xl border-2 border-white/60 bg-white/70 p-6 text-center shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-leaf hover:shadow-xl hover:shadow-leaf/20 sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]"
+              className="group w-full rounded-2xl border-2 border-leaf bg-white/70 sm:border-white/60 p-6 text-center shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-leaf hover:shadow-xl hover:shadow-leaf/20 sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]"
             >
               <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-pine shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-leaf group-hover:text-pine-deep">
                 <svg viewBox="0 0 24 24" className="h-6 w-6">

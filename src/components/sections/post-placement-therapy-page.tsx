@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { ServiceHero } from "@/components/sections/service-hero";
 import { FaqSection } from "@/components/sections/faq-section";
 import { AppointmentRequestForm } from "@/components/forms/appointment-request-form";
 import type { Faq } from "@/lib/content/faqs";
@@ -63,49 +64,15 @@ const headingFont = "font-sans text-[2.1rem] font-bold leading-tight tracking-ti
 export function PostPlacementTherapyPage({ faqs }: { faqs: Faq[] }) {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[420px] w-full overflow-hidden sm:min-h-[480px]">
-        <Image
-          src="/fs4 (2).jpg"
-          alt="A family talking with a caseworker during a supportive foster care consultation"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-pine-deep/85 via-pine-deep/45 to-pine-deep/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/70 via-transparent to-transparent" />
-
-        <div className="relative mx-auto flex h-full min-h-[420px] w-full max-w-[1400px] flex-col justify-center px-5 py-16 sm:min-h-[480px] sm:px-8">
-          <nav
-            aria-label="Breadcrumb"
-            className="mb-8 inline-flex w-fit items-center gap-2 rounded-full bg-pine-deep/80 px-5 py-2 font-sans text-sm font-semibold text-cream backdrop-blur-sm"
-          >
-            <a href="/" className="hover:text-leaf">Home</a>
-            <span className="text-cream/50">&gt;</span>
-            <a href="/services" className="hover:text-leaf">Services</a>
-            <span className="text-cream/50">&gt;</span>
-            <span>Post-Placement Therapy</span>
-          </nav>
-
-          <h1 className="max-w-2xl font-sans text-5xl font-bold leading-tight text-white sm:text-6xl">
-            Post-Placement Therapy
-          </h1>
-          <p className="mt-5 max-w-xl font-sans text-lg leading-relaxed text-cream/90">
-            At Open Arms Initiative, we support foster care and adoption journeys starting with placement. Our
-            post-placement therapy helps children and families adjust emotionally.
-          </p>
-
-          <div className="mt-8">
-            <a
-              href="/sign-up-now"
-              className="inline-flex items-center rounded-full bg-leaf px-7 py-3.5 font-sans text-base font-semibold text-white shadow-lg transition-colors duration-300 hover:bg-leaf-deep"
-            >
-              Start Your Journey Today
-            </a>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        title="Post-Placement Therapy"
+        highlight="Therapy"
+        intro={"At Open Arms Initiative, we support foster care and adoption journeys starting with placement. Our post-placement therapy helps children and families adjust emotionally."}
+        image="/fs4 (2).jpg"
+        imageAlt="A family talking with a caseworker during a supportive foster care consultation"
+        imagePosition="object-center"
+        crumb="Post-Placement Therapy"
+      />
 
       {/* What to Expect */}
       <section className="bg-[rgb(235,243,238)] px-5 py-20 sm:px-8 sm:py-28">

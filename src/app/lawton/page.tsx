@@ -31,7 +31,7 @@ export default function LawtonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <LocationPageTemplate
         office={office}
-        intro="Welcome to Open Arms Foster Care! Our mission is to provide the highest level of care and support to children in need and foster families in Lawton, OK. We specialize in therapeutic foster care services, offering compassionate and personalized support for children who require emotional and psychological healing."
+        intro="Welcome to Open Arms Foster Care! Our mission is to provide the highest level of care and support to children in need and foster families in Lawton, OK. We specialize in therapeutic foster care services, offering compassionate and personalized support for children who require emotional and psychological healing. Whether you’re looking to become a foster parent or need specialized foster care services, we are here to guide you every step of the way."
         whyChoose={[
           {
             title: "Specialized Therapeutic Foster Care",

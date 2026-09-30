@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { graph, webPageSchema, faqPageSchema } from "@/lib/schema";
 import { aboutFaqs } from "@/lib/content/faqs";
-import { PageHero } from "@/components/sections/page-hero";
+import { AboutHero } from "@/components/sections/about-hero";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { FeaturedVideoSection } from "@/components/sections/featured-video-section";
 import { FaqSection } from "@/components/sections/faq-section";
@@ -36,13 +36,7 @@ export default function AboutUsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      <PageHero
-        eyebrow="About Us"
-        title="Your Trusted Partner in Foster Care Across Oklahoma"
-        intro={description}
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "About Us" }]}
-        backgroundImage="/aae.jpeg"
-      />
+      <AboutHero />
 
       <TeamSection />
       <TestimonialsSection />

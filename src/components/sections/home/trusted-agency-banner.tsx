@@ -5,11 +5,11 @@ import { siteConfig } from "@/lib/site-config";
 export function TrustedAgencyBanner() {
   return (
     <section className="relative bg-cream-alt">
-      <div className="relative overflow-hidden bg-[rgb(216,234,203)] py-16 sm:py-20">
+      <div className="relative overflow-hidden bg-[rgb(216,234,203)] py-10 sm:py-14">
         <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-leaf/15 blur-3xl" />
         <div className="pointer-events-none absolute -left-16 bottom-10 h-56 w-56 rounded-full bg-leaf/10 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-[1400px] items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-x-10 lg:gap-y-0">
+        <div className="relative mx-auto grid max-w-[1400px] items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-10 lg:gap-y-0">
           <div className="order-1 lg:col-start-1">
             <span className="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-leaf-deep">
               <span className="h-1.5 w-1.5 rounded-full bg-current" />
@@ -21,8 +21,8 @@ export function TrustedAgencyBanner() {
             </h2>
           </div>
 
-          <div className="relative order-2 mx-auto w-full max-w-sm self-start lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-md">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_20px_45px_rgba(15,33,27,0.22)]">
+          <div className="relative order-2 mx-auto w-full max-w-sm self-start lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-[27rem]">
+            <div className="relative aspect-[4/5] overflow-hidden lg:aspect-[1/1] rounded-[2rem] shadow-[0_20px_45px_rgba(15,33,27,0.22)]">
               <Image
                 src="/medium-shot-girl-holding-toy-100kb.jpg"
                 alt="A young girl in foster care holding her favorite toy"

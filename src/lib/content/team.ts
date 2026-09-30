@@ -27,8 +27,8 @@ export const teamMembers: TeamMember[] = [
   { name: "Karli Burch", credential: "LPC", title: "Therapist", image: "/Karli Burch - LPC.jpg" },
   { name: "Lori Baker", credential: "LMFT-S", title: "Therapist", image: "/lori.jpg" },
   { name: "Breanna White", credential: "LPC", title: "Therapist", image: "/Breanna White - LPC.jpg" },
-  { name: "Jamira Alexander", title: "Therapist Intern", image: "/Jamira Alexander.jpg" },
+  { name: "Jamira Alexander", title: "Therapist", image: "/Jamira Alexander.jpg" },
   { name: "Rebekah Thomas", credential: "LPC-C", title: "Therapist", image: "/rebekah.jpg" },
-  { name: "Victori Swinford", title: "Therapist Intern", image: "/Victori.jpg" },
-  { name: "Mattea Lear", title: "Therapist Intern", image: "/Mattea.jpg" },
+  { name: "Victori Swinford", title: "Therapist", image: "/Victori.jpg" },
+  { name: "Mattea Lear", title: "Therapist", image: "/Mattea.jpg" },
 ];

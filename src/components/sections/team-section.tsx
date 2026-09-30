@@ -19,8 +19,8 @@ export function TeamSection() {
 
         <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {teamMembers.map((member) => (
-            <div key={member.name} className="relative overflow-hidden rounded-2xl">
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <div key={member.name} className="relative flex h-full flex-col overflow-hidden rounded-2xl">
+              <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -29,7 +29,7 @@ export function TeamSection() {
                   className="object-cover"
                 />
               </div>
-              <div className="bg-pine px-4 py-3.5">
+              <div className="flex-1 bg-pine px-4 py-3.5">
                 <h3 className="font-sans text-sm font-semibold leading-snug text-cream sm:text-base">
                   {member.name}
                   {member.credential ? ` – ${member.credential}` : ""}
