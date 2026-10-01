@@ -1,16 +1,12 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { FormError, Honeypot } from "@/components/forms/form-ui";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 export function ReferralForm() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const { sent, sending, error, handleSubmit } = useLeadForm("referral");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sent");
-  }
-
-  if (status === "sent") {
+  if (sent) {
     return (
       <div className="rounded-2xl bg-pine p-8 text-center">
         <p className="font-display text-xl font-medium text-cream">Referral received — thank you!</p>
@@ -25,6 +21,7 @@ export function ReferralForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2">
+      <Honeypot />
       <div className="flex flex-col gap-1.5">
         <label className={labelClass}>First Name</label>
         <input required name="firstName" placeholder="First Name" className={fieldClass} />
@@ -60,11 +57,14 @@ export function ReferralForm() {
         <input name="referredPhone" type="tel" placeholder="Phone Number of Person" className={fieldClass} />
       </div>
 
+      <FormError message={error} className="sm:col-span-2" />
+
       <button
         type="submit"
+        disabled={sending}
         className="mt-2 inline-flex items-center justify-center rounded-full bg-leaf px-7 py-3.5 font-sans text-sm font-semibold text-pine-deep transition-colors hover:bg-leaf-deep sm:col-span-2 sm:w-fit"
       >
-        Submit
+        {sending ? "Sending…" : "Submit"}
       </button>
     </form>
   );

@@ -1,20 +1,16 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { FormError, Honeypot } from "@/components/forms/form-ui";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 const fieldClass =
   "w-full rounded-full border border-leaf bg-[#e2e8e5] px-5 py-[1.05rem] font-sans text-sm text-ink outline-none transition-all placeholder:text-ink/45 focus:border-leaf-deep focus:bg-white focus:ring-4 focus:ring-leaf/25";
 const labelClass = "font-sans text-sm font-bold text-pine-deep";
 
 export function HomeContactForm() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const { sent, sending, error, handleSubmit } = useLeadForm("contact");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sent");
-  }
-
-  if (status === "sent") {
+  if (sent) {
     return (
       <div className="rounded-2xl bg-mint p-8 text-center">
         <p className="font-display text-xl font-medium text-pine">Thank you — we&apos;ll be in touch shortly.</p>
@@ -25,6 +21,7 @@ export function HomeContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-x-4 gap-y-5 sm:grid-cols-2">
+      <Honeypot />
       <div className="flex flex-col gap-2">
         <label htmlFor="hc-first" className={labelClass}>
           First Name
@@ -90,11 +87,13 @@ export function HomeContactForm() {
           className={`resize-none rounded-[1.9rem] ${fieldClass}`}
         />
       </div>
+      <FormError message={error} className="sm:col-span-2" />
       <button
         type="submit"
+        disabled={sending}
         className="mt-1 inline-flex w-fit items-center justify-center rounded-full bg-leaf px-12 py-3.5 font-sans text-sm font-bold text-pine-deep transition-colors hover:bg-leaf-deep sm:col-span-2"
       >
-        Submit
+        {sending ? "Sending…" : "Submit"}
       </button>
     </form>
   );

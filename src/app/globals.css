@@ -304,3 +304,9 @@ body {
     animation: cta-glow 2.6s ease-out infinite;
   }
 }
+
+/* a form that is being sent: dim the button and show the wait cursor so people don't press it twice */
+button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}

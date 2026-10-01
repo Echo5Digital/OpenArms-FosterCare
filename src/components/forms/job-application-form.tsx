@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
-import { Required, fieldClass, labelClass } from "@/components/forms/form-ui";
+import { FormError, Honeypot, Required, fieldClass, labelClass } from "@/components/forms/form-ui";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 const positions = [
   "Licensed Professional Counselor - OKC",
@@ -11,14 +11,9 @@ const positions = [
 ];
 
 export function JobApplicationForm() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const { sent, sending, error, handleSubmit } = useLeadForm("job");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sent");
-  }
-
-  if (status === "sent") {
+  if (sent) {
     return (
       <div className="rounded-[1.5rem] bg-white/70 p-8 text-center">
         <p className="font-display text-xl font-medium text-pine">Application received — thank you!</p>
@@ -29,6 +24,7 @@ export function JobApplicationForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-x-2.5 gap-y-3 sm:grid-cols-2">
+      <Honeypot />
       <div className="flex flex-col gap-2">
         <label htmlFor="ja-first" className={labelClass}>
           First Name
@@ -133,11 +129,13 @@ export function JobApplicationForm() {
           className={`min-h-[3.75rem] resize-y rounded-[1.9rem] ${fieldClass}`}
         />
       </div>
+      <FormError message={error} className="sm:col-span-2" />
       <button
         type="submit"
+        disabled={sending}
         className="-mt-0.5 inline-flex w-full items-center justify-center rounded-full bg-leaf px-8 py-[0.55rem] font-sans text-[0.95rem] font-bold text-white transition-colors hover:bg-leaf-deep sm:col-span-2 sm:w-[14.5rem]"
       >
-        Submit
+        {sending ? "Sending…" : "Submit"}
       </button>
     </form>
   );

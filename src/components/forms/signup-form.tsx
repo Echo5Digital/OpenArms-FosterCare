@@ -1,31 +1,35 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { saveInquiryPrefill, sourceOptions } from "@/lib/inquiry-prefill";
-import { Required, fieldClass, labelClass } from "@/components/forms/form-ui";
+import { FormError, Honeypot, Required, fieldClass, labelClass } from "@/components/forms/form-ui";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 export function SignupForm() {
   const router = useRouter();
   const [sourceTouched, setSourceTouched] = useState(false);
 
-  // carry what was typed over to the Recruitment Inquiry form, which opens pre-filled
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const get = (key: string) => String(data.get(key) ?? "").trim();
+  // save the lead first, then carry what was typed over to the Recruitment Inquiry form, which opens pre-filled
+  const { sending, sent, error, handleSubmit } = useLeadForm("signup", {
+    onSaved: ({ followUp }, form) => {
+      const data = new FormData(form);
+      const get = (key: string) => String(data.get(key) ?? "").trim();
 
-    saveInquiryPrefill({
-      name: [get("firstName"), get("lastName")].filter(Boolean).join(" "),
-      email: get("email"),
-      phone: get("phone"),
-      source: get("source"),
-    });
-    router.push("/inquiry-form");
-  }
+      saveInquiryPrefill({
+        name: [get("firstName"), get("lastName")].filter(Boolean).join(" "),
+        email: get("email"),
+        phone: get("phone"),
+        source: get("source"),
+        followUp,
+      });
+      router.push("/inquiry-form");
+    },
+  });
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-x-2.5 gap-y-3 sm:grid-cols-2">
+      <Honeypot />
       <div className="flex flex-col gap-2">
         <label htmlFor="su-first" className={labelClass}>
           First Name
@@ -121,11 +125,13 @@ export function SignupForm() {
           className={`min-h-[3.75rem] resize-y rounded-[1.9rem] ${fieldClass}`}
         />
       </div>
+      <FormError message={error} className="sm:col-span-2" />
       <button
         type="submit"
+        disabled={sending || sent}
         className="-mt-0.5 inline-flex w-full items-center justify-center rounded-full bg-leaf px-8 py-[0.55rem] font-sans text-[0.95rem] font-bold text-white transition-colors hover:bg-leaf-deep sm:col-span-2 sm:w-[31rem]"
       >
-        Submit
+        {sending || sent ? "Sending…" : "Submit"}
       </button>
     </form>
   );

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useSyncExternalStore, type ChangeEvent, type FormEvent, type ReactNode } from "react";
+import { useState, useSyncExternalStore, type ChangeEvent, type ReactNode } from "react";
 import { clearInquiryPrefill, sourceOptions, useInquiryPrefill } from "@/lib/inquiry-prefill";
-import { Required, fieldClass, labelClass } from "@/components/forms/form-ui";
+import { FormError, Honeypot, Required, fieldClass, labelClass } from "@/components/forms/form-ui";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 const choiceBase =
   "h-5 w-5 shrink-0 cursor-pointer appearance-none border-2 border-pine-deep/80 bg-white outline-none transition-colors checked:border-leaf-deep checked:bg-leaf-deep checked:shadow-[inset_0_0_0_3px_#fff] focus-visible:ring-4 focus-visible:ring-leaf/30";
@@ -127,7 +128,6 @@ function nowStamp() {
 const noSubscribe = () => () => {};
 
 export function RecruitmentInquiryForm() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
   const [sourceTouched, setSourceTouched] = useState(false);
   const [gender, setGender] = useState<Record<number, string>>({ 1: genders[0], 2: genders[0] });
   const [edits, setEdits] = useState<Partial<Values>>({});
@@ -148,14 +148,16 @@ export function RecruitmentInquiryForm() {
     (key: keyof Values) => (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
       setEdits((v) => ({ ...v, [key]: e.target.value }));
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    clearInquiryPrefill();
-    setStatus("sent");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  // adds this inquiry to the Sign Up lead it followed on from (one lead, not two), and forgets the saved Sign Up details once it is sent
+  const { sent, sending, error, handleSubmit } = useLeadForm("inquiry", {
+    followUp: () => prefill?.followUp,
+    onSaved: () => {
+      clearInquiryPrefill();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+  });
 
-  if (status === "sent") {
+  if (sent) {
     return (
       <div className="mt-8 rounded-[1.5rem] bg-white/70 p-10 text-center">
         <p className="font-display text-2xl font-medium text-pine">Inquiry received.</p>
@@ -166,6 +168,7 @@ export function RecruitmentInquiryForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-x-2.5 gap-y-4 md:grid-cols-12">
+      <Honeypot />
       <Field id="iq-name" label="Name" required span="md:col-span-4">
         <input
           id="iq-name"
@@ -380,11 +383,14 @@ export function RecruitmentInquiryForm() {
         <textarea id="iq-summary" name="summary" rows={1} className={areaClass} />
       </Field>
 
+      <FormError message={error} className="md:col-span-12" />
+
       <button
         type="submit"
+        disabled={sending}
         className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-leaf px-8 py-[0.55rem] font-sans text-[0.95rem] font-bold text-white transition-colors hover:bg-leaf-deep md:col-span-12 md:w-[31rem]"
       >
-        Submit
+        {sending ? "Sending…" : "Submit"}
       </button>
     </form>
   );

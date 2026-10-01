@@ -1,18 +1,14 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { FormError, Honeypot } from "@/components/forms/form-ui";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 const services = ["Foster Parent Training", "Support for School Staff", "Post-Placement Therapy"];
 
 export function AppointmentRequestForm() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const { sent, sending, error, handleSubmit } = useLeadForm("appointment");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sent");
-  }
-
-  if (status === "sent") {
+  if (sent) {
     return (
       <div className="rounded-2xl bg-mint p-8 text-center">
         <p className="font-display text-xl font-medium text-pine">Thank you — we&apos;ll be in touch shortly.</p>
@@ -27,6 +23,7 @@ export function AppointmentRequestForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2">
+      <Honeypot />
       <div className="flex flex-col gap-1.5">
         <label className="font-sans text-sm font-semibold text-pine">Name</label>
         <div className="relative">
@@ -115,8 +112,10 @@ export function AppointmentRequestForm() {
           </select>
         </div>
       </div>
+      <FormError message={error} className="sm:col-span-2" />
       <button
         type="submit"
+        disabled={sending}
         className="mt-2 inline-flex items-center justify-center gap-2.5 self-start rounded-full bg-pine-deep px-7 py-3.5 font-sans text-sm font-semibold text-leaf transition-colors hover:bg-pine sm:col-span-2"
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" aria-hidden>
@@ -129,7 +128,7 @@ export function AppointmentRequestForm() {
             strokeLinejoin="round"
           />
         </svg>
-        Make an Appointment
+        {sending ? "Sending…" : "Make an Appointment"}
       </button>
     </form>
   );

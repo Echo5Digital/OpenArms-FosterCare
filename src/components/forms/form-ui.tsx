@@ -12,3 +12,28 @@ export function Required() {
     </span>
   );
 }
+
+/** Hidden trap for spam bots: people never see or fill it, so anything typed in is thrown away by the server. */
+export function Honeypot() {
+  return (
+    <div aria-hidden className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden">
+      <label>
+        Leave this field empty
+        <input type="text" name="company_fax" tabIndex={-1} autoComplete="off" defaultValue="" />
+      </label>
+    </div>
+  );
+}
+
+/** Shown under a form when sending failed. */
+export function FormError({ message, className = "" }: { message: string | null; className?: string }) {
+  if (!message) return null;
+  return (
+    <p
+      role="alert"
+      className={`rounded-2xl bg-red-50 px-4 py-3 font-sans text-sm font-medium text-red-700 ring-1 ring-red-200 ${className}`}
+    >
+      {message}
+    </p>
+  );
+}

@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 import { graph, organizationSchema, websiteSchema } from "@/lib/schema";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteChrome } from "@/components/layout/site-chrome";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -54,9 +55,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(graph(organizationSchema(), websiteSchema())),
           }}
         />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <SiteChrome header={<SiteHeader />} footer={<SiteFooter />}>
+          {children}
+        </SiteChrome>
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { FormError, Honeypot } from "@/components/forms/form-ui";
+import { useLeadForm } from "@/lib/use-lead-form";
 
 const sources = ["Referred by someone I know", "Google", "Facebook", "Instagram", "Youtube", "Twitter"];
 
@@ -9,14 +10,9 @@ const fieldClass =
 const labelClass = "font-sans text-sm font-semibold text-white";
 
 export function HealingHopeContactForm() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const { sent, sending, error, handleSubmit } = useLeadForm("contact");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sent");
-  }
-
-  if (status === "sent") {
+  if (sent) {
     return (
       <div className="rounded-3xl bg-white/10 p-10 text-center backdrop-blur-sm">
         <p className="font-display text-2xl font-medium text-white">Thank you — we&apos;ll be in touch shortly.</p>
@@ -26,6 +22,7 @@ export function HealingHopeContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-x-4 gap-y-5 sm:grid-cols-2">
+      <Honeypot />
       <div className="flex flex-col gap-2">
         <label htmlFor="hh-first" className={labelClass}>
           First Name
@@ -74,11 +71,13 @@ export function HealingHopeContactForm() {
           className={`resize-none rounded-3xl ${fieldClass}`}
         />
       </div>
+      <FormError message={error} className="sm:col-span-2" />
       <button
         type="submit"
+        disabled={sending}
         className="mt-1 inline-flex w-fit items-center justify-center rounded-full bg-white px-9 py-3.5 font-sans text-sm font-bold text-leaf-deep shadow-lg transition-all hover:-translate-y-0.5 hover:bg-leaf hover:text-pine-deep sm:col-span-2"
       >
-        Submit
+        {sending ? "Sending…" : "Submit"}
       </button>
     </form>
   );

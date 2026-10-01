@@ -13,6 +13,8 @@ export type InquiryPrefill = {
   email?: string;
   phone?: string;
   source?: string;
+  /** Secret from the saved Sign Up, so the inquiry is added to that same lead on the dashboard. */
+  followUp?: string;
 };
 
 /** Options for "How did you hear about us?" — shared by the Sign Up and Inquiry forms. */
@@ -47,7 +49,7 @@ function parse(raw: string | null): InquiryPrefill | null {
   try {
     const data = JSON.parse(raw) as Record<string, unknown>;
     const pick = (k: string) => (typeof data[k] === "string" ? (data[k] as string) : undefined);
-    return { name: pick("name"), email: pick("email"), phone: pick("phone"), source: pick("source") };
+    return { name: pick("name"), email: pick("email"), phone: pick("phone"), source: pick("source"), followUp: pick("followUp") };
   } catch {
     return null;
   }
