@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
-const services = ["Foster Parent Training", "Support for School Staff", "Child Welfare Advocacy", "Post-Placement Therapy"];
+const services = ["Foster Parent Training", "Support for School Staff", "Post-Placement Therapy"];
 
 export function AppointmentRequestForm() {
   const [status, setStatus] = useState<"idle" | "sent">("idle");

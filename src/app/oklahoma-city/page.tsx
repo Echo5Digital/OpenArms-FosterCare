@@ -32,6 +32,10 @@ export default function OklahomaCityPage() {
       <LocationPageTemplate
         office={office}
         heroBreadcrumb={[{ label: "Home", href: "/" }, { label: "Oklahoma" }]}
+        appointmentForm={{
+          src: "/front-view-grandmother-granddaughter-100kb.png",
+          alt: "A grandmother holding her smiling granddaughter",
+        }}
         intro="Our charge is to give the loftiest position of care and support to children in need and foster families throughout Oklahoma City. We specialize in remedial foster care services, delivering compassionate, individualized support to children who bear emotional and cerebral mending. Whether you are considering getting a foster parent or seeking technical foster care services, Open Arms Foster Care is then to guide you every step of the way across the state of Oklahoma City."
         whyChoose={[
           {

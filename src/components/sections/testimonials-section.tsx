@@ -73,7 +73,7 @@ export function TestimonialsSection() {
         <span className="inline-flex items-center rounded-full bg-leaf px-5 py-2 font-sans text-sm font-semibold text-pine-deep shadow-sm">
           Testimonials
         </span>
-        <h2 className="mt-6 font-display text-4xl font-medium tracking-tight text-cream sm:text-5xl">
+        <h2 className="mt-6 font-sans text-[2.15rem] font-bold leading-tight tracking-tight text-cream sm:text-[2.8rem]">
           Hear from our clients
         </h2>
         <p className="mt-4 text-lg text-cream/70">Our clients love working with us, just read what they have to say!</p>

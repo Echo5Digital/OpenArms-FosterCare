@@ -31,6 +31,12 @@ export default function TulsaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <LocationPageTemplate
         office={office}
+        appointmentForm={{
+          src: "/calm-african-american-mother-child-beach-mother-son-casual-clothes-sitting-blanket-hugging-family-relaxation-nature-concept-100kb.png",
+          alt: "A mother hugging her son while they sit together on a blanket",
+          className: "object-cover object-bottom",
+          boxClassName: "aspect-[2/3] max-w-[20rem] sm:max-w-[22rem] lg:max-w-[26rem]",
+        }}
         intro="Welcome to Open Arms Foster Care, where our mission is to provide compassionate, professional foster care services in Tulsa, OK. Whether you're interested in becoming a foster parent or you're already part of the system and need support, we are here to guide you through every step of the process."
         whyChoose={[
           {

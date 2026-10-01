@@ -4,6 +4,10 @@ import { SupportShowcase } from "@/components/sections/support-showcase";
 import { StepsTimeline } from "@/components/sections/steps-timeline";
 import { OngoingSupportSection, type OngoingSupportProps } from "@/components/sections/ongoing-support-section";
 import { LocationCta } from "@/components/sections/location-cta";
+import {
+  LocationAppointmentSection,
+  type LocationAppointmentPhoto,
+} from "@/components/sections/location-appointment-section";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Reveal } from "@/components/ui/reveal";
 import { siteConfig, type Office } from "@/lib/site-config";
@@ -52,6 +56,7 @@ export function LocationPageTemplate({
   office,
   intro,
   heroBreadcrumb,
+  appointmentForm,
   therapeuticLocation,
   supportHeading,
   supportAlignHeader,
@@ -66,12 +71,16 @@ export function LocationPageTemplate({
   therapeutic,
   supportFeatures,
   emergency,
+  emergencyLocation,
   becomeParentSteps,
   closing,
+  closingHeading,
 }: {
   office: Office;
   intro: string;
   heroBreadcrumb?: { label: string; href?: string }[];
+  /** Shows the "To Healing & Hope" appointment form section under the banner, using this photo (default: hidden). */
+  appointmentForm?: LocationAppointmentPhoto;
   /** Overrides the highlighted part of the therapeutic section heading (default: "<city>, OK"). */
   therapeuticLocation?: string;
   /** Overrides the support-services heading (default: "Foster Parent Support Services in <city>"). */
@@ -97,8 +106,12 @@ export function LocationPageTemplate({
   supportFeatures: Feature[];
   /** Text for the dark "Emergency Foster Care" section. Leave out to hide the section on that page. */
   emergency?: ReactNode[];
+  /** Overrides the highlighted part of the emergency section heading (default: "<city>"). */
+  emergencyLocation?: string;
   becomeParentSteps: Feature[];
   closing?: string;
+  /** Optional small heading shown above the closing paragraph. */
+  closingHeading?: string;
 }) {
   return (
     <>
@@ -111,6 +124,8 @@ export function LocationPageTemplate({
         imagePosition={heroPhotos[office.id]?.position}
         imageFit={heroPhotos[office.id]?.fit}
       />
+
+      {appointmentForm && <LocationAppointmentSection photo={appointmentForm} />}
 
       <section className="relative overflow-x-clip bg-[rgb(243,249,237)]">
         <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-leaf/20 blur-3xl" />
@@ -463,7 +478,7 @@ export function LocationPageTemplate({
               </div>
 
               <h2 className="mt-5 max-w-xl font-sans text-[2rem] font-bold leading-[1.12] tracking-tight text-cream sm:text-[2.8rem]">
-                Emergency Foster Care in <span className="text-leaf">{office.city}</span>
+                Emergency Foster Care in <span className="text-leaf">{emergencyLocation ?? office.city}</span>
               </h2>
 
               <div className="mt-8 max-w-xl space-y-5">
@@ -585,9 +600,16 @@ export function LocationPageTemplate({
 
           {closing && (
             <Reveal className="mt-14">
-              <p className="max-w-2xl border-l-4 border-leaf pl-5 font-display text-xl italic leading-snug text-pine">
-                {closing}
-              </p>
+              {closingHeading ? (
+                <div className="max-w-3xl border-l-4 border-leaf pl-5">
+                  <h3 className="font-sans text-xl font-bold tracking-tight text-pine sm:text-2xl">{closingHeading}</h3>
+                  <p className="mt-3 font-display text-xl italic leading-snug text-pine">{closing}</p>
+                </div>
+              ) : (
+                <p className="max-w-2xl border-l-4 border-leaf pl-5 font-display text-xl italic leading-snug text-pine">
+                  {closing}
+                </p>
+              )}
             </Reveal>
           )}
         </div>

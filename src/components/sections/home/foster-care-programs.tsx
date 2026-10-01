@@ -61,7 +61,7 @@ export function FosterCarePrograms() {
               </div>
 
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                <h3 className="font-display text-2xl font-medium text-cream sm:text-3xl">{program.title}</h3>
+                <h3 className="font-sans text-2xl font-bold leading-tight tracking-tight text-cream sm:text-3xl">{program.title}</h3>
                 {program.body && (
                   <p className="mt-4 text-[1.02rem] leading-relaxed text-cream/80">{program.body}</p>
                 )}

@@ -19,6 +19,7 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { BecomingFosterParent } from "@/components/sections/home/becoming-foster-parent";
 import { EmergencyFosterCare } from "@/components/sections/home/emergency-foster-care";
 import { TeamSection } from "@/components/sections/team-section";
+import { TherapeuticFosterCare } from "@/components/sections/home/therapeutic-foster-care";
 import { HealingHopeSection } from "@/components/sections/healing-hope-section";
 import { OfficesSection } from "@/components/sections/offices-section";
 import { ClosingCta } from "@/components/sections/home/closing-cta";
@@ -71,6 +72,7 @@ export default function HomePage() {
       <WhyOpenArms />
       <TestimonialsSection />
       <TeamSection />
+      <TherapeuticFosterCare />
       <BecomingFosterParent />
       <EmergencyFosterCare />
       <FaqSection
@@ -88,7 +90,7 @@ export default function HomePage() {
           alt: "A grandmother sharing a warm, playful moment with her grandson at home",
         }}
       />
-      <HealingHopeSection />
+      <HealingHopeSection form="contact" />
       <OfficesSection />
       <ClosingCta />
     </>
