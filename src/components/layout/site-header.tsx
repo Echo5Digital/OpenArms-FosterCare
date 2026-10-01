@@ -25,7 +25,7 @@ export function SiteHeader() {
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
           {mainNav.map((item) =>
             item.children ? (
-              <NavDropdown key={item.label} label={item.label} items={item.children} />
+              <NavDropdown key={item.label} label={item.label} items={item.children} menu={item.menu} />
             ) : (
               <Link
                 key={item.label}

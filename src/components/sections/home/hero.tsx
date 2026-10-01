@@ -142,7 +142,7 @@ export function Hero() {
               </Link>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 font-sans text-[0.95rem] font-semibold text-pine ring-1 ring-inset ring-pine/25 transition-colors hover:bg-leaf hover:text-pine-deep hover:ring-leaf"
+                className="inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 font-sans text-[0.95rem] font-semibold text-pine ring-1 ring-inset ring-pine/25 transition-colors max-sm:bg-leaf max-sm:text-pine-deep max-sm:ring-leaf hover:bg-leaf hover:text-pine-deep hover:ring-leaf"
               >
                 Talk With Our Team
               </Link>

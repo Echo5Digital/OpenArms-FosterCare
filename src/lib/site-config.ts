@@ -75,12 +75,19 @@ export const offices: Office[] = [
 
 export type NavLink = { label: string; href: string };
 
-export const mainNav: (NavLink & { children?: NavLink[] })[] = [
+export type NavItem = NavLink & {
+  children?: NavLink[];
+  /** Picks the photo shown with the links in the header dropdown. */
+  menu?: "services" | "locations";
+};
+
+export const mainNav: NavItem[] = [
   { label: "About Us", href: "/about-us" },
   { label: "Therapeutic Foster Care", href: "/therapeutic-foster-care-agency" },
   {
     label: "Services",
     href: "/foster-parent-training",
+    menu: "services",
     children: [
       { label: "Foster Parent Training", href: "/foster-parent-training" },
       { label: "Post-Placement Therapy", href: "/post-placement-therapy" },
@@ -91,6 +98,7 @@ export const mainNav: (NavLink & { children?: NavLink[] })[] = [
   {
     label: "Locations",
     href: "/oklahoma-city",
+    menu: "locations",
     children: [
       { label: "Oklahoma City", href: "/oklahoma-city" },
       { label: "Tulsa", href: "/tulsa" },

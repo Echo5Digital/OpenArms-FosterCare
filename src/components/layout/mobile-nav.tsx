@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { mainNav, siteConfig } from "@/lib/site-config";
+import { NavMenuCard } from "@/components/layout/nav-menu-card";
 
 export function MobileNav({ dark = false }: { dark?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -81,18 +82,14 @@ export function MobileNav({ dark = false }: { dark?: boolean }) {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="ml-3 flex flex-col gap-0.5 border-l-2 border-leaf/50 pb-2 pl-4">
-                          {children.map((child) => (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              onClick={() => setOpen(false)}
-                              tabIndex={isOpen ? 0 : -1}
-                              className="py-1.5 font-sans text-sm text-slate transition-colors hover:text-pine"
-                            >
-                              {child.label}
-                            </Link>
-                          ))}
+                        <div className="pb-2 pt-2">
+                          <NavMenuCard
+                            variant="phone"
+                            menu={item.menu ?? "services"}
+                            items={children}
+                            onNavigate={() => setOpen(false)}
+                            tabbable={isOpen}
+                          />
                         </div>
                       </div>
                     </div>
