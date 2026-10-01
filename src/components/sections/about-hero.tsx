@@ -36,9 +36,9 @@ export function AboutHero() {
         <circle cx="400" cy="400" r="210" strokeWidth="1" />
       </svg>
 
-      <div className="relative mx-auto grid max-w-[1400px] items-center gap-14 px-5 pb-20 pt-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:pb-28 lg:pt-20">
-        {/* copy */}
-        <div>
+      <div className="relative mx-auto flex max-w-[1400px] flex-col gap-10 px-5 pb-20 pt-14 sm:px-8 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:grid-rows-[1fr_auto_auto_1fr] lg:gap-x-10 lg:gap-y-0 lg:pb-28 lg:pt-20">
+        {/* heading */}
+        <div className="lg:col-start-1 lg:row-start-2">
           <Reveal>
             <nav
               aria-label="Breadcrumb"
@@ -63,39 +63,10 @@ export function AboutHero() {
               Across Oklahoma
             </h1>
           </Reveal>
-
-          <Reveal delay={200}>
-            <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-white/80 sm:text-lg">
-              We focus on therapeutic foster care, supportive foster care, and intensive treatment family care to
-              ensure children receive the best emotional, behavioral, and social support.
-            </p>
-          </Reveal>
-
-          <Reveal delay={300}>
-            <ul className="mt-8 max-w-xl space-y-3 rounded-3xl border border-white/15 bg-white/[0.07] p-5 backdrop-blur-md sm:p-6">
-              {checklist.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[0.97rem] font-medium leading-snug text-white">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-leaf text-pine-deep shadow-[0_0_0_4px_rgba(141,197,64,0.2)]">
-                    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" aria-hidden>
-                      <path
-                        d="M5 13l4 4L19 7"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={3}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
         </div>
 
         {/* image mosaic */}
-        <Reveal delay={150} from="right">
+        <Reveal delay={150} from="right" className="lg:col-start-2 lg:row-span-4 lg:row-start-1 lg:self-center">
           <div className="relative mx-auto h-[26rem] w-full max-w-[34rem] sm:h-[32rem] lg:h-[35rem]">
             <div className="animate-gentle-bob absolute bottom-[4%] left-0 top-[6%] w-[54%] overflow-hidden rounded-t-[999px] rounded-b-[2rem] border-4 border-white/20 shadow-[0_35px_70px_-25px_rgba(0,0,0,0.6)]">
               <Image
@@ -137,6 +108,38 @@ export function AboutHero() {
             </span>
           </div>
         </Reveal>
+
+        {/* intro + checklist */}
+        <div className="lg:col-start-1 lg:row-start-3">
+          <Reveal delay={200}>
+            <p className="max-w-xl text-[1.05rem] leading-relaxed lg:mt-6 text-white/80 sm:text-lg">
+              We focus on therapeutic foster care, supportive foster care, and intensive treatment family care to
+              ensure children receive the best emotional, behavioral, and social support.
+            </p>
+          </Reveal>
+
+          <Reveal delay={300}>
+            <ul className="mt-8 max-w-xl space-y-3 rounded-3xl border border-white/15 bg-white/[0.07] p-5 backdrop-blur-md sm:p-6">
+              {checklist.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-[0.97rem] font-medium leading-snug text-white">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-leaf text-pine-deep shadow-[0_0_0_4px_rgba(141,197,64,0.2)]">
+                    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" aria-hidden>
+                      <path
+                        d="M5 13l4 4L19 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={3}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

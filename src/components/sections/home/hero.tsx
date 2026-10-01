@@ -130,13 +130,13 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/sign-up-now"
-                className="inline-flex items-center gap-2.5 rounded-full bg-pine px-7 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-colors hover:bg-pine-deep"
+                className="inline-flex items-center gap-2.5 rounded-full bg-pine px-7 py-3.5 font-sans text-[0.95rem] font-semibold text-cream transition-colors hover:bg-leaf hover:text-pine-deep"
               >
                 Start Your Foster Care Journey
               </Link>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 font-sans text-[0.95rem] font-semibold text-pine ring-1 ring-inset ring-pine/25 transition-colors hover:ring-pine/60"
+                className="inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 font-sans text-[0.95rem] font-semibold text-pine ring-1 ring-inset ring-pine/25 transition-colors hover:bg-leaf hover:text-pine-deep hover:ring-leaf"
               >
                 Talk With Our Team
               </Link>
