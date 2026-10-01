@@ -6,7 +6,7 @@ import { OngoingSupportSection, type OngoingSupportProps } from "@/components/se
 import { LocationCta } from "@/components/sections/location-cta";
 import {
   LocationAppointmentSection,
-  type LocationAppointmentPhoto,
+  type LocationAppointmentConfig,
 } from "@/components/sections/location-appointment-section";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Reveal } from "@/components/ui/reveal";
@@ -80,7 +80,7 @@ export function LocationPageTemplate({
   intro: string;
   heroBreadcrumb?: { label: string; href?: string }[];
   /** Shows the "To Healing & Hope" appointment form section under the banner, using this photo (default: hidden). */
-  appointmentForm?: LocationAppointmentPhoto;
+  appointmentForm?: LocationAppointmentConfig;
   /** Overrides the highlighted part of the therapeutic section heading (default: "<city>, OK"). */
   therapeuticLocation?: string;
   /** Overrides the support-services heading (default: "Foster Parent Support Services in <city>"). */

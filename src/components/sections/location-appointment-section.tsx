@@ -1,17 +1,20 @@
 import Image from "next/image";
+import { HomeContactForm } from "@/components/forms/home-contact-form";
 import { LocationAppointmentForm } from "@/components/forms/location-appointment-form";
 import { Reveal } from "@/components/ui/reveal";
 
-export type LocationAppointmentPhoto = {
+export type LocationAppointmentConfig = {
   src: string;
   alt: string;
+  /** Which fields to show: appointment (name, phone, date, time, service) or contact (name, email, phone, message). Default: appointment. */
+  form?: "appointment" | "contact";
   /** Object-fit / position classes for the cut-out (default suits a wide photo with the people on the left). */
   className?: string;
   /** Aspect ratio + max widths of the photo block (default suits a wide photo; use the photo's own ratio for a tall one). */
   boxClassName?: string;
 };
 
-export function LocationAppointmentSection({ photo }: { photo: LocationAppointmentPhoto }) {
+export function LocationAppointmentSection({ photo }: { photo: LocationAppointmentConfig }) {
   return (
     <section className="relative overflow-x-clip bg-[rgb(243,249,237)]">
       <div className="pointer-events-none absolute -right-28 top-10 h-80 w-80 rounded-full bg-leaf/20 blur-3xl" />
@@ -66,7 +69,7 @@ export function LocationAppointmentSection({ photo }: { photo: LocationAppointme
           {/* form */}
           <Reveal delay={150} className="lg:col-start-2 lg:row-start-3 lg:mt-8">
             <div className="rounded-[2rem_2rem_5rem_2rem] border-4 border-white bg-[#ebf0ee] p-6 shadow-[0_35px_70px_-30px_rgba(25,53,45,0.5)] sm:p-9">
-              <LocationAppointmentForm />
+              {photo.form === "contact" ? <HomeContactForm /> : <LocationAppointmentForm />}
             </div>
           </Reveal>
         </div>
