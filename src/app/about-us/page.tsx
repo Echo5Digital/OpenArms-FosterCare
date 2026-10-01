@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema, faqPageSchema } from "@/lib/schema";
+import { pageSchema } from "@/lib/schema";
 import { aboutFaqs } from "@/lib/content/faqs";
 import { AboutHero } from "@/components/sections/about-hero";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -23,14 +22,14 @@ export const metadata: Metadata = {
 };
 
 export default function AboutUsPage() {
-  const schema = graph(
-    webPageSchema({
-      url: `${siteConfig.url}/about-us/`,
-      name: "About Us - Open Arms Foster Care | Therapeutic Foster Care Agency | Oklahoma City",
-      description,
-    }),
-    faqPageSchema(aboutFaqs),
-  );
+  const schema = pageSchema({
+    path: "/about-us",
+    name: "About Us - Open Arms Foster Care | Therapeutic Foster Care Agency | Oklahoma City",
+    description,
+    type: "AboutPage",
+    breadcrumb: "About Us",
+    faqs: aboutFaqs,
+  });
 
   return (
     <>

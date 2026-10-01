@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { siteConfig, offices } from "@/lib/site-config";
-import { graph, webPageSchema, localBusinessSchema } from "@/lib/schema";
+import { offices } from "@/lib/site-config";
+import { pageSchema, localBusinessSchema, localBusinessId } from "@/lib/schema";
 import { LocationPageTemplate } from "@/components/sections/location-page-template";
 
 const office = offices.find((o) => o.id === "oklahoma-city")!;
@@ -21,10 +21,14 @@ export const metadata: Metadata = {
 };
 
 export default function OklahomaCityPage() {
-  const schema = graph(
-    webPageSchema({ url: `${siteConfig.url}/oklahoma-city/`, name: "Oklahoma City - Open Arms Foster Care", description }),
-    localBusinessSchema("oklahoma-city"),
-  );
+  const schema = pageSchema({
+    path: "/oklahoma-city",
+    name: "Oklahoma City - Open Arms Foster Care",
+    description,
+    breadcrumb: "Oklahoma City",
+    aboutId: localBusinessId("oklahoma-city"),
+    extra: [localBusinessSchema("oklahoma-city")],
+  });
 
   return (
     <>

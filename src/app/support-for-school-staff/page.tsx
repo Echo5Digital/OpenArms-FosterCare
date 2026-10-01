@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema, faqPageSchema } from "@/lib/schema";
+import { pageSchema } from "@/lib/schema";
 import { schoolStaffFaqs } from "@/lib/content/faqs";
 import { SupportForSchoolStaffPage as SupportForSchoolStaffContent } from "@/components/sections/support-for-school-staff-page";
 
@@ -19,14 +18,14 @@ export const metadata: Metadata = {
 };
 
 export default function SupportForSchoolStaffPage() {
-  const schema = graph(
-    webPageSchema({
-      url: `${siteConfig.url}/support-for-school-staff/`,
-      name: "Support for School Staff | Open Arms Foster Care",
-      description,
-    }),
-    faqPageSchema(schoolStaffFaqs),
-  );
+  const schema = pageSchema({
+    path: "/support-for-school-staff",
+    name: "Support for School Staff | Open Arms Foster Care",
+    description,
+    breadcrumb: "Support for School Staff",
+    service: { serviceType: "Support for School Staff" },
+    faqs: schoolStaffFaqs,
+  });
 
   return (
     <>

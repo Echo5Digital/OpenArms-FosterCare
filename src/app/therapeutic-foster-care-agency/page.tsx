@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { siteConfig, offices } from "@/lib/site-config";
-import { graph, webPageSchema, faqPageSchema } from "@/lib/schema";
+import { pageSchema } from "@/lib/schema";
 import { therapeuticFaqs } from "@/lib/content/faqs";
 import { TherapeuticHero } from "@/components/sections/therapeutic-hero";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -89,14 +89,14 @@ const locations = [
 ];
 
 export default function TherapeuticFosterCarePage() {
-  const schema = graph(
-    webPageSchema({
-      url: `${siteConfig.url}/therapeutic-foster-care-agency/`,
-      name: "Become a Therapeutic Foster Parent in Oklahoma",
-      description,
-    }),
-    faqPageSchema(therapeuticFaqs),
-  );
+  const schema = pageSchema({
+    path: "/therapeutic-foster-care-agency",
+    name: "Become a Therapeutic Foster Parent in Oklahoma",
+    description,
+    breadcrumb: "Therapeutic Foster Care",
+    service: { serviceType: "Therapeutic Foster Care" },
+    faqs: therapeuticFaqs,
+  });
 
   return (
     <>

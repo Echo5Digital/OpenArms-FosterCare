@@ -8,52 +8,58 @@ type Job = {
   requirements: string[];
 };
 
+/** Green-to-dark bars that open into the role's details. All start closed. */
 export function JobAccordion({ jobs }: { jobs: Job[] }) {
-  const [openIndex, setOpenIndex] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number>(-1);
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-2.5">
       {jobs.map((job, i) => {
         const isOpen = openIndex === i;
         return (
           <div
             key={job.title}
-            className={`overflow-hidden rounded-[0.5rem_1.75rem_0.5rem_1.75rem] border transition-colors ${
-              isOpen ? "border-leaf/50 bg-mint/50" : "border-pine/10 bg-white"
+            className={`overflow-hidden rounded-[1.75rem] bg-white transition-shadow duration-300 ${
+              isOpen ? "shadow-[0_26px_50px_-28px_rgba(25,53,45,0.55)]" : "shadow-[0_10px_24px_-16px_rgba(25,53,45,0.5)]"
             }`}
           >
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? -1 : i)}
-              className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
               aria-expanded={isOpen}
+              className="group flex w-full items-center gap-3.5 bg-gradient-to-r from-leaf from-40% to-pine-deep py-3 pl-3.5 pr-6 text-left transition-[filter] duration-300 hover:brightness-105"
             >
-              <span className="font-display text-lg font-medium text-pine">{job.title}</span>
               <span
-                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-pine/25 text-pine transition-transform duration-300 ${
-                  isOpen ? "rotate-45 border-leaf bg-leaf text-pine-deep" : ""
+                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-300 group-hover:bg-white group-hover:text-pine-deep ${
+                  isOpen ? "rotate-45 bg-white text-pine-deep" : ""
                 }`}
               >
-                <svg viewBox="0 0 12 12" className="h-3 w-3">
-                  <path d="M6 1v10M1 6h10" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" />
+                <svg viewBox="0 0 12 12" className="h-3 w-3" aria-hidden>
+                  <path d="M6 1v10M1 6h10" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" />
                 </svg>
               </span>
+              <span className="font-sans text-[1.05rem] font-bold text-white sm:text-xl">{job.title}</span>
             </button>
+
             <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
               <div className="overflow-hidden">
-                <div className="px-6 pb-6">
-                  <p className="text-sm leading-relaxed text-slate">{job.body}</p>
-                  <p className="mt-4 font-sans text-xs font-semibold uppercase tracking-wide text-leaf-deep">
-                    General Requirements
-                  </p>
-                  <ul className="mt-2 space-y-1.5">
-                    {job.requirements.map((r) => (
-                      <li key={r} className="flex items-start gap-2 text-sm leading-relaxed text-slate">
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-leaf-deep" />
-                        {r}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="px-6 pb-7 pt-6 sm:px-8">
+                  <p className="max-w-3xl text-[1.02rem] leading-relaxed text-ink/80">{job.body}</p>
+                  {job.requirements.length > 0 && (
+                    <>
+                      <p className="mt-5 font-sans text-sm font-bold uppercase tracking-wide text-leaf-deep">
+                        General Requirements
+                      </p>
+                      <ul className="mt-3 space-y-2">
+                        {job.requirements.map((r) => (
+                          <li key={r} className="flex items-start gap-3 text-[1.02rem] leading-relaxed text-ink/80">
+                            <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-leaf" />
+                            {r}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

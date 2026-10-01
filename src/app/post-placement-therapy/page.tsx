@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema, faqPageSchema } from "@/lib/schema";
+import { pageSchema } from "@/lib/schema";
 import { postPlacementFaqs } from "@/lib/content/faqs";
 import { PostPlacementTherapyPage as PostPlacementTherapyContent } from "@/components/sections/post-placement-therapy-page";
 
@@ -19,14 +18,14 @@ export const metadata: Metadata = {
 };
 
 export default function PostPlacementTherapyPage() {
-  const schema = graph(
-    webPageSchema({
-      url: `${siteConfig.url}/post-placement-therapy/`,
-      name: "Post-Placement Therapy | Open Arms Foster Care",
-      description,
-    }),
-    faqPageSchema(postPlacementFaqs),
-  );
+  const schema = pageSchema({
+    path: "/post-placement-therapy",
+    name: "Post-Placement Therapy | Open Arms Foster Care",
+    description,
+    breadcrumb: "Post-Placement Therapy",
+    service: { serviceType: "Post-Placement Therapy" },
+    faqs: postPlacementFaqs,
+  });
 
   return (
     <>

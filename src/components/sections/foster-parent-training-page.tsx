@@ -82,7 +82,7 @@ export function FosterParentTrainingPage({ faqs }: { faqs: Faq[] }) {
         <div className="mx-auto max-w-[1400px]">
           <SectionHeading
             eyebrow="What You'll Learn"
-            title="Preparing You for Every Step of the Journey"
+            title="Ongoing Support and Resources"
             align="center"
             className="mx-auto"
             titleClassName={headingFont}
@@ -93,7 +93,7 @@ export function FosterParentTrainingPage({ faqs }: { faqs: Faq[] }) {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-xl lg:aspect-auto lg:h-full lg:min-h-[420px]">
                 <Image
                   src="/child-doing-therapy-session-with-psychologist-100kb.jpg"
-                  alt="Foster parent training in session"
+                  alt="A young girl drawing during a session with a psychologist"
                   fill
                   sizes="(min-width: 1024px) 45vw, 90vw"
                   className="object-contain"

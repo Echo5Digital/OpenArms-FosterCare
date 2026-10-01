@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema } from "@/lib/schema";
+import { pageSchema } from "@/lib/schema";
 import { ReferralForm } from "@/components/forms/referral-form";
 
 const description = "Did you know we offer a $500 referral bonus? Refer a prospective foster parent to Open Arms Foster Care in Oklahoma.";
@@ -14,9 +13,12 @@ export const metadata: Metadata = {
 };
 
 export default function ReferralsPage() {
-  const schema = graph(
-    webPageSchema({ url: `${siteConfig.url}/referrals/`, name: "Referrals - Open Arms Foster Care", description }),
-  );
+  const schema = pageSchema({
+    path: "/referrals",
+    name: "Referrals - Open Arms Foster Care",
+    description,
+    breadcrumb: "Referrals",
+  });
 
   return (
     <>

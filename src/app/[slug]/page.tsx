@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema, articleSchema, faqPageSchema, breadcrumbSchema } from "@/lib/schema";
+import { pageSchema, pageUrl, articleSchema } from "@/lib/schema";
 import { allPosts, getPostBySlug } from "@/lib/content/posts";
 import { PageHero } from "@/components/sections/page-hero";
 import { PostBody } from "@/components/blog/post-body";
@@ -49,26 +48,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const related = allPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
-  const schema = graph(
-    webPageSchema({
-      url: `${siteConfig.url}/${post.slug}/`,
-      name: post.metaTitle,
-      description: post.metaDescription,
-    }),
-    articleSchema({
-      url: `${siteConfig.url}/${post.slug}/`,
-      headline: post.title,
-      description: post.metaDescription,
-      datePublished: post.datePublished,
-      dateModified: post.dateModified,
-    }),
-    breadcrumbSchema([
-      { name: "Home", url: `${siteConfig.url}/` },
-      { name: "Blog", url: `${siteConfig.url}/blog/` },
-      { name: post.title, url: `${siteConfig.url}/${post.slug}/` },
-    ]),
-    ...(post.faqs ? [faqPageSchema(post.faqs)] : []),
-  );
+  const schema = pageSchema({
+    path: `/${post.slug}`,
+    name: post.metaTitle,
+    description: post.metaDescription,
+    breadcrumb: [
+      { name: "Blog", path: "/blog" },
+      { name: post.title, path: `/${post.slug}` },
+    ],
+    faqs: post.faqs,
+    extra: [
+      articleSchema({
+        url: pageUrl(`/${post.slug}`),
+        headline: post.title,
+        description: post.metaDescription,
+        datePublished: post.datePublished,
+        dateModified: post.dateModified,
+      }),
+    ],
+  });
 
   return (
     <>

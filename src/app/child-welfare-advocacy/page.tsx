@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema, faqPageSchema } from "@/lib/schema";
+import { pageSchema } from "@/lib/schema";
 import { childWelfareAdvocacyFaqs } from "@/lib/content/faqs";
 import { ServicePageTemplate } from "@/components/sections/service-page-template";
 
@@ -15,14 +14,14 @@ export const metadata: Metadata = {
 };
 
 export default function ChildWelfareAdvocacyPage() {
-  const schema = graph(
-    webPageSchema({
-      url: `${siteConfig.url}/child-welfare-advocacy/`,
-      name: "Child Welfare Advocacy | Open Arms Foster Care",
-      description,
-    }),
-    faqPageSchema(childWelfareAdvocacyFaqs),
-  );
+  const schema = pageSchema({
+    path: "/child-welfare-advocacy",
+    name: "Child Welfare Advocacy | Open Arms Foster Care",
+    description,
+    breadcrumb: "Child Welfare Advocacy",
+    service: { serviceType: "Child Welfare Advocacy" },
+    faqs: childWelfareAdvocacyFaqs,
+  });
 
   return (
     <>

@@ -95,7 +95,7 @@ export function TestimonialsSection() {
               <Image src="/icon (1).svg" alt="" width={22} height={22} className="shrink-0" />
             </div>
 
-            <div className="mt-4 flex gap-1">
+            <div role="img" aria-label="5 out of 5 stars" className="mt-4 flex gap-1">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Image key={i} src="/f (1).svg" alt="" width={16} height={15} />
               ))}

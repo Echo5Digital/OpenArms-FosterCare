@@ -5,7 +5,7 @@ export function ClosingCta() {
   return (
     <section className="px-5 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-8">
       <div className="relative mx-auto max-w-[1600px] overflow-hidden rounded-[2rem]">
-        <Image src="/fam10.jpg" alt="" fill sizes="100vw" className="object-cover object-[85%_center]" />
+        <Image src="/fam10.jpg" alt="A mother, father and two children sitting close together on a sofa in a sunlit living room" fill sizes="100vw" className="object-cover object-[85%_center]" />
         <div className="absolute inset-0 bg-gradient-to-r from-pine-deep/90 via-pine-deep/60 to-pine-deep/20" />
 
         <div className="relative flex flex-col gap-8 px-6 py-14 sm:px-12 sm:py-20 lg:flex-row lg:items-center lg:justify-between">

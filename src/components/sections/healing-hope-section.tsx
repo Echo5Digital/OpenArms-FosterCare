@@ -7,7 +7,7 @@ export function HealingHopeSection({ form = "appointment" }: { form?: "appointme
     <section className="relative overflow-hidden py-20 sm:py-28">
       <Image
         src="/beautiful-boy-playing-with-bubbles-sunny-day-garden-100kb.jpg"
-        alt=""
+        alt="Father and son blowing bubbles together in a garden"
         fill
         sizes="100vw"
         className="object-cover object-[center_60%]"

@@ -82,9 +82,9 @@ export function SupportForSchoolStaffPage({ faqs }: { faqs: Faq[] }) {
         <div className="mx-auto max-w-[1400px]">
           <SectionHeading
             eyebrow="What to Expect"
-            title="Support for School Staff"
+            title="Empowering Educators for Lasting Impact"
             align="center"
-            className="mx-auto"
+            className="mx-auto max-w-4xl! text-balance"
             titleClassName={headingFont}
           />
 
@@ -102,26 +102,32 @@ export function SupportForSchoolStaffPage({ faqs }: { faqs: Faq[] }) {
 
               <div>
                 <p className="text-[1.05rem] leading-relaxed text-slate">
-                  Foster children carry experiences that show up in the classroom in ways that aren&rsquo;t always
-                  easy to read — a change in routine, a new caregiver, a court date, can all shape a school day long
-                  before a teacher hears about it. Open Arms partners directly with school staff so those signals are
-                  easier to recognize and respond to with steadiness rather than guesswork.
+                  Becoming a foster parent is a meaningful journey, one that requires the right preparation, support,
+                  and education. At Open Arms Foster Care, we offer comprehensive Foster Parenting Training Programs
+                  that equip individuals and families with the skills they need to provide safe, stable, and loving
+                  homes for children in care.
                 </p>
                 <p className="mt-4 text-[1.05rem] leading-relaxed text-slate">
-                  Our sessions are built for the realities of a school day: short, practical workshops that fit into
-                  existing professional development time and give teachers, counselors, and administrators concrete
-                  tools rather than abstract theory.
+                  Our training programs are state-approved and designed to meet the diverse needs of both new and
+                  experienced foster parents. From understanding child development and trauma to learning discipline
+                  strategies and legal responsibilities, every aspect of fostering is covered in our curriculum.
                 </p>
                 <p className="mt-4 text-[1.05rem] leading-relaxed text-slate">
-                  We also stay connected after training. When a foster child in your school experiences a placement
-                  change or a difficult season, our team is a phone call away to help school staff understand
-                  what&rsquo;s happening and how best to support that student without needing details that
-                  aren&rsquo;t theirs to share.
+                  For those in the metro area, we host regular Foster Parenting Classes in Oklahoma City, available in
+                  both in-person and virtual formats. These classes are led by experienced professionals and include
+                  interactive sessions that prepare you for real-world caregiving challenges.
+                </p>
+                <p className="mt-4 text-[1.05rem] leading-relaxed text-slate">
+                  Open Arms also specializes in{" "}
+                  <strong className="font-bold text-pine">Therapeutic Foster Care in Oklahoma City</strong>, and we
+                  offer advanced training for parents interested in supporting children with emotional or behavioral
+                  needs. This specialized training focuses on trauma-informed care, crisis management, and ongoing
+                  therapeutic support, all essential for helping children with complex backgrounds heal and thrive.
                 </p>
                 <p className="mt-6 max-w-xl font-sans text-xl not-italic leading-snug text-pine">
-                  Whether you&rsquo;re a classroom teacher, a school counselor, or an administrator building
-                  district-wide practices, Open Arms is here to make sure every foster child in an Oklahoma classroom
-                  is met with understanding instead of assumptions.
+                  Whether you&rsquo;re just starting your foster care journey or looking to expand your skills, our
+                  training programs provide the knowledge, tools, and confidence you need. With Open Arms,
+                  you&rsquo;re not just fostering, you&rsquo;re changing lives.
                 </p>
               </div>
             </div>
@@ -194,7 +200,7 @@ export function SupportForSchoolStaffPage({ faqs }: { faqs: Faq[] }) {
             <div className="relative order-1 min-h-[320px] overflow-hidden rounded-tl-[4rem] lg:order-2 lg:min-h-0">
               <Image
                 src="/parents-kid-doing-therapy 1-100kb.jpg"
-                alt="A family working together in a supportive session"
+                alt="A mother, father and young daughter talking with a therapist"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"

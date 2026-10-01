@@ -10,16 +10,19 @@ const services = [
     title: "Foster Parent Training",
     href: "/foster-parent-training",
     image: "/handsome-father-with-cute-little-son-100kb.jpg",
+    alt: "A father joyfully lifting his young son into the air outdoors",
   },
   {
     title: "Post-Placement Therapy",
     href: "/post-placement-therapy",
     image: "/teen-girl-participates-drawing-activity-as-part-psychotherapy-100kb.jpg",
+    alt: "A therapist reviewing a girl's drawing while her mother looks on",
   },
   {
     title: "Support for School Staff",
     href: "/support-for-school-staff",
     image: "/mother-son-looking-tablet-100kb.jpg",
+    alt: "A mother and her son smiling at each other while looking at a tablet on the sofa",
   },
 ] as const;
 
@@ -64,7 +67,7 @@ export function Services() {
               >
                 <Image
                   src={service.image}
-                  alt=""
+                  alt={service.alt}
                   fill
                   sizes="50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

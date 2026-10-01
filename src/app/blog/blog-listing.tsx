@@ -2,14 +2,39 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/page-hero";
 import { PostCard } from "@/components/blog/post-card";
 import { HealingHopeSection } from "@/components/sections/healing-hope-section";
-import { getPostsPage, totalPages } from "@/lib/content/posts";
+import { POSTS_PER_PAGE, getPostsPage, totalPages } from "@/lib/content/posts";
+import { itemListSchema, pageSchema, pageUrl } from "@/lib/schema";
+
+export const blogDescription = "Stories, guidance, and resources for Oklahoma foster families from Open Arms Foster Care.";
 
 export function BlogListing({ page }: { page: number }) {
   const posts = getPostsPage(page);
   const [featured, ...rest] = posts;
 
+  const schema = pageSchema({
+    path: page === 1 ? "/blog" : `/blog/page/${page}`,
+    name: page === 1 ? "Blog - Open Arms Foster Care" : `Blog - Page ${page} - Open Arms Foster Care`,
+    description: blogDescription,
+    type: "CollectionPage",
+    breadcrumb:
+      page === 1
+        ? "Blog"
+        : [
+            { name: "Blog", path: "/blog" },
+            { name: `Page ${page}`, path: `/blog/page/${page}` },
+          ],
+    extra: [
+      itemListSchema(
+        posts.map((post) => ({ name: post.title, url: pageUrl(`/${post.slug}`) })),
+        (page - 1) * POSTS_PER_PAGE + 1,
+      ),
+    ],
+  });
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+
       <PageHero
         eyebrow="Blog"
         title="Stories, guidance, and resources for Oklahoma foster families"

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema, faqPageSchema } from "@/lib/schema";
+import { pageSchema } from "@/lib/schema";
 import { fosterParentTrainingFaqs } from "@/lib/content/faqs";
 import { FosterParentTrainingPage as FosterParentTrainingContent } from "@/components/sections/foster-parent-training-page";
 
@@ -19,14 +18,14 @@ export const metadata: Metadata = {
 };
 
 export default function FosterParentTrainingPage() {
-  const schema = graph(
-    webPageSchema({
-      url: `${siteConfig.url}/foster-parent-training/`,
-      name: "Foster Parenting Training Programs Oklahoma | Foster Parent Support Services Oklahoma",
-      description,
-    }),
-    faqPageSchema(fosterParentTrainingFaqs),
-  );
+  const schema = pageSchema({
+    path: "/foster-parent-training",
+    name: "Foster Parenting Training Programs Oklahoma | Foster Parent Support Services Oklahoma",
+    description,
+    breadcrumb: "Foster Parent Training",
+    service: { serviceType: "Foster Parent Training" },
+    faqs: fosterParentTrainingFaqs,
+  });
 
   return (
     <>

@@ -3,8 +3,33 @@ import Image from "next/image";
 export function WhatIsFosterCare() {
   return (
     <section className="relative overflow-hidden bg-cream-alt py-20 sm:py-28">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div className="relative mx-auto flex w-full max-w-md items-center justify-center lg:max-w-none">
+      {/* phones: heading, photos, copy; lg: photos on the left, heading + copy centred on the right */}
+      <div className="mx-auto flex max-w-[1400px] flex-col gap-10 px-5 sm:px-8 lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:grid-rows-[1fr_auto_auto_1fr] lg:gap-x-16 lg:gap-y-0">
+        {/* heading */}
+        <div className="lg:col-start-2 lg:row-start-2">
+          <span className="block h-[3px] w-24 rounded-full bg-gradient-to-r from-leaf-deep to-leaf" />
+          <h2 className="mt-5 font-sans text-[2.1rem] font-bold leading-[1.1] tracking-tight text-pine sm:text-[2.8rem] lg:text-[3.1rem]">
+            What is{" "}
+            <span className="relative inline-block whitespace-nowrap">
+              <span className="bg-gradient-to-r from-leaf-deep to-leaf bg-clip-text text-transparent">Foster Care?</span>
+              <svg
+                aria-hidden
+                viewBox="0 0 220 14"
+                preserveAspectRatio="none"
+                className="absolute -bottom-2.5 left-0 h-3 w-full text-leaf"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={4}
+                strokeLinecap="round"
+              >
+                <path d="M3 9C45 2 95 2 135 7S195 11 217 4" />
+              </svg>
+            </span>
+          </h2>
+        </div>
+
+        {/* photos */}
+        <div className="relative mx-auto flex w-full max-w-md items-center justify-center lg:col-start-1 lg:row-span-4 lg:row-start-1 lg:max-w-none">
           <div className="relative aspect-square w-[78%] overflow-hidden rounded-[2.5rem] bg-leaf shadow-xl">
             <svg
               viewBox="0 0 200 200"
@@ -46,12 +71,9 @@ export function WhatIsFosterCare() {
           </div>
         </div>
 
-        <div>
-          <span className="inline-block rounded-full bg-gradient-to-r from-leaf to-pine px-6 py-2.5 font-sans text-lg font-bold text-cream shadow-sm sm:text-xl">
-            What is Foster Care?
-          </span>
-
-          <p className="mt-7 text-[1.05rem] leading-relaxed text-slate">
+        {/* copy */}
+        <div className="lg:col-start-2 lg:row-start-3">
+          <p className="text-[1.05rem] leading-relaxed text-slate lg:mt-8">
             Foster care provides a safe, temporary home for children who cannot remain with their biological
             families due to safety concerns. While reunification is the primary goal, some children transition to
             long-term foster care or adoption. Open Arms coordinates placements and supports each child&rsquo;s

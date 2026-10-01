@@ -8,18 +8,22 @@ const cards = [
   {
     title: "Foster Parent Training",
     image: "/handsome-father-with-cute-little-son-100kb.jpg",
+    alt: "A father joyfully lifting his young son into the air outdoors",
   },
   {
     title: "Support for Every Placement",
     image: "/family-with-baby-standing-outside-house-100kb.jpg",
+    alt: "Parents with their baby outdoors, the mother straightening the baby's hat",
   },
   {
     title: "Post-Placement Therapy",
     image: "/teen-girl-participates-drawing-activity-as-part-psychotherapy-100kb.jpg",
+    alt: "A therapist reviewing a girl's drawing while her mother looks on",
   },
   {
     title: "Support for School Staff",
     image: "/mother-son-looking-tablet-100kb.jpg",
+    alt: "A mother and her son smiling at each other while looking at a tablet on the sofa",
   },
 ] as const;
 
@@ -111,11 +115,13 @@ export function Hero() {
                 {track.map((card, i) => (
                   <div
                     key={`${card.title}-${i}`}
+                    // the last slide is a copy of the first, only there so the loop animation can wrap smoothly
+                    aria-hidden={i >= cards.length || undefined}
                     className="relative flex h-[200px] w-[calc(50%-0.5rem)] shrink-0 items-end overflow-hidden rounded-[1.25rem]"
                   >
                     <Image
                       src={card.image}
-                      alt=""
+                      alt={i >= cards.length ? "" : card.alt}
                       fill
                       sizes="(min-width: 1024px) 25vw, 50vw"
                       className="object-cover"

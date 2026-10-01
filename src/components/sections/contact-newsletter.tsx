@@ -6,7 +6,7 @@ export function ContactNewsletter() {
   return (
     <section className="px-3 pb-12 pt-3 sm:px-5 sm:pb-16">
       <div className="relative isolate mx-auto max-w-[1400px] overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
-        <Image src="/fam10.jpg" alt="" fill sizes="100vw" className="-z-20 object-cover object-[80%_center]" />
+        <Image src="/fam10.jpg" alt="A mother, father and two children sitting close together on a sofa in a sunlit living room" fill sizes="100vw" className="-z-20 object-cover object-[80%_center]" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-pine-deep/95 via-pine-deep/80 to-pine/55" />
         <div className="pointer-events-none absolute -right-20 -top-24 -z-10 h-72 w-72 rounded-full border-[28px] border-leaf/15" />
         <div className="pointer-events-none absolute -bottom-28 left-1/3 -z-10 h-72 w-72 rounded-full bg-leaf/25 blur-3xl" />

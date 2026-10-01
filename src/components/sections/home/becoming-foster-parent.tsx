@@ -145,7 +145,7 @@ export function BecomingFosterParent() {
                     </span>
 
                     <Reveal from={right ? "right" : "left"} triggerOffset="-8%" className={right ? "lg:ml-auto lg:w-[calc(50%-3.5rem)]" : "lg:w-[calc(50%-3.5rem)]"}>
-                      <div className="group relative flex h-full gap-5 overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-leaf/70 hover:bg-white/[0.14] hover:shadow-[0_24px_50px_-20px_rgba(141,197,64,0.55)] sm:p-7">
+                      <div className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-leaf/70 hover:bg-white/[0.14] hover:shadow-[0_24px_50px_-20px_rgba(141,197,64,0.55)] sm:flex-row sm:gap-5 sm:p-7">
                         <span className="pointer-events-none absolute -right-3 -top-5 font-display text-8xl font-semibold leading-none text-white/[0.06] transition-all duration-500 group-hover:-translate-y-1 group-hover:text-leaf/25">
                           {String(i + 1).padStart(2, "0")}
                         </span>

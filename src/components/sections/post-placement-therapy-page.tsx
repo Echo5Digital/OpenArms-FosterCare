@@ -67,7 +67,7 @@ export function PostPlacementTherapyPage({ faqs }: { faqs: Faq[] }) {
       <ServiceHero
         title="Post-Placement Therapy"
         highlight="Therapy"
-        intro={"At Open Arms Initiative, we support foster care and adoption journeys starting with placement. Our post-placement therapy helps children and families adjust emotionally."}
+        intro={"At Open Arms Initiative, we support foster care and adoption journeys starting with placement. Our Post-Placement Therapy helps children and families adjust emotionally in their new home."}
         image="/fs4 (2).jpg"
         imageAlt="A family talking with a caseworker during a supportive foster care consultation"
         imagePosition="object-center"
@@ -204,7 +204,7 @@ export function PostPlacementTherapyPage({ faqs }: { faqs: Faq[] }) {
             <div className="relative order-1 min-h-[320px] overflow-hidden rounded-tl-[4rem] lg:order-2 lg:min-h-0">
               <Image
                 src="/beautiful-boy-playing-with-bubbles-sunny-day-garden-100kb.jpg"
-                alt="A happy family spending time together outdoors"
+                alt="Father and son blowing bubbles together in a garden"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"

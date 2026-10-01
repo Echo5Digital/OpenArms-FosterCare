@@ -75,7 +75,7 @@ export function FosterFamilySupport() {
     <section className="relative overflow-hidden py-20 sm:py-28">
       <Image
         src="/cute-family-walking-sunset-summer-park-100kb.jpg"
-        alt=""
+        alt="A family walking together through a park at sunset"
         fill
         priority
         quality={100}

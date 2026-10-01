@@ -35,10 +35,26 @@ export function WhyOpenArms() {
     <section className="relative overflow-hidden bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <Reveal>
-          <span className="inline-block rounded-full bg-gradient-to-r from-leaf to-leaf-deep px-6 py-2.5 font-sans text-lg font-bold text-pine-deep shadow-sm sm:text-xl">
-            Why Choose Open Arms Foster Care in Oklahoma City?
-          </span>
-          <p className="mt-6 max-w-3xl text-[1.05rem] leading-relaxed text-ink/70">
+          <span className="block h-[3px] w-24 rounded-full bg-gradient-to-r from-leaf-deep to-leaf" />
+          <h2 className="mt-5 max-w-4xl font-sans text-[2.1rem] font-bold leading-[1.1] tracking-tight text-pine sm:text-[2.8rem] lg:text-[3.1rem]">
+            Why Choose Open Arms Foster Care in{" "}
+            <span className="relative inline-block whitespace-nowrap">
+              <span className="bg-gradient-to-r from-leaf-deep to-leaf bg-clip-text text-transparent">Oklahoma City?</span>
+              <svg
+                aria-hidden
+                viewBox="0 0 220 14"
+                preserveAspectRatio="none"
+                className="absolute -bottom-2.5 left-0 h-3 w-full text-leaf"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={4}
+                strokeLinecap="round"
+              >
+                <path d="M3 9C45 2 95 2 135 7S195 11 217 4" />
+              </svg>
+            </span>
+          </h2>
+          <p className="mt-8 max-w-3xl text-[1.05rem] leading-relaxed text-ink/70">
             When it comes to selecting a foster care agency in Oklahoma, it is important to find an agency that
             understands the unique needs of both children and foster parents. Open Arms Foster Care is proud to be
             recognized as one of the best foster care agencies in Oklahoma City, and here&rsquo;s why:

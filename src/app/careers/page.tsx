@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema } from "@/lib/schema";
-import { PageHero } from "@/components/sections/page-hero";
+import { pageSchema } from "@/lib/schema";
+import { CareersHero } from "@/components/sections/careers/careers-hero";
+import { CareersHiring } from "@/components/sections/careers/careers-hiring";
+import { CareersApply } from "@/components/sections/careers/careers-apply";
+import { CareersCta } from "@/components/sections/careers/careers-cta";
 import { JobAccordion } from "@/components/ui/job-accordion";
-import { JobApplicationForm } from "@/components/forms/job-application-form";
+import { Reveal } from "@/components/ui/reveal";
 
 const description =
   "Interested in joining our team of talented individuals dedicated to making a positive impact in the lives of the families we serve? Check out our current open positions and apply.";
@@ -44,37 +46,35 @@ const jobs = [
 ];
 
 export default function CareersPage() {
-  const schema = graph(
-    webPageSchema({ url: `${siteConfig.url}/careers/`, name: "Careers - Open Arms Foster Care", description }),
-  );
+  const schema = pageSchema({
+    path: "/careers",
+    name: "Careers - Open Arms Foster Care",
+    description,
+    breadcrumb: "Careers",
+  });
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      <PageHero
-        eyebrow="Careers"
-        title="We're Hiring!"
-        intro={description}
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "Careers" }]}
-      />
+      <CareersHero />
+      <CareersHiring />
 
-      <section className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8 sm:py-28">
-        <h2 className="font-display text-2xl font-medium text-pine sm:text-3xl">Current Open Positions</h2>
-        <div className="mt-8 max-w-2xl">
+      <section className="mx-auto max-w-[1300px] px-5 py-14 sm:px-8 sm:py-20">
+        <Reveal>
+          <span className="block h-[3px] w-20 rounded-full bg-gradient-to-r from-leaf-deep to-leaf" />
+          <h2 className="mt-5 font-sans text-[2.1rem] font-bold leading-[1.1] tracking-tight text-pine sm:text-[2.8rem]">
+            Current{" "}
+            <span className="bg-gradient-to-r from-leaf-deep to-leaf bg-clip-text text-transparent">Open Positions</span>
+          </h2>
+        </Reveal>
+        <Reveal delay={100} className="mt-8">
           <JobAccordion jobs={jobs} />
-        </div>
+        </Reveal>
       </section>
 
-      <section id="applynow" className="mx-auto max-w-[1400px] px-5 pb-20 sm:px-8 sm:pb-28">
-        <div className="rounded-[2rem_2rem_4rem_2rem] border border-pine/10 bg-mint/60 p-8 sm:p-12">
-          <h2 className="font-display text-2xl font-medium text-pine">Apply</h2>
-          <p className="mt-2 max-w-md text-sm text-slate">Fill out some info and we will be reaching out shortly!</p>
-          <div className="mt-8">
-            <JobApplicationForm />
-          </div>
-        </div>
-      </section>
+      <CareersApply />
+      <CareersCta />
     </>
   );
 }

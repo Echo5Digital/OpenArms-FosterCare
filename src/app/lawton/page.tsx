@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { siteConfig, offices } from "@/lib/site-config";
-import { graph, webPageSchema, localBusinessSchema } from "@/lib/schema";
+import { offices } from "@/lib/site-config";
+import { pageSchema, localBusinessSchema, localBusinessId } from "@/lib/schema";
 import { LocationPageTemplate } from "@/components/sections/location-page-template";
 
 const office = offices.find((o) => o.id === "lawton")!;
@@ -21,10 +21,14 @@ export const metadata: Metadata = {
 };
 
 export default function LawtonPage() {
-  const schema = graph(
-    webPageSchema({ url: `${siteConfig.url}/lawton/`, name: "Lawton - Open Arms Foster Care", description }),
-    localBusinessSchema("lawton"),
-  );
+  const schema = pageSchema({
+    path: "/lawton",
+    name: "Lawton - Open Arms Foster Care",
+    description,
+    breadcrumb: "Lawton",
+    aboutId: localBusinessId("lawton"),
+    extra: [localBusinessSchema("lawton")],
+  });
 
   return (
     <>

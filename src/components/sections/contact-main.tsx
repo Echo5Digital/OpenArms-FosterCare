@@ -125,7 +125,9 @@ export function ContactMain() {
           </div>
 
           <Reveal from="right" delay={100} className="h-full">
-            <div className="relative h-full overflow-hidden rounded-[2rem_2rem_5rem_2rem] border-4 border-white bg-[#ebf0ee] p-6 shadow-[0_40px_80px_-35px_rgba(25,53,45,0.55)] sm:p-10">
+            <div
+              id="contact-form"
+              className="relative h-full scroll-mt-28 overflow-hidden rounded-[2rem_2rem_5rem_2rem] border-4 border-white bg-[#ebf0ee] p-6 shadow-[0_40px_80px_-35px_rgba(25,53,45,0.55)] sm:p-10">
               <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full border-[22px] border-leaf/20" />
               <div className="pointer-events-none absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-leaf/20 blur-3xl" />
               <div className="relative">

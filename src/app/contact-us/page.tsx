@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema, breadcrumbSchema } from "@/lib/schema";
+import { offices } from "@/lib/site-config";
+import { pageSchema, localBusinessSchema } from "@/lib/schema";
 import { ContactHero } from "@/components/sections/contact-hero";
 import { ContactMain } from "@/components/sections/contact-main";
 import { ContactOffices } from "@/components/sections/contact-offices";
@@ -16,13 +16,15 @@ export const metadata: Metadata = {
 };
 
 export default function ContactUsPage() {
-  const schema = graph(
-    webPageSchema({ url: `${siteConfig.url}/contact-us/`, name: "Contact Us - Open Arms Foster Care", description }),
-    breadcrumbSchema([
-      { name: "Home", url: `${siteConfig.url}/` },
-      { name: "Contact Us", url: `${siteConfig.url}/contact-us/` },
-    ]),
-  );
+  const schema = pageSchema({
+    path: "/contact-us",
+    name: "Contact Us - Open Arms Foster Care",
+    description,
+    type: "ContactPage",
+    breadcrumb: "Contact Us",
+    // the page shows all three offices with their maps and addresses
+    extra: offices.map((o) => localBusinessSchema(o.id)),
+  });
 
   return (
     <>

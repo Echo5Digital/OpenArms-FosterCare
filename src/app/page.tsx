@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { graph, webPageSchema, serviceCatalogSchema, faqPageSchema } from "@/lib/schema";
+import { pageSchema, serviceCatalogSchema } from "@/lib/schema";
 import { homeFaqs } from "@/lib/content/faqs";
 import { Hero } from "@/components/sections/home/hero";
 import { TrustedAgencyBanner } from "@/components/sections/home/trusted-agency-banner";
@@ -45,15 +45,13 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const schema = graph(
-    webPageSchema({
-      url: `${siteConfig.url}/`,
-      name: "Foster Care in Oklahoma City | Become a Foster Parent | Open Arms",
-      description: siteConfig.description,
-    }),
-    serviceCatalogSchema(),
-    faqPageSchema(homeFaqs),
-  );
+  const schema = pageSchema({
+    path: "/",
+    name: "Foster Care in Oklahoma City | Become a Foster Parent | Open Arms",
+    description: siteConfig.description,
+    faqs: homeFaqs,
+    extra: [serviceCatalogSchema()],
+  });
 
   return (
     <>
