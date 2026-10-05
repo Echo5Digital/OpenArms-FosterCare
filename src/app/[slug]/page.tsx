@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   const cover = getPostImage(post);
-  const coverSizes = "(min-width: 1400px) 880px, (min-width: 1024px) 62vw, 100vw";
+  const coverSizes = "(min-width: 1400px) 980px, (min-width: 1280px) 70vw, (min-width: 1024px) 62vw, 100vw";
 
   // a post can place its FAQs inside the article; otherwise they follow it
   const faqsInBody = post.body.some((block) => block.type === "faqs");
@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
 
             {post.faqs && post.faqs.length > 0 && !faqsInBody && (
-              <div className="mt-14 max-w-[750px]">
+              <div className="mt-14">
                 <h2 className="font-sans text-2xl font-bold tracking-tight text-pine sm:text-[1.7rem]">
                   {post.faqTitle ?? "Common Questions Foster Parents Ask"}
                 </h2>

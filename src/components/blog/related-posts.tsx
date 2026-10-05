@@ -22,7 +22,7 @@ export function RelatedPosts({ posts }: { posts: BlogPost[] }) {
                 <PostPhoto
                   src={getPostImage(post)}
                   alt=""
-                  sizes="(min-width: 1400px) 400px, (min-width: 640px) 28vw, 100vw"
+                  sizes="(min-width: 1400px) 450px, (min-width: 640px) 32vw, 100vw"
                   className="rounded-xl"
                   imageClassName="transition-transform duration-500 group-hover:scale-105"
                 />

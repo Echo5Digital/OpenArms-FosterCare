@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
-/** Server-side only (reads the file): pixel size of a JPEG or PNG in /public, so a photo can be shown at its own proportions. */
+/** Server-side only (reads the file): pixel size of a JPEG, PNG or WebP in /public, so a photo can be shown at its own proportions. */
 export type ImageSize = { width: number; height: number };
 
 function jpegSize(buf: Buffer): ImageSize | null {
@@ -36,6 +36,27 @@ function pngSize(buf: Buffer): ImageSize | null {
   return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
 }
 
+function webpSize(buf: Buffer): ImageSize | null {
+  if (buf.toString("ascii", 0, 4) !== "RIFF" || buf.toString("ascii", 8, 12) !== "WEBP") return null;
+  const kind = buf.toString("ascii", 12, 16);
+  if (kind === "VP8X") {
+    // extended format: 24-bit width-1 and height-1
+    return { width: 1 + buf.readUIntLE(24, 3), height: 1 + buf.readUIntLE(27, 3) };
+  }
+  if (kind === "VP8L") {
+    // lossless: signature byte 0x2f, then 14-bit width-1 and 14-bit height-1
+    if (buf[20] !== 0x2f) return null;
+    const bits = buf.readUInt32LE(21);
+    return { width: 1 + (bits & 0x3fff), height: 1 + ((bits >>> 14) & 0x3fff) };
+  }
+  if (kind === "VP8 ") {
+    // lossy: 3-byte frame tag, start code 9d 01 2a, then 14-bit width and height
+    if (buf[23] !== 0x9d || buf[24] !== 0x01 || buf[25] !== 0x2a) return null;
+    return { width: buf.readUInt16LE(26) & 0x3fff, height: buf.readUInt16LE(28) & 0x3fff };
+  }
+  return null;
+}
+
 const cache = new Map<string, ImageSize | null>();
 
 // the 3:2 frame photos are normally cropped to, with a little tolerance for photos that are 3:2 give or take a pixel
@@ -60,7 +81,7 @@ export function getImageSize(src: string): ImageSize | null {
   let size: ImageSize | null = null;
   try {
     const buf = readFileSync(path.join(process.cwd(), "public", decodeURIComponent(src)));
-    size = jpegSize(buf) ?? pngSize(buf);
+    size = jpegSize(buf) ?? pngSize(buf) ?? webpSize(buf);
   } catch {
     size = null;
   }

@@ -1,13 +1,26 @@
+import type { ReactNode } from "react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import type { PostBlock, PostFaq } from "@/lib/content/posts/types";
 import { PostPhoto } from "./post-photo";
+import { PostTable } from "./post-table";
 
 const text = "text-[1.0625rem] leading-[1.85] text-ink/80 sm:text-lg";
 
+/** Turns **bold** and *italic* in a paragraph into emphasis; text without markers is returned as is. */
+function withEmphasis(value: string): ReactNode {
+  const parts = value.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+  if (parts.length === 1) return value;
+  return parts.map((part, i) => {
+    if (part.startsWith("**")) return <strong key={i} className="font-semibold text-ink">{part.slice(2, -2)}</strong>;
+    if (part.startsWith("*")) return <em key={i}>{part.slice(1, -1)}</em>;
+    return part;
+  });
+}
+
 export function PostBody({ blocks, faqs = [] }: { blocks: PostBlock[]; faqs?: PostFaq[] }) {
   return (
-    <div className="max-w-[750px]">
+    <div>
       {blocks.map((block, i) => {
         switch (block.type) {
           case "h2":
@@ -25,7 +38,7 @@ export function PostBody({ blocks, faqs = [] }: { blocks: PostBlock[]; faqs?: Po
           case "p":
             return (
               <p key={i} className={`mt-5 ${text}`}>
-                {block.text}
+                {withEmphasis(block.text)}
               </p>
             );
           case "ul":
@@ -53,7 +66,9 @@ export function PostBody({ blocks, faqs = [] }: { blocks: PostBlock[]; faqs?: Po
               </ol>
             );
           case "img":
-            return <PostPhoto key={i} src={block.src} alt={block.alt} sizes="(min-width: 1024px) 750px, 100vw" className="mt-10 rounded-xl" />;
+            return <PostPhoto key={i} src={block.src} alt={block.alt} sizes="(min-width: 1280px) 900px, (min-width: 1024px) 560px, 100vw" className="mt-10 rounded-xl" />;
+          case "table":
+            return <PostTable key={i} caption={block.caption} headers={block.headers} rows={block.rows} />;
           case "faqs":
             return faqs.length > 0 ? (
               <div key={i} className="mt-14">

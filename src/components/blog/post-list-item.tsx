@@ -16,7 +16,7 @@ export function PostListItem({ post, preloadImage = false }: { post: BlogPost; p
           src={getPostImage(post)}
           alt=""
           preload={preloadImage}
-          sizes="(min-width: 1400px) 880px, (min-width: 1024px) 62vw, 100vw"
+          sizes="(min-width: 1400px) 980px, (min-width: 1280px) 70vw, (min-width: 1024px) 62vw, 100vw"
           className="rounded-[1.25rem]"
           imageClassName="transition-transform duration-500 group-hover:scale-105"
         />

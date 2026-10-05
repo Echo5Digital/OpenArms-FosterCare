@@ -1,6 +1,7 @@
 export type PostFaq = { question: string; answer: string };
 
 export type PostBlock =
+  /** Paragraph text may use *italic* and **bold**. */
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
@@ -8,6 +9,8 @@ export type PostBlock =
   | { type: "ol"; items: string[] }
   /** Inline photo from /public, shown full width of the article column. */
   | { type: "img"; src: string; alt: string }
+  /** Comparison table with sorting, search and paging. The first column is shown bold as the row label. */
+  | { type: "table"; caption?: string; headers: string[]; rows: string[][] }
   /** Shows the post's `faqs` here, under this heading, instead of at the end of the page. */
   | { type: "faqs"; title: string }
   /** Highlighted line pulled out of the text. */
