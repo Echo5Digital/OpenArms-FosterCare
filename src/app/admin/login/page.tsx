@@ -20,7 +20,7 @@ export default async function AdminLoginPage() {
       <div className="w-full max-w-md rounded-[2rem] border-4 border-white bg-[#ebf0ee] p-8 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.6)] sm:p-10">
         <div className="flex items-center gap-3">
           <span className="relative h-12 w-12 overflow-hidden rounded-full bg-white shadow">
-            <Image src="/images/fav.png" alt="" width={96} height={96} className="h-[160%] w-[160%] max-w-none -translate-x-[18%] -translate-y-[18%] object-contain" />
+            <Image src="/images/fav.png" alt="Open Arms Foster Care logo" width={96} height={96} className="h-[160%] w-[160%] max-w-none -translate-x-[18%] -translate-y-[18%] object-contain" />
           </span>
           <div>
             <p className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-leaf-deep">Open Arms Foster Care</p>

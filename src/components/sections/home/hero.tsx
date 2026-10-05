@@ -93,7 +93,7 @@ export function Hero() {
             </div>
 
             <div className="absolute -top-5 -left-5 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full shadow-lg sm:h-24 sm:w-24">
-              <Image src="/images/fav.png" alt="" width={96} height={96} className="h-full w-full object-cover" />
+              <Image src="/images/fav.png" alt="Open Arms Foster Care logo" width={96} height={96} className="h-full w-full object-cover" />
             </div>
           </div>
 

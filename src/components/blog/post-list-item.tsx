@@ -13,7 +13,7 @@ export function PostListItem({ post, preloadImage = false }: { post: BlogPost; p
       <Link href={href} tabIndex={-1} aria-hidden className="block">
         <PostPhoto
           src={getPostImage(post)}
-          alt=""
+          alt={post.title}
           preload={preloadImage}
           sizes="(min-width: 1400px) 980px, (min-width: 1280px) 70vw, (min-width: 1024px) 62vw, 100vw"
           className="rounded-[1.25rem]"

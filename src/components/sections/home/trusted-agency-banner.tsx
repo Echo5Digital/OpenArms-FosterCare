@@ -37,7 +37,7 @@ export function TrustedAgencyBanner() {
             >
               <Image
                 src="/images/fav.png"
-                alt=""
+                alt="Open Arms Foster Care logo"
                 width={120}
                 height={120}
                 className="h-[160%] w-[160%] max-w-none object-contain"

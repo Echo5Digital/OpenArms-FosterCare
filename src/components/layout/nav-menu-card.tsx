@@ -5,10 +5,16 @@ import type { NavItem, NavLink } from "@/lib/site-config";
 type Menu = NonNullable<NavItem["menu"]>;
 
 /** Cut-out photos (transparent PNGs) that stand beside the links; the optimizer serves a small copy. */
-const photos: Record<Menu, { src: string; desktop: string; phone: string }> = {
-  services: { src: "/xn (1).png", desktop: "w-[12rem] -right-11", phone: "w-[7.5rem] -right-1" },
+const photos: Record<Menu, { src: string; alt: string; desktop: string; phone: string }> = {
+  services: {
+    src: "/xn (1).png",
+    alt: "A smiling mother hugging her young daughter",
+    desktop: "w-[12rem] -right-11",
+    phone: "w-[7.5rem] -right-1",
+  },
   locations: {
     src: "/mother-child-being-happy-100kb (1) (1).png",
+    alt: "A mother and her young son laughing together",
     desktop: "w-[15.5rem] -right-14",
     phone: "w-[9.5rem] -right-3",
   },
@@ -116,7 +122,7 @@ export function NavMenuCard({
       >
         <Image
           src={photo.src}
-          alt=""
+          alt={photo.alt}
           fill
           sizes={phone ? "160px" : "260px"}
           className="object-contain object-bottom drop-shadow-[0_14px_20px_rgba(0,0,0,0.35)]"

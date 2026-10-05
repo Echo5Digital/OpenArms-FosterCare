@@ -21,7 +21,7 @@ export function RelatedPosts({ posts }: { posts: BlogPost[] }) {
               <Link href={href} tabIndex={-1} aria-hidden className="block">
                 <PostPhoto
                   src={getPostImage(post)}
-                  alt=""
+                  alt={post.title}
                   sizes="(min-width: 1400px) 450px, (min-width: 640px) 32vw, 100vw"
                   className="rounded-xl"
                   imageClassName="transition-transform duration-500 group-hover:scale-105"
