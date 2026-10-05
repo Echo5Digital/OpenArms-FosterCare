@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import type { ReactNode } from "react";
 import { allPosts, allTags, formatPostDate } from "@/lib/content/posts";
 import { BlogSearch } from "./blog-search";

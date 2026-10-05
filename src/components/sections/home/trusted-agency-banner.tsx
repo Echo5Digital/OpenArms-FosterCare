@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import { siteConfig } from "@/lib/site-config";
 
 export function TrustedAgencyBanner() {

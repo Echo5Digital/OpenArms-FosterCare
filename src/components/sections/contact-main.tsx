@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import { HomeContactForm } from "@/components/forms/home-contact-form";
 import { Reveal } from "@/components/ui/reveal";
 import { siteConfig } from "@/lib/site-config";
@@ -86,7 +86,7 @@ export function ContactMain() {
                 <div className="absolute inset-0 [clip-path:inset(-30%_0_0_0_round_0_0_2rem_2rem)]">
                   <div className="absolute bottom-0 right-0 aspect-[4/3] w-[88%] sm:w-[60%]">
                     <Image
-                      src="/mother-child-being-happy-100kb (1).png"
+                      src="/mother-child-being-happy-100kb (1) (1).png"
                       alt="A smiling mother laughing with her son"
                       fill
                       sizes="(min-width: 1024px) 26rem, 90vw"

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { offices } from "@/lib/site-config";
 

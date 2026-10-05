@@ -342,7 +342,7 @@ export function LocationPageTemplate({
                   }}
                 >
                   <Image
-                    src="/mother-child-being-happy-100kb (1).png"
+                    src="/mother-child-being-happy-100kb (1) (1).png"
                     alt="A mother and her child laughing together"
                     width={1080}
                     height={810}

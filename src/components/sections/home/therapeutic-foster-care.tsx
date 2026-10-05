@@ -101,7 +101,7 @@ export function TherapeuticFosterCare() {
 
               <div className="absolute inset-0 [clip-path:inset(-10%_0_0_0_round_0_0_2.5rem_2.5rem)]">
                 <Image
-                  src="/xn.png"
+                  src="/xn (1).png"
                   alt="A foster mother smiling as she hugs her daughter"
                   fill
                   sizes="(min-width: 1024px) 34rem, (min-width: 640px) 30rem, 26rem"

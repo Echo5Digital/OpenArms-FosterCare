@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import { BlogLayout } from "@/components/blog/blog-layout";
 import { PostListItem } from "@/components/blog/post-list-item";
 import { POSTS_PER_PAGE, allPosts, getPostsByTag, pageCount, paginate, type TagInfo } from "@/lib/content/posts";

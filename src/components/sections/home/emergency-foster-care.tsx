@@ -99,7 +99,7 @@ export function EmergencyFosterCare() {
               <path d="M12 21s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 8.2a4.3 4.3 0 0 1 7.5 2.6C19.5 16.4 12 21 12 21Z" />
             </svg>
             <Image
-              src="/close-up-sad-boy-portrait-100kb (1).png"
+              src="/close-up-sad-boy-portrait-100kb (1) (1).png"
               alt="A young boy sitting quietly, waiting for a safe place to stay"
               fill
               sizes="(min-width: 1024px) 28vw, 80vw"

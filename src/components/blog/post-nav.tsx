@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import type { BlogPost } from "@/lib/content/posts/types";
 
 function ArrowIcon({ direction }: { direction: "left" | "right" }) {

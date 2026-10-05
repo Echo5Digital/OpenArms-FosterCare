@@ -52,7 +52,7 @@ export function CareersApply() {
 
               <div className="absolute inset-0 [clip-path:inset(-12%_0_0_0_round_0_0_1.9rem_1.9rem)]">
                 <Image
-                  src="/xn.png"
+                  src="/xn (1).png"
                   alt="A smiling mother lifting her laughing daughter in a hug"
                   fill
                   sizes="(min-width: 1024px) 30rem, 26rem"

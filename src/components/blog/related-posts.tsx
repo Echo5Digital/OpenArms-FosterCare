@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import { getPostImage } from "@/lib/content/posts/images";
 import type { BlogPost } from "@/lib/content/posts/types";
 import { PostMeta } from "./post-meta";

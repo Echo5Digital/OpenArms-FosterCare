@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import { formatPostDate } from "@/lib/content/posts";
 import type { BlogPost } from "@/lib/content/posts/types";
 

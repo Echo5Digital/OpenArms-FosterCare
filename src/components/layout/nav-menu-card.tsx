@@ -1,14 +1,14 @@
 import Image from "next/image";
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import type { NavItem, NavLink } from "@/lib/site-config";
 
 type Menu = NonNullable<NavItem["menu"]>;
 
 /** Cut-out photos (transparent PNGs) that stand beside the links; the optimizer serves a small copy. */
 const photos: Record<Menu, { src: string; desktop: string; phone: string }> = {
-  services: { src: "/xn.png", desktop: "w-[12rem] -right-11", phone: "w-[7.5rem] -right-1" },
+  services: { src: "/xn (1).png", desktop: "w-[12rem] -right-11", phone: "w-[7.5rem] -right-1" },
   locations: {
-    src: "/mother-child-being-happy-100kb (1).png",
+    src: "/mother-child-being-happy-100kb (1) (1).png",
     desktop: "w-[15.5rem] -right-14",
     phone: "w-[9.5rem] -right-3",
   },

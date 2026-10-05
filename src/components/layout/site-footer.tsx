@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import Image from "next/image";
 import { siteConfig, footerServiceLinks, footerOfficeLinks } from "@/lib/site-config";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
