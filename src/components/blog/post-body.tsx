@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
@@ -7,13 +8,29 @@ import { PostTable } from "./post-table";
 
 const text = "text-[1.0625rem] leading-[1.85] text-ink/80 sm:text-lg";
 
-/** Turns **bold** and *italic* in a paragraph into emphasis; text without markers is returned as is. */
+const linkClass = "font-medium text-leaf-deep underline underline-offset-4 transition-colors hover:text-pine";
+
+/** Turns **bold**, *italic* and [label](link) in a paragraph into emphasis and links; text without markers is returned as is. */
 function withEmphasis(value: string): ReactNode {
-  const parts = value.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+  const parts = value.split(/(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)\s]+\))/g);
   if (parts.length === 1) return value;
   return parts.map((part, i) => {
     if (part.startsWith("**")) return <strong key={i} className="font-semibold text-ink">{part.slice(2, -2)}</strong>;
     if (part.startsWith("*")) return <em key={i}>{part.slice(1, -1)}</em>;
+    const link = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/);
+    if (link) {
+      const [, label, href] = link;
+      // a link to a page on this site stays in the app; anything else opens as a normal link
+      return href.startsWith("/") ? (
+        <Link key={i} href={href} className={linkClass}>
+          {label}
+        </Link>
+      ) : (
+        <a key={i} href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+          {label}
+        </a>
+      );
+    }
     return part;
   });
 }
@@ -34,6 +51,12 @@ export function PostBody({ blocks, faqs = [] }: { blocks: PostBlock[]; faqs?: Po
               <h3 key={i} className="mt-8 font-sans text-xl font-bold leading-snug tracking-tight text-pine">
                 {block.text}
               </h3>
+            );
+          case "h4":
+            return (
+              <h4 key={i} className="mt-6 font-sans text-lg font-bold leading-snug tracking-tight text-pine">
+                {block.text}
+              </h4>
             );
           case "p":
             return (

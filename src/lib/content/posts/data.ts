@@ -7,6 +7,238 @@ import type { BlogPost } from "./types";
  */
 export const posts: BlogPost[] = [
   {
+    slug: "what-should-you-have-ready-before-a-foster-child-arrives",
+    title: "What Should You Have Ready Before a Foster Child Arrives?",
+    metaTitle: "What Should You Have Ready Before a Foster Child Arrives? - Open Arms Foster Care",
+    metaDescription:
+      "Learn what to have ready before a foster child arrives, from clothing and bedding to home safety, a welcome package, and your own emotional readiness.",
+    datePublished: "2026-09-28",
+    dateModified: "2026-09-28",
+    excerpt:
+      "The call can come at any time. Sometimes you have a few days to prepare, and sometimes you have a few hours. Either way, knowing what to have ready for a foster child before they walk through your door makes all the difference for both of you.",
+    image: "/house-for-kids-e0ca39 (1).jpg",
+    tags: [],
+    body: [
+      {
+        type: "p",
+        text: "The call can come at any time. Sometimes you have a few days to prepare, and sometimes you have a few hours. Either way, knowing what to have ready for a foster child before they walk through your door makes all the difference for both of you. A well-prepared home tells a child something powerful: someone thought about me before I got here. That message matters deeply, especially for children who have experienced trauma, neglect, or instability. For therapeutic foster parents working with Open Arms Foster Care, this preparation goes beyond stocking shelves. It is about creating a space where healing can begin from the very first moment. This foster child arrival checklist covers everything from physical essentials to emotional readiness, so you can feel confident and your new placement can feel safe.",
+      },
+      {
+        type: "cta",
+        eyebrow: "Open Arms Foster Care",
+        title: "Helping Children and Foster Families Thrive",
+        text: "Open Arms plants seeds of hope, waters them with truth and love, and trusts God to grow them in His time. Our team walks alongside every foster family every step of the way.",
+        label: "Start Your Journey",
+        href: "/contact-us",
+      },
+      { type: "h2", text: "The Essential Foster Child Arrival Checklist: Physical Supplies" },
+      {
+        type: "p",
+        text: "Before anything else, you need the basics covered. Children arriving in foster care often come with very little, sometimes just the clothes they are wearing. Having these items ready removes one layer of stress from an already overwhelming transition.",
+      },
+      { type: "h3", text: "Clothing and Personal Items" },
+      {
+        type: "p",
+        text: "Stock a range of sizes if you do not know the child’s exact measurements. Include:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Several sets of comfortable, season-appropriate clothing",
+          "Pajamas",
+          "Underwear and socks",
+          "A warm jacket or hoodie",
+          "Comfortable shoes or slippers",
+          "A basic toiletry kit with a toothbrush, toothpaste, shampoo, body wash, and a comb or brush",
+        ],
+      },
+      {
+        type: "p",
+        text: "Buying these items new sends a quiet but meaningful message. These things belong to the child. They are not hand-me-downs from someone else’s life.",
+      },
+      { type: "h3", text: "Bedding and Sleep Essentials" },
+      {
+        type: "p",
+        text: "A proper foster child room setup starts with a clean, comfortable bed. Make sure you have:",
+      },
+      {
+        type: "ul",
+        items: [
+          "A fitted sheet, flat sheet, and blanket or comforter",
+          "A pillow and pillowcase",
+          "A nightlight (many children in foster care struggle with darkness or sleep anxiety)",
+          "A small lamp they can control themselves",
+        ],
+      },
+      {
+        type: "p",
+        text: "Sleep is one of the first things disrupted by trauma. A cozy, predictable sleeping space helps a child begin to regulate.",
+      },
+      { type: "h3", text: "Food and Kitchen Basics" },
+      {
+        type: "p",
+        text: "You may not know the child’s preferences yet, and that is fine. Have a variety of simple, familiar foods available:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Cereal, bread, peanut butter (check for allergies first)",
+          "Fresh fruit and easy snacks",
+          "Juice, milk, and water bottles",
+          "A few options for easy dinners",
+        ],
+      },
+      {
+        type: "p",
+        text: "Food insecurity is common among children entering care. Keeping visible, accessible snacks in the kitchen can ease anxiety about when the next meal will come.",
+      },
+      { type: "h2", text: "Preparing Your Home for Foster Child Safety" },
+      {
+        type: "p",
+        text: "Foster child safety preparation is required by licensing standards, but it also builds trust. A child who feels physically safe in your home is more likely to begin feeling emotionally safe too.",
+      },
+      {
+        type: "p",
+        text: "Walk through your home with fresh eyes. Lock up medications, cleaning supplies, and any sharp objects. Install smoke detectors and carbon monoxide detectors if you have not already. Make sure windows have working locks and that pools or other hazards are properly secured.",
+      },
+      {
+        type: "p",
+        text: "For therapeutic placements through Open Arms Foster Care, safety also means thinking about sensory triggers. Loud appliances, strong smells, or cluttered spaces can escalate stress for children with trauma histories. A calm, organized environment supports regulation.",
+      },
+      { type: "h2", text: "Building a Foster Care Welcome Package" },
+      {
+        type: "p",
+        text: "A foster care welcome package does not need to be expensive. It just needs to be personal. This small gesture helps a child feel expected and valued rather than like an afterthought.",
+      },
+      { type: "h3", text: "What to Include in a Welcome Package" },
+      {
+        type: "p",
+        text: "Open Arms Foster Care encourages therapeutic foster parents to personalize these packages whenever possible. If you know the child’s age and interests ahead of time, even a small toy or book related to something they enjoy can create an immediate connection.",
+      },
+      {
+        type: "ul",
+        items: [
+          "A stuffed animal or soft blanket",
+          "A small backpack or bag that belongs to them",
+          "Age-appropriate books or a journal",
+          "Crayons, markers, or colored pencils",
+          "A welcome card or short note from your family",
+        ],
+      },
+      { type: "h2", text: "Foster Parent Preparation: What to Know Before the First Day" },
+      {
+        type: "p",
+        text: "Preparing for a foster child is not only about what you buy. It is about what you know and how you show up emotionally. Foster parent preparation means understanding the child’s background as much as your caseworker can share, knowing the expectations for the first 72 hours, and having a basic plan for how you will handle the transition.",
+      },
+      {
+        type: "p",
+        text: "Ask your caseworker or Open Arms Foster Care team these questions before the child arrives:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Are there known allergies, medical needs, or medications?",
+          "What is the child’s school situation?",
+          "Are there any known trauma triggers or behavioral patterns?",
+          "What is the visitation schedule with biological family?",
+          "Are there comfort items or routines the child is used to?",
+        ],
+      },
+      {
+        type: "p",
+        text: "The more information you gather, the smoother the first day foster child preparation will be. You will not have all the answers immediately, but asking the right questions shows your commitment to meeting the child where they are.",
+      },
+      { type: "h2", text: "Preparing Emotionally for a Foster Child Placement" },
+      {
+        type: "p",
+        text: "This is the part of the foster parent readiness checklist that often gets overlooked. Your emotional state directly affects how a child experiences your home.",
+      },
+      {
+        type: "p",
+        text: "Children placed through Open Arms Foster Care often carry complex emotional, behavioral, and developmental needs. They may not respond the way you expect. They might reject kindness, test boundaries, or shut down completely. None of that is personal. It is survival behavior shaped by their experiences.",
+      },
+      {
+        type: "p",
+        text: "Prepare yourself by reviewing the trauma-informed training Open Arms Foster Care provides. Talk with your support network. Set realistic expectations for the first few weeks. Progress with these children is rarely linear, but the stability and patience you offer can change the entire trajectory of their lives.",
+      },
+      { type: "h3", text: "Prepare Your Family Too" },
+      {
+        type: "p",
+        text: "If you have biological children or other family members in the home, include them in the preparation process. Explain what to expect in age-appropriate terms. Talk about how the new child might act differently than they expect, and why. Encourage questions.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Foster Care offers resources and guidance to help your whole family navigate foster care transition planning. A united household gives the incoming child the consistency they need.",
+      },
+      { type: "h2", text: "What to Do in an Emergency Foster Placement" },
+      {
+        type: "p",
+        text: "Sometimes placements happen fast. An emergency foster placement checklist helps you respond quickly without scrambling.",
+      },
+      {
+        type: "p",
+        text: "Keep a small bin or closet stocked with the basics at all times: a few sets of clothing in various sizes, sealed toiletries, a clean set of bedding, and some non-perishable snacks. This emergency kit means you are always ready, even at midnight on a weekday.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Foster Care supports families through unexpected placements with on-call guidance and resources. You are never doing this alone.",
+      },
+      { type: "h2", text: "How Open Arms Foster Care Supports Your Readiness" },
+      {
+        type: "p",
+        text: "Preparing for foster care placement, especially therapeutic foster care, requires more than good intentions. Open Arms Foster Care provides specialized training in trauma-informed care, ongoing clinical support, and a dedicated team that walks alongside you from your first placement forward.",
+      },
+      {
+        type: "p",
+        text: "Unlike traditional foster care settings, Open Arms focuses on children and adolescents with complex needs who require structured, therapeutic environments. As a foster parent with Open Arms, you receive:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Comprehensive onboarding and foster parent preparation training",
+          "24/7 support from clinical and case management teams",
+          "Guidance on foster child room setup, safety requirements, and home readiness",
+          "Ongoing education on trauma, attachment, and behavioral health",
+          "A community of experienced therapeutic foster parents",
+        ],
+      },
+      {
+        type: "p",
+        text: "This level of support means you are equipped not just for the first day, but for every day after.",
+      },
+      {
+        type: "p",
+        text: "Getting ready for a foster child is about more than checking items off a list. It is about creating a home where a child can exhale, maybe for the first time in a long time. From physical essentials and safety preparations to emotional readiness and family conversations, every step you take matters.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Foster Care exists to support foster parents who are willing to care for children with the most complex needs. The preparation you put in today builds the foundation for real healing and lasting impact.",
+      },
+      {
+        type: "quote",
+        text: "Open Arms Foster Care exists to support foster parents who are willing to care for children with the most complex needs.",
+      },
+      {
+        type: "p",
+        text: "If you are considering becoming a therapeutic foster parent, or you are preparing for your first placement, reach out to Open Arms Foster Care. Their team will help you feel ready, supported, and confident every step of the way.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What should I have ready before a foster child arrives?",
+        answer: "You should have clothing, bedding, toiletries, simple food options, a safe and clean room, and a small welcome package ready before the child arrives.",
+      },
+      {
+        question: "How do I prepare my home for a foster child with trauma?",
+        answer: "Create a calm, organized environment, secure hazards, reduce sensory triggers, and complete trauma-informed training through your foster care agency.",
+      },
+      {
+        question: "What does Open Arms Foster Care provide to help foster parents prepare?",
+        answer: "Open Arms Foster Care provides trauma-informed training, 24/7 clinical support, home setup guidance, and ongoing education for therapeutic foster parents.",
+      },
+    ],
+  },
+  {
     slug: "why-oklahoma-city-needs-emergency-foster-volunteers",
     title: "Why Oklahoma City Needs Emergency Foster Volunteers",
     metaTitle: "Why Oklahoma City Needs Emergency Foster Volunteers",
@@ -3915,6 +4147,7 @@ export const posts: BlogPost[] = [
   dateModified: "2025-10-06",
   excerpt:
     "Therapeutic foster care goes beyond shelter, pairing trained families with clinical support to help children heal from significant trauma. Here's how the model works and why it gets results.",
+  image: "/Untitled-design (1).webp",
   tags: [
     "Therapeutic foster care Oklahoma",
     "Trauma-informed foster care",
@@ -3951,6 +4184,7 @@ export const posts: BlogPost[] = [
       ],
     },
     { type: "h2", text: "Impact of Therapeutic Foster Care on Children" },
+    { type: "img", src: "/Open-Arms-Foster-Care-Blog-Image-1140-x-500-.webp", alt: "Impact of therapeutic foster care on children" },
     {
       type: "p",
       text: "Research shows children in these programs are more likely to experience stability, improved mental health, and fewer behavioral incidents. For instance, a 10-year-old who has cycled through multiple group homes might, under therapeutic foster care, finally receive the consistent attachment and trauma-informed support needed to develop healthier coping skills.",
@@ -4022,6 +4256,7 @@ export const posts: BlogPost[] = [
       text: "These services ensure that children not only stabilize but also build competencies for adulthood.",
     },
     { type: "h2", text: "Therapeutic Foster Care Training for Parents" },
+    { type: "img", src: "/Open-Arms-Foster-Care-Blog-Image-1140-x-500-1.webp", alt: "Therapeutic foster care training for parents" },
     {
       type: "p",
       text: "The role of foster parents is crucial. Therapeutic foster care training for parents covers topics such as attachment theory, de-escalation techniques, managing triggers, and supporting children's education and therapy.",
@@ -4270,6 +4505,7 @@ export const posts: BlogPost[] = [
   dateModified: "2025-08-20",
   excerpt:
     "Child welfare in Oklahoma is about more than keeping kids safe. Here's how Open Arms Foster Care pairs protection with real, long-term support for children and the families who foster them.",
+  image: "/Untitled-design-37 (1).png",
   tags: [
     "Child Welfare Services In Oklahoma",
     "Foster Care Agency Oklahoma City",
@@ -4333,6 +4569,7 @@ export const posts: BlogPost[] = [
       text: "At Open Arms, we walk alongside families through each step, making the process less intimidating and more empowering.",
     },
     { type: "h3", text: "Foster Care Placement Services in Oklahoma" },
+    { type: "img", src: "/Untitled-design-4.png", alt: "Foster care placement services in Oklahoma" },
     {
       type: "p",
       text: "Every child's story is unique, and so is every placement. The role of foster care placement services in Oklahoma is to carefully match children with foster families who can best meet their needs.",
@@ -4416,35 +4653,40 @@ export const posts: BlogPost[] = [
   dateModified: "2025-07-23",
   excerpt:
     "A comprehensive look at how Oklahoma's foster care system works, from top agencies and emergency placements to what prospective parents should expect before they start.",
+  image: "/Untitled-design-5-1 (1).png",
   tags: [
-    "Foster Care Agency Tulsa OK",
-    "Foster Care Agency Oklahoma City",
+    "Child Welfare Services In Oklahoma",
     "Emergency Foster Care Services Oklahoma City",
-    "How to become a foster parent in Oklahoma",
+    "Foster Care Agency In Oklahoma",
+    "Foster Care Agency Tulsa OK",
+    "Foster Parent Support Services Oklahoma",
+    "Foster Parenting Classes In Oklahoma City",
+    "Foster Parenting Training Programs Oklahoma",
+    "Promoting Well-Being of Children and Families in Child Protection",
   ],
   body: [
     {
       type: "p",
-      text: "If you're considering the best foster care agencies in Oklahoma, whether as a potential parent, a supporter, or someone simply seeking understanding, you've likely noticed that the system is both deeply compassionate and, at times, frustratingly complex. Foster care isn't just about providing temporary housing to children; it's about offering stability, safety, and hope in situations often riddled with crisis or trauma.",
+      text: "If you’re considering Best Foster Care Agencies In Oklahoma, whether as a potential parent, a supporter, or someone simply seeking understanding, you’ve likely noticed that the system is both deeply compassionate and, at times, frustratingly complex. Foster care isn’t just about providing temporary housing to children; it’s about offering stability, safety, and hope in situations often riddled with crisis or trauma.",
     },
     {
       type: "p",
-      text: "In this guide, we'll explore key aspects: how the system works, who the top agencies are, emergency placement options, and what prospective foster parents should expect. Whether you're near Tulsa, Oklahoma City, or a rural county, this post is meant to be your companion, organized, honest, and grounded in real-world experience.",
+      text: "In this guide, we’ll explore key aspects: how the system works, who the top agencies are, emergency placement options, and what prospective foster parents should expect. Whether you’re near Tulsa, Oklahoma City, or a rural county, this post is meant to be your companion, organized, honest, and grounded in real-world experience.",
     },
     { type: "h2", text: "1. The Purpose and Framework of Foster Care in Oklahoma" },
     {
       type: "p",
-      text: "Oklahoma places children's well-being at the center. The system itself is a collaboration among caregivers, DHS (Department of Human Services), approved agencies, courts, and community support. While placements can vary from traditional foster homes to treatment-based or therapeutic environments, the goal remains clear: to provide children with a safe, nurturing setting while their families address the issues that led to their removal.",
+      text: "Oklahoma places children well-being at the center. The system itself is a collaboration among caregivers, DHS (Department of Human Services), approved agencies, courts, and community support. While placements can vary from traditional foster homes to treatment-based or therapeutic environments, the goal remains clear: to provide children with a safe, nurturing setting while their families address the issues that led to their removal.",
     },
     {
       type: "p",
-      text: "It's not an easy journey. Many children have faced neglect, abuse, or loss. Some children are in care for only a few weeks, while others may stay much longer, depending on their situation. That's why agencies go beyond providing beds: many offer behavioral support, trauma-informed care, and active engagement with birth families, schools, and mental health providers.",
+      text: "It’s not an easy journey. Many children have faced neglect, abuse, or loss. Some children are in care for only a few weeks, while others may stay much longer, depending on their situation. That’s why agencies go beyond providing beds: many offer behavioral support, trauma-informed care, and active engagement with birth families, schools, and mental health providers.",
     },
     { type: "h2", text: "2. Top Foster Care Agencies in Oklahoma" },
     { type: "h3", text: "Open Arms Foster Care - statewide, led in Tulsa" },
     {
       type: "p",
-      text: "Known for streamlined foster care placement services in Oklahoma and multiple care options, traditional, therapeutic, and intensive treatment, it's CARF-accredited and supported by statewide experience. Their readiness to respond in crises gives many families confidence in their professionalism.",
+      text: "Known for streamlined Foster care placement services Oklahoma and multiple care options, traditional, therapeutic, and intensive treatment, it’s CARF-accredited and supported by statewide experience. Their readiness to respond in crises gives many families confidence in their professionalism.",
     },
     { type: "h3", text: "Foundation for Families – Oklahoma City" },
     {
@@ -4459,23 +4701,24 @@ export const posts: BlogPost[] = [
     { type: "h3", text: "Sunbeam Family Services – statewide" },
     {
       type: "p",
-      text: "Although better known for adoption and behavioral-health counseling, Sunbeam supports foster families through respite care, ongoing mental health resources, and enrichment programs (mentorship, academic help, life skills).",
+      text: "Although better known for adoption and behavior-health counseling, Sunbeam supports foster families through respite care, ongoing mental-health resources, and enrichment programs (mentorship, academic help, life skills).",
     },
+    { type: "img", src: "/Untitled-design-4.png", alt: "Emergency foster care in Oklahoma" },
     { type: "h2", text: "3. Emergency Foster Care in Oklahoma" },
     {
       type: "p",
-      text: "Crisis doesn't wait. That's where emergency foster care in Tulsa shines, helping children in immediate distress due to domestic violence, homelessness, or sudden family upheaval.",
+      text: "Crisis doesn’t wait. That’s where Emergency foster care Tulsa OK shines, helping children in immediate distress due to domestic violence, homelessness, or sudden family upheaval.",
     },
     {
       type: "p",
-      text: "Some agencies maintain \"ready\" foster homes with bedding, clothing, and clear procedures to receive a child on short notice, sometimes in hours. These placements are often supervised more closely, ensuring the child gets proper care and swift evaluation by DHS.",
+      text: "Some agencies maintain “ready” foster homes with bedding, clothing, and clear procedures to receive a child on short notice, sometimes in hours. These placements are often supervised more closely, ensuring the child gets proper care and swift evaluation by DHS.",
     },
     {
       type: "p",
-      text: "What's challenging is the emotional toll: caregivers must be prepared to say goodbye perhaps after only a few nights. Yet many describe it as an honor to offer calm in someone's most turbulent moment.",
+      text: "What’s challenging is the emotional toll: caregivers must be prepared to say goodbye perhaps after only a few nights. Yet many describe it as an honour to offer calm in someone’s most turbulent moment.",
     },
     { type: "h2", text: "4. Understanding Tulsa: Area-Specific Challenges and Foster Agency Presence" },
-    { type: "p", text: "If you're in Tulsa or nearby, here's what to know:" },
+    { type: "p", text: "If you’re in Tulsa or nearby, here’s what to know:" },
     {
       type: "ul",
       items: [
@@ -4493,12 +4736,12 @@ export const posts: BlogPost[] = [
     { type: "h3", text: "Training Requirements" },
     {
       type: "p",
-      text: "Beyond basic classes, Oklahoma emphasizes trauma-informed parenting. That means understanding complex grief, attachment disorders, and navigating school or behavioral challenges. Agencies like Sunbeam or Foundation offer extra workshops in these areas, especially important if you're parenting older youth (12+).",
+      text: "Beyond basic classes, Oklahoma emphasizes trauma-informed parenting. That means understanding complex grief, attachment disorders, and navigating school or behavioral challenges. Agencies like Sunbeam or Foundation offer extra workshops in these areas, especially important if you’re parenting older youth (12+).",
     },
     { type: "h3", text: "Financial Support & Reimbursement" },
     {
       type: "p",
-      text: "Foster parents receive monthly stipends based on the child's needs (basic, moderate, or high). Traditional placements (ages 0–12 without diagnoses) see smaller reimbursements, while therapeutic or medically complex placements receive more.",
+      text: "Foster parents receive monthly stipends based on the child’s needs (basic, moderate, or high). Traditional placements (ages 0–12 without diagnoses) see smaller reimbursements, while therapeutic or medically complex placements receive more.",
     },
     { type: "h3", text: "Support Services" },
     { type: "p", text: "Beyond finances, expect ongoing services:" },
@@ -4531,14 +4774,14 @@ export const posts: BlogPost[] = [
     { type: "h3", text: "Handling Crisis" },
     {
       type: "p",
-      text: "Agencies train you in de-escalation, emergency safety planning, and self-care. You might face aggressive behavior or medical situations, knowing you're supported isn't optional; it's essential.",
+      text: "Agencies train you in de-escalation, emergency safety planning, and self-care. You might face aggressive behavior or medical situations, knowing you’re supported isn’t optional; it’s essential.",
     },
-    { type: "h2", text: "7. The Broader Impact: Foster Care's Role in Strengthening Communities" },
+    { type: "h2", text: "7. The Broader Impact: Foster Care’s Role in Strengthening Communities" },
     { type: "p", text: "Foster parents report subtle, long-lasting rewards:" },
     {
       type: "ul",
       items: [
-        "Their children become more empathetic, aware, and growth-oriented.",
+        "Their children become more empathetic, aware, and growth–oriented.",
         "Their communities grow stronger, understanding systemic issues like mental health or addiction.",
         "They often feel more capable as individuals, both in household and personal resilience.",
       ],
@@ -4550,19 +4793,19 @@ export const posts: BlogPost[] = [
     { type: "h2", text: "8. Challenges and Calls to Action" },
     {
       type: "p",
-      text: "Oklahoma's foster system is doing better than it was a decade ago, but issues remain:",
+      text: "Oklahoma’s foster system is doing better than it was a decade ago, but issues remain:",
     },
     {
       type: "ul",
       items: [
         "Rural access is uneven; counties face shortages in social workers and resource scarcity.",
         "High turnover: foster families can feel burnt out from high caseloads.",
-        "Limited trauma-support specialists: while parent training is improving, direct mental health services aren't always available or affordable.",
+        "Limited trauma-support specialists: while parent training is improving, direct mental-health services aren’t always available or affordable.",
       ],
     },
     {
       type: "p",
-      text: "If you're reading this and thinking, \"I want to help,\" there are many ways beyond fostering:",
+      text: "If you’re reading this and thinking, “I want to help,” there are many ways beyond fostering:",
     },
     {
       type: "ul",
@@ -4576,11 +4819,11 @@ export const posts: BlogPost[] = [
     { type: "h2", text: "9. Final Thoughts: Foster Care as a Journey, not a Destination" },
     {
       type: "p",
-      text: "Foster care in Oklahoma is best described as a mosaic that fits together to form something strong, often beautiful, occasionally fragile. It's also one of those journeys where you're refreshed by small triumphs: a child learning to trust, reuniting with their parents, or a sibling reunion. Becoming a foster parent in Oklahoma means joining a supportive community rooted in empathy, healing, and hope.",
+      text: "Foster care in Oklahoma is best described as a mosaic piece that fits together to form something strong, often beautiful, occasionally fragile. It’s also one of those journeys where you’re refreshed by small triumphs: a child learning to trust, reuniting with their parents, or a sibling reunion. Becoming a foster parent in Oklahoma means joining a supportive community rooted in empathy, healing, and hope.",
     },
     {
       type: "p",
-      text: "The system isn't perfect, but with the right agency, support, and perspective, you can be part of a child's turning point.",
+      text: "The system isn’t perfect, but with the right agency, support, and perspective, you can be part of a child’s turning point.",
     },
   ],
 },
@@ -4594,24 +4837,27 @@ export const posts: BlogPost[] = [
   dateModified: "2025-07-23",
   excerpt:
     "Thinking about a career or calling in child welfare? Here are five practical steps to finding your path, whether that's foster parenting, casework, advocacy, or therapeutic support.",
+  image: "/Untitled-design-8 (1).jpg",
   tags: [
     "Child Welfare Services In Oklahoma",
+    "Foster Care Agency In Oklahoma",
+    "Foster Care Agency Tulsa OK",
     "Foster Parent Support Services Oklahoma",
-    "Foster parent training",
-    "How to become a foster parent in Oklahoma",
+    "Foster Parenting Training Programs Oklahoma",
+    "Promoting Well-Being of Children and Families in Child Protection",
   ],
   body: [
     {
       type: "p",
-      text: "Working in child welfare is more than a job; it's a calling. It's about protecting children, supporting families in crisis, and helping to build a safer, more compassionate community. Whether your goal is to become a caseworker, foster parent, advocate, or therapist, getting involved in child welfare services in Oklahoma opens the door to one of the most meaningful careers imaginable.",
+      text: "Working in child welfare is more than a job; it’s a calling. It’s about protecting children, supporting families in crisis, and helping to build a safer, more compassionate community. Whether your goal is to become a caseworker, foster parent, advocate, or therapist, getting involved in Child Welfare Services in Oklahoma opens the door to one of the most meaningful careers imaginable.",
     },
     {
       type: "p",
-      text: "But how do you get started? Where do you begin if your heart says \"yes,\" but your mind needs a plan?",
+      text: "But how do you get started? Where do you begin if your heart says “yes,” but your mind needs a plan?",
     },
     {
       type: "p",
-      text: "In this blog, we'll walk you through the steps to get involved in child welfare services, whether professionally or personally. Along the way, we'll cover state-specific options, including foster parent support services in Oklahoma, training opportunities like foster parenting classes in Oklahoma City, and the types of roles available in the field.",
+      text: "In this blog, we’ll walk you through the steps to get involved in child welfare services, whether professionally or personally. Along the way, we’ll cover state-specific options, including Foster Parent Support Services Oklahoma, training opportunities like foster parenting classes in Oklahoma City, and the types of roles available in the field.",
     },
     { type: "h2", text: "Understanding the Scope of Child Welfare Services" },
     {
@@ -4630,30 +4876,47 @@ export const posts: BlogPost[] = [
     },
     {
       type: "p",
-      text: "Child welfare doesn't just happen in government offices. Organizations such as community nonprofits, counseling centers, educational institutions, and religious groups also contribute significantly to child welfare efforts.",
+      text: "Child welfare doesn’t just happen in government offices. Organizations such as community nonprofits, counselling centers, educational institutions, and religious groups also contribute significantly to child welfare efforts.",
     },
-    { type: "p", text: "If you want to get involved, there are multiple entry points, each one valuable and necessary." },
+    {
+      type: "p",
+      text: "If you want to get involved, there are multiple entry points, each one valuable and necessary.",
+    },
     { type: "h3", text: "Step 1: Identify the Role That Best Fits Your Passion and Skills" },
-    { type: "p", text: "Your journey begins by identifying how you want to serve. Here are a few popular paths:" },
     {
       type: "p",
-      text: "Become a Child Welfare Professional: If you want to work full-time in the system, you may pursue roles like caseworker, social worker, or family support specialist. These roles typically call for an educational background in fields like social work, psychology, or similar areas of study.",
+      text: "Your journey begins by identifying how you want to serve. Here are a few popular paths:",
     },
+    { type: "h4", text: "Become a Child Welfare Professional" },
     {
       type: "p",
-      text: "Become a Foster Parent: Foster parenting is a direct way to help a child in need of a safe, temporary (or sometimes permanent) home. In Oklahoma, this includes completing training, passing background checks, and maintaining an environment that supports healing and growth.",
+      text: "If you want to work full-time in the system, you may pursue roles like caseworker, social worker, or family support specialist. These roles typically call for an educational background in fields like social work, psychology, or similar areas of study.",
     },
+    { type: "h4", text: "Become a Foster Parent" },
     {
       type: "p",
-      text: "Offer Therapeutic Support: Professionals with mental health credentials can work with agencies offering foster parent support services in Oklahoma, particularly around trauma-informed care and emotional regulation for both children and caregivers.",
+      text: "Foster parenting is a direct way to help a child in need of a safe, temporary (or sometimes permanent) home. In Oklahoma, this includes completing training, passing background checks, and maintaining an environment that supports healing and growth.",
     },
+    { type: "h4", text: "Offer Therapeutic Support" },
     {
       type: "p",
-      text: "Volunteer or Advocate: From tutoring to court-appointed special advocate (CASA) roles, there are many ways to serve even if you're not ready to foster or work full-time in the system.",
+      text: "Professionals with mental health credentials can work with agencies offering foster parent support services in Oklahoma, particularly around trauma-informed care and emotional regulation for both children and caregivers.",
+    },
+    { type: "h4", text: "Volunteer or Advocate" },
+    {
+      type: "p",
+      text: "From tutoring to court-appointed special advocate (CASA) roles, there are many ways to serve even if you’re not ready to foster or work full-time in the system.",
     },
     { type: "h3", text: "Step 2: Pursue the Necessary Education and Skill Development" },
-    { type: "p", text: "Depending on your path, education and certification will vary." },
-    { type: "p", text: "For Professionals: Many jobs in child welfare require a degree in:" },
+    {
+      type: "p",
+      text: "Depending on your path, education and certification will vary.",
+    },
+    { type: "h4", text: "For Professionals" },
+    {
+      type: "p",
+      text: "Many jobs in child welfare require a degree in:",
+    },
     {
       type: "ul",
       items: [
@@ -4667,14 +4930,15 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "After graduation, professionals may pursue additional training in trauma-informed care, legal processes, and ethical standards, especially in high-responsibility roles such as case management or family therapy.",
     },
+    { type: "h4", text: "For Foster Parents" },
     {
       type: "p",
-      text: "For Foster Parents: If your goal is to become a foster parent in Oklahoma, you're required to attend foster parenting classes in Oklahoma City or your local region. These programs cover key competencies, including:",
+      text: "If your goal is to become a foster parent in Oklahoma, you’re required to attend Foster Parenting Classes Oklahoma City or your local region. These programs cover key competencies, including:",
     },
     {
       type: "ul",
       items: [
-        "Managing behavioral challenges",
+        "Managing behavioural challenges",
         "Understanding trauma and attachment issues",
         "Navigating the child welfare system",
         "Communicating with caseworkers and biological families",
@@ -4685,8 +4949,15 @@ export const posts: BlogPost[] = [
       text: "This training ensures that foster parents are well-prepared to meet the emotional and practical needs of the children in their care.",
     },
     { type: "h3", text: "Step 3: Meet the Requirements" },
-    { type: "p", text: "Each path into child welfare services comes with its own set of requirements." },
-    { type: "p", text: "For Foster Parents in Oklahoma, to qualify, you must:" },
+    {
+      type: "p",
+      text: "Each path into child welfare services comes with its own set of requirements.",
+    },
+    { type: "h4", text: "For Foster Parents in Oklahoma" },
+    {
+      type: "p",
+      text: "To qualify, you must:",
+    },
     {
       type: "ul",
       items: [
@@ -4700,15 +4971,19 @@ export const posts: BlogPost[] = [
     },
     {
       type: "p",
-      text: "Once approved, you'll be connected with a support agency that can guide you through every placement and challenge. Agencies offering foster parent support services in Oklahoma often include case management, access to counseling, and 24/7 helplines.",
+      text: "Once approved, you’ll be connected with a support agency that can guide you through every placement and challenge. Agencies offering foster parent support services in Oklahoma often include case management, access to counselling, and 24/7 helplines.",
     },
-    { type: "p", text: "For Professionals, if you're entering as a caseworker or social worker, requirements usually include:" },
+    { type: "h4", text: "For Professionals" },
+    {
+      type: "p",
+      text: "If you’re entering as a caseworker or social worker, requirements usually include:",
+    },
     {
       type: "ul",
       items: [
-        "A bachelor's or master's degree",
+        "A bachelor’s or master’s degree",
         "Field experience or internship",
-        "A valid driver's license",
+        "A valid driver’s license",
         "Completing background checks and drug testing requirements",
         "Training in Oklahoma-specific child welfare laws and procedures",
       ],
@@ -4716,7 +4991,7 @@ export const posts: BlogPost[] = [
     { type: "h3", text: "Step 4: Get Connected to the Right Organizations" },
     {
       type: "p",
-      text: "If you're uncertain about how to get started, consider connecting with reliable community organizations:",
+      text: "If you’re uncertain about how to get started, consider connecting with reliable community organizations:",
     },
     {
       type: "ul",
@@ -4735,9 +5010,12 @@ export const posts: BlogPost[] = [
     { type: "h3", text: "Step 5: Be Ready Emotionally and Logistically" },
     {
       type: "p",
-      text: "Getting into child welfare isn't just about paperwork; it's about heart work. Whether you're becoming a social worker or opening your home to foster, this work requires compassion, patience, and resilience.",
+      text: "Getting into child welfare isn’t just about paperwork; it’s about heart work. Whether you’re becoming a social worker or opening your home to foster, this work requires compassion, patience, and resilience.",
     },
-    { type: "p", text: "Ask yourself:" },
+    {
+      type: "p",
+      text: "Ask yourself:",
+    },
     {
       type: "ul",
       items: [
@@ -4749,20 +5027,25 @@ export const posts: BlogPost[] = [
     },
     {
       type: "p",
-      text: "If you're saying yes, even with some hesitation, you're already showing the qualities child welfare needs more of.",
+      text: "If you’re saying yes, even with some hesitation, you’re already showing the qualities child welfare needs more of.",
     },
+    { type: "h4", text: "The Impact You Can Make" },
     {
       type: "p",
-      text: "The Impact You Can Make: The difference you can make in a child's life is profound. With stability, love, and advocacy, children in the foster care system can thrive even after experiencing trauma or disruption. Whether you're providing a home, delivering therapy, or helping families reunite, your role creates a ripple effect that can last for generations.",
+      text: "The difference you can make in a child’s life is profound. With stability, love, and advocacy, children in the foster care system can thrive even after experiencing trauma or disruption. Whether you’re providing a home, delivering therapy, or helping families reunite, your role creates a ripple effect that can last for generations.",
     },
     {
       type: "p",
       text: "Agencies offering child welfare services in Oklahoma are actively seeking people with empathy, grit, and a commitment to transformation. Every child deserves a champion. Will it be you?",
     },
+    {
+      type: "p",
+      text: "For More Information: [The Importance of a Support System for Foster Parents](/the-importance-of-a-support-system-for-foster-parents)",
+    },
     { type: "h3", text: "Final Thoughts: Your Next Step" },
     {
       type: "p",
-      text: "If your heart is pulling you toward this work, don't ignore the nudge. Child welfare needs people from all walks of life, those with professional training, lived experience, or simply the desire to make a difference.",
+      text: "If your heart is pulling you toward this work, don’t ignore the nudge. Child welfare needs people from all walks of life, those with professional training, lived experience, or simply the desire to make a difference.",
     },
     {
       type: "p",
@@ -4770,7 +5053,7 @@ export const posts: BlogPost[] = [
     },
     {
       type: "p",
-      text: "Because stepping into child welfare isn't just about what you give, it's about what you gain: perspective, purpose, and a chance to be part of something bigger than yourself.",
+      text: "Because stepping into child welfare isn’t just about what you give, it’s about what you gain: perspective, purpose, and a chance to be part of something bigger than yourself.",
     },
   ],
 },
@@ -4784,6 +5067,7 @@ export const posts: BlogPost[] = [
   dateModified: "2025-06-24",
   excerpt:
     "True child protection is about more than physical safety. Here's how a whole-family, whole-community approach helps children in foster care truly thrive.",
+  image: "/Promoting-Well-Being-of-Children-and-Families-in-Child-Protection (1).jpg",
   tags: [
     "Child Welfare Services In Oklahoma",
     "Promoting Well-Being of Children and Families in Child Protection",
@@ -4843,6 +5127,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Foster parents are never alone. They are part of a wider team that includes caseworkers, therapists, educators, and sometimes the child's biological family. This team approach ensures that the foster home becomes a launching pad for healing and stability.",
     },
+    { type: "img", src: "/Promoting-Well-Being-of-Children-and-Families-in-Child-Protection2.jpg", alt: "Supporting the whole family in child protection" },
     { type: "h2", text: "Supporting the Whole Family" },
     {
       type: "p",
@@ -4912,6 +5197,7 @@ export const posts: BlogPost[] = [
   dateModified: "2025-06-13",
   excerpt:
     "Emergency foster parents don't wear capes, but they change lives overnight. Here's what it takes to become one, and the training and support that stand behind you.",
+  image: "/Emergency-Foster-Care-Hero (1).jpg",
   tags: [
     "Emergency Foster Care Services Oklahoma City",
     "Foster Care Agency Tulsa OK",
@@ -4991,6 +5277,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Whether you're joining in Tulsa or Lawton, the skills you gain will prepare you for the incredible journey ahead.",
     },
+    { type: "img", src: "/foster-parent-support.jpg", alt: "Ongoing support that stays with emergency foster parents" },
     { type: "h2", text: "Ongoing Support That Stays With You" },
     {
       type: "p",
@@ -5069,6 +5356,7 @@ export const posts: BlogPost[] = [
   dateModified: "2025-05-22",
   excerpt:
     "From training to financial help to emotional backing, here are three concrete ways a foster care agency supports you long before and long after a child is placed in your home.",
+  image: "/3-Ways-Foster-Agencies-Support-You-as-a-Foster-Parent (1).jpg",
   tags: [
     "Foster Parent Support Services Oklahoma",
     "Foster parent training",
@@ -5165,6 +5453,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Many foster parents say that this emotional support is what makes the biggest difference. You're never just a number in a system, you're part of a larger network that wants to see your family succeed.",
     },
+    { type: "img", src: "/Emotional-Support.jpg", alt: "A safe, supported path forward for foster parents" },
     { type: "h2", text: "A Safe, Supported Path Forward" },
     {
       type: "p",
@@ -5190,6 +5479,7 @@ export const posts: BlogPost[] = [
     dateModified: "2025-05-15",
     excerpt:
       "Building trust with a foster child rarely happens through grand gestures — it happens in small, steady moments that say 'you are safe here.' Here's how foster parents can nurture that connection day by day.",
+    image: "/Best-Foster-Care-Agencies-2 (1).jpg",
     tags: [
       "Foster Care Agency Oklahoma City",
       "Trauma-informed foster care",
@@ -5243,6 +5533,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "Memories knit relationships together. We encourage foster parents to build traditions, big or small, that kids can carry forward. Baking cookies on Sundays, watching a favorite movie, or planting a garden creates a sense of belonging. A 12-year-old who has bounced between homes might light up tending a tomato plant, feeling rooted for the first time. The National Foster Parent Association highlights how rituals strengthen bonds, a practice we embed in our training. These moments don't take the pain away, but they help create hope.",
       },
+      { type: "img", src: "/Family-Counseling.jpg", alt: "Supporting a foster child's emotional growth" },
       { type: "h2", text: "Supporting Emotional Growth" },
       {
         type: "p",
@@ -5297,6 +5588,8 @@ export const posts: BlogPost[] = [
     dateModified: "2025-05-15",
     excerpt:
       "From training to peer groups, a solid support network is what turns the chaos of fostering into calm — here's how that web of support actually works in Oklahoma.",
+    image: "/Foster-Parenting-Training-Programs-in-Oklahoma (1).jpg",
+    faqTitle: "FAQs",
     tags: [
       "Foster Parent Support Services Oklahoma",
       "Foster Parent training",
@@ -5344,6 +5637,7 @@ export const posts: BlogPost[] = [
           "Resources: We provide guides and check-ins to keep foster parents grounded.",
         ],
       },
+      { type: "img", src: "/Foster-Parenting-Classes-in-Oklahoma-City-2.jpg", alt: "The tough days of foster parenting" },
       { type: "h2", text: "The Tough Days" },
       {
         type: "p",
@@ -5389,6 +5683,8 @@ export const posts: BlogPost[] = [
     dateModified: "2025-04-16",
     excerpt:
       "Bringing a new foster child home is rarely a polished story — it's a real, rugged process of turning strangers into family. Here's what actually helps during those first uncertain weeks.",
+    image: "/Foster-Care-Agency-In-Oklahoma (1).jpg",
+    faqTitle: "FAQs",
     tags: [
       "Foster Care Agency In Oklahoma",
       "Therapeutic foster care Oklahoma",
@@ -5431,6 +5727,7 @@ export const posts: BlogPost[] = [
           "Reach Out: We provide caseworkers and peer groups — use them when needed.",
         ],
       },
+      { type: "img", src: "/Child-Welfare-Services-in-Oklahoma.jpg", alt: "Handling the tough stuff when a new foster child joins your family" },
       { type: "h2", text: "Handling the Tough Stuff" },
       {
         type: "p",
@@ -5481,6 +5778,7 @@ export const posts: BlogPost[] = [
     dateModified: "2025-04-11",
     excerpt:
       "At 18, foster youth in Oklahoma are often nudged into adulthood with little more than a bag of clothes. Here's what aging out really looks like, and the resources that can turn it into a springboard instead of a cliff edge.",
+    image: "/Child-Welfare-Services-In-Oklahoma-1 (1).jpg",
     tags: [
       "Child Welfare Services In Oklahoma",
       "Foster Care Agency Oklahoma City",
@@ -5522,6 +5820,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "Here's the bright side: Oklahoma's got tools, and Open Arms is woven into that fabric. State programs and private groups offer lifelines—if folks know where to turn.",
       },
+      { type: "img", src: "/Best-Foster-Care-Agencies.jpg", alt: "Resources for Oklahoma's foster youth" },
       { type: "h2", text: "Resources for Oklahoma's Foster Youth" },
       {
         type: "p",
@@ -5561,6 +5860,7 @@ export const posts: BlogPost[] = [
     dateModified: "2025-03-25",
     excerpt:
       "Stable, healing foster placements don't happen in isolation — they're built by businesses, churches, schools, and neighbors pitching in alongside foster families. Here's what community support for foster care in Oklahoma actually looks like.",
+    image: "/Foster-Care-Agency-In-Oklahoma-1 (1).jpg",
     tags: [
       "Foster Care Agency In Oklahoma",
       "Foster Parenting Classes In Oklahoma City",
@@ -5606,6 +5906,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "Churches, religious groups, and nonprofits have historically played a significant role in foster care support. Many faith-based organizations provide mentorship programs, family support services, and emergency housing assistance. These groups also often offer foster parent support services in Oklahoma, giving families access to counseling, training, and other essential resources.",
       },
+      { type: "img", src: "/Foster-Parenting-Classes-In-Oklahoma-City.jpg", alt: "Foster parenting classes in Oklahoma City" },
       { type: "h2", text: "Education and Training: Strengthening Foster Parenting Skills" },
       {
         type: "p",
@@ -5648,6 +5949,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "By focusing on mental health, communities help foster children develop coping skills and resilience, leading to healthier futures.",
       },
+      { type: "img", src: "/Foster-Care-Services (1).jpg", alt: "How schools can support foster children" },
       { type: "h2", text: "How Schools Can Support Foster Children" },
       { type: "p", text: "Educational stability is critical for foster youth. Schools can provide additional support by:" },
       {
@@ -5693,16 +5995,12 @@ export const posts: BlogPost[] = [
     dateModified: "2025-03-20",
     excerpt:
       "A step-by-step look at what it takes to become a licensed foster parent in Oklahoma, from meeting the basic requirements through your first placement and beyond.",
-    tags: [
-      "How to become a foster parent in Oklahoma",
-      "Child Welfare Services In Oklahoma",
-      "Foster parent training",
-      "Foster Care Agency Oklahoma City",
-    ],
+    image: "/How-To-Become-A-Foster-Parent-In-Oklahoma (1).jpg",
+    tags: ["Emergency Foster Care Services Oklahoma City", "Foster Care Agency Tulsa OK"],
     body: [
       {
         type: "p",
-        text: "How To Become A Foster Parent In Oklahoma? Becoming a foster parent is a fulfilling and transformative choice. It involves opening your heart and home to a child in need, providing them with a safe and loving environment during a challenging time in their lives. If you're considering becoming a foster parent in Oklahoma, this guide will walk you through the steps, requirements, and benefits of fostering children in the state.",
+        text: "How To Become A Foster Parent In Oklahoma? Becoming a foster parent is a fulfilling and transformative choice. It involves opening your heart and home to a child in need, providing them with a safe and loving environment during a challenging time in their lives. If you’re considering becoming a foster parent in Oklahoma, this guide will walk you through the steps, requirements, and benefits of fostering children in the state.",
       },
       { type: "h2", text: "What Is Foster Care?" },
       {
@@ -5711,22 +6009,37 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "In Oklahoma, as in other states, the foster care system relies on compassionate and dedicated foster parents to care for children who need a loving environment. If you're considering fostering, it's important to understand the responsibilities, challenges, and rewards of this important role.",
+        text: "In Oklahoma, as in other states, the foster care system relies on compassionate and dedicated foster parents to care for children who need a loving environment. If you’re considering fostering, it’s important to understand the responsibilities, challenges, and rewards of this important role.",
       },
       { type: "h2", text: "Why Become a Foster Parent in Oklahoma?" },
       {
         type: "p",
-        text: "The need for foster parents in Oklahoma is significant. Thousands of children are in the state's foster care system, and there are always children in need of loving homes. Foster parents play a vital role in helping children heal from trauma, experience stability, and receive the support they need to thrive. By becoming a foster parent in Oklahoma, you have the opportunity to make a lasting impact on a child's life. You provide more than just a roof over their head – you offer emotional support, guidance, and the chance to experience love and safety that many of these children have never known. It's an opportunity to make a difference in the lives of children who need you the most.",
+        text: "The need for foster parents in Oklahoma is significant. Thousands of children are in the state’s foster care system, and there are always children in need of loving homes. Foster parents play a vital role in helping children heal from trauma, experience stability, and receive the support they need to thrive. By becoming a foster parent in Oklahoma, you have the opportunity to make a lasting impact on a child’s life. You provide more than just a roof over their head – you offer emotional support, guidance, and the chance to experience love and safety that many of these children have never known. It’s an opportunity to make a difference in the lives of children who need you the most.",
       },
       { type: "h2", text: "Steps to Become a Foster Parent in Oklahoma" },
       {
         type: "p",
-        text: "The process of becoming a foster parent in Oklahoma can seem overwhelming, but with the right information and support, it's entirely manageable. Below is a detailed guide to help you through each step of the process:",
+        text: "The process of becoming a foster parent in Oklahoma can seem overwhelming, but with the right information and support, it’s entirely manageable. Below is a detailed guide to help you through each step of the process:",
       },
       { type: "h3", text: "Step 1: Meet the Basic Requirements" },
       {
         type: "p",
-        text: "Before you can become a foster parent, you need to meet certain basic requirements. These requirements ensure that you are prepared and capable of providing a safe and supportive environment for a child. In Oklahoma, foster parents must be at least 21 years old, have a stable income or financial support to care for a child, pass a criminal background check (including both state and federal checks) to ensure safety, be in good physical and mental health, have a clean and safe home environment, and be willing to attend training and complete the necessary certifications. If you meet these basic requirements, you can move forward with the process of becoming a foster parent.",
+        text: "Before you can become a foster parent, you need to meet certain basic requirements. These requirements ensure that you are prepared and capable of providing a safe and supportive environment for a child. In Oklahoma, foster parents must:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Be at least 21 years old.",
+          "Have a stable income or financial support to care for a child.",
+          "Pass a criminal background check (including both state and federal checks) to ensure safety.",
+          "Be in good physical and mental health.",
+          "Have a clean and safe home environment.",
+          "Be willing to attend training and complete the necessary certifications.",
+        ],
+      },
+      {
+        type: "p",
+        text: "If you meet these basic requirements, you can move forward with the process of becoming a foster parent.",
       },
       { type: "h3", text: "Step 2: Complete an Application" },
       {
@@ -5736,7 +6049,7 @@ export const posts: BlogPost[] = [
       { type: "h3", text: "Step 3: Attend Orientation and Foster Parent Training" },
       {
         type: "p",
-        text: "Once your application is accepted, you will be required to attend an orientation session. This meeting will provide you with an overview of the foster care system, the responsibilities of foster parents, and the specific needs of children in foster care. During orientation, you'll learn what to expect throughout the process and what's required of you as a foster parent.",
+        text: "Once your application is accepted, you will be required to attend an orientation session. This meeting will provide you with an overview of the foster care system, the responsibilities of foster parents, and the specific needs of children in foster care. During orientation, you’ll learn what to expect throughout the process and what’s required of you as a foster parent.",
       },
       {
         type: "p",
@@ -5763,22 +6076,22 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "The purpose of the home study is to ensure that your home is safe, stable, and suitable for a child welfare placement in Oklahoma. The social worker will assess your living space, look for potential hazards, and ensure that you have the necessary resources to care for a child. They may also talk to family members, review references, and ensure that everyone in the home is ready to welcome a child.",
+        text: "The purpose of the home study is to ensure that your home is safe, stable, and suitable for Child Welfare Services In Oklahoma. The social worker will assess your living space, look for potential hazards, and ensure that you have the necessary resources to care for a child. They may also talk to family members, review references, and ensure that everyone in the home is ready to welcome a child.",
       },
       { type: "h3", text: "Step 5: Receive Approval and Certification" },
       {
         type: "p",
-        text: "Once you pass the home study and complete all required steps, you will be approved to become a foster parent. You will receive your foster parent certification, which means you are now eligible to take placements of children in need. After certification, you will work with the foster care agency to discuss the types of children you feel prepared to care for, such as their age, needs, and any specific challenges. Foster care agencies try to match children with the most suitable families based on the family's experience, needs, and preferences.",
+        text: "Once you pass the home study and complete all required steps, you will be approved to become a foster parent. You will receive your foster parent certification, which means you are now eligible to take placements of children in need. After certification, you will work with the foster care agency to discuss the types of children you feel prepared to care for, such as their age, needs, and any specific challenges. Foster care agencies try to match children with the most suitable families based on the family’s experience, needs, and preferences.",
       },
       { type: "h3", text: "Step 6: Placement of a Child" },
       {
         type: "p",
-        text: "Once approved, you will be ready to welcome a child into your home. The placement process varies based on the needs of the children and the availability of foster homes. You may receive a call from your foster care agency when a child needs placement. At this stage, you will be asked if you're able to take in the child based on their specific needs. The length of placement can vary. In some cases, children may stay in foster care temporarily while efforts are made to reunite them with their birth families. In other cases, children may remain in foster care longer, especially if adoption is the permanent plan.",
+        text: "Once approved, you will be ready to welcome a child into your home. The placement process varies based on the needs of the children and the availability of foster homes. You may receive a call from your foster care agency when a child needs placement. At this stage, you will be asked if you’re able to take in the child based on their specific needs. The length of placement can vary. In some cases, children may stay in foster care temporarily while efforts are made to reunite them with their birth families. In other cases, children may remain in foster care longer, especially if adoption is the permanent plan.",
       },
       { type: "h3", text: "Step 7: Ongoing Support and Communication" },
       {
         type: "p",
-        text: "Once a child is placed in your home, you will continue to receive ongoing support from your foster care agency. You will have regular check-ins with caseworkers, therapists, and other professionals who are part of the child's care team. Communication is key to ensuring that the child's needs are being met and that any challenges are addressed.",
+        text: "Once a child is placed in your home, you will continue to receive ongoing support from your foster care agency. You will have regular check-ins with caseworkers, therapists, and other professionals who are part of the child’s care team. Communication is key to ensuring that the child’s needs are being met and that any challenges are addressed.",
       },
       {
         type: "p",
@@ -5797,13 +6110,14 @@ export const posts: BlogPost[] = [
           "Personal Growth: Fostering teaches patience, empathy, and resilience, all while giving you an opportunity for personal and emotional growth.",
         ],
       },
+      { type: "h3", text: "Conclusion" },
       {
         type: "p",
-        text: "Becoming a foster parent in Oklahoma is a big decision, but it's also one of the most impactful choices you can make. It's about providing a safe, loving home to children who have experienced trauma, and giving them the support they need to thrive. The process of becoming a foster parent may require patience and effort, but the rewards of making a difference in a child's life are immeasurable.",
+        text: "Becoming a foster parent in Oklahoma is a big decision, but it’s also one of the most impactful choices you can make. It’s about providing a safe, loving home to children who have experienced trauma, and giving them the support they need to thrive. The process of becoming a foster parent may require patience and effort, but the rewards of making a difference in a child’s life are immeasurable.",
       },
       {
         type: "p",
-        text: "If you're ready to make a difference in the life of a child, reach out to your local foster care agency or the Oklahoma Department of Human Services to learn more about becoming a foster parent today!",
+        text: "If you’re ready to make a difference in the life of a child, reach out to your local foster care agency or the Oklahoma Department of Human Services to learn more about becoming a foster parent today!",
       },
     ],
   },
@@ -5817,6 +6131,7 @@ export const posts: BlogPost[] = [
     dateModified: "2025-03-20",
     excerpt:
       "Fostering asks parents to learn on the job, fast. Here's why ongoing education — from trauma-informed training to peer support networks — is what turns good intentions into real, lasting stability for foster children.",
+    image: "/Why-Education-is-So-Important-for-Foster-Parents-2048x1367 (1).jpg",
     tags: [
       "Foster parent training",
       "Foster Parent Support Services Oklahoma",

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { allPosts, allTags, formatPostDate } from "@/lib/content/posts";
 import { BlogSearch } from "./blog-search";
+import { BlogTags, type TagsDesign } from "./blog-tags";
 import { CalendarIcon } from "./post-meta";
 
 const searchablePosts = allPosts.map((p) => ({
@@ -12,11 +13,15 @@ const searchablePosts = allPosts.map((p) => ({
 
 const LATEST_COUNT = 5;
 
-function Widget({ title, children }: { title: string; children: ReactNode }) {
+/** Which look the Tags widget uses: "pills", "cloud", "list" or "dark" (see blog-tags.tsx). */
+const TAGS_DESIGN: TagsDesign = "pills";
+
+function Widget({ title, children, tone = "light" }: { title: string; children: ReactNode; tone?: "light" | "dark" }) {
+  const dark = tone === "dark";
   return (
-    <section className="rounded-[1.25rem] border border-pine/10 bg-white p-6 sm:p-7">
-      <div className="relative mb-6 border-b border-pine/10 pb-3">
-        <h2 className="font-sans text-xl font-bold tracking-tight text-pine">{title}</h2>
+    <section className={`rounded-[1.25rem] border p-6 sm:p-7 ${dark ? "border-pine-deep bg-pine" : "border-pine/10 bg-white"}`}>
+      <div className={`relative mb-6 border-b pb-3 ${dark ? "border-cream/15" : "border-pine/10"}`}>
+        <h2 className={`font-sans text-xl font-bold tracking-tight ${dark ? "text-cream" : "text-pine"}`}>{title}</h2>
         <span aria-hidden className="absolute -bottom-px left-0 h-0.5 w-[90px] bg-leaf" />
       </div>
       {children}
@@ -27,7 +32,12 @@ function Widget({ title, children }: { title: string; children: ReactNode }) {
 /** `activeTags` are the tags of the post being read; they stand out in the tag list. */
 export function BlogSidebar({ activeTags = [] }: { activeTags?: string[] }) {
   return (
-    <aside aria-label="Blog sidebar" className="flex flex-col gap-8">
+    // On wide screens the sidebar stays in view just under the site header. It is taller than most screens, so it
+    // scrolls inside itself (thin leaf-green scrollbar) and every card stays reachable; on phones it flows below the posts.
+    <aside
+      aria-label="Blog sidebar"
+      className="flex flex-col gap-8 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:self-start lg:overflow-y-auto lg:pr-1 [scrollbar-color:var(--leaf)_transparent] [scrollbar-width:thin]"
+    >
       <Widget title="Search Here">
         <BlogSearch posts={searchablePosts} />
       </Widget>
@@ -65,19 +75,8 @@ export function BlogSidebar({ activeTags = [] }: { activeTags?: string[] }) {
       </Widget>
 
       {allTags.length > 0 && (
-        <Widget title="Tags">
-          <ul className="flex flex-wrap gap-2">
-            {allTags.map((tag) => (
-              <li
-                key={tag}
-                className={`rounded-full border px-3 py-1 text-xs ${
-                  activeTags.includes(tag) ? "border-leaf bg-leaf/20 font-semibold text-pine" : "border-pine/15 text-slate"
-                }`}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
+        <Widget title="Tags" tone={TAGS_DESIGN === "dark" ? "dark" : "light"}>
+          <BlogTags design={TAGS_DESIGN} activeTags={activeTags} />
         </Widget>
       )}
     </aside>

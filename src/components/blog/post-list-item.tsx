@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ButtonLink } from "@/components/ui/button-link";
 import { getPostImage } from "@/lib/content/posts/images";
 import type { BlogPost } from "@/lib/content/posts/types";
 import { PostMeta } from "./post-meta";
@@ -33,9 +32,22 @@ export function PostListItem({ post, preloadImage = false }: { post: BlogPost; p
       <p className="mt-4 line-clamp-3 text-base leading-relaxed text-slate">{post.excerpt}</p>
 
       <div className="mt-6">
-        <ButtonLink href={href} variant="ghost">
-          Read More
-        </ButtonLink>
+        {/* dark green pill with a leaf-green arrow; on hover a leaf-green fill slides across and the colours swap */}
+        <Link
+          href={href}
+          className="group/btn relative inline-flex items-center gap-4 overflow-hidden rounded-full bg-pine py-2 pl-7 pr-2 font-sans text-[0.95rem] font-semibold text-cream transition-colors duration-300 hover:text-pine-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf focus-visible:ring-offset-2 focus-visible:ring-offset-mint motion-reduce:transition-none"
+        >
+          <span
+            aria-hidden
+            className="absolute inset-0 -translate-x-full bg-leaf transition-transform duration-300 ease-out group-hover/btn:translate-x-0 motion-reduce:transition-none"
+          />
+          <span className="relative">Read More</span>
+          <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-leaf text-pine-deep transition-colors duration-300 group-hover/btn:bg-pine group-hover/btn:text-leaf motion-reduce:transition-none">
+            <svg aria-hidden viewBox="0 0 24 24" className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-0.5 motion-reduce:transition-none">
+              <path d="M4 12h15m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </Link>
       </div>
     </article>
   );

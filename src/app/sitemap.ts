@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { allPosts, totalPages } from "@/lib/content/posts";
+import { allPosts, allTags, pageCount, totalPages } from "@/lib/content/posts";
 
 const staticRoutes = [
   "",
@@ -46,5 +46,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...blogPaginationEntries, ...postEntries];
+  // one page per tag, plus extra pages for tags with more than 10 posts
+  const tagEntries: MetadataRoute.Sitemap = allTags.flatMap((tag) =>
+    Array.from({ length: pageCount(tag.count) }, (_, i) => ({
+      url: `${siteConfig.url}/blog/tag/${tag.slug}${i === 0 ? "" : `/page/${i + 1}`}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.4,
+    })),
+  );
+
+  return [...staticEntries, ...blogPaginationEntries, ...tagEntries, ...postEntries];
 }

@@ -1,10 +1,12 @@
 export type PostFaq = { question: string; answer: string };
 
 export type PostBlock =
-  /** Paragraph text may use *italic* and **bold**. */
+  /** Paragraph text may use *italic*, **bold** and [links](/a-page-on-this-site or https://elsewhere). */
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
+  /** Small sub-heading under an h3. */
+  | { type: "h4"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
   /** Inline photo from /public, shown full width of the article column. */
