@@ -34,7 +34,7 @@ export function WhyOpenArms() {
   return (
     <section className="relative overflow-hidden bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
-        <Reveal>
+        <Reveal noMobileAnimation>
           <span className="block h-[3px] w-24 rounded-full bg-gradient-to-r from-leaf-deep to-leaf" />
           <h2 className="mt-5 max-w-4xl font-sans text-[2.1rem] font-bold leading-[1.1] tracking-tight text-pine sm:text-[2.8rem] lg:text-[3.1rem]">
             Why Choose Open Arms Foster Care in{" "}
@@ -62,7 +62,7 @@ export function WhyOpenArms() {
         </Reveal>
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          <Reveal className="lg:sticky lg:top-28 lg:self-start" delay={100}>
+          <Reveal className="lg:sticky lg:top-28 lg:self-start" delay={100} noMobileAnimation>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-2xl">
               <Image
                 src="/father-spending-time-with-his-daughter-outdoors-father-s-day 1-100kb.jpg"
@@ -89,7 +89,7 @@ export function WhyOpenArms() {
 
           <div className="flex flex-col gap-5">
             {reasons.map((reason, i) => (
-              <Reveal key={reason.title} from="right" triggerOffset="-12%">
+              <Reveal key={reason.title} from="right" triggerOffset="-12%" noMobileAnimation>
                 <div className="group flex gap-6 rounded-[1.75rem] bg-cream-alt p-7 shadow-[0_4px_20px_-8px_rgba(15,33,27,0.1)] ring-1 ring-pine/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-16px_rgba(15,33,27,0.18)] sm:p-8">
                   <span className="font-display text-4xl font-light leading-none text-leaf/60 transition-colors duration-300 group-hover:text-leaf-deep">
                     {String(i + 1).padStart(2, "0")}

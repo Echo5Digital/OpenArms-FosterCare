@@ -9,9 +9,30 @@ type Props = {
   from?: "bottom" | "right" | "left";
   /** Extra offset from the viewport bottom before triggering, e.g. "-15%". */
   triggerOffset?: string;
+  /** Show the content straight away on phones; the scroll animation only plays from the md breakpoint up. */
+  noMobileAnimation?: boolean;
 };
 
-export function Reveal({ children, className = "", delay = 0, from = "bottom", triggerOffset = "0px" }: Props) {
+const hiddenState = {
+  right: "translate-x-14 opacity-0",
+  left: "-translate-x-14 opacity-0",
+  bottom: "translate-y-8 opacity-0",
+};
+
+const hiddenStateFromMd = {
+  right: "md:translate-x-14 md:opacity-0",
+  left: "md:-translate-x-14 md:opacity-0",
+  bottom: "md:translate-y-8 md:opacity-0",
+};
+
+export function Reveal({
+  children,
+  className = "",
+  delay = 0,
+  from = "bottom",
+  triggerOffset = "0px",
+  noMobileAnimation = false,
+}: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -39,11 +60,7 @@ export function Reveal({ children, className = "", delay = 0, from = "bottom", t
       className={`transition-all duration-700 ease-out ${
         isVisible
           ? "translate-x-0 translate-y-0 opacity-100"
-          : from === "right"
-            ? "translate-x-14 opacity-0"
-            : from === "left"
-              ? "-translate-x-14 opacity-0"
-              : "translate-y-8 opacity-0"
+          : (noMobileAnimation ? hiddenStateFromMd : hiddenState)[from]
       } ${className}`}
       style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
     >
