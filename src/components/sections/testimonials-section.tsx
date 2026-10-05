@@ -92,12 +92,12 @@ export function TestimonialsSection() {
                 </span>
                 <figcaption className="font-sans text-base font-semibold text-pine">{active.name}</figcaption>
               </div>
-              <Image src="/icon (1).svg" alt="" width={22} height={22} className="shrink-0" />
+              <Image src="/icon (1).svg" alt="Google" width={22} height={22} className="shrink-0" />
             </div>
 
             <div role="img" aria-label="5 out of 5 stars" className="mt-4 flex gap-1">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Image key={i} src="/f (1).svg" alt="" width={16} height={15} />
+                <Image key={i} src="/f (1).svg" alt="Star" width={16} height={15} />
               ))}
             </div>
 

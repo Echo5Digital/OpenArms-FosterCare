@@ -65,15 +65,15 @@ export function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-cream p-5 pt-0">
-      <div className="absolute inset-0 -z-10">
-        <Image src="/echo5-image-1790661911908.png" alt="" fill sizes="100vw" className="object-cover" />
+      <div aria-hidden className="absolute inset-0 -z-10">
+        <Image src="/echo5-image-1790661911908.png" alt="Soft green geometric pattern background" fill sizes="100vw" className="object-cover" />
       </div>
 
       <div className="relative overflow-hidden rounded-[2rem] pt-[5.5rem] lg:mt-[5.5rem] lg:flex lg:min-h-[calc(100vh-5.5rem)] lg:flex-col lg:justify-center lg:pt-0">
-        <div className="absolute inset-y-0 left-0 hidden w-[22%] overflow-hidden rounded-[2rem] bg-[#111a16] lg:block">
+        <div aria-hidden className="absolute inset-y-0 left-0 hidden w-[22%] overflow-hidden rounded-[2rem] bg-[#111a16] lg:block">
           <Image
             src="/bgbanner.png"
-            alt=""
+            alt="Dark green geometric pattern"
             fill
             sizes="22vw"
             className="object-cover opacity-20"
@@ -102,8 +102,8 @@ export function Hero() {
               Foster Care in Oklahoma City,
               <br />
               Helping Children and Foster Families Thrive
-              <span className="ml-3 hidden h-14 w-14 shrink-0 translate-y-2 items-center justify-center overflow-hidden rounded-full align-middle sm:inline-flex sm:h-16 sm:w-16">
-                <Image src="/images/fav.png" alt="" width={64} height={64} className="h-full w-full object-cover" />
+              <span aria-hidden className="ml-3 hidden h-14 w-14 shrink-0 translate-y-2 items-center justify-center overflow-hidden rounded-full align-middle sm:inline-flex sm:h-16 sm:w-16">
+                <Image src="/images/fav.png" alt="Open Arms Foster Care logo" width={64} height={64} className="h-full w-full object-cover" />
               </span>
             </h1>
 
@@ -121,7 +121,7 @@ export function Hero() {
                   >
                     <Image
                       src={card.image}
-                      alt={i >= cards.length ? "" : card.alt}
+                      alt={card.alt}
                       fill
                       sizes="(min-width: 1024px) 25vw, 50vw"
                       className="object-cover"
