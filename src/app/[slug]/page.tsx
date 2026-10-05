@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { pageSchema, pageUrl, articleSchema } from "@/lib/schema";
 import { allPosts, getPostBySlug } from "@/lib/content/posts";
-import { PageHero } from "@/components/sections/page-hero";
+import { getPostImage } from "@/lib/content/posts/images";
+import { BlogLayout } from "@/components/blog/blog-layout";
+import { CommentForm } from "@/components/blog/comment-form";
 import { PostBody } from "@/components/blog/post-body";
-import { PostCard } from "@/components/blog/post-card";
+import { PostMeta } from "@/components/blog/post-meta";
+import { PostNav } from "@/components/blog/post-nav";
+import { PostPhoto } from "@/components/blog/post-photo";
+import { PostShare } from "@/components/blog/post-share";
+import { RelatedPosts } from "@/components/blog/related-posts";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
-import { HealingHopeSection } from "@/components/sections/healing-hope-section";
-import { SocialIcons } from "@/components/ui/social-icons";
 
 export function generateStaticParams() {
   return allPosts.map((post) => ({ slug: post.slug }));
@@ -37,16 +41,22 @@ export async function generateMetadata({
   };
 }
 
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-}
-
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const related = allPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const cover = getPostImage(post);
+  const coverSizes = "(min-width: 1400px) 880px, (min-width: 1024px) 62vw, 100vw";
+
+  // a post can place its FAQs inside the article; otherwise they follow it
+  const faqsInBody = post.body.some((block) => block.type === "faqs");
+
+  const related = allPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  // allPosts is newest-first, so the post before this one in the list is the newer one
+  const index = allPosts.indexOf(post);
+  const newer = allPosts[index - 1];
+  const older = allPosts[index + 1];
 
   const schema = pageSchema({
     path: `/${post.slug}`,
@@ -72,62 +82,37 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      <PageHero
-        eyebrow={formatDate(post.datePublished)}
-        title={post.title}
-        breadcrumb={[{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }, { label: post.title }]}
-      />
+      <BlogLayout activeTags={post.tags}>
+        <article className="overflow-hidden rounded-[1.25rem] bg-white">
+          <PostPhoto src={cover} alt={post.title} sizes={coverSizes} preload />
 
-      <article className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8 sm:py-24">
-        <div className="grid gap-16 lg:grid-cols-[1fr_0.4fr]">
-          <PostBody blocks={post.body} />
+          <div className="p-6 sm:p-10">
+            <PostMeta post={post} />
+            <h1 className="mt-3 font-sans text-[1.9rem] font-bold leading-tight tracking-tight text-pine sm:text-4xl">{post.title}</h1>
 
-          <aside className="hidden lg:block">
-            <div className="sticky top-28 flex flex-col gap-8">
-              <div className="rounded-[0.5rem_1.75rem_0.5rem_1.75rem] bg-mint p-6">
-                <p className="font-sans text-xs font-semibold uppercase tracking-wide text-leaf-deep">Share</p>
-                <div className="mt-3">
-                  <SocialIcons className="text-pine" />
+            <div className="mt-8">
+              <PostBody blocks={post.body} faqs={post.faqs} />
+            </div>
+
+            {post.faqs && post.faqs.length > 0 && !faqsInBody && (
+              <div className="mt-14 max-w-[750px]">
+                <h2 className="font-sans text-2xl font-bold tracking-tight text-pine sm:text-[1.7rem]">
+                  {post.faqTitle ?? "Common Questions Foster Parents Ask"}
+                </h2>
+                <div className="mt-6">
+                  <FaqAccordion faqs={post.faqs} />
                 </div>
               </div>
-              {post.tags.length > 0 && (
-                <div>
-                  <p className="font-sans text-xs font-semibold uppercase tracking-wide text-slate">Topics</p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <span key={tag} className="rounded-full border border-pine/15 px-3 py-1 text-xs text-slate">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </aside>
-        </div>
+            )}
 
-        {post.faqs && post.faqs.length > 0 && (
-          <div className="mt-16 max-w-2xl border-t border-pine/10 pt-12">
-            <h2 className="font-display text-2xl font-medium text-pine">Frequently Asked Questions</h2>
-            <div className="mt-6">
-              <FaqAccordion faqs={post.faqs} />
-            </div>
+            <PostShare url={pageUrl(`/${post.slug}`)} title={post.title} />
+            <PostNav older={older} newer={newer} />
+            <RelatedPosts posts={related} />
           </div>
-        )}
-      </article>
+        </article>
 
-      {related.length > 0 && (
-        <section className="mx-auto max-w-[1400px] px-5 pb-20 sm:px-8 sm:pb-28">
-          <h2 className="font-display text-2xl font-medium text-pine">More from the Blog</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
-            {related.map((p) => (
-              <PostCard key={p.slug} post={p} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      <HealingHopeSection />
+        <CommentForm postTitle={post.title} />
+      </BlogLayout>
     </>
   );
 }

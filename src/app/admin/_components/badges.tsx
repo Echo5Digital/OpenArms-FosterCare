@@ -8,6 +8,7 @@ const typeStyle: Record<LeadType, string> = {
   referral: "bg-rose-50 text-rose-800 ring-rose-200",
   job: "bg-slate-100 text-slate-700 ring-slate-300",
   newsletter: "bg-teal-50 text-teal-800 ring-teal-200",
+  comment: "bg-orange-50 text-orange-800 ring-orange-200",
 };
 
 export const statusStyle: Record<LeadStatus, string> = {

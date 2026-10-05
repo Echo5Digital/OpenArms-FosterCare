@@ -1,6 +1,6 @@
 /** Lead definitions shared by the forms (browser), the API and the dashboard. */
 
-export const LEAD_TYPES = ["contact", "appointment", "signup", "inquiry", "referral", "job", "newsletter"] as const;
+export const LEAD_TYPES = ["contact", "appointment", "signup", "inquiry", "referral", "job", "newsletter", "comment"] as const;
 export type LeadType = (typeof LEAD_TYPES)[number];
 
 export const LEAD_STATUSES = ["new", "contacted", "closed"] as const;
@@ -14,6 +14,7 @@ export const leadTypeLabels: Record<LeadType, string> = {
   referral: "Referral",
   job: "Job application",
   newsletter: "Newsletter",
+  comment: "Blog comment",
 };
 
 /** Plural / short names for the filter tabs. */
@@ -25,6 +26,7 @@ export const leadTypeTabs: Record<LeadType, string> = {
   referral: "Referrals",
   job: "Job applications",
   newsletter: "Newsletter",
+  comment: "Comments",
 };
 
 export const leadStatusLabels: Record<LeadStatus, string> = {

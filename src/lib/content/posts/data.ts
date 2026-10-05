@@ -16,6 +16,7 @@ export const posts: BlogPost[] = [
     dateModified: "2026-09-25",
     excerpt:
       "Every day in Oklahoma City, children are removed from unsafe situations with no safe place to sleep that night. Here's why emergency foster volunteers matter so much.",
+    image: "/emergency-foster-care-oklahoma-city-d74b87.jpg",
     tags: [
       "Emergency Foster Care Services Oklahoma City",
       "Foster Care Agency Oklahoma City",
@@ -25,59 +26,164 @@ export const posts: BlogPost[] = [
     body: [
       {
         type: "p",
-        text: "Every day in Oklahoma City, children are removed from unsafe situations with no safe place to sleep that night. Caseworkers scramble to find temporary foster homes, sometimes making dozens of calls before a single family says yes. The gap between the number of children who need emergency placement foster care in OKC and the families available to take them in is growing wider every year.",
+        text: "Every day in Oklahoma City, children are removed from unsafe situations with no safe place to sleep that night. Caseworkers scramble to find temporary foster homes, sometimes making dozens of calls before a single family says yes. The gap between the number of children who need emergency placement foster care in OKC and the families available to take them in is growing wider every year. Emergency foster care in Oklahoma City is not a hypothetical problem. It is an urgent, ongoing crisis that directly affects the most vulnerable children in our community. When there are not enough licensed foster homes ready to respond at a moment’s notice, children end up sleeping in DHS offices, being placed far from their schools, or being grouped with children whose needs are vastly different from their own. Open Arms Initiative exists to close that gap, specifically for children and teens with complex emotional, behavioral, and developmental needs. But no agency can solve this alone. Oklahoma City needs more emergency foster volunteers, and it needs them now.",
       },
       {
-        type: "p",
-        text: "Emergency foster care in Oklahoma City is not a hypothetical problem. It is an urgent, ongoing crisis that directly affects the most vulnerable children in our community. Open Arms Initiative exists to close that gap, specifically for children and teens with complex emotional, behavioral, and developmental needs. But no agency can solve this alone. Oklahoma City needs more emergency foster volunteers, and it needs them now.",
+        type: "cta",
+        eyebrow: "Open Arms Foster Care",
+        title: "Helping Children and Foster Families Thrive",
+        text: "Open Arms plants seeds of hope, waters them with truth and love, and trusts God to grow them in His time. Our team walks alongside every foster family every step of the way.",
+        label: "Start Your Journey",
+        href: "/contact-us",
       },
       { type: "h2", text: "The Current State of Emergency Foster Care in Oklahoma City" },
       {
         type: "p",
-        text: "Oklahoma's child welfare system is stretched thin. According to DHS foster care data, the state consistently ranks among the highest in the nation for children in out-of-home care per capita. Oklahoma City, as the state's largest metro area, absorbs a significant share of that demand.",
+        text: "Oklahoma’s child welfare system is stretched thin. According to DHS foster care Oklahoma data, the state consistently ranks among the highest in the nation for children in out-of-home care per capita. Oklahoma City, as the state’s largest metro area, absorbs a significant share of that demand.",
       },
       {
         type: "p",
-        text: "When a child is removed from a home due to abuse, neglect, or a family crisis, the placement process begins immediately. Caseworkers need a safe, licensed home within hours, sometimes within minutes. But the reality rarely matches that expectation — there simply are not enough emergency foster families in the metro area.",
+        text: "When a child is removed from a home due to abuse, neglect, or a family crisis, the placement process begins immediately. Caseworkers need a safe, licensed home within hours. In many cases, they need one within minutes. Same-day foster care in Oklahoma is not a luxury. It is the baseline expectation.",
+      },
+      {
+        type: "quote",
+        text: "When a child is removed from a home due to abuse, neglect, or a family crisis, the placement process begins immediately.",
+      },
+      {
+        type: "p",
+        text: "But the reality rarely matches that expectation. There simply are not enough emergency foster families in the metro area. The result is a system that operates in constant triage mode, placing children wherever there is an open bed rather than where they would receive the best care.",
+      },
+      { type: "h2", text: "Why Emergency Foster Care Oklahoma City Families Are So Critical" },
+      {
+        type: "p",
+        text: "Emergency placement is different from traditional foster care. Traditional placements often allow time for matching, preparation, and transition. Emergency placements happen in crisis. A child may arrive at your home with nothing but the clothes they are wearing, often late at night, often frightened and confused.",
+      },
+      {
+        type: "p",
+        text: "This is exactly why emergency foster volunteers matter so much. These families serve as the first point of stability in what is usually the worst day of a child’s life. The quality of that first placement can shape everything that follows, from the child’s emotional recovery to their willingness to trust the adults around them.",
+      },
+      {
+        type: "p",
+        text: "For children with trauma histories, which includes the vast majority of kids entering the system, the stakes are even higher. A chaotic or impersonal first placement can deepen existing wounds. A calm, prepared, trauma-informed home can begin the healing process from the very first night.",
       },
       { type: "h2", text: "Who Can Become an Emergency Foster Parent in Oklahoma City" },
       {
         type: "p",
-        text: "One of the most common misconceptions is that you need to be a married couple with a large home and years of parenting experience. That is not the case. Oklahoma licenses single adults, couples, homeowners, renters, and families of all sizes.",
+        text: "One of the most common misconceptions about foster care licensing in Oklahoma is that you need to be a married couple with a large home and years of parenting experience. That is not the case. Oklahoma licenses single adults, couples, homeowners, renters, and families of all sizes.",
       },
       {
-        type: "ul",
-        items: [
-          "Adults and families ready to provide structured care — patient, consistent, and willing to learn.",
-          "Experienced parents whose biological children have grown, with real-world parenting experience and emotional bandwidth to spare.",
-          "Professionals in education, counseling, or social work who bring a deep understanding of child development and trauma.",
-        ],
+        type: "p",
+        text: "What matters most is your willingness to be trained, your ability to provide a safe environment, and your commitment to being available when a child needs you. Open Arms Initiative provides specialized training in therapeutic, trauma-informed care so that every foster parent in our network is prepared for the unique challenges of emergency placement.",
+      },
+      {
+        type: "p",
+        text: "Here is who we are looking for:",
+      },
+      { type: "h3", text: "Adults and Families Ready to Provide Structured Care" },
+      {
+        type: "p",
+        text: "You do not need to be a mental health professional, but you do need to be open to learning. Our training equips foster parents with the skills to manage behavioral challenges, de-escalate conflict, and create predictable routines that help traumatized children feel safe. If you are patient, consistent, and willing to learn, you have what it takes.",
+      },
+      { type: "h3", text: "Experienced Parents Looking for a New Way to Help" },
+      {
+        type: "p",
+        text: "Many of our strongest emergency foster volunteers are parents whose biological children have grown. They have real-world parenting experience, a stable home, and the emotional bandwidth to take on a child in crisis. If this sounds like you, your experience is exactly what Oklahoma City’s foster care system needs.",
+      },
+      { type: "h3", text: "Professionals in Education, Counseling, or Social Work" },
+      {
+        type: "p",
+        text: "Schools, counselors, and caseworkers see the foster care crisis firsthand every day. Some of these professionals choose to become foster parents themselves, bringing a deep understanding of child development and trauma to their homes. Others refer families to agencies like Open Arms Initiative, helping us build a stronger network of crisis foster care placement options.",
+      },
+      { type: "h2", text: "What Makes Emergency Placement Different from Traditional Foster Care" },
+      {
+        type: "p",
+        text: "Emergency foster care is fast, unpredictable, and emotionally intense. Understanding the differences can help prospective volunteers decide if this role is the right fit.",
+      },
+      { type: "h3", text: "Speed of Placement" },
+      {
+        type: "p",
+        text: "Traditional foster placements may take days or weeks to arrange. Emergency child placement services operate on a timeline of hours. Foster families on an emergency list agree to accept a child with very little notice, sometimes receiving a call at 2 a.m. and welcoming a child by 3 a.m. Immediate foster care availability is the entire point.",
+      },
+      { type: "h3", text: "Duration of Stay" },
+      {
+        type: "p",
+        text: "Emergency placements are typically short-term, ranging from a single night to 30 days or more. The goal is stabilization, not permanency. During this window, caseworkers work to identify a longer-term placement, reunify the child with family, or explore kinship emergency care options with relatives.",
+      },
+      { type: "h3", text: "Emotional Intensity" },
+      {
+        type: "p",
+        text: "Children arriving through emergency placement are often in acute distress. They may have just witnessed violence, been removed by law enforcement, or experienced a sudden family breakdown. This is where trauma-informed training becomes essential. Open Arms Initiative prepares our foster parents for these scenarios so they can respond with calm confidence rather than panic.",
       },
       { type: "h2", text: "How Open Arms Initiative Supports Emergency Foster Families" },
       {
         type: "p",
-        text: "Becoming an emergency foster parent does not mean doing it alone. Open Arms provides pre-service training in therapeutic and trauma-informed care, 24/7 access to on-call support staff, regular check-ins with licensed clinicians, emergency respite options, and connection to a community of foster families who understand exactly what you're going through.",
+        text: "Becoming an emergency foster parent does not mean doing it alone. Open Arms Initiative provides comprehensive, ongoing support designed specifically for families caring for high-needs children and adolescents.",
+      },
+      {
+        type: "p",
+        text: "Our foster care support in Oklahoma City includes pre-service training in therapeutic and trauma-informed care, 24/7 access to on-call support staff, regular check-ins with licensed clinicians, emergency respite foster care options when you need a break, and connection to a community of foster families who understand exactly what you are going through.",
+      },
+      {
+        type: "p",
+        text: "We also handle the logistics of foster care licensing in Oklahoma, walking you through every step of the process from your initial inquiry to your first placement. Our goal is to remove barriers so that more families can say yes when a child needs them.",
+      },
+      { type: "h2", text: "The Children Who Need Emergency Foster Care Oklahoma City Volunteers the Most" },
+      {
+        type: "p",
+        text: "While every child deserves a safe emergency placement, some children face the greatest difficulty finding one. Teens, sibling groups, children with disabilities, and children with significant behavioral or emotional needs are routinely the hardest to place.",
+      },
+      {
+        type: "p",
+        text: "This is where Open Arms Initiative’s focus on therapeutic foster care makes a real difference. Traditional foster care settings are not always equipped to support children with complex needs. Our trained foster parents provide the structured, clinical environment that these children require to stabilize and begin healing.",
+      },
+      {
+        type: "p",
+        text: "Oklahoma City’s urgent foster care needs are greatest for exactly these populations. If you have the heart and the willingness to be trained, you can fill a gap that very few others can.",
       },
       { type: "h2", text: "How to Get Started as an Emergency Foster Volunteer" },
       {
+        type: "p",
+        text: "The foster child placement process in Oklahoma begins with a conversation. If you are considering becoming an emergency foster parent, here is what to expect:",
+      },
+      {
         type: "ol",
         items: [
-          "Reach out to Open Arms Initiative for an initial conversation about fostering.",
-          "Complete the licensing application and required background checks.",
-          "Attend trauma-informed, therapeutic foster care training.",
-          "Complete a home study to confirm a safe, ready environment.",
-          "Join our on-call emergency response list once approved.",
+          "Reach out to Open Arms Initiative to learn about our program and ask questions.",
+          "Complete a pre-service orientation that covers the basics of therapeutic foster care.",
+          "Begin your foster care licensing process, including background checks, home study, and training hours.",
+          "Receive specialized training in trauma-informed care and crisis response.",
+          "Get added to our emergency placement list and begin accepting children in need.",
         ],
+      },
+      {
+        type: "p",
+        text: "The entire process can be completed in a matter of weeks, depending on your schedule and the pace of your licensing. Every day that passes without enough emergency foster families is another day a child in Oklahoma City goes without the care they deserve.",
+      },
+      {
+        type: "p",
+        text: "Oklahoma City’s need for emergency foster volunteers is real, measurable, and growing. Children are entering the system every week with nowhere safe to go, and the most vulnerable among them, teens and kids with complex emotional and behavioral needs, face the longest waits and the fewest options.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Initiative is building a network of trained, supported, trauma-informed foster families who are ready to respond when crisis strikes. But we cannot do it without people who are willing to step forward.",
+      },
+      {
+        type: "p",
+        text: "If you have room in your home and the willingness to be trained, you can change the trajectory of a child’s life. Reach out to Open Arms Initiative today to learn how you can become part of the solution.",
       },
     ],
     faqs: [
       {
-        question: "How fast can an emergency placement happen?",
-        answer: "Emergency placements can happen within hours, sometimes even overnight, once you're licensed and on our response list.",
+        question: "How quickly do emergency foster parents need to accept a placement?",
+        answer: "Emergency foster parents may receive a call and need to welcome a child into their home within just a few hours, sometimes in the middle of the night.",
       },
       {
-        question: "Do I need parenting experience to volunteer for emergency foster care?",
-        answer: "No. Our training prepares every foster parent, regardless of prior parenting experience.",
+        question: "What qualifications do I need to become an emergency foster parent in Oklahoma City?",
+        answer: "You need to be at least 21, pass a background check and home study, and complete required training hours, but you do not need prior parenting or medical experience.",
+      },
+      {
+        question: "How long do children stay in emergency foster care placements?",
+        answer: "Emergency placements are typically short-term, lasting anywhere from one night to about 30 days while caseworkers arrange a longer-term plan for the child.",
       },
     ],
   },
@@ -127,6 +233,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-08-25",
   excerpt:
     "Foster parents are never expected to cover a child's costs alone. Here's exactly how federal funding, Oklahoma's stipend program, and Medicaid work together to support foster families.",
+  image: "/who-pays-for-foster-child-expenses-d604fb.jpg",
   tags: [
     "Foster Care Agency Oklahoma City",
     "Therapeutic foster care Oklahoma",
@@ -193,6 +300,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Foster parents who work with Open Arms Initiative often care for children and teens with higher support needs. Because of this, the foster care subsidy rates for therapeutic placements tend to be higher than standard rates, reflecting the additional care and structure these children require.",
     },
+    { type: "img", src: "/who-pays-for-foster-child-expenses-0bc437.jpg", alt: "Who Pays for Foster Child Expenses" },
     { type: "h2", text: "Who Pays for Foster Child Medical Expenses?" },
     {
       type: "p",
@@ -307,6 +415,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-08-12",
   excerpt:
     "Worried the cost of fostering will be out of reach? Here's why finances shouldn't hold you back, and exactly what training, licensing, and reimbursement actually look like in Oklahoma.",
+  image: "/cost-of-becoming-a-foster-parent-84049e.jpg",
   tags: [
     "How to become a foster parent in Oklahoma",
     "Foster parent training",
@@ -378,6 +487,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Because Open Arms Initiative specializes in therapeutic foster care for high-needs children and teens, the reimbursement rates for our foster parents reflect the additional level of care required. Our foster parents receive competitive monthly stipends that account for the structured, trauma-informed environment they provide. We also offer ongoing support, clinical guidance, and respite care to make sure our foster families have what they need to succeed.",
     },
+    { type: "img", src: "/cost-of-becoming-a-foster-parent-40c885.jpg", alt: "Cost of Becoming a Foster Parent" },
     { type: "h2", text: "How Much Does Foster Care Cost Compared to Adoption or Private Care?" },
     {
       type: "p",
@@ -460,6 +570,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-07-30",
   excerpt:
     "From setting up the bedroom to surviving the first bedtime, here's a real, practical walkthrough of what your very first day welcoming a foster child actually looks like.",
+  image: "/saying-goodbye-as-a-foster-parent-bc5262.jpg",
   tags: [
     "How to become a foster parent in Oklahoma",
     "Trauma-informed foster care",
@@ -526,6 +637,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Open Arms Foster Care equips families with trauma-informed strategies specifically designed for these early moments. Our foster parent training covers how to read behavioral cues, regulate your own stress response, and create safety through consistency rather than control.",
     },
+    { type: "img", src: "/first-day-as-a-foster-parent-faad38.jpg", alt: "First Day as a Foster Parent" },
     { type: "h2", text: "Building the First Day Routine for a Foster Child" },
     {
       type: "p",
@@ -639,6 +751,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-07-09",
   excerpt:
     "Whether it's reunification, a new placement, or adoption, letting go of a foster child you've grown to love is one of the hardest parts of fostering. Here's how to move through it in a healthy way.",
+  image: "/saying-goodbye-as-a-foster-parent-bc5262.jpg",
   tags: [
     "Trauma-informed foster care",
     "Support for foster parents",
@@ -698,6 +811,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "You are never expected to handle these moments alone. Our model of therapeutic foster care is built on the understanding that caring for high-needs children requires robust, ongoing foster parent support.",
     },
+    { type: "img", src: "/saying-goodbye-as-a-foster-parent-b32b91.jpg", alt: "Saying Goodbye as a Foster Parent" },
     { type: "h2", text: "Practical Ways to Say Goodbye to a Foster Child" },
     {
       type: "p",
@@ -812,6 +926,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-06-12",
   excerpt:
     "Working full-time does not disqualify you from fostering. Here's what agencies actually look for, and practical strategies working parents use to balance a career with foster care.",
+  image: "/can-you-foster-a-child-if-you-work-full-time-b5703a.jpg",
   tags: [
     "How to become a foster parent in Oklahoma",
     "Foster parent training",
@@ -872,6 +987,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "These services exist because we know that fostering while employed full time requires a village. We are that village.",
     },
+    { type: "img", src: "/can-you-foster-a-child-if-you-work-full-time-c23eef.jpg", alt: "Can You Foster a Child If You Work Full-Time" },
     { type: "h2", text: "How to Manage Work and Foster Care Responsibilities" },
     {
       type: "p",
@@ -980,6 +1096,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-05-29",
   excerpt:
     "From attachment struggles and burnout to navigating the system and sibling separation, here's an honest look at the real challenges of foster parenting, and how the right support makes them manageable.",
+  image: "/challenges-foster-parents-face-2bf2c5.jpg",
   tags: [
     "Trauma-informed foster care",
     "Support for foster parents",
@@ -1035,6 +1152,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Open Arms Foster Care provides specialized training in trauma-informed parenting for foster carers. Our programs equip families with practical strategies for de-escalation, emotional regulation support, and building safety in the home. This is especially critical for teens in foster care, who often arrive with years of compounded trauma and very little trust in adults.",
     },
+    { type: "img", src: "/challenges-foster-parents-face-04770c.jpg", alt: "Challenges Foster Parents Face" },
     { type: "h2", text: "How Do Foster Parents Navigate the System?" },
     {
       type: "p",
@@ -1134,6 +1252,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-05-18",
   excerpt:
     "A month-by-month breakdown of what fostering actually costs, what Oklahoma's stipend and Medicaid cover, and where families sometimes choose to spend a little extra.",
+  image: "/is-foster-parenting-expensive-f1bb0c (1).jpg",
   tags: [
     "Foster Parent Support Services Oklahoma",
     "Therapeutic foster care Oklahoma",
@@ -1184,6 +1303,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Foster parents are required to complete continuing education hours each year. These are almost always offered free through your foster care agency or state resources. Open Arms Initiative provides ongoing support, education, and clinical guidance for its therapeutic foster families at no additional charge.",
     },
+    { type: "img", src: "/is-foster-parenting-expensive-c9a44d.jpg", alt: "Is Foster Parenting Expensive" },
     { type: "h2", text: "How Much Does It Cost to Foster a Child Month to Month?" },
     {
       type: "p",
@@ -1295,6 +1415,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-04-28",
   excerpt:
     "Having kids at home doesn't disqualify you from fostering. Here's what Oklahoma actually requires, how to prepare your children for the transition, and why the right agency makes all the difference.",
+  image: "/how-to-become-a-foster-parent-in-oklahoma-d2b500 (1).jpg",
   tags: [
     "How to become a foster parent in Oklahoma",
     "Foster Parent Support Services Oklahoma",
@@ -1364,6 +1485,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Foster parent orientation and certification sessions are designed to answer your questions and prepare you for real scenarios. If you're working with Open Arms, you'll have a dedicated support team guiding you through every form, every class, and every conversation.",
     },
+    { type: "img", src: "/how-to-become-a-foster-parent-in-oklahoma-d9eb7e.jpg", alt: "How to Become a Foster Parent in Oklahoma" },
     { type: "h2", text: "How Fostering Affects Your Biological Children" },
     {
       type: "p",
@@ -1446,6 +1568,7 @@ export const posts: BlogPost[] = [
   dateModified: "2026-04-23",
   excerpt:
     "From financial assistance and training to peer mentoring and respite care, here's a clear-eyed look at the full network of support available to Oklahoma foster parents.",
+  image: "/foster-parent-support-services-oklahoma-3ba88d (1).jpg",
   tags: [
     "Foster Parent Support Services Oklahoma",
     "Child Welfare Services In Oklahoma",
@@ -1498,6 +1621,7 @@ export const posts: BlogPost[] = [
       type: "p",
       text: "Ongoing education for foster parents in Oklahoma isn't just a checkbox requirement. It's a genuine tool that builds your confidence and equips you for real-world situations. Open Arms offers continued learning opportunities so foster caregivers stay prepared and supported long after their initial certification.",
     },
+    { type: "img", src: "/foster-parent-support-services-oklahoma-8b7a80.jpg", alt: "Foster Parent Support Services Oklahoma" },
     { type: "h2", text: "Foster Parent Support Groups and Peer Mentoring in Oklahoma" },
     {
       type: "p",
@@ -1629,6 +1753,7 @@ export const posts: BlogPost[] = [
     dateModified: "2026-03-31",
     excerpt:
       "Connection with a foster child isn't automatic — it's built slowly through safety, predictability, and patience. Here are ten trauma-informed ways to strengthen that bond.",
+    image: "/build-Connection-with-Foster-Kids (1).jpg",
     tags: [
       "Therapeutic foster care Oklahoma",
       "Trauma-informed foster care",
@@ -1848,11 +1973,14 @@ export const posts: BlogPost[] = [
     dateModified: "2026-03-16",
     excerpt:
       "Compassion alone isn't enough for children carrying invisible trauma histories. Here's how trauma-informed counseling stabilizes both foster children and the families who care for them.",
+    image: "/Trauma-Informed-Counseling (1).jpg",
     tags: [
-      "Trauma-informed foster care",
+      "foster family support services",
+      "foster parent training Oklahoma",
+      "Open Arms Foster Care",
       "Therapeutic foster care Oklahoma",
-      "Support for foster parents",
-      "Foster Parent Support Services Oklahoma",
+      "Trauma-Informed Counseling",
+      "trauma-informed foster care",
     ],
     body: [
       { type: "p", text: "Foster care is built on compassion. But compassion alone is not enough." },
@@ -1871,15 +1999,20 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Even positive transitions, such as moving into a safe foster home, can activate fear responses. The child's nervous system has learned unpredictability. Safety may feel unfamiliar.",
+        text: "Even positive transitions, such as moving into a safe foster home, can activate fear responses. The child’s nervous system has learned unpredictability. Safety may feel unfamiliar.",
       },
       {
         type: "p",
-        text: "In trauma-informed foster care, we recognize that behaviors often labeled as \"defiant,\" \"withdrawn,\" or \"manipulative\" are frequently adaptive survival strategies.",
+        text: "In trauma-informed foster care, we recognize that behaviors often labeled as “defiant,” “withdrawn,” or “manipulative” are frequently adaptive survival strategies.",
       },
+      { type: "p", text: "For example:" },
       {
-        type: "p",
-        text: "For example: a child who hoards food may have experienced food scarcity. A child who avoids eye contact may have learned that connection was unsafe. A child who becomes aggressive may be reacting to perceived threat, even when none exists.",
+        type: "ul",
+        items: [
+          "A child who hoards food may have experienced food scarcity.",
+          "A child who avoids eye contact may have learned that connection was unsafe.",
+          "A child who becomes aggressive may be reacting to perceived threat, even when none exists.",
+        ],
       },
       {
         type: "p",
@@ -1941,7 +2074,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "For example, a child may push boundaries repeatedly after placement. This is often misinterpreted as resistance. In trauma-informed work, it is understood as a test: \"Will you still stay when I am difficult?\"",
+        text: "For example, a child may push boundaries repeatedly after placement. This is often misinterpreted as resistance. In trauma-informed work, it is understood as a test: “Will you still stay when I am difficult?”",
       },
       { type: "p", text: "Consistent, informed responses rebuild trust gradually." },
       { type: "h2", text: "Reducing Placement Disruptions" },
@@ -1985,7 +2118,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "When caregivers understand how trauma reshapes brain development, particularly in areas governing impulse control and emotional regulation, empathy increases.",
       },
-      { type: "p", text: "Education shifts the mindset from \"What's wrong with this child?\" to \"What happened to this child?\"" },
+      { type: "p", text: "Education shifts the mindset from “What’s wrong with this child?” to “What happened to this child?”" },
       { type: "p", text: "That shift changes everything." },
       { type: "h2", text: "Supporting the Entire Family System" },
       {
@@ -2000,7 +2133,7 @@ export const posts: BlogPost[] = [
       { type: "h2", text: "Measuring Long-Term Impact" },
       {
         type: "p",
-        text: "While every child's journey is unique, research consistently demonstrates that trauma-informed foster care improves emotional regulation, placement stability, and long-term relational outcomes (Substance Abuse and Mental Health Services Administration [SAMHSA], 2014).",
+        text: "While every child’s journey is unique, research consistently demonstrates that trauma-informed foster care improves emotional regulation, placement stability, and long-term relational outcomes (Substance Abuse and Mental Health Services Administration [SAMHSA], 2014).",
       },
       { type: "p", text: "In practice, we observe:" },
       {
@@ -2016,6 +2149,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "These outcomes are not immediate. Trauma recovery is nonlinear. Progress may be gradual, sometimes frustratingly so. But with structured therapeutic support, growth is sustainable.",
       },
+      { type: "faqs", title: "Short Q & A" },
       { type: "h3", text: "A Subtle but Powerful Shift" },
       {
         type: "p",
@@ -2072,6 +2206,8 @@ export const posts: BlogPost[] = [
     dateModified: "2026-02-26",
     excerpt:
       "A toddler's trauma response looks nothing like a teenager's, even when the underlying experiences are similar. Here's how trauma shows up across every developmental stage.",
+    image: "/Untitled-design-6 (1).jpg",
+    faqTitle: "Short Q & A – Common Foster Parent Questions",
     tags: [
       "Trauma-informed foster care",
       "Therapeutic foster care Oklahoma",
@@ -2276,6 +2412,7 @@ export const posts: BlogPost[] = [
     dateModified: "2026-02-13",
     excerpt:
       "Placement day can feel like the finish line, but it's really the beginning. Here's why foster parents need continued support long after a child moves in.",
+    image: "/blogfeb1.1 (1).jpg",
     tags: [
       "Support for foster parents",
       "Foster Parent Support Services Oklahoma",
@@ -2461,6 +2598,8 @@ export const posts: BlogPost[] = [
     dateModified: "2026-01-30",
     excerpt:
       "Placement day is only the start of the relationship. Here's how Open Arms builds layered, ongoing support around every foster family it serves.",
+    image: "/Untitled-design-5 (1).jpg",
+    faqTitle: "Short Q&A",
     tags: [
       "Support for foster parents",
       "Foster Parent Support Services Oklahoma",
@@ -2599,6 +2738,7 @@ export const posts: BlogPost[] = [
     dateModified: "2026-01-30",
     excerpt:
       "A meltdown, a silence, a flinch — trauma speaks through behavior long before it speaks through words. Here's how foster parents can learn to listen.",
+    image: "/blo1.5 (1).jpg",
     tags: [
       "Trauma-informed foster care",
       "Therapeutic foster care Oklahoma",
@@ -2682,6 +2822,7 @@ export const posts: BlogPost[] = [
         ],
       },
       { type: "p", text: "Foster parents are never left to interpret trauma alone." },
+      { type: "img", src: "/Untitled-design-6 (1).jpg", alt: "How Trauma Affects a Child's Behavior" },
       { type: "h2", text: "Why Predictability Builds Trust" },
       {
         type: "p",
@@ -5768,10 +5909,11 @@ export const posts: BlogPost[] = [
     metaTitle: "What If a Foster Child Doesn't Bond With Me? | Open Arms Foster Care",
     metaDescription:
       "Worried your foster child isn't bonding with you? Learn why attachment takes time, what healthy bonding looks like, and how Open Arms supports the process.",
-    datePublished: "2026-09-18",
-    dateModified: "2026-09-18",
+    datePublished: "2026-06-30",
+    dateModified: "2026-06-30",
     excerpt:
       "If weeks or months in, your foster child still seems distant, that doesn't mean you're failing. Here's what bonding actually looks like and how to support it.",
+    image: "/foster-child-bonding-cbd379.jpg",
     tags: [
       "trauma-informed foster care",
       "Build Connection with Foster Kids",
@@ -5782,7 +5924,7 @@ export const posts: BlogPost[] = [
     body: [
       {
         type: "p",
-        text: "You've completed the training, prepared your home, and opened your heart. But weeks or even months into a foster placement, the child in your care still pulls away, avoids eye contact, or seems emotionally distant. You start to wonder if you're doing something wrong.",
+        text: "You’ve completed the training, prepared your home, and opened your heart. But weeks or even months into a foster placement, the child in your care still pulls away, avoids eye contact, or seems emotionally distant. You start to wonder if you’re doing something wrong.",
       },
       {
         type: "p",
@@ -5790,12 +5932,12 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "The good news is that difficulty bonding doesn't mean failure. It means the child's brain and body are doing exactly what they were taught to do: protect themselves. With the right approach, patience, and professional support, emotional connection can develop in ways that are deeply meaningful for both of you.",
+        text: "The good news is that difficulty bonding doesn’t mean failure. It means the child’s brain and body are doing exactly what they were taught to do: protect themselves. With the right approach, patience, and professional support, emotional connection can develop in ways that are deeply meaningful for both of you.",
       },
       { type: "h2", text: "Why Foster Child Bonding Takes Longer Than You Expect" },
       {
         type: "p",
-        text: "Most children placed in foster care have experienced some form of neglect, abuse, or instability. Their early relationships taught them that adults are unpredictable or unsafe. So when they arrive in your home, they're not starting from a blank slate. They're starting from a place of self-protection.",
+        text: "Most children placed in foster care have experienced some form of neglect, abuse, or instability. Their early relationships taught them that adults are unpredictable or unsafe. So when they arrive in your home, they’re not starting from a blank slate. They’re starting from a place of self-protection.",
       },
       {
         type: "p",
@@ -5803,7 +5945,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "This doesn't mean they don't want connection. It means they need more time, more consistency, and often more specialized support to feel safe enough to let someone in.",
+        text: "This doesn’t mean they don’t want connection. It means they need more time, more consistency, and often more specialized support to feel safe enough to let someone in.",
       },
       { type: "h3", text: "Understanding Attachment Disruption" },
       {
@@ -5812,7 +5954,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "A child with disrupted attachment may resist affection, test boundaries relentlessly, act out aggressively, or seem indifferent to your efforts. These behaviors are not personal rejections. They are signals that the child's nervous system is still in survival mode.",
+        text: "A child with disrupted attachment may resist affection, test boundaries relentlessly, act out aggressively, or seem indifferent to your efforts. These behaviors are not personal rejections. They are signals that the child’s nervous system is still in survival mode.",
       },
       {
         type: "p",
@@ -5821,7 +5963,7 @@ export const posts: BlogPost[] = [
       { type: "h2", text: "What Healthy Bonding Actually Looks Like in Foster Care" },
       {
         type: "p",
-        text: "One of the biggest misconceptions about building trust with foster children is that bonding should look like warmth, hugs, and \"I love you\" from the start. For many foster children, that level of emotional closeness takes a long time to develop. And that's perfectly okay.",
+        text: "One of the biggest misconceptions about building trust with foster children is that bonding should look like warmth, hugs, and “I love you” from the start. For many foster children, that level of emotional closeness takes a long time to develop. And that’s perfectly okay.",
       },
       {
         type: "p",
@@ -5829,7 +5971,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "These micro-moments are real progress. They show that the child is starting to test whether you'll stay consistent, whether you'll remain calm, and whether you're safe.",
+        text: "These micro-moments are real progress. They show that the child is starting to test whether you’ll stay consistent, whether you’ll remain calm, and whether you’re safe.",
       },
       { type: "h3", text: "Signs of Emerging Trust" },
       { type: "p", text: "Watch for these subtle but meaningful indicators that emotional connection is developing:" },
@@ -5847,6 +5989,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "These signs may not feel dramatic, but they represent significant shifts in how the child perceives safety in your home.",
       },
+      { type: "img", src: "/foster-child-bonding-074587.jpg", alt: "Foster Child Bonding" },
       { type: "h2", text: "Trauma-Informed Bonding Strategies That Work" },
       {
         type: "p",
@@ -5859,25 +6002,25 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Eat meals at the same time. Follow through on what you say. Let the child know what's happening next. This predictability is the foundation of foster placement stability, and stability is what allows bonding to begin.",
+        text: "Eat meals at the same time. Follow through on what you say. Let the child know what’s happening next. This predictability is the foundation of foster placement stability, and stability is what allows bonding to begin.",
       },
-      { type: "h3", text: "Follow the Child's Lead" },
+      { type: "h3", text: "Follow the Child’s Lead" },
       {
         type: "p",
-        text: "Resist the urge to force closeness. A child who isn't ready for hugs may be comfortable sitting beside you during a car ride. A teenager who won't talk about their feelings might open up while doing a shared activity like cooking or playing a game.",
+        text: "Resist the urge to force closeness. A child who isn’t ready for hugs may be comfortable sitting beside you during a car ride. A teenager who won’t talk about their feelings might open up while doing a shared activity like cooking or playing a game.",
       },
       {
         type: "p",
-        text: "Bonding activities for foster families don't have to be elaborate. Walking the dog, organizing a shelf together, or watching a show side by side can create more emotional safety than a planned \"bonding event\" that puts pressure on the child.",
+        text: "Bonding activities for foster families don’t have to be elaborate. Walking the dog, organizing a shelf together, or watching a show side by side can create more emotional safety than a planned “bonding event” that puts pressure on the child.",
       },
       { type: "h3", text: "Regulate Yourself First" },
       {
         type: "p",
-        text: "Foster children are highly attuned to the emotional states of the adults around them. If you're anxious about the lack of bonding, frustrated by rejection, or overwhelmed by challenging behavior, the child will sense it.",
+        text: "Foster children are highly attuned to the emotional states of the adults around them. If you’re anxious about the lack of bonding, frustrated by rejection, or overwhelmed by challenging behavior, the child will sense it.",
       },
       {
         type: "p",
-        text: "Practicing your own emotional regulation is one of the most powerful trauma-informed bonding strategies available. When you stay calm and grounded, you model what safety feels like. Over time, the child's nervous system begins to co-regulate with yours.",
+        text: "Practicing your own emotional regulation is one of the most powerful trauma-informed bonding strategies available. When you stay calm and grounded, you model what safety feels like. Over time, the child’s nervous system begins to co-regulate with yours.",
       },
       { type: "h2", text: "How Open Arms Foster Care Supports the Bonding Process" },
       {
@@ -5886,16 +6029,16 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Our foster parents receive specialized training in trauma-informed care before a child is ever placed in their home. But the support doesn't stop there. We provide ongoing clinical resources, access to mental health professionals, and regular check-ins to help foster families navigate the unique challenges of building relationships with high-needs children.",
+        text: "Our foster parents receive specialized training in trauma-informed care before a child is ever placed in their home. But the support doesn’t stop there. We provide ongoing clinical resources, access to mental health professionals, and regular check-ins to help foster families navigate the unique challenges of building relationships with high-needs children.",
       },
       {
         type: "p",
-        text: "If a child in your care is showing signs of reactive attachment disorder or other attachment difficulties, our clinical team works directly with you and the child to develop individualized strategies. You're never left guessing about what to do next.",
+        text: "If a child in your care is showing signs of reactive attachment disorder or other attachment difficulties, our clinical team works directly with you and the child to develop individualized strategies. You’re never left guessing about what to do next.",
       },
       { type: "h3", text: "Why Clinical Support Matters for Foster Child Emotional Development" },
       {
         type: "p",
-        text: "Bonding difficulties don't resolve through willpower alone. Children who have experienced chronic trauma often need professional therapeutic support alongside a nurturing home environment.",
+        text: "Bonding difficulties don’t resolve through willpower alone. Children who have experienced chronic trauma often need professional therapeutic support alongside a nurturing home environment.",
       },
       {
         type: "p",
@@ -5903,16 +6046,16 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "For the foster parent, this clinical partnership also provides reassurance. You'll have professionals alongside you who understand foster child behavior and bonding, and who can help you interpret what the child's actions are really communicating.",
+        text: "For the foster parent, this clinical partnership also provides reassurance. You’ll have professionals alongside you who understand foster child behavior and bonding, and who can help you interpret what the child’s actions are really communicating.",
       },
       { type: "h2", text: "What to Do When You Feel Like Giving Up" },
       {
         type: "p",
-        text: "There will be hard days. Days when the child pushes you away, when nothing you try seems to work, and when you question whether this placement is right for either of you. Those feelings are normal, and they don't make you a bad foster parent.",
+        text: "There will be hard days. Days when the child pushes you away, when nothing you try seems to work, and when you question whether this placement is right for either of you. Those feelings are normal, and they don’t make you a bad foster parent.",
       },
       {
         type: "p",
-        text: "What matters is how you respond to those moments. Reaching out for support is not a sign of weakness. It's a sign that you're committed to doing this well.",
+        text: "What matters is how you respond to those moments. Reaching out for support is not a sign of weakness. It’s a sign that you’re committed to doing this well.",
       },
       {
         type: "p",
@@ -5920,15 +6063,15 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Reconnecting with foster children after a difficult period is possible. Sometimes a rupture in the relationship, followed by a genuine repair, actually deepens trust more than smooth sailing ever could. The child learns that conflict doesn't mean abandonment. And that lesson can be life-changing.",
+        text: "Reconnecting with foster children after a difficult period is possible. Sometimes a rupture in the relationship, followed by a genuine repair, actually deepens trust more than smooth sailing ever could. The child learns that conflict doesn’t mean abandonment. And that lesson can be life-changing.",
       },
       {
         type: "p",
-        text: "Foster child bonding is not a light switch. It's a slow, sometimes messy process that unfolds over weeks, months, or even longer. The fact that a child hasn't bonded with you yet doesn't mean they won't. It means they're still learning whether you're safe enough to let in.",
+        text: "Foster child bonding is not a light switch. It’s a slow, sometimes messy process that unfolds over weeks, months, or even longer. The fact that a child hasn’t bonded with you yet doesn’t mean they won’t. It means they’re still learning whether you’re safe enough to let in.",
       },
       {
         type: "p",
-        text: "Your consistency, patience, and willingness to stay present through the difficult moments are exactly what these children need. And you don't have to do it alone.",
+        text: "Your consistency, patience, and willingness to stay present through the difficult moments are exactly what these children need. And you don’t have to do it alone.",
       },
       {
         type: "p",
@@ -5936,17 +6079,17 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "If you're considering becoming a therapeutic foster parent, or if you're currently fostering and need more support, reach out to Open Arms Foster Care. The children who need you most are the ones who may take the longest to show it, but the connection, when it comes, is worth every moment.",
+        text: "If you’re considering becoming a therapeutic foster parent, or if you’re currently fostering and need more support, reach out to Open Arms Foster Care. The children who need you most are the ones who may take the longest to show it, but the connection, when it comes, is worth every moment.",
       },
     ],
     faqs: [
       {
         question: "How long does it take for a foster child to bond with a foster parent?",
-        answer: "There's no set timeline; bonding can take weeks, months, or longer depending on the child's trauma history and the consistency of care they receive.",
+        answer: "There’s no set timeline; bonding can take weeks, months, or longer depending on the child’s trauma history and the consistency of care they receive.",
       },
       {
         question: "What should I do if my foster child resists affection?",
-        answer: "Follow the child's lead, avoid forcing closeness, and focus on creating predictability and safety, which are the foundations of trust.",
+        answer: "Follow the child’s lead, avoid forcing closeness, and focus on creating predictability and safety, which are the foundations of trust.",
       },
       {
         question: "Can a foster child with attachment disorder still form a bond?",
