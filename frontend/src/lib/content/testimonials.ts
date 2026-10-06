@@ -30,3 +30,7 @@ export const testimonials: Testimonial[] = [
     avatar: "/unnamed-2.png",
   },
 ];
+
+/** Where "Read More Reviews" sends people: the agency's Google reviews. */
+export const googleReviewsUrl =
+  "https://www.google.com/search?q=openarms+fostercare&rlz=1C1MRUS_enIN1162IN1169&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQkyOTEzajBqMTWoAgiwAgHxBalrTsFDOeUQ8QWpa07BQznlEA&sourceid=chrome&source=chrome.rb&ie=UTF-8#sv=CCYSwwEKEgoDdGJzEgtscmY6ITNzSUFFPQoaCgFxEhVvcGVuIGFybXMgZm9zdGVyIGNhcmUKBwoDdWRtEgAQARoQcHYtL2cvMTFtNl9xN2dmMCosCg0vZy8xMW02X3E3Z2YwIhsKFW9wZW4gYXJtcyBmb3N0ZXIgY2FyZRACGAMyRgoVb3BlbiBhcm1zIGZvc3RlciBjYXJlWhciFW9wZW4gYXJtcyBmb3N0ZXIgY2FyZZIBE2Zvc3Rlcl9jYXJlX3NlcnZpY2UYCiDoouy5Bw";

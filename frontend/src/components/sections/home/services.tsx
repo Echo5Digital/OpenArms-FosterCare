@@ -5,26 +5,29 @@ import Image from "next/image";
 import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import { SectionHeading } from "@/components/ui/section-heading";
 
-const services = [
+const services: { title: string; href: string; image: string; alt: string; position?: string }[] = [
   {
     title: "Foster Parent Training",
     href: "/foster-parent-training",
-    image: "/handsome-father-with-cute-little-son-100kb.jpg",
-    alt: "A father joyfully lifting his young son into the air outdoors",
+    image: "/medium-shot-smiley-therapist-with-family-90kb.jpg",
+    alt: "A smiling therapist holding a clipboard, with a father, mother and their young son sitting on a sofa behind her",
+    position: "object-[center_25%]",
   },
   {
     title: "Post-Placement Therapy",
     href: "/post-placement-therapy",
-    image: "/teen-girl-participates-drawing-activity-as-part-psychotherapy-100kb.jpg",
-    alt: "A therapist reviewing a girl's drawing while her mother looks on",
+    image: "/adorable-family-parents-with-son-100kb.jpg",
+    alt: "A father, mother and their young son smiling as they lean on the back of a sofa",
+    position: "object-[center_42%]",
   },
   {
     title: "Support for School Staff",
     href: "/support-for-school-staff",
-    image: "/mother-son-looking-tablet-100kb.jpg",
-    alt: "A mother and her son smiling at each other while looking at a tablet on the sofa",
+    image: "/girl-holding-black-plane-table-90kb.jpg",
+    alt: "A teacher leaning over a classroom desk to help a girl holding a clipboard, with a younger girl beside them",
+    position: "object-[center_30%]",
   },
-] as const;
+];
 
 const ROTATE_MS = 2000;
 
@@ -63,14 +66,14 @@ export function Services() {
               <Link
                 key={service.href}
                 href={service.href}
-                className="group relative flex h-40 w-[calc(50%-0.75rem)] shrink-0 items-end overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1 sm:h-48"
+                className="group relative flex h-48 w-[calc(50%-0.75rem)] shrink-0 items-end overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1 sm:h-60"
               >
                 <Image
                   src={service.image}
                   alt={service.alt}
                   fill
                   sizes="50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`object-cover transition-transform duration-500 group-hover:scale-105 ${service.position ?? ""}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/85 via-pine-deep/30 to-pine-deep/10" />
                 <h3 className="relative z-10 p-6 font-sans text-lg font-bold text-cream sm:text-xl">

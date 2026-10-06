@@ -5,11 +5,12 @@ import Image from "next/image";
 import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
 import { ScrollVideo } from "@/components/ui/scroll-video";
 
-const cards = [
+const cards: { title: string; image: string; alt: string; position?: string }[] = [
   {
     title: "Foster Parent Training",
-    image: "/handsome-father-with-cute-little-son-100kb.jpg",
-    alt: "A father joyfully lifting his young son into the air outdoors",
+    image: "/medium-shot-smiley-therapist-with-family-90kb.jpg",
+    alt: "A smiling therapist holding a clipboard, with a father, mother and their young son sitting on a sofa behind her",
+    position: "object-[center_35%]",
   },
   {
     title: "Support for Every Placement",
@@ -18,15 +19,17 @@ const cards = [
   },
   {
     title: "Post-Placement Therapy",
-    image: "/teen-girl-participates-drawing-activity-as-part-psychotherapy-100kb.jpg",
-    alt: "A therapist reviewing a girl's drawing while her mother looks on",
+    image: "/adorable-family-parents-with-son-100kb.jpg",
+    alt: "A father, mother and their young son smiling as they lean on the back of a sofa",
+    position: "object-[center_30%]",
   },
   {
     title: "Support for School Staff",
-    image: "/mother-son-looking-tablet-100kb.jpg",
-    alt: "A mother and her son smiling at each other while looking at a tablet on the sofa",
+    image: "/girl-holding-black-plane-table-90kb.jpg",
+    alt: "A teacher leaning over a classroom desk to help a girl holding a clipboard, with a younger girl beside them",
+    position: "object-[center_30%]",
   },
-] as const;
+];
 
 const ROTATE_MS = 2000;
 const RESET_MS = 700;
@@ -123,7 +126,7 @@ export function Hero() {
                       alt={card.alt}
                       fill
                       sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover"
+                      className={`object-cover ${card.position ?? ""}`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/85 via-pine-deep/30 to-pine-deep/10" />
                     <h3 className="relative z-10 p-6 font-sans text-lg font-bold text-cream">{card.title}</h3>

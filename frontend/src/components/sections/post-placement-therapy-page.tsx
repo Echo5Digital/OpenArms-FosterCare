@@ -76,9 +76,9 @@ export function PostPlacementTherapyPage({ faqs }: { faqs: Faq[] }) {
         title="Post-Placement Therapy"
         highlight="Therapy"
         intro={"At Open Arms Initiative, we support foster care and adoption journeys starting with placement. Our Post-Placement Therapy helps children and families adjust emotionally in their new home."}
-        image="/fs4 (2).jpg"
-        imageAlt="A family talking with a caseworker during a supportive foster care consultation"
-        imagePosition="object-center"
+        image="/adorable-family-parents-with-son-100kb.jpg"
+        imageAlt="A father, mother and their young son smiling as they lean on the back of a sofa"
+        imagePosition="object-[72%_center] lg:object-center"
         crumb="Post-Placement Therapy"
       />
 

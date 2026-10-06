@@ -308,6 +308,23 @@ body {
   }
 }
 
+/* the ring that fills around the current reviewer's photo; its duration is set where it is used */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes ring-fill {
+    from {
+      stroke-dashoffset: 100;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .animate-ring-fill {
+    animation-name: ring-fill;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+}
+
 /* a form that is being sent: dim the button and show the wait cursor so people don't press it twice */
 button[type="submit"]:disabled {
   opacity: 0.7;

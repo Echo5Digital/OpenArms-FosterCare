@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { HoverPrefetchLink as Link } from "@/components/ui/hover-prefetch-link";
-import { testimonials } from "@/lib/content/testimonials";
+import { googleReviewsUrl, testimonials } from "@/lib/content/testimonials";
 
 export function TestimonialsSection() {
   const [index, setIndex] = useState(0);
@@ -121,7 +121,7 @@ export function TestimonialsSection() {
 
         <div className="mt-10 flex justify-center">
           <Link
-            href="https://www.google.com/search?q=openarms+fostercare&rlz=1C1MRUS_enIN1162IN1169&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQkyOTEzajBqMTWoAgiwAgHxBalrTsFDOeUQ8QWpa07BQznlEA&sourceid=chrome&source=chrome.rb&ie=UTF-8#sv=CCYSwwEKEgoDdGJzEgtscmY6ITNzSUFFPQoaCgFxEhVvcGVuIGFybXMgZm9zdGVyIGNhcmUKBwoDdWRtEgAQARoQcHYtL2cvMTFtNl9xN2dmMCosCg0vZy8xMW02X3E3Z2YwIhsKFW9wZW4gYXJtcyBmb3N0ZXIgY2FyZRACGAMyRgoVb3BlbiBhcm1zIGZvc3RlciBjYXJlWhciFW9wZW4gYXJtcyBmb3N0ZXIgY2FyZZIBE2Zvc3Rlcl9jYXJlX3NlcnZpY2UYCiDoouy5Bw"
+            href={googleReviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-leaf px-7 py-3.5 font-sans text-sm font-semibold text-pine-deep transition-all duration-300 hover:-translate-y-0.5 hover:bg-leaf-deep hover:shadow-lg"

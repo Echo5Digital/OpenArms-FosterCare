@@ -14,7 +14,7 @@ import { OurProcessVideos } from "@/components/sections/home/our-process-videos"
 import { WhatIsFosterCare } from "@/components/sections/home/what-is-foster-care";
 import { FosterCarePrograms } from "@/components/sections/home/foster-care-programs";
 import { WhyOpenArms } from "@/components/sections/home/why-open-arms";
-import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { HomeTestimonials } from "@/components/sections/home/home-testimonials";
 import { FaqSection } from "@/components/sections/faq-section";
 import { BecomingFosterParent } from "@/components/sections/home/becoming-foster-parent";
 import { EmergencyFosterCare } from "@/components/sections/home/emergency-foster-care";
@@ -68,7 +68,7 @@ export default function HomePage() {
       <WhatIsFosterCare />
       <FosterCarePrograms />
       <WhyOpenArms />
-      <TestimonialsSection />
+      <HomeTestimonials />
       <OurTeam />
       <TherapeuticFosterCare />
       <BecomingFosterParent />
