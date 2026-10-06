@@ -18,7 +18,7 @@ import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { FaqSection } from "@/components/sections/faq-section";
 import { BecomingFosterParent } from "@/components/sections/home/becoming-foster-parent";
 import { EmergencyFosterCare } from "@/components/sections/home/emergency-foster-care";
-import { TeamSection } from "@/components/sections/team-section";
+import { OurTeam } from "@/components/sections/home/our-team";
 import { TherapeuticFosterCare } from "@/components/sections/home/therapeutic-foster-care";
 import { HealingHopeSection } from "@/components/sections/healing-hope-section";
 import { OfficesSection } from "@/components/sections/offices-section";
@@ -69,7 +69,7 @@ export default function HomePage() {
       <FosterCarePrograms />
       <WhyOpenArms />
       <TestimonialsSection />
-      <TeamSection />
+      <OurTeam />
       <TherapeuticFosterCare />
       <BecomingFosterParent />
       <EmergencyFosterCare />
