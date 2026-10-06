@@ -8,8 +8,8 @@ const programs = [
     body: "Our program helps children who have experienced trauma or significant emotional and behavioral challenges. Foster parents receive specialized training, and families have access to counseling, behavior supports, and coordinated care with our clinical team.",
     bullets: ["Individual and family counseling", "Behavior support plans and skill building", "Stability, structure, and nurturing routines"],
     cta: { label: "Learn More", href: "/therapeutic-foster-care-agency" },
-    image: "/teenager-girl-making-progress-self-love-self-acceptance-therapy-100kb.jpg",
-    alt: "Teenage girl in a supportive counseling session, building self-acceptance",
+    image: "/mom-daughter-looking-each-other-90kb.jpg",
+    alt: "A mother and her young daughter smiling at each other as they sit holding hands on a sofa",
     imagePosition: "object-center",
   },
   {
@@ -17,8 +17,8 @@ const programs = [
     body: "When a child needs immediate placement, our team responds quickly to secure a safe, short-term home while a longer-term plan is developed.",
     bullets: ["Rapid, safe placement", "24/7 availability", "Short-term care with transition planning"],
     cta: { label: "Refer a Child", href: "/referrals" },
-    image: "/mother-son-looking-tablet-100kb.jpg",
-    alt: "Mother and son looking at a tablet together on the couch",
+    image: "/healthcare-concept-clinic-90kb.jpg",
+    alt: "A woman holding a child who rests against her shoulder while she speaks with a clinician",
     imagePosition: "object-center",
   },
   {
