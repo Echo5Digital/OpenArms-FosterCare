@@ -77,35 +77,45 @@ export function TherapeuticFosterCare() {
             </h2>
           </Reveal>
 
-          {/* cut-out photo popping out of a green panel */}
+          {/* cut-out photo standing on the page itself: no panel behind it, just a soft glow and thin rings with a dot circling each one */}
           <Reveal from="left" delay={100} className="lg:col-start-1 lg:row-span-4 lg:row-start-1">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-[26rem] sm:max-w-[30rem] lg:max-w-[34rem]">
-              <div className="absolute inset-x-0 bottom-0 top-[18%] overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-leaf via-leaf-deep to-pine shadow-[0_40px_80px_-30px_rgba(25,53,45,0.55)]">
-                <div
-                  aria-hidden
-                  className="absolute inset-0 opacity-[0.22]"
-                  style={{
-                    backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1.4px)",
-                    backgroundSize: "22px 22px",
-                  }}
-                />
-                <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/25" />
-                <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full border border-white/25" />
-                <div className="absolute -bottom-28 -left-24 h-72 w-72 rounded-full bg-pine-deep/35 blur-2xl" />
-              </div>
-
+            <div className="relative mx-auto aspect-[2/3] w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-[28rem]">
               <div
                 aria-hidden
-                className="pointer-events-none absolute -left-[6%] top-[10%] h-[34%] w-[34%] animate-spin rounded-full border-2 border-dashed border-leaf-deep/50 [animation-duration:40s] motion-reduce:animate-none"
+                className="absolute left-1/2 top-[44%] aspect-square w-[125%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(141,197,64,0.26)_0%,rgba(235,243,238,0.55)_42%,transparent_68%)]"
               />
 
-              <div className="absolute inset-0 [clip-path:inset(-10%_0_0_0_round_0_0_2.5rem_2.5rem)]">
+              {[
+                { size: "w-full", ring: "border border-leaf-deep/30", dot: "bg-leaf", spin: "[animation-duration:36s]" },
+                {
+                  size: "w-[76%]",
+                  ring: "border border-dashed border-leaf-deep/40",
+                  dot: "bg-leaf-deep",
+                  spin: "[animation-duration:28s] [animation-direction:reverse]",
+                },
+                { size: "w-[52%]", ring: "border border-leaf-deep/30", dot: "bg-leaf", spin: "[animation-duration:22s]" },
+              ].map(({ size, ring, dot, spin }) => (
+                <div
+                  key={size}
+                  aria-hidden
+                  className={`pointer-events-none absolute left-1/2 top-[44%] aspect-square -translate-x-1/2 -translate-y-1/2 ${size}`}
+                >
+                  <div className={`relative h-full w-full animate-spin rounded-full motion-reduce:animate-none ${ring} ${spin}`}>
+                    <span
+                      className={`absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full shadow-md shadow-leaf/50 ${dot}`}
+                    />
+                  </div>
+                </div>
+              ))}
+
+              {/* the photo is cropped at the legs, so let it fade out into the page instead of ending in a hard edge */}
+              <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,black_80%,transparent)]">
                 <Image
-                  src="/xn (1).png"
-                  alt="A foster mother smiling as she hugs her daughter"
+                  src="/my-daddy-is-my-hero-90kb (1) (1).png"
+                  alt="A foster father lifting his smiling daughter into the air"
                   fill
-                  sizes="(min-width: 1024px) 34rem, (min-width: 640px) 30rem, 26rem"
-                  className="object-contain object-bottom drop-shadow-[0_20px_25px_rgba(15,33,27,0.35)]"
+                  sizes="(min-width: 1024px) 28rem, (min-width: 640px) 26rem, 22rem"
+                  className="object-contain object-bottom drop-shadow-[0_18px_22px_rgba(15,33,27,0.25)]"
                 />
               </div>
             </div>

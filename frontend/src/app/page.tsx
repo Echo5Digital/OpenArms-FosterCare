@@ -63,8 +63,8 @@ export default function HomePage() {
       <ProcessSteps />
       <FosterFamilySupport />
       <PlantWaterGrow />
-      <NurturingFutures />
       <OurProcessVideos />
+      <NurturingFutures />
       <WhatIsFosterCare />
       <FosterCarePrograms />
       <WhyOpenArms />

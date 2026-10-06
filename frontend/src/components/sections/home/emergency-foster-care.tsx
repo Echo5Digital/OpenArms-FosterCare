@@ -113,21 +113,26 @@ export function EmergencyFosterCare() {
           <h3 className="whitespace-nowrap font-sans text-[min(5.6cqw,2rem)] font-bold leading-[1.1] tracking-tight text-pine">
             How to Become a Foster Parent
           </h3>
-          <ol className="mt-6 flex flex-col gap-4">
+          <ol className="relative mt-6 flex flex-col gap-4">
+            {/* a dashed line running down behind the number badges; the white cards hide it except in the gaps */}
+            <span
+              aria-hidden
+              className="absolute bottom-8 left-[calc(2.75rem-1px)] top-8 w-0 border-l-2 border-dashed border-leaf-deep/50"
+            />
             {steps.map((step, i) => (
               <li key={step.title}>
-                <div className="group relative flex min-h-[5.5rem] items-center gap-4 overflow-hidden rounded-full bg-gradient-to-r from-leaf via-leaf-deep to-pine-deep py-3 pl-3 pr-6 text-white shadow-md transition-all duration-500 hover:translate-x-2 hover:shadow-[0_18px_35px_-15px_rgba(25,53,45,0.6)]">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-pine transition-all duration-500 group-hover:scale-110 group-hover:bg-pine group-hover:text-leaf">
+                <div className="group relative z-10 flex items-center gap-4 rounded-[1.75rem] bg-white p-4 pr-5 shadow-[0_10px_30px_-18px_rgba(25,53,45,0.35)] ring-1 ring-pine/10 transition-all duration-500 hover:-translate-y-1 hover:ring-leaf/60 hover:shadow-[0_22px_40px_-20px_rgba(111,162,47,0.6)]">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-leaf/20 font-display text-xl font-semibold text-leaf-deep ring-1 ring-leaf/40 transition-all duration-500 group-hover:-rotate-6 group-hover:bg-leaf group-hover:text-pine-deep">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-sans text-lg font-bold leading-tight text-pine">{step.title}</p>
+                    <p className="mt-1 text-[0.85rem] leading-snug text-ink/70">{step.body}</p>
+                  </div>
+                  <span className="ml-auto flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mint text-pine transition-all duration-500 group-hover:bg-leaf group-hover:text-pine-deep">
                     <svg viewBox="0 0 24 24" className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5" aria-hidden>
                       <path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                  </span>
-                  <div className="min-w-0">
-                    <p className="font-sans text-lg font-semibold leading-tight">{step.title}</p>
-                    <p className="mt-0.5 text-[0.85rem] font-medium leading-snug text-white/90">{step.body}</p>
-                  </div>
-                  <span className="ml-auto hidden font-display text-3xl font-semibold text-white/15 sm:block">
-                    {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
               </li>
