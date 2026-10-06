@@ -1,4 +1,4 @@
-import { HONEYPOT_FIELD, isLeadType, type LeadFieldValue, type LeadType } from "./types";
+import { HONEYPOT_FIELD, isLeadType, type LeadFieldValue, type LeadType } from "@shared/leads/types";
 
 const MAX_BODY_FIELDS = 120;
 const MAX_KEY_LENGTH = 60;

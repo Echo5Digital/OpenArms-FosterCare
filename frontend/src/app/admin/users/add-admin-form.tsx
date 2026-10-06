@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState, useState } from "react";
-import { addAdminAction, type AddAdminState } from "@backend/admin/users-actions";
+import { addAdminAction, type AddAdminState } from "@/app/admin/users/actions";
 
 const inputClass =
   "w-full rounded-full border border-pine/15 bg-[#f4f7f5] px-5 py-3 font-sans text-sm text-ink outline-none transition-all placeholder:text-ink/40 focus:border-leaf-deep focus:bg-white focus:ring-4 focus:ring-leaf/25";

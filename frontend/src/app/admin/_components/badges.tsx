@@ -1,4 +1,4 @@
-import { leadStatusLabels, leadTypeLabels, type LeadStatus, type LeadType } from "@backend/leads/types";
+import { leadStatusLabels, leadTypeLabels, type LeadStatus, type LeadType } from "@shared/leads/types";
 
 const typeStyle: Record<LeadType, string> = {
   contact: "bg-emerald-50 text-emerald-800 ring-emerald-200",

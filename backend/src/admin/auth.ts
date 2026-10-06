@@ -1,25 +1,18 @@
-import "server-only";
-import { cache } from "react";
-import { redirect } from "next/navigation";
 import { createHash, timingSafeEqual } from "node:crypto";
-import { readSession } from "./session";
+import type { Admin } from "@shared/api";
+import { verifySessionToken } from "./session";
 import { verifyPassword } from "./password";
 import { findAdmin } from "./users";
 
 const digest = (value: string) => createHash("sha256").update(value).digest();
 
-export type Admin = {
-  username: string;
-  /** The account from the server settings (ADMIN_USERNAME): it cannot be removed from the Users page. */
-  owner: boolean;
-};
-
 /**
- * The logged-in admin (remembered for the rest of this request), or null. An admin who has been removed from the Users
- * page loses access on their very next request, not when their login would have expired.
+ * The admin a login token belongs to, or null. An admin who has been removed from the Users page loses access on their
+ * very next request, not when their login would have expired.
  */
-export const getAdmin = cache(async (): Promise<Admin | null> => {
-  const session = await readSession();
+export async function adminFromToken(token: string | undefined): Promise<Admin | null> {
+  if (!token) return null;
+  const session = await verifySessionToken(token);
   if (!session) return null;
 
   const ownerName = process.env.ADMIN_USERNAME;
@@ -27,16 +20,6 @@ export const getAdmin = cache(async (): Promise<Admin | null> => {
 
   const admin = await findAdmin(session.username).catch(() => null);
   return admin ? { username: admin.email, owner: false } : null;
-});
-
-/**
- * Call this at the top of every dashboard page, action and download: the login is checked again each time, close to the
- * data, instead of trusting that an earlier page already did.
- */
-export async function requireAdmin() {
-  const admin = await getAdmin();
-  if (!admin) redirect("/admin/login");
-  return admin;
 }
 
 /**

@@ -1,7 +1,7 @@
 "use client";
 
 import { useTransition } from "react";
-import { removeAdminAction } from "@backend/admin/users-actions";
+import { removeAdminAction } from "@/app/admin/users/actions";
 
 export function RemoveAdminButton({ email }: { email: string }) {
   const [pending, startTransition] = useTransition();

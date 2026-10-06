@@ -6,7 +6,7 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  // The Next.js app lives in frontend/ (the backend/ code is compiled by it), so tell the Next rules where to look.
+  // The Next.js app lives in frontend/, so tell the Next rules where to look.
   { settings: { next: { rootDir: path.join(import.meta.dirname, "frontend") } } },
   // Override default ignores of eslint-config-next.
   globalIgnores([
@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
     "**/.next/**",
     "**/out/**",
     "**/build/**",
+    "**/dist/**",
     "**/next-env.d.ts",
   ]),
 ]);

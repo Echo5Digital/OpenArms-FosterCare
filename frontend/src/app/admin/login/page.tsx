@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
-import { getAdmin } from "@backend/admin/auth";
+import { getAdmin } from "@/lib/admin";
 import { LoginForm } from "@/app/admin/login/login-form";
 
 export default async function AdminLoginPage() {

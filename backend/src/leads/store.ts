@@ -1,4 +1,3 @@
-import "server-only";
 import { randomBytes } from "node:crypto";
 import { ObjectId, type Filter } from "mongodb";
 import { getDb } from "../lib/mongodb";
@@ -8,7 +7,7 @@ import {
   type LeadFieldValue,
   type LeadStatus,
   type LeadType,
-} from "./types";
+} from "@shared/leads/types";
 import type { ParsedLead } from "./validate";
 
 type LeadDoc = {

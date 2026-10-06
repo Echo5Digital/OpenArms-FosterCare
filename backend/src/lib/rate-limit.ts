@@ -1,5 +1,3 @@
-import "server-only";
-
 /**
  * Simple sliding-window limiter kept in the server's memory. It stops a single visitor from flooding the forms.
  * On a host that runs several server instances each one keeps its own count, so treat
@@ -31,7 +29,10 @@ export function allow(key: string, limit: number, windowMs: number) {
   return true;
 }
 
-/** Best-effort visitor address from the proxy headers (only used to count requests, never stored). */
+/**
+ * The visitor's address, which the website passes along in x-client-ip (every request to this server comes from the
+ * website, so the connection itself would always show the same address). Only used to count requests, never stored.
+ */
 export function clientKey(headers: Headers) {
-  return headers.get("x-forwarded-for")?.split(",")[0].trim() || headers.get("x-real-ip") || "unknown";
+  return headers.get("x-client-ip")?.trim().slice(0, 64) || "unknown";
 }

@@ -1,17 +1,14 @@
-import "server-only";
 import { MongoClient, type Db } from "mongodb";
 
-/**
- * One shared connection for the whole server. In development, hot reloads would open a new connection every time a
- * file changes, so the client is parked on `globalThis` and reused.
- */
-const globalForMongo = globalThis as unknown as { _mongoClient?: Promise<MongoClient>; _mongoIndexes?: Promise<void> };
+/** One shared connection for the whole server, opened on first use. */
+let connection: Promise<MongoClient> | undefined;
+let indexes: Promise<void> | undefined;
 
 function client() {
   const uri = process.env.MONGODB_URI;
-  if (!uri) throw new Error("MONGODB_URI is not set (add it to .env.local, or to the hosting provider's environment variables).");
-  globalForMongo._mongoClient ??= new MongoClient(uri, { serverSelectionTimeoutMS: 8000 }).connect();
-  return globalForMongo._mongoClient;
+  if (!uri) throw new Error("MONGODB_URI is not set (add it to backend/.env, or to the hosting provider's environment variables).");
+  connection ??= new MongoClient(uri, { serverSelectionTimeoutMS: 8000 }).connect();
+  return connection;
 }
 
 export async function getDb(): Promise<Db> {
@@ -19,13 +16,13 @@ export async function getDb(): Promise<Db> {
   try {
     db = (await client()).db(process.env.MONGODB_DB || "openarms");
   } catch (error) {
-    globalForMongo._mongoClient = undefined; // let the next request try to connect again
+    connection = undefined; // let the next request try to connect again
     throw error;
   }
-  globalForMongo._mongoIndexes ??= ensureIndexes(db).catch(() => {
-    globalForMongo._mongoIndexes = undefined;
+  indexes ??= ensureIndexes(db).catch(() => {
+    indexes = undefined;
   });
-  await globalForMongo._mongoIndexes;
+  await indexes;
   return db;
 }
 
@@ -38,4 +35,12 @@ async function ensureIndexes(db: Db) {
     // only Sign Ups waiting for their inquiry carry a token
     leads.createIndex({ followUpToken: 1 }, { unique: true, sparse: true }),
   ]);
+}
+
+/** Closes the connection (used when the server is shutting down). */
+export async function closeDb() {
+  const open = connection;
+  connection = undefined;
+  indexes = undefined;
+  if (open) await (await open).close().catch(() => undefined);
 }

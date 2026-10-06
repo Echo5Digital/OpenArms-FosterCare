@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { logoutAction } from "@backend/admin/actions";
+import { logoutAction } from "@/app/admin/actions";
 
 const navItems = [
   { key: "leads", label: "Leads", href: "/admin" },

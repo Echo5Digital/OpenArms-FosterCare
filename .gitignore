@@ -44,3 +44,6 @@ next-env.d.ts
 # claude code / research scratch
 .claude/
 _research/
+
+# backend build output
+dist/

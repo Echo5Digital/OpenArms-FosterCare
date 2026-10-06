@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { deleteLeadAction, saveNoteAction, setStatusAction } from "@backend/admin/actions";
-import { LEAD_STATUSES, leadStatusLabels, type LeadStatus } from "@backend/leads/types";
+import { deleteLeadAction, saveNoteAction, setStatusAction } from "@/app/admin/actions";
+import { LEAD_STATUSES, leadStatusLabels, type LeadStatus } from "@shared/leads/types";
 
 const activeStyle: Record<LeadStatus, string> = {
   new: "bg-leaf text-pine-deep shadow-md",

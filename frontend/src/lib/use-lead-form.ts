@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import type { LeadType } from "@backend/leads/types";
+import type { LeadType } from "@shared/leads/types";
 import { submitLead, type SubmitResult } from "@/lib/submit-lead";
 
 type Options = {

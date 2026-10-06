@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { requireAdmin } from "@backend/admin/auth";
-import { getLead } from "@backend/leads/store";
-import { leadTypeLabels, pageLabel } from "@backend/leads/types";
-import { fieldLabel, formatDateTime, formatValue, leadTitle } from "@backend/leads/format";
+import { api } from "@/lib/backend";
+import { requireAdmin } from "@/lib/admin";
+import { leadTypeLabels, pageLabel } from "@shared/leads/types";
+import { fieldLabel, formatDateTime, formatValue, leadTitle } from "@shared/leads/format";
 import { AdminHeader } from "@/app/admin/_components/admin-header";
 import { StatusBadge, TypeBadge } from "@/app/admin/_components/badges";
 import { LeadActions } from "@/app/admin/_components/lead-actions";
@@ -12,10 +12,10 @@ import { LeadActions } from "@/app/admin/_components/lead-actions";
 const SHOWN_ABOVE = new Set(["name", "firstName", "lastName", "email", "phone"]);
 
 export default async function LeadPage({ params }: { params: Promise<{ id: string }> }) {
-  const admin = await requireAdmin();
+  const { admin, token } = await requireAdmin();
   const { id } = await params;
 
-  const lead = await getLead(id).catch(() => null);
+  const lead = await api.lead(token, id).catch(() => null);
   if (!lead) redirect("/admin");
 
   const answers = Object.entries(lead.fields).filter(([key]) => !SHOWN_ABOVE.has(key));

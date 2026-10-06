@@ -3,7 +3,7 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   turbopack: {
-    // One level up from frontend/, so the bundler can also read the server code in ../backend (imported as @backend/*).
+    // One level up from frontend/, so the bundler can also read the code shared with the backend in ../shared (imported as @shared/*).
     root: path.join(__dirname, ".."),
   },
   images: {

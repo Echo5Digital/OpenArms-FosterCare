@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
-import type { LeadFieldValue, LeadType } from "@backend/leads/types";
+import type { LeadFieldValue, LeadType } from "@shared/leads/types";
 
 export type SubmitResult = { ok: true; id?: string; followUp?: string } | { ok: false; error: string };
 

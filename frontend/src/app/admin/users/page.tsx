@@ -1,6 +1,6 @@
-import { requireAdmin } from "@backend/admin/auth";
-import { listAdmins } from "@backend/admin/users";
-import { formatDay } from "@backend/leads/format";
+import { api } from "@/lib/backend";
+import { requireAdmin } from "@/lib/admin";
+import { formatDay } from "@shared/leads/format";
 import { AdminHeader } from "@/app/admin/_components/admin-header";
 import { AddAdminForm } from "@/app/admin/users/add-admin-form";
 import { RemoveAdminButton } from "@/app/admin/users/remove-admin-button";
@@ -31,9 +31,10 @@ function Pill({ children, tone }: { children: string; tone: "owner" | "you" }) {
 }
 
 export default async function AdminUsersPage() {
-  const me = await requireAdmin();
-  const owner = process.env.ADMIN_USERNAME;
-  const admins = await listAdmins().catch(() => null);
+  const { admin: me, token } = await requireAdmin();
+  const data = await api.users(token).catch(() => null);
+  const owner = data?.owner;
+  const admins = data?.users ?? null;
 
   return (
     <>
@@ -54,7 +55,7 @@ export default async function AdminUsersPage() {
 
             {admins === null ? (
               <p role="alert" className="mt-4 rounded-2xl bg-red-50 px-4 py-3 text-sm text-red-800 ring-1 ring-red-200">
-                The list of admins could not be loaded. The database did not answer; refresh the page to try again.
+                The list of admins could not be loaded. The backend server or its database did not answer; refresh the page to try again.
               </p>
             ) : (
               <ul className="mt-2 divide-y divide-pine/10">

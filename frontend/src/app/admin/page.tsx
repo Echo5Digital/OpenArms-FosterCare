@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { requireAdmin } from "@backend/admin/auth";
-import { getLeadStats, listLeads } from "@backend/leads/store";
+import { api } from "@/lib/backend";
+import { requireAdmin } from "@/lib/admin";
 import {
   LEAD_STATUSES,
   LEAD_TYPES,
@@ -11,8 +11,8 @@ import {
   pageLabel,
   type LeadStatus,
   type LeadType,
-} from "@backend/leads/types";
-import { formatDay, formatTime, leadTitle, timeAgo } from "@backend/leads/format";
+} from "@shared/leads/types";
+import { formatDay, formatTime, leadTitle, timeAgo } from "@shared/leads/format";
 import { AdminHeader } from "@/app/admin/_components/admin-header";
 import { TypeBadge } from "@/app/admin/_components/badges";
 import { StatusSelect } from "@/app/admin/_components/status-select";
@@ -56,7 +56,7 @@ export default async function AdminDashboardPage({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const admin = await requireAdmin();
+  const { admin, token } = await requireAdmin();
   const sp = await searchParams;
 
   const typeParam = first(sp.type);
@@ -68,7 +68,7 @@ export default async function AdminDashboardPage({
     page: Math.max(1, Number.parseInt(first(sp.page) ?? "1", 10) || 1),
   };
 
-  const data = await Promise.all([getLeadStats(), listLeads(query, query.page ?? 1)])
+  const data = await Promise.all([api.stats(token), api.leads(token, query)])
     .then(([stats, list]) => ({ stats, list }))
     .catch(() => null);
 
@@ -102,8 +102,9 @@ export default async function AdminDashboardPage({
           <div role="alert" className="mt-8 rounded-3xl bg-red-50 p-8 text-red-800 ring-1 ring-red-200">
             <p className="font-sans text-lg font-bold">The leads could not be loaded.</p>
             <p className="mt-1 text-sm">
-              The database did not answer. Check the connection settings (MONGODB_URI) and that the database allows this server,
-              then refresh the page.
+              The backend server did not answer, or it could not reach the database. Check that the backend is running and its
+              settings (BACKEND_URL here, MONGODB_URI on the backend), then refresh the page. A backend that has been idle
+              can take a minute to wake up.
             </p>
           </div>
         ) : (

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . ../backend",
+    "lint": "eslint . ../backend ../shared",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

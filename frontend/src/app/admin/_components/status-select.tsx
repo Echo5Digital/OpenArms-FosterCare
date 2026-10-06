@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { setStatusAction } from "@backend/admin/actions";
+import { setStatusAction } from "@/app/admin/actions";
 import { statusStyle } from "@/app/admin/_components/badges";
-import { LEAD_STATUSES, leadStatusLabels, type LeadStatus } from "@backend/leads/types";
+import { LEAD_STATUSES, leadStatusLabels, type LeadStatus } from "@shared/leads/types";
 
 /** Pick-list that saves a lead's status the moment it changes. */
 export function StatusSelect({ id, status }: { id: string; status: LeadStatus }) {

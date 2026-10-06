@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { loginAction, type LoginState } from "@backend/admin/actions";
+import { loginAction, type LoginState } from "@/app/admin/actions";
 
 const inputClass =
   "w-full rounded-full border border-leaf bg-[#e2e8e5] px-5 py-3.5 font-sans text-sm text-ink outline-none transition-all placeholder:text-ink/45 focus:border-leaf-deep focus:bg-white focus:ring-4 focus:ring-leaf/25";

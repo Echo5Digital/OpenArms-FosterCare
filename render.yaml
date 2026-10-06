@@ -1,0 +1,36 @@
+# Render Blueprint for the backend API (the ../backend folder). In Render: New > Blueprint, pick this repository.
+# It creates one web service; Render then asks for the secret values marked "sync: false" (they are never stored here).
+# See the README ("Deploying") for the full steps, including the matching settings on Vercel.
+services:
+  - type: web
+    name: openarms-backend
+    runtime: node
+    # "free" spins down after about 15 minutes without a request, and the next visitor then waits up to a minute for it
+    # to wake up (a form sent in that minute can fail). "starter" stays awake. Change it here or in the Render dashboard.
+    plan: free
+    # build from the repository root so the root package-lock.json is used; only the backend's packages are installed
+    buildCommand: npm ci --workspace backend && npm run build --workspace backend
+    startCommand: npm run start --workspace backend
+    healthCheckPath: /health
+    # a push that only changes the website (frontend/) does not need to redeploy the backend
+    buildFilter:
+      paths:
+        - backend/**
+        - shared/**
+        - package.json
+        - package-lock.json
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: openarms
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+      - key: AUTH_SECRET
+        sync: false
+      - key: BACKEND_API_KEY
+        sync: false
