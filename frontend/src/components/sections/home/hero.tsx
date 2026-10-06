@@ -88,7 +88,7 @@ export function Hero() {
           <div className="relative mx-auto hidden w-full max-w-sm lg:mx-0 lg:block lg:max-w-none lg:justify-self-end">
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[1.5rem] bg-pine-deep lg:aspect-auto lg:h-[580px]">
               <ScrollVideo
-                src={`https://www.youtube.com/embed/${HERO_VIDEO_ID}?autoplay=1&loop=1&playlist=${HERO_VIDEO_ID}&controls=0&modestbranding=1&rel=0&playsinline=1&disablekb=1&iv_load_policy=3`}
+                src={`https://www.youtube.com/embed/${HERO_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${HERO_VIDEO_ID}&controls=0&modestbranding=1&rel=0&playsinline=1&disablekb=1&iv_load_policy=3`}
                 title="Open Arms Foster Care"
                 className="pointer-events-none absolute left-1/2 top-1/2 h-[177.78vw] min-h-full w-[100%] min-w-[177.78vh] -translate-x-1/2 -translate-y-1/2"
               />
