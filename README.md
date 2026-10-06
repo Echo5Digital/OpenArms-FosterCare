@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Open Arms Foster Care
 
-## Getting Started
+The Open Arms website: a [Next.js](https://nextjs.org) app with a lead-capture backend (MongoDB) and an admin dashboard.
 
-First, run the development server:
+The project is split into two folders that are set up as npm workspaces:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+frontend/   The Next.js app: pages, components, styling, images (public/), and the thin route files
+            that give the backend its web addresses (/api/leads, /admin/export).
+backend/    Server-side code: MongoDB connection, lead validation and storage, admin login and sessions,
+            admin users, the CSV export and the form-submission handler.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The frontend imports backend code with the `@backend/*` alias (for example `@backend/leads/store`), which points at
+`backend/src/*`. Next.js compiles the backend together with the frontend, so there is still one app and one deploy.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Getting started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install                                    # once, from the project root
+cp frontend/.env.example frontend/.env.local   # then fill in the values
+npm run dev                                    # http://localhost:3000
+```
 
-## Learn More
+Run these from the project root:
 
-To learn more about Next.js, take a look at the following resources:
+| Command             | What it does                                          |
+| ------------------- | ----------------------------------------------------- |
+| `npm run dev`       | Start the dev server                                  |
+| `npm run build`     | Production build                                      |
+| `npm run start`     | Serve the production build                            |
+| `npm run lint`      | ESLint over `frontend/` and `backend/`                |
+| `npm run typecheck` | TypeScript check of both folders                      |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Admin password
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The dashboard at `/admin` checks a salted hash, not the password itself. To make one:
 
-## Deploy on Vercel
+```bash
+node backend/scripts/admin-password.mjs "your new password"
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Paste the printed `ADMIN_PASSWORD_HASH=...` line into `frontend/.env.local` (or the hosting provider's environment
+variables).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploying
+
+Deploy the `frontend/` folder as the app's root directory. On Vercel, set **Root Directory** to `frontend` and leave
+**Include source files outside of the Root Directory** switched on, so `backend/` is available during the build.
+Environment variables are the ones listed in `frontend/.env.example`.
