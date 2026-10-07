@@ -73,7 +73,7 @@ export function NavDropdown({
         ref={buttonRef}
         type="button"
         onClick={show}
-        className={`relative flex items-center gap-1.5 px-4 py-2 font-sans text-[0.95rem] font-medium transition-colors ${
+        className={`relative flex items-center gap-1.5 whitespace-nowrap px-2.5 py-2 font-sans text-[0.95rem] font-medium transition-colors xl:px-4 ${
           light
             ? open
               ? "text-cream"
@@ -92,7 +92,7 @@ export function NavDropdown({
         </svg>
         <span
           aria-hidden
-          className={`absolute inset-x-4 bottom-0 h-0.5 origin-left rounded-full bg-leaf transition-transform duration-300 ${
+          className={`absolute inset-x-2.5 bottom-0 h-0.5 xl:inset-x-4 origin-left rounded-full bg-leaf transition-transform duration-300 ${
             open ? "scale-x-100" : "scale-x-0"
           }`}
         />

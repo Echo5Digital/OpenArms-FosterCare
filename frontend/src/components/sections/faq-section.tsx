@@ -63,7 +63,7 @@ export function FaqSection({
                 </a>
 
                 {secondaryImage && (
-                  <div className="absolute -bottom-10 -left-6 h-32 w-28 overflow-hidden rounded-[1.5rem] border-4 border-cream-alt shadow-xl sm:-left-10 sm:h-40 sm:w-36">
+                  <div className="absolute -bottom-10 -left-3 h-32 w-28 overflow-hidden rounded-[1.5rem] border-4 border-cream-alt shadow-xl sm:-left-6 sm:h-40 sm:w-36 xl:-left-10">
                     <Image
                       src={secondaryImage.src}
                       alt={secondaryImage.alt}

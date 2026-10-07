@@ -74,11 +74,11 @@ export function WhyOpenArms() {
               <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/60 via-transparent to-transparent" />
             </div>
 
-            <div className="mt-6 grid grid-cols-3 gap-4">
+            <div className="mt-6 grid grid-cols-3 gap-3 sm:gap-4">
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl bg-mint p-4 text-center shadow-sm ring-1 ring-pine/8"
+                  className="rounded-2xl bg-mint p-3 text-center shadow-sm sm:p-4 ring-1 ring-pine/8"
                 >
                   <p className="font-display text-2xl font-semibold text-leaf-deep sm:text-3xl">{stat.value}</p>
                   <p className="mt-1 text-[0.7rem] leading-snug text-ink/65">{stat.label}</p>
@@ -90,7 +90,7 @@ export function WhyOpenArms() {
           <div className="flex flex-col gap-5">
             {reasons.map((reason, i) => (
               <Reveal key={reason.title} from="right" triggerOffset="-12%" noMobileAnimation>
-                <div className="group flex gap-6 rounded-[1.75rem] bg-cream-alt p-7 shadow-[0_4px_20px_-8px_rgba(15,33,27,0.1)] ring-1 ring-pine/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-16px_rgba(15,33,27,0.18)] sm:p-8">
+                <div className="group flex flex-col gap-3 rounded-[1.75rem] bg-cream-alt p-7 sm:flex-row sm:gap-6 shadow-[0_4px_20px_-8px_rgba(15,33,27,0.1)] ring-1 ring-pine/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-16px_rgba(15,33,27,0.18)] sm:p-8">
                   <span className="font-display text-4xl font-light leading-none text-leaf/60 transition-colors duration-300 group-hover:text-leaf-deep">
                     {String(i + 1).padStart(2, "0")}
                   </span>

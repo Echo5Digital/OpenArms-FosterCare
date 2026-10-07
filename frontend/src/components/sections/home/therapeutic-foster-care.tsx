@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
-import { Reveal } from "@/components/ui/reveal";
 
 const iconProps = {
   viewBox: "0 0 24 24",
@@ -49,7 +48,7 @@ const benefits: { title: string; body: string; icon: ReactNode }[] = [
 
 export function TherapeuticFosterCare() {
   return (
-    <section className="relative overflow-x-clip bg-gradient-to-b from-white via-cream-alt to-cream">
+    <section className="relative overflow-x-clip bg-[rgb(235,243,238)]">
       {/* ambient light + texture */}
       <div className="pointer-events-none absolute -left-40 top-24 h-[28rem] w-[28rem] rounded-full bg-leaf/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-10 h-[30rem] w-[30rem] rounded-full bg-leaf/20 blur-3xl" />
@@ -67,7 +66,7 @@ export function TherapeuticFosterCare() {
       <div className="relative mx-auto max-w-[1400px] px-5 py-16 sm:px-8 sm:py-24">
         <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:grid-rows-[1fr_auto_auto_1fr] lg:gap-x-16 lg:gap-y-0">
           {/* heading */}
-          <Reveal className="lg:col-start-2 lg:row-start-2">
+          <div className="lg:col-start-2 lg:row-start-2">
             <span className="block h-[3px] w-24 rounded-full bg-gradient-to-r from-leaf-deep to-leaf" />
             <h2 className="mt-5 max-w-2xl font-sans text-[2.1rem] font-bold leading-[1.1] tracking-tight text-pine sm:text-[2.8rem] lg:text-[3.1rem]">
               Therapeutic Foster Care in{" "}
@@ -75,10 +74,10 @@ export function TherapeuticFosterCare() {
                 Oklahoma City
               </span>
             </h2>
-          </Reveal>
+          </div>
 
-          {/* cut-out photo standing on the page itself: no panel behind it, just a soft glow and thin rings with a dot circling each one */}
-          <Reveal from="left" delay={100} className="lg:col-start-1 lg:row-span-4 lg:row-start-1">
+          {/* cut-out photo standing on the page itself: no panel behind it, just a soft glow and thin rings with a dot resting on each one */}
+          <div className="lg:col-start-1 lg:row-span-4 lg:row-start-1">
             <div className="relative mx-auto aspect-[2/3] w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-[28rem]">
               <div
                 aria-hidden
@@ -86,21 +85,17 @@ export function TherapeuticFosterCare() {
               />
 
               {[
-                { size: "w-full", ring: "border border-leaf-deep/30", dot: "bg-leaf", spin: "[animation-duration:36s]" },
-                {
-                  size: "w-[76%]",
-                  ring: "border border-dashed border-leaf-deep/40",
-                  dot: "bg-leaf-deep",
-                  spin: "[animation-duration:28s] [animation-direction:reverse]",
-                },
-                { size: "w-[52%]", ring: "border border-leaf-deep/30", dot: "bg-leaf", spin: "[animation-duration:22s]" },
-              ].map(({ size, ring, dot, spin }) => (
+                { size: "w-full", ring: "border border-leaf-deep/30", dot: "bg-leaf", angle: 90 },
+                { size: "w-[76%]", ring: "border border-dashed border-leaf-deep/40", dot: "bg-leaf-deep", angle: -50 },
+                { size: "w-[52%]", ring: "border border-leaf-deep/30", dot: "bg-leaf", angle: 200 },
+              ].map(({ size, ring, dot, angle }) => (
                 <div
                   key={size}
                   aria-hidden
                   className={`pointer-events-none absolute left-1/2 top-[44%] aspect-square -translate-x-1/2 -translate-y-1/2 ${size}`}
                 >
-                  <div className={`relative h-full w-full animate-spin rounded-full motion-reduce:animate-none ${ring} ${spin}`}>
+                  {/* static: each dot rests at a fixed spot on its ring */}
+                  <div className={`relative h-full w-full rounded-full ${ring}`} style={{ transform: `rotate(${angle}deg)` }}>
                     <span
                       className={`absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full shadow-md shadow-leaf/50 ${dot}`}
                     />
@@ -119,10 +114,10 @@ export function TherapeuticFosterCare() {
                 />
               </div>
             </div>
-          </Reveal>
+          </div>
 
           {/* copy */}
-          <Reveal delay={150} className="lg:col-start-2 lg:row-start-3">
+          <div className="lg:col-start-2 lg:row-start-3">
             <div className="max-w-2xl space-y-4 text-[1.05rem] leading-relaxed text-ink/80 lg:mt-6">
               <p>
                 <strong className="font-bold text-pine">Therapeutic foster care</strong> is a specialized type of
@@ -140,18 +135,18 @@ export function TherapeuticFosterCare() {
                 behavioral growth are prioritized.
               </p>
             </div>
-          </Reveal>
+          </div>
         </div>
 
         {/* benefits */}
-        <Reveal className="mt-16">
+        <div className="mt-16">
           <p className="flex items-center gap-4 font-sans text-xl text-pine sm:text-2xl">
             <span aria-hidden className="h-px w-10 shrink-0 bg-leaf-deep/60" />
             <span>
               The benefits of <strong className="font-bold">therapeutic foster care</strong> include:
             </span>
           </p>
-        </Reveal>
+        </div>
 
         {/* stacking deck on phones (cards pile up as you scroll), three across from md up */}
         <div className="mt-8 flex flex-col gap-6 md:grid md:grid-cols-3 md:gap-6">
@@ -163,7 +158,7 @@ export function TherapeuticFosterCare() {
                 className="max-md:sticky md:h-full"
                 style={{ top: `calc(4.75rem + ${i * 0.85}rem)` }}
               >
-                <Reveal delay={i * 100} className="h-full">
+                <div className="h-full">
                   <div
                     className={`group relative flex h-full flex-col overflow-hidden rounded-[2rem_2rem_2rem_0.5rem] p-7 transition-all duration-500 max-md:min-h-[16rem] max-md:shadow-[0_-16px_34px_-14px_rgba(15,33,27,0.55)] sm:p-8 md:shadow-[0_25px_50px_-28px_rgba(25,53,45,0.55)] md:hover:-translate-y-2 md:hover:shadow-[0_32px_60px_-24px_rgba(25,53,45,0.7)] ${
                       dark
@@ -208,7 +203,7 @@ export function TherapeuticFosterCare() {
                       {benefit.body}
                     </p>
                   </div>
-                </Reveal>
+                </div>
               </div>
             );
           })}

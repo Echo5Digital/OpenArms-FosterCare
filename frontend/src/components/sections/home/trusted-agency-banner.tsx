@@ -24,11 +24,11 @@ export function TrustedAgencyBanner() {
           <div className="relative order-2 mx-auto w-full max-w-sm self-start lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-[27rem]">
             <div className="relative aspect-[4/5] overflow-hidden lg:aspect-[1/1] rounded-[2rem] shadow-[0_20px_45px_rgba(15,33,27,0.22)]">
               <Image
-                src="/medium-shot-girl-holding-toy-100kb.jpg"
-                alt="A young girl in foster care holding her favorite toy"
+                src="/happy-boy-sitting-thinking-alone-park-100kb.jpg"
+                alt="A young boy sitting thoughtfully in a park with his chin resting in his hands"
                 fill
                 sizes="(min-width: 1024px) 35vw, 80vw"
-                className="object-cover"
+                className="object-cover object-[center_62%]"
               />
             </div>
             <span

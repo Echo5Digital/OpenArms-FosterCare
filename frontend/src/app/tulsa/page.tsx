@@ -38,7 +38,6 @@ export default function TulsaPage() {
         appointmentForm={{
           src: "/calm-african-american-mother-child-beach-mother-son-casual-clothes-sitting-blanket-hugging-family-relaxation-nature-concept-100kb.png",
           alt: "A mother hugging her son while they sit together on a blanket",
-          form: "contact",
           className: "object-cover object-bottom",
           boxClassName: "aspect-[2/3] max-w-[20rem] sm:max-w-[22rem] lg:max-w-[26rem]",
         }}

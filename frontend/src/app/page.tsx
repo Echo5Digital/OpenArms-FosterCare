@@ -66,11 +66,11 @@ export default function HomePage() {
       <OurProcessVideos />
       <NurturingFutures />
       <WhatIsFosterCare />
+      <TherapeuticFosterCare />
       <FosterCarePrograms />
       <WhyOpenArms />
       <HomeTestimonials />
       <OurTeam />
-      <TherapeuticFosterCare />
       <BecomingFosterParent />
       <EmergencyFosterCare />
       <FaqSection
@@ -88,7 +88,7 @@ export default function HomePage() {
           alt: "A grandmother sharing a warm, playful moment with her grandson at home",
         }}
       />
-      <HealingHopeSection form="contact" />
+      <HealingHopeSection form="contact" variant="card" />
       <OfficesSection />
       <ClosingCta />
     </>

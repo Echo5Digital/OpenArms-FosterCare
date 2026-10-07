@@ -55,7 +55,7 @@ export function OurTeam() {
                     {member.name}
                     {member.credential ? ` - ${member.credential}` : ""}
                   </h3>
-                  <p className="mt-1 line-clamp-2 text-[0.66rem] font-semibold uppercase leading-snug tracking-[0.08em] text-leaf-deep transition-colors duration-500 group-hover:text-pine-deep lg:mt-0.5 lg:text-xs lg:font-normal lg:normal-case lg:tracking-normal lg:text-ink/70 lg:group-hover:text-pine-deep/80">
+                  <p className="mt-1 line-clamp-3 text-[0.66rem] font-semibold uppercase leading-snug tracking-[0.08em] text-leaf-deep transition-colors duration-500 group-hover:text-pine-deep lg:mt-0.5 lg:line-clamp-2 lg:text-xs lg:font-normal lg:normal-case lg:tracking-normal lg:text-ink/70 lg:group-hover:text-pine-deep/80">
                     {member.title}
                   </p>
                 </div>

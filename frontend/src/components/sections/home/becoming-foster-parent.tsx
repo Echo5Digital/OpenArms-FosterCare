@@ -58,7 +58,7 @@ const steps: { title: string; body: ReactNode; icon: ReactNode }[] = [
 export function BecomingFosterParent() {
   return (
     <section className="px-3 py-10 sm:px-5 sm:py-16">
-      <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[2rem] bg-gradient-to-br from-pine-deep via-pine to-leaf-deep px-6 py-14 sm:rounded-[2.5rem] sm:px-12 sm:py-20">
+      <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[2rem] bg-gradient-to-br from-pine-deep via-pine to-leaf-deep px-6 py-14 sm:rounded-[2.5rem] sm:px-12 sm:py-20 max-sm:px-4">
         {/* dotted texture */}
         <div
           aria-hidden
@@ -124,7 +124,7 @@ export function BecomingFosterParent() {
           <div className="relative mt-14">
             <div
               aria-hidden
-              className="animate-line-flow absolute bottom-6 left-6 top-6 w-[3px] -translate-x-1/2 rounded-full lg:left-1/2"
+              className="animate-line-flow absolute bottom-6 left-[1.125rem] top-6 w-[3px] sm:left-6 -translate-x-1/2 rounded-full lg:left-1/2"
               style={{
                 backgroundImage:
                   "repeating-linear-gradient(to bottom, rgba(141,197,64,0.15) 0px, rgba(141,197,64,0.95) 60px, rgba(141,197,64,0.15) 120px)",
@@ -136,29 +136,28 @@ export function BecomingFosterParent() {
               {steps.map((step, i) => {
                 const right = i % 2 === 1;
                 return (
-                  <div key={step.title} className="relative pl-16 lg:pl-0">
-                    <span className="absolute left-6 top-7 z-10 flex h-11 w-11 -translate-x-1/2 items-center justify-center lg:left-1/2">
+                  <div key={step.title} className="relative pl-12 sm:pl-16 lg:pl-0">
+                    <span className="absolute left-[1.125rem] top-7 z-10 flex h-9 w-9 -translate-x-1/2 sm:left-6 sm:h-11 sm:w-11 items-center justify-center lg:left-1/2">
                       <span className="animate-pulse-ring absolute inset-0 rounded-full bg-leaf" />
-                      <span className="relative flex h-11 w-11 items-center justify-center rounded-full border-4 border-pine bg-leaf font-display text-base font-semibold text-pine-deep shadow-lg">
+                      <span className="relative flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-pine bg-leaf font-display text-sm sm:h-11 sm:w-11 sm:border-4 sm:text-base font-semibold text-pine-deep shadow-lg">
                         {i + 1}
                       </span>
                     </span>
 
                     <Reveal from={right ? "right" : "left"} triggerOffset="-8%" className={right ? "lg:ml-auto lg:w-[calc(50%-3.5rem)]" : "lg:w-[calc(50%-3.5rem)]"}>
-                      <div className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-leaf/70 hover:bg-white/[0.14] hover:shadow-[0_24px_50px_-20px_rgba(141,197,64,0.55)] sm:flex-row sm:gap-5 sm:p-7">
-                        <span className="pointer-events-none absolute -right-3 -top-5 font-display text-8xl font-semibold leading-none text-white/[0.06] transition-all duration-500 group-hover:-translate-y-1 group-hover:text-leaf/25">
+                      <div className="relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-5 backdrop-blur-sm sm:flex-row sm:gap-5 sm:p-7">
+                        <span className="pointer-events-none absolute -right-3 -top-5 font-display text-8xl font-semibold leading-none text-white/[0.06]">
                           {String(i + 1).padStart(2, "0")}
                         </span>
-                        <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/15 text-white transition-all duration-500 group-hover:rotate-[8deg] group-hover:scale-110 group-hover:bg-leaf group-hover:text-pine-deep">
+                        <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/15 text-white">
                           {step.icon}
                         </span>
                         <div className="relative">
                           <h4 className="font-sans text-lg font-semibold leading-snug text-white">{step.title}</h4>
-                          <p className="mt-2 text-[0.95rem] leading-relaxed text-white/75 transition-colors duration-500 group-hover:text-white/90">
+                          <p className="mt-2 text-[0.95rem] leading-relaxed text-white/75">
                             {step.body}
                           </p>
                         </div>
-                        <span className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-leaf transition-transform duration-500 group-hover:scale-x-100" />
                       </div>
                     </Reveal>
                   </div>
