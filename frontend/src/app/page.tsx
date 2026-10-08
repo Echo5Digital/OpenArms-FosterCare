@@ -11,7 +11,6 @@ import { FosterCarePrograms } from "@/components/sections/home/foster-care-progr
 import { WhyOpenArms } from "@/components/sections/home/why-open-arms";
 import { HomeTestimonials } from "@/components/sections/home/home-testimonials";
 import { FaqSection } from "@/components/sections/faq-section";
-import { BecomingFosterParent } from "@/components/sections/home/becoming-foster-parent";
 import { EmergencyFosterCare } from "@/components/sections/home/emergency-foster-care";
 import { TherapeuticFosterCare } from "@/components/sections/home/therapeutic-foster-care";
 import { HealingHopeSection } from "@/components/sections/healing-hope-section";
@@ -60,7 +59,6 @@ export default function HomePage() {
       <FosterCarePrograms />
       <WhyOpenArms />
       <HomeTestimonials />
-      <BecomingFosterParent />
       <EmergencyFosterCare />
       <FaqSection
         faqs={homeFaqs}
@@ -77,8 +75,8 @@ export default function HomePage() {
           alt: "A grandmother sharing a warm, playful moment with her grandson at home",
         }}
       />
-      <OutreachCta />
       <OfficesSection />
+      <OutreachCta />
     </>
   );
 }
