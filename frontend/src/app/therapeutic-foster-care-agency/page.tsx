@@ -195,9 +195,17 @@ export default function TherapeuticFosterCarePage() {
                 alt: "A foster family sitting together on a sofa during a session with their caseworker",
               },
               { src: "/family-lesson-time-100kb.jpg", alt: "A family enjoying lesson time together" },
-              { src: "/drinking-bodybuilding-bottle-sport-athletic-active-100kb.jpg", alt: "An active, healthy family moment" },
+              {
+                src: "/mother-embracing-teenage-daughter-in-family-counse-2025-05-25-17-12-27-utc-scaled.jpg",
+                alt: "A mother embracing her teenage daughter on a sofa during a family counseling session",
+                position: "object-[center_22%]",
+              },
               { src: "/close-up-girl-therapist-high-five-100kb.jpg", alt: "A girl giving her therapist a high five" },
-              { src: "/family-with-binoculars (1).jpg", alt: "A family exploring together with binoculars" },
+              {
+                src: "/rfjs.jpeg",
+                alt: "A man resting a comforting arm on the shoulder of a boy who looks down, seated together in an office",
+                position: "object-[center_20%]",
+              },
               {
                 src: "/teenager-girl-making-progress-self-love-self-acceptance-therapy-100kb.jpg",
                 alt: "A teenager making progress in therapy",
@@ -277,7 +285,7 @@ export default function TherapeuticFosterCarePage() {
       </section>
 
       {/* To Healing & Hope */}
-      <section className="mx-auto max-w-[1200px] px-5 pb-20 sm:px-8 sm:pb-28">
+      <section id="healing-hope-form" className="mx-auto max-w-[1200px] scroll-mt-28 px-5 pb-20 sm:px-8 sm:pb-28">
         <div className="grid items-stretch gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal className="h-full">
             <div className="relative h-full overflow-hidden rounded-[2rem] bg-gradient-to-b from-pine-deep via-leaf-deep to-leaf p-8 shadow-xl sm:p-10">

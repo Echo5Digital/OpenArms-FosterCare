@@ -79,6 +79,29 @@ export function TherapeuticHero() {
               compassionate, trauma-informed foster care and 24/7 support for families.
             </p>
           </Reveal>
+
+          <Reveal delay={300}>
+            <Link
+              href="#healing-hope-form"
+              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-[rgb(217,179,101)] px-7 py-3.5 font-sans text-base font-semibold text-pine-deep shadow-[0_15px_30px_-12px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgb(230,195,121)]"
+            >
+              Start Your Journey Today
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              >
+                <path
+                  d="M4 12h15m0 0-6-6m6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Link>
+          </Reveal>
         </div>
       </div>
 
