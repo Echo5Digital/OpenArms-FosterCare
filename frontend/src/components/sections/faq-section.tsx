@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
@@ -11,6 +12,7 @@ export function FaqSection({
   image,
   secondaryImage,
   titleClassName,
+  aside,
 }: {
   faqs: Faq[];
   title?: string;
@@ -18,7 +20,29 @@ export function FaqSection({
   image?: { src: string; alt: string; position?: string };
   secondaryImage?: { src: string; alt: string; position?: string };
   titleClassName?: string;
+  /** Replaces the heading + photo column: the content goes on the left and the heading moves above the questions. */
+  aside?: ReactNode;
 }) {
+  if (aside) {
+    return (
+      <section className="bg-cream-alt px-5 py-20 sm:px-8 sm:py-28">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-16">
+            {/* on phones the questions come first and this follows them */}
+            <div className="max-lg:order-last lg:sticky lg:top-28">{aside}</div>
+            <div>
+              {/* every FAQ title uses the FAQ heading font, whatever font class the page passes in */}
+              <div className="mb-8 [&_h2]:font-cabinet [&_h2]:font-bold">
+                <SectionHeading eyebrow={eyebrow} title={title} titleClassName={titleClassName} />
+              </div>
+              <FaqAccordion faqs={faqs} />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="bg-cream-alt px-5 py-20 sm:px-8 sm:py-28">
       <div className="mx-auto max-w-[1400px]">
