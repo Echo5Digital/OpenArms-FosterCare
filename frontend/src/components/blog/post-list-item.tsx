@@ -39,7 +39,7 @@ export function PostListItem({ post, preloadImage = false }: { post: BlogPost; p
         >
           <span
             aria-hidden
-            className="absolute inset-0 -translate-x-full bg-leaf transition-transform duration-300 ease-out group-hover/btn:translate-x-0 motion-reduce:transition-none"
+            className="absolute inset-0 -translate-x-full bg-[rgb(217,179,101)] transition-transform duration-300 ease-out group-hover/btn:translate-x-0 motion-reduce:transition-none"
           />
           <span className="relative">Read More</span>
           <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-leaf text-pine-deep transition-colors duration-300 group-hover/btn:bg-pine group-hover/btn:text-leaf motion-reduce:transition-none">

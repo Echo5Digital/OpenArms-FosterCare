@@ -14,7 +14,7 @@ const tones = [
     icon: "text-pine",
     title: "text-pine-deep",
     body: "text-slate",
-    pill: "bg-white text-pine-deep group-hover:bg-leaf",
+    pill: "bg-white text-pine-deep group-hover:bg-[rgb(217,179,101)]",
     decor: "bg-leaf/15",
   },
   {
@@ -23,7 +23,7 @@ const tones = [
     icon: "text-pine-deep",
     title: "text-pine-deep",
     body: "text-pine-deep/75",
-    pill: "bg-leaf text-pine-deep group-hover:bg-white",
+    pill: "bg-leaf text-pine-deep group-hover:bg-[rgb(217,179,101)]",
     decor: "bg-leaf-deep/30",
   },
   {
@@ -32,7 +32,7 @@ const tones = [
     icon: "text-leaf",
     title: "text-white",
     body: "text-white/70",
-    pill: "bg-pine text-white group-hover:bg-leaf group-hover:text-pine-deep",
+    pill: "bg-pine text-white group-hover:bg-[rgb(217,179,101)] group-hover:text-pine-deep",
     decor: "bg-leaf/10",
   },
 ];

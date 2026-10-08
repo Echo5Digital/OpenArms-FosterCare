@@ -99,7 +99,7 @@ export function ServiceHero({ title, highlight, intro, image, imageAlt, imagePos
           <Reveal delay={300}>
             <Link
               href="/contact-us#contact-form"
-              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-leaf px-7 py-3.5 font-sans text-base font-semibold text-pine-deep shadow-[0_15px_30px_-12px_rgba(141,197,64,0.8)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white"
+              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-[rgb(217,179,101)] px-7 py-3.5 font-sans text-base font-semibold text-pine-deep shadow-[0_15px_30px_-12px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgb(230,195,121)]"
             >
               Start Your Journey Today
               <svg
