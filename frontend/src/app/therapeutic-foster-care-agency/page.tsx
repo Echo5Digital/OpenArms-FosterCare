@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const cards = [
   {
     title: "Why Foster with Open Arms?",
-    image: "/therapeutic-card-15.webp",
+    image: "/cost-of-becoming-a-foster-parent-84049e.jpg",
     items: [
       "24/7 support and guidance",
       "Comprehensive training provided",
@@ -40,7 +40,7 @@ const cards = [
   },
   {
     title: "Who Can Apply?",
-    image: "/therapeutic-card-16.webp",
+    image: "/front-view-parents-kid-couch-90kb.jpg",
     items: [
       "Are 21 years or older",
       "Are a resident of Oklahoma with a stable home environment",
@@ -60,9 +60,19 @@ const cards = [
 ];
 
 const bento = [
-  { type: "image" as const, image: cards[0].image, alt: "A family celebrating a new home together" },
+  {
+    type: "image" as const,
+    image: cards[0].image,
+    alt: "A smiling family of four on a sofa holding a chalkboard that says family",
+    position: "object-[45%_center]",
+  },
   { type: "text" as const, dark: false, title: cards[0].title, items: cards[0].items },
-  { type: "image" as const, image: cards[1].image, alt: "A caregiver playing with two young children" },
+  {
+    type: "image" as const,
+    image: cards[1].image,
+    alt: "A smiling couple and their young son sitting together on a sofa",
+    position: "object-[53%_center]",
+  },
   { type: "text" as const, dark: true, title: cards[1].title, items: cards[1].items },
   { type: "image" as const, image: cards[2].image, alt: "A teacher leading a group of children in a letter activity" },
   { type: "text" as const, dark: true, title: cards[2].title, items: cards[2].items },
@@ -247,7 +257,7 @@ export default function TherapeuticFosterCarePage() {
                     alt={tile.alt}
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`object-cover transition-transform duration-700 group-hover:scale-105 ${tile.position ?? ""}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-pine-deep/25 via-transparent to-transparent" />
                 </div>
