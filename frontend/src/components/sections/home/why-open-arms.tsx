@@ -90,13 +90,13 @@ export function WhyOpenArms() {
           <div className="flex flex-col gap-5">
             {reasons.map((reason, i) => (
               <Reveal key={reason.title} from="right" triggerOffset="-12%" noMobileAnimation>
-                <div className="group flex flex-col gap-3 rounded-[1.75rem] bg-cream-alt p-7 sm:flex-row sm:gap-6 shadow-[0_4px_20px_-8px_rgba(15,33,27,0.1)] ring-1 ring-pine/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-16px_rgba(15,33,27,0.18)] sm:p-8">
-                  <span className="font-display text-4xl font-light leading-none text-leaf/60 transition-colors duration-300 group-hover:text-leaf-deep">
+                <div className="group flex flex-col gap-3 rounded-[1.75rem] bg-cream-alt p-7 sm:flex-row sm:gap-6 shadow-[0_4px_20px_-8px_rgba(15,33,27,0.1)] ring-1 ring-pine/6 transition-all duration-300 hover:-translate-y-1 hover:bg-[rgb(25,53,45)] hover:shadow-[0_20px_40px_-16px_rgba(15,33,27,0.35)] sm:p-8">
+                  <span className="font-display text-4xl font-light leading-none text-leaf/60 transition-colors duration-300 group-hover:text-leaf">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="font-sans text-lg font-semibold text-pine">{reason.title}</h3>
-                    <p className="mt-2.5 text-[0.98rem] leading-relaxed text-ink/70">{reason.body}</p>
+                    <h3 className="font-sans text-lg font-semibold text-pine transition-colors duration-300 group-hover:text-white">{reason.title}</h3>
+                    <p className="mt-2.5 text-[0.98rem] leading-relaxed text-ink/70 transition-colors duration-300 group-hover:text-white/80">{reason.body}</p>
                   </div>
                 </div>
               </Reveal>
