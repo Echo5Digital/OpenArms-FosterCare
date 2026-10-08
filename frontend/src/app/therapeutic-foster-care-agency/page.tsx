@@ -190,6 +190,10 @@ export default function TherapeuticFosterCarePage() {
         <Reveal>
           <ImageSlider
             slides={[
+              {
+                src: "/foster-1030x687-1.jpeg",
+                alt: "A foster family sitting together on a sofa during a session with their caseworker",
+              },
               { src: "/family-lesson-time-100kb.jpg", alt: "A family enjoying lesson time together" },
               { src: "/drinking-bodybuilding-bottle-sport-athletic-active-100kb.jpg", alt: "An active, healthy family moment" },
               { src: "/close-up-girl-therapist-high-five-100kb.jpg", alt: "A girl giving her therapist a high five" },

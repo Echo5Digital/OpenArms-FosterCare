@@ -85,7 +85,7 @@ export function HomeTestimonials() {
             </svg>
 
             <blockquote
-              className={`mt-4 text-balance font-display font-medium tracking-tight text-cream ${quoteSize(active.quote.length)}`}
+              className={`mt-4 text-balance font-sans font-medium tracking-tight text-cream ${quoteSize(active.quote.length)}`}
             >
               {active.quote}
             </blockquote>
@@ -173,7 +173,7 @@ export function HomeTestimonials() {
               href={googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2.5 rounded-full bg-leaf px-6 py-3 font-sans text-sm font-semibold text-pine-deep transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-[rgb(217,179,101)] px-6 py-3 font-sans text-sm font-semibold text-pine-deep transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgb(230,195,121)] hover:shadow-lg"
             >
               Read More Reviews
               <svg viewBox="0 0 24 24" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" aria-hidden>

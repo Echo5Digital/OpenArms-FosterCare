@@ -3,26 +3,20 @@ import { siteConfig } from "@/lib/site-config";
 import { pageSchema, serviceCatalogSchema } from "@/lib/schema";
 import { homeFaqs } from "@/lib/content/faqs";
 import { Hero } from "@/components/sections/home/hero";
-import { TrustedAgencyBanner } from "@/components/sections/home/trusted-agency-banner";
 import { TrustedAgency } from "@/components/sections/home/trusted-agency";
 import { Services } from "@/components/sections/home/services";
 import { ProcessSteps } from "@/components/sections/home/process-steps";
-import { FosterFamilySupport } from "@/components/sections/foster-family-support";
 import { PlantWaterGrow } from "@/components/sections/home/plant-water-grow";
-import { NurturingFutures } from "@/components/sections/home/nurturing-futures";
-import { OurProcessVideos } from "@/components/sections/home/our-process-videos";
-import { WhatIsFosterCare } from "@/components/sections/home/what-is-foster-care";
 import { FosterCarePrograms } from "@/components/sections/home/foster-care-programs";
 import { WhyOpenArms } from "@/components/sections/home/why-open-arms";
 import { HomeTestimonials } from "@/components/sections/home/home-testimonials";
 import { FaqSection } from "@/components/sections/faq-section";
 import { BecomingFosterParent } from "@/components/sections/home/becoming-foster-parent";
 import { EmergencyFosterCare } from "@/components/sections/home/emergency-foster-care";
-import { OurTeam } from "@/components/sections/home/our-team";
 import { TherapeuticFosterCare } from "@/components/sections/home/therapeutic-foster-care";
 import { HealingHopeSection } from "@/components/sections/healing-hope-section";
 import { OfficesSection } from "@/components/sections/offices-section";
-import { ClosingCta } from "@/components/sections/home/closing-cta";
+import { OutreachCta } from "@/components/sections/home/outreach-cta";
 
 export const metadata: Metadata = {
   title: "Foster Care in Oklahoma City | Become a Foster Parent | Open Arms",
@@ -57,20 +51,15 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Hero />
-      <TrustedAgencyBanner />
       <TrustedAgency />
       <Services />
+      <HealingHopeSection form="contact" variant="card" />
       <ProcessSteps />
-      <FosterFamilySupport />
       <PlantWaterGrow />
-      <OurProcessVideos />
-      <NurturingFutures />
-      <WhatIsFosterCare />
       <TherapeuticFosterCare />
       <FosterCarePrograms />
       <WhyOpenArms />
       <HomeTestimonials />
-      <OurTeam />
       <BecomingFosterParent />
       <EmergencyFosterCare />
       <FaqSection
@@ -88,9 +77,8 @@ export default function HomePage() {
           alt: "A grandmother sharing a warm, playful moment with her grandson at home",
         }}
       />
-      <HealingHopeSection form="contact" variant="card" />
+      <OutreachCta />
       <OfficesSection />
-      <ClosingCta />
     </>
   );
 }

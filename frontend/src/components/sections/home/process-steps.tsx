@@ -188,6 +188,8 @@ export function ProcessSteps() {
                   className="lg:sticky lg:pb-10 lg:last:pb-0"
                   style={{ top: `calc(7rem + ${i} * 0.9rem)` }}
                 >
+                  {/* phones and tablets: each card slides in from alternating sides as it scrolls into view */}
+                  <Reveal belowLgOnly from={i % 2 === 0 ? "left" : "right"} triggerOffset="-8%">
                   <article
                     className={`group relative isolate overflow-hidden rounded-[1.75rem] p-6 shadow-[0_28px_50px_-30px_rgba(15,33,27,0.55)] sm:rounded-[2rem] sm:p-9 lg:min-h-56 ${tone.card}`}
                   >
@@ -231,6 +233,7 @@ export function ProcessSteps() {
                       </div>
                     </div>
                   </article>
+                  </Reveal>
                 </li>
               );
             })}

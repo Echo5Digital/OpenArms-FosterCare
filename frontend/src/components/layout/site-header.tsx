@@ -52,7 +52,11 @@ export function SiteHeader() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="ml-1 inline-flex items-center whitespace-nowrap rounded-full bg-leaf px-4 py-2.5 font-sans text-[0.95rem] font-semibold text-pine-deep shadow-[0_10px_22px_-10px_rgba(141,197,64,0.8)] transition-colors hover:bg-leaf-deep focus-visible:outline-solid focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-pine-deep xl:px-5 xl:ml-2"
+                className={`ml-1 inline-flex items-center whitespace-nowrap rounded-full px-4 py-2.5 font-sans text-[0.95rem] font-semibold text-pine-deep transition-colors focus-visible:outline-solid focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-pine-deep xl:px-5 xl:ml-2 ${
+                  isHome
+                    ? "bg-leaf-deep hover:bg-leaf"
+                    : "bg-leaf shadow-[0_10px_22px_-10px_rgba(141,197,64,0.8)] hover:bg-leaf-deep"
+                }`}
               >
                 {item.label}
               </Link>

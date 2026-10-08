@@ -78,10 +78,10 @@ export function TherapeuticFosterCare() {
 
           {/* cut-out photo standing on the page itself: no panel behind it, just a soft glow and thin rings with a dot resting on each one */}
           <div className="lg:col-start-1 lg:row-span-4 lg:row-start-1">
-            <div className="relative mx-auto aspect-[2/3] w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-[28rem]">
+            <div className="relative mx-auto aspect-square w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-[28rem]">
               <div
                 aria-hidden
-                className="absolute left-1/2 top-[44%] aspect-square w-[125%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(141,197,64,0.26)_0%,rgba(235,243,238,0.55)_42%,transparent_68%)]"
+                className="absolute left-1/2 top-[57%] aspect-square w-[125%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(141,197,64,0.26)_0%,rgba(235,243,238,0.55)_42%,transparent_68%)]"
               />
 
               {[
@@ -92,7 +92,7 @@ export function TherapeuticFosterCare() {
                 <div
                   key={size}
                   aria-hidden
-                  className={`pointer-events-none absolute left-1/2 top-[44%] aspect-square -translate-x-1/2 -translate-y-1/2 ${size}`}
+                  className={`pointer-events-none absolute left-1/2 top-[57%] aspect-square -translate-x-1/2 -translate-y-1/2 ${size}`}
                 >
                   {/* static: each dot rests at a fixed spot on its ring */}
                   <div className={`relative h-full w-full rounded-full ${ring}`} style={{ transform: `rotate(${angle}deg)` }}>
@@ -104,10 +104,10 @@ export function TherapeuticFosterCare() {
               ))}
 
               {/* the photo is cropped at the legs, so let it fade out into the page instead of ending in a hard edge */}
-              <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,black_80%,transparent)]">
+              <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,black_86%,transparent)]">
                 <Image
-                  src="/my-daddy-is-my-hero-90kb (1) (1).png"
-                  alt="A foster father lifting his smiling daughter into the air"
+                  src="/clmn_3 (1).png"
+                  alt="A woman with short curly hair sitting close to a teenage girl and resting a comforting arm on her shoulder"
                   fill
                   sizes="(min-width: 1024px) 28rem, (min-width: 640px) 26rem, 22rem"
                   className="object-contain object-bottom drop-shadow-[0_18px_22px_rgba(15,33,27,0.25)]"

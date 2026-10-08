@@ -3,6 +3,7 @@ import { offices } from "@/lib/site-config";
 import { pageSchema, localBusinessSchema } from "@/lib/schema";
 import { ContactHero } from "@/components/sections/contact-hero";
 import { ContactMain } from "@/components/sections/contact-main";
+import { OurProcessVideos } from "@/components/sections/home/our-process-videos";
 import { ContactOffices } from "@/components/sections/contact-offices";
 import { ContactNewsletter } from "@/components/sections/contact-newsletter";
 
@@ -32,6 +33,7 @@ export default function ContactUsPage() {
 
       <ContactHero />
       <ContactMain />
+      <OurProcessVideos />
       <ContactOffices />
       <ContactNewsletter />
     </>
