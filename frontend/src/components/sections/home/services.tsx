@@ -11,6 +11,13 @@ const services: { title: string; href: string; image: string; alt: string; posit
     position: "object-[center_25%]",
   },
   {
+    title: "Therapeutic Foster Care",
+    href: "/therapeutic-foster-care-agency",
+    image: "/rfjs.jpeg",
+    alt: "A man with glasses resting a comforting arm on the shoulder of a boy who looks down, seated together in an office",
+    position: "object-[center_12%]",
+  },
+  {
     title: "Post-Placement Therapy",
     href: "/post-placement-therapy",
     image: "/istockphoto-2187351214-612x612.jpg",
@@ -31,7 +38,7 @@ export function Services() {
     <section className="relative bg-mint py-14 sm:py-16">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Our Services"
+          eyebrow="Our Programmes"
           title="Foster Care Services Tailored to Your Needs"
           align="center"
           className="mx-auto lg:max-w-4xl"
@@ -43,11 +50,14 @@ export function Services() {
         </p>
 
         <div className="mt-9 grid gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6">
-          {services.map((service) => (
+          {services.map((service, i) => (
             <Link
               key={service.href}
               href={service.href}
-              className="group relative flex h-40 items-end overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1 sm:h-48 lg:h-52"
+              // the fourth card drops to a second row and sits centred, under the second card
+              className={`group relative flex h-40 items-end overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1 sm:h-48 lg:h-52 ${
+                i === 3 ? "sm:col-start-2" : ""
+              }`}
             >
               <Image
                 src={service.image}

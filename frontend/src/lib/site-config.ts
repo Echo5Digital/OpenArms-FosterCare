@@ -83,12 +83,12 @@ export type NavItem = NavLink & {
 
 export const mainNav: NavItem[] = [
   { label: "About Us", href: "/about-us" },
-  { label: "Therapeutic Foster Care", href: "/therapeutic-foster-care-agency" },
   {
-    label: "Services",
-    href: "/foster-parent-training",
+    label: "Programmes",
+    href: "/therapeutic-foster-care-agency",
     menu: "services",
     children: [
+      { label: "Therapeutic Foster Care", href: "/therapeutic-foster-care-agency" },
       { label: "Foster Parent Training", href: "/foster-parent-training" },
       { label: "Post-Placement Therapy", href: "/post-placement-therapy" },
       { label: "Support for School Staff", href: "/support-for-school-staff" },
