@@ -17,8 +17,8 @@ export function PageHero({
 }) {
   return (
     <section
-      className={`relative flex overflow-hidden bg-pine ${
-        backgroundImage ? "min-h-[70vh] items-center py-12" : "pb-16 pt-12 sm:pb-20 sm:pt-16"
+      className={`relative flex overflow-hidden bg-pine lg:-mt-[4.5rem] ${
+        backgroundImage ? "min-h-[70vh] items-center py-12 lg:min-h-[calc(70vh+4.5rem)] lg:pt-[7.5rem]" : "pb-16 pt-12 sm:pb-20 sm:pt-16 lg:pt-[8.5rem]"
       }`}
     >
       {backgroundImage && (

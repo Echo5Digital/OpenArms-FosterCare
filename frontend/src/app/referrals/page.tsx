@@ -24,7 +24,7 @@ export default function ReferralsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      <section className="bg-pine-deep px-5 py-20 sm:px-8 sm:py-28">
+      <section className="bg-pine-deep px-5 py-20 sm:px-8 sm:py-28 lg:-mt-[4.5rem] lg:pt-[11.5rem]">
         <div className="mx-auto grid max-w-[1400px] gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
           <div>
             <h2 className="font-sans text-4xl font-extrabold leading-tight tracking-tight text-cream sm:text-5xl">

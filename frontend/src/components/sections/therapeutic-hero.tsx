@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/reveal";
 
 export function TherapeuticHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-pine-deep">
+    <section className="relative isolate overflow-hidden bg-pine-deep lg:-mt-[4.5rem]">
       {/* photo, cut on a diagonal */}
       <div
         className="absolute inset-y-0 right-0 -z-10 hidden w-[64%] bg-leaf lg:block"
@@ -37,7 +37,7 @@ export function TherapeuticHero() {
         }}
       />
 
-      <div className="relative mx-auto flex min-h-[32rem] max-w-[1400px] items-center px-5 pb-28 pt-16 sm:px-8 lg:min-h-[38rem] lg:pb-32">
+      <div className="relative mx-auto flex min-h-[32rem] max-w-[1400px] items-center px-5 pb-28 pt-16 sm:px-8 lg:min-h-[42.5rem] lg:pb-32 lg:pt-[8.5rem]">
         <div className="max-w-xl">
           <Reveal>
             <nav

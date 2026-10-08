@@ -10,7 +10,7 @@ const checklist = [
 
 export function AboutHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-pine-deep via-pine to-[#1f4a36]">
+    <section className="relative isolate overflow-hidden bg-gradient-to-br from-pine-deep via-pine to-[#1f4a36] lg:-mt-[4.5rem]">
       {/* ambient light + texture */}
       <div className="pointer-events-none absolute -left-32 -top-32 -z-10 h-[30rem] w-[30rem] rounded-full bg-leaf/25 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 right-0 -z-10 h-[32rem] w-[32rem] rounded-full bg-leaf-deep/30 blur-3xl" />
@@ -36,7 +36,7 @@ export function AboutHero() {
         <circle cx="400" cy="400" r="210" strokeWidth="1" />
       </svg>
 
-      <div className="relative mx-auto flex max-w-[1400px] flex-col gap-10 px-5 pb-20 pt-14 sm:px-8 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:grid-rows-[1fr_auto_auto_1fr] lg:gap-x-10 lg:gap-y-0 lg:pb-28 lg:pt-20">
+      <div className="relative mx-auto flex max-w-[1400px] flex-col gap-10 px-5 pb-20 pt-14 sm:px-8 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:grid-rows-[1fr_auto_auto_1fr] lg:gap-x-10 lg:gap-y-0 lg:pb-28 lg:pt-[9.5rem]">
         {/* heading */}
         <div className="lg:col-start-1 lg:row-start-2">
           <Reveal>

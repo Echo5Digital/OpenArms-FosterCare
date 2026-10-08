@@ -29,7 +29,7 @@ export function LocationHero({
   imageFit?: "zoom" | "full";
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-pine-deep via-pine to-[#1c4a3a]">
+    <section className="relative isolate overflow-hidden bg-gradient-to-br from-pine-deep via-pine to-[#1c4a3a] lg:-mt-[4.5rem]">
       {/* topographic contour lines */}
       <svg
         aria-hidden
@@ -50,7 +50,7 @@ export function LocationHero({
       <div className="pointer-events-none absolute -left-24 -top-24 -z-10 h-96 w-96 rounded-full bg-leaf/25 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 right-10 -z-10 h-96 w-96 rounded-full bg-leaf-deep/30 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-[1400px] items-center gap-16 px-5 pb-28 pt-14 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
+      <div className="relative mx-auto grid max-w-[1400px] items-center gap-16 px-5 pb-28 pt-14 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-[9.5rem]">
         {/* copy */}
         <div>
           <Reveal>
