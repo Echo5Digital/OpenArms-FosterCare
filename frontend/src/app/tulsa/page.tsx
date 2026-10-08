@@ -150,6 +150,11 @@ export default function TulsaPage() {
           ],
           startHeading: "How to Get Started with Open Arms Foster Care in Tulsa",
           startHighlight: "Tulsa",
+          startImage: {
+            src: "/blogfeb1.1 (1).jpg",
+            alt: "A smiling woman, a man and two girls sitting together at a table by a window, looking at the camera",
+            position: "object-center",
+          },
           startParagraphs: [
             "If you’re ready to make a difference in the life of a child, getting started with Open Arms Foster Care is easy. We’ll guide you through the process of becoming a foster parent, including completing your application, undergoing background checks, and participating in training.",
             "Our team will walk you through the steps of becoming a foster parent in Tulsa, ensuring that you’re well-prepared for the journey ahead. Whether you’re interested in emergency foster care or therapeutic foster care, we are here to help you every step of the way.",

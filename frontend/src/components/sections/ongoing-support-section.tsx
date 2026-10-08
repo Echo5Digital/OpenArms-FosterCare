@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/ui/reveal";
 import { ExpandingPanels, type PanelItem } from "@/components/sections/expanding-panels";
 
@@ -11,6 +12,8 @@ export type OngoingSupportProps = {
   /** Part of `startHeading` to show in leaf green. */
   startHighlight?: string;
   startParagraphs: string[];
+  /** A photo in the dark "how to get started" panel, in place of the animated path (default: the path). */
+  startImage?: { src: string; alt: string; position?: string };
 };
 
 function split(text: string, part?: string) {
@@ -36,6 +39,7 @@ export function OngoingSupportSection({
   startHeading,
   startHighlight,
   startParagraphs,
+  startImage,
 }: OngoingSupportProps) {
   const h = split(heading, headingHighlight);
   const s = split(startHeading, startHighlight);
@@ -103,43 +107,55 @@ export function OngoingSupportSection({
                 </h2>
               </div>
 
-              <svg aria-hidden viewBox="0 0 400 210" className="relative w-full max-w-md overflow-visible max-sm:hidden" fill="none">
-                <path d={PATH} stroke="#8dc540" strokeOpacity="0.18" strokeWidth="12" strokeLinecap="round" />
-                <path
-                  d={PATH}
-                  stroke="#8dc540"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeDasharray="6 10"
-                  className="animate-dash-flow"
-                />
-                <circle cx="10" cy="170" r="5" fill="#ffffff" />
-                {NODES.map((n) => (
-                  <g key={n.x}>
-                    <circle
-                      cx={n.x}
-                      cy={n.y}
-                      r="11"
-                      fill="#8dc540"
-                      fillOpacity="0.45"
-                      className="animate-pulse-ring [transform-box:fill-box] [transform-origin:center]"
-                      style={{ animationDelay: n.delay }}
-                    />
-                    <circle cx={n.x} cy={n.y} r="7" fill="#8dc540" stroke="#ffffff" strokeWidth="3" />
+              {startImage ? (
+                <div className="relative aspect-[9/4] w-full overflow-hidden rounded-[1.5rem] shadow-[0_24px_40px_-22px_rgba(0,0,0,0.6)] ring-1 ring-white/15 lg:aspect-auto lg:min-h-[13rem] lg:flex-1">
+                  <Image
+                    src={startImage.src}
+                    alt={startImage.alt}
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 90vw"
+                    className={`object-cover ${startImage.position ?? "object-center"}`}
+                  />
+                </div>
+              ) : (
+                <svg aria-hidden viewBox="0 0 400 210" className="relative w-full max-w-md overflow-visible max-sm:hidden" fill="none">
+                  <path d={PATH} stroke="#8dc540" strokeOpacity="0.18" strokeWidth="12" strokeLinecap="round" />
+                  <path
+                    d={PATH}
+                    stroke="#8dc540"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeDasharray="6 10"
+                    className="animate-dash-flow"
+                  />
+                  <circle cx="10" cy="170" r="5" fill="#ffffff" />
+                  {NODES.map((n) => (
+                    <g key={n.x}>
+                      <circle
+                        cx={n.x}
+                        cy={n.y}
+                        r="11"
+                        fill="#8dc540"
+                        fillOpacity="0.45"
+                        className="animate-pulse-ring [transform-box:fill-box] [transform-origin:center]"
+                        style={{ animationDelay: n.delay }}
+                      />
+                      <circle cx={n.x} cy={n.y} r="7" fill="#8dc540" stroke="#ffffff" strokeWidth="3" />
+                    </g>
+                  ))}
+                  <circle
+                    cx="385"
+                    cy="40"
+                    r="22"
+                    fill="#8dc540"
+                    fillOpacity="0.2"
+                    className="animate-pulse-ring [transform-box:fill-box] [transform-origin:center] [animation-delay:-1s]"
+                  />
+                  <g transform="translate(367 22) scale(1.5)">
+                    <path d={HEART} fill="#8dc540" />
                   </g>
-                ))}
-                <circle
-                  cx="385"
-                  cy="40"
-                  r="22"
-                  fill="#8dc540"
-                  fillOpacity="0.2"
-                  className="animate-pulse-ring [transform-box:fill-box] [transform-origin:center] [animation-delay:-1s]"
-                />
-                <g transform="translate(367 22) scale(1.5)">
-                  <path d={HEART} fill="#8dc540" />
-                </g>
-              </svg>
+                </svg>
+              )}
             </div>
 
             {/* copy */}

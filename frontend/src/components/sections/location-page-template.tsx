@@ -58,6 +58,7 @@ export function LocationPageTemplate({
   heroBreadcrumb,
   appointmentForm,
   therapeuticLocation,
+  therapeuticSticker,
   supportHeading,
   supportAlignHeader,
   supportIntro,
@@ -83,6 +84,8 @@ export function LocationPageTemplate({
   appointmentForm?: LocationAppointmentConfig;
   /** Overrides the highlighted part of the therapeutic section heading (default: "<city>, OK"). */
   therapeuticLocation?: string;
+  /** Overrides the cut-out photo in the therapeutic section (default: the laughing mother and child). `maxWidth` narrows a portrait cut-out. */
+  therapeuticSticker?: { src: string; alt: string; width: number; height: number; maxWidth?: string };
   /** Overrides the support-services heading (default: "Foster Parent Support Services in <city>"). */
   supportHeading?: string;
   /** Aligns the support heading row with the showcase panel below (default: off). */
@@ -113,6 +116,13 @@ export function LocationPageTemplate({
   /** Optional small heading shown above the closing paragraph. */
   closingHeading?: string;
 }) {
+  const sticker = therapeuticSticker ?? {
+    src: "/mother-child-being-happy-100kb (1) (1).png",
+    alt: "A mother and her child laughing together",
+    width: 1080,
+    height: 810,
+  };
+
   return (
     <>
       <LocationHero
@@ -335,18 +345,19 @@ export function LocationPageTemplate({
               {/* the sticker */}
               <div className="animate-gentle-bob relative z-10">
                 <div
-                  className="-rotate-3"
+                  className={sticker.maxWidth ? "mx-auto -rotate-3" : "-rotate-3"}
                   style={{
                     WebkitMaskImage: "linear-gradient(to bottom, #000 78%, transparent 100%)",
                     maskImage: "linear-gradient(to bottom, #000 78%, transparent 100%)",
+                    maxWidth: sticker.maxWidth,
                   }}
                 >
                   <Image
-                    src="/mother-child-being-happy-100kb (1) (1).png"
-                    alt="A mother and her child laughing together"
-                    width={1080}
-                    height={810}
-                    sizes="(min-width: 1024px) 34rem, 92vw"
+                    src={sticker.src}
+                    alt={sticker.alt}
+                    width={sticker.width}
+                    height={sticker.height}
+                    sizes={sticker.maxWidth ? `(min-width: 640px) ${sticker.maxWidth}, 70vw` : "(min-width: 1024px) 34rem, 92vw"}
                     className="h-auto w-full [filter:drop-shadow(4px_0_0_#fff)_drop-shadow(-4px_0_0_#fff)_drop-shadow(0_4px_0_#fff)_drop-shadow(0_-4px_0_#fff)_drop-shadow(0_22px_22px_rgba(15,33,27,0.35))]"
                   />
                 </div>

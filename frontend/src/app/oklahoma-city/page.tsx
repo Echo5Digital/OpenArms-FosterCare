@@ -60,6 +60,13 @@ export default function OklahomaCityPage() {
           },
         ]}
         therapeuticLocation="Oklahoma City"
+        therapeuticSticker={{
+          src: "/jdrt8hucgfk4hnrdhohc.png",
+          alt: "A mother sitting on a sofa with her arm around her teenage daughter, who rests her head against her",
+          width: 878,
+          height: 1080,
+          maxWidth: "24rem",
+        }}
         therapeutic={[
           "Therapeutic foster care is a specialized form of foster care designed for children who have experienced trauma or who face emotional challenges. These children often require more intensive support than traditional foster care can offer, and therapeutic programs are tailored to help them process trauma, regulate emotions, and develop healthy coping strategies.",
           "At Open Arms Foster Care, we provide therapeutic foster care services throughout Oklahoma City, with trained foster parents who are equipped to care for children with emotional and behavioral needs. Our approach combines compassionate, family-based support with access to professional therapy and behavioral health resources, creating a safe, structured environment where children can begin to heal and thrive.",

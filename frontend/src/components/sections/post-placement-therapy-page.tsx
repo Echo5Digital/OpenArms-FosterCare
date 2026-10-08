@@ -53,8 +53,8 @@ const approachCards = [
         strokeLinejoin="round"
       />
     ),
-    imageSrc: "/child-doing-therapy-session-with-psychologist-100kb.jpg",
-    imageAlt: "A child during a therapy session with a psychologist",
+    imageSrc: "/istockphoto-1249785387-612x612.jpg",
+    imageAlt: "A therapist taking notes while a young child plays on a mat and a parent looks on in a living room",
     imagePosition: "bottom",
   },
 ] as const;
