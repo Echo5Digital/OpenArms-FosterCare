@@ -50,7 +50,7 @@ const cards = [
   },
   {
     title: "Next Steps",
-    image: "/therapeutic-card-17.webp",
+    image: "/premium_photo-1661403858267-4e0feb15585f.avif",
     items: [
       "Fill out the application form below.",
       "Our team will contact you for an initial consultation.",
@@ -74,7 +74,7 @@ const bento = [
     position: "object-[53%_center]",
   },
   { type: "text" as const, dark: true, title: cards[1].title, items: cards[1].items },
-  { type: "image" as const, image: cards[2].image, alt: "A teacher leading a group of children in a letter activity" },
+  { type: "image" as const, image: cards[2].image, alt: "A smiling woman being hugged by four laughing children" },
   { type: "text" as const, dark: true, title: cards[2].title, items: cards[2].items },
 ];
 
@@ -149,7 +149,7 @@ export default function TherapeuticFosterCarePage() {
   });
 
   return (
-    <>
+    <div className="bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <TherapeuticHero />
@@ -352,7 +352,7 @@ export default function TherapeuticFosterCarePage() {
                 <Reveal delay={i * 120} className="h-full">
                   <div className="flex h-full gap-5 lg:flex-col lg:items-center lg:gap-6">
                     <span
-                      className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full font-display text-2xl font-semibold shadow-lg ring-8 ring-cream ${
+                      className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full font-display text-2xl font-semibold shadow-lg ring-8 ring-white ${
                         last ? "bg-pine text-leaf" : "bg-leaf text-pine-deep"
                       }`}
                     >
@@ -543,6 +543,6 @@ export default function TherapeuticFosterCarePage() {
           </div>
         </Reveal>
       </section>
-    </>
+    </div>
   );
 }

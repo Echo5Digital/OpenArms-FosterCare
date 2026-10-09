@@ -110,7 +110,7 @@ export function TherapeuticHero() {
         aria-hidden
         viewBox="0 0 1440 80"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-[-1px] -z-0 h-14 w-full text-cream sm:h-20"
+        className="absolute inset-x-0 bottom-[-1px] -z-0 h-14 w-full text-white sm:h-20"
         fill="currentColor"
       >
         <path d="M0 80V40C240 0 480 0 720 28s480 40 720-8v60H0Z" />
