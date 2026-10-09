@@ -36,8 +36,8 @@ const approachCards = [
         strokeLinejoin="round"
       />
     ),
-    imageSrc: "/mother-son-looking-tablet-100kb.jpg",
-    imageAlt: "A mother and son looking at a tablet together at home",
+    imageSrc: "/gettyimages-2281297824-612x612.jpg",
+    imageAlt: "A smiling couple sitting close on a sofa with their young daughter, who is holding a teddy bear, while a therapist listens",
     imagePosition: "top",
   },
   {
