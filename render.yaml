@@ -34,3 +34,19 @@ services:
         sync: false
       - key: BACKEND_API_KEY
         sync: false
+      # email after a form (welcome email to the visitor, notice to the team) over SMTP. Render's free plan blocks SMTP
+      # ports, so this needs a paid plan to work; with the settings empty no email is sent and the forms still work.
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_SECURE
+        value: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM_NAME
+        value: Open Arms Foster Care
+      - key: LEAD_NOTIFY_EMAIL
+        sync: false

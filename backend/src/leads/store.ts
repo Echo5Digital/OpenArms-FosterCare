@@ -25,6 +25,8 @@ type LeadDoc = {
   createdAt: Date;
   inquiryAt?: Date;
   updatedAt?: Date;
+  /** When the welcome email was sent to this lead's address (kept only to avoid sending it twice). */
+  welcomeEmailAt?: Date;
 };
 
 async function leads() {
@@ -59,6 +61,20 @@ export async function insertLead(lead: ParsedLead) {
     createdAt: new Date(),
   });
   return { id: result.insertedId.toString(), followUpToken };
+}
+
+/** True when a welcome email already went to this address within the given time. */
+export async function recentlyWelcomed(email: string, withinMs: number) {
+  const found = await (await leads()).findOne(
+    { email, welcomeEmailAt: { $gte: new Date(Date.now() - withinMs) } },
+    { projection: { _id: 1 } },
+  );
+  return Boolean(found);
+}
+
+export async function markWelcomed(id: string) {
+  if (!validId(id)) return;
+  await (await leads()).updateOne({ _id: new ObjectId(id) }, { $set: { welcomeEmailAt: new Date() } });
 }
 
 // how long a Sign Up keeps waiting for its Recruitment Inquiry when the visitor's browser could not vouch for it

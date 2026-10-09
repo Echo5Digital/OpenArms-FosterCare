@@ -22,6 +22,10 @@ export function checkEnv() {
     process.exit(1);
   }
 
+  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    console.warn("SMTP_HOST, SMTP_USER and SMTP_PASS are not all set: no email (welcome or admin notice) will be sent after a form.");
+  }
+
   if (!process.env.ADMIN_USERNAME || !process.env.ADMIN_PASSWORD_HASH) {
     console.warn("ADMIN_USERNAME and ADMIN_PASSWORD_HASH are not both set: only admins added on the Users page can sign in.");
   }

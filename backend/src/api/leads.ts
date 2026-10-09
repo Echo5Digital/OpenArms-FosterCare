@@ -1,6 +1,8 @@
 import type { Context } from "hono";
 import { addInquiryToSignup, insertLead } from "../leads/store";
 import { parseLead } from "../leads/validate";
+import { notifyAdmin } from "../leads/notify";
+import { sendWelcomeEmail } from "../leads/welcome";
 import { allow, clientKey } from "../lib/rate-limit";
 
 const MAX_BODY_BYTES = 100_000;
@@ -41,10 +43,16 @@ export async function submitLead(c: Context) {
     // a Recruitment Inquiry that follows a Sign Up is added to that lead, so the person appears on the dashboard once
     if (parsed.lead.type === "inquiry") {
       const joined = await addInquiryToSignup(parsed.lead, parsed.followUp);
-      if (joined) return reply({ ok: true, id: joined });
+      if (joined) {
+        void notifyAdmin(parsed.lead, true);
+        return reply({ ok: true, id: joined });
+      }
     }
 
     const { id, followUpToken } = await insertLead(parsed.lead);
+    // the emails go out in the background: the visitor does not wait for them and a failure never affects the form
+    void sendWelcomeEmail(parsed.lead, id);
+    void notifyAdmin(parsed.lead);
     return reply({ ok: true, id, ...(followUpToken ? { followUp: followUpToken } : {}) }, 201);
   } catch (error) {
     // log the reason without the visitor's details

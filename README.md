@@ -36,6 +36,9 @@ Each side has its own file. Neither is committed to git; copy the `.env.example`
 | `ADMIN_USERNAME`, `ADMIN_PASSWORD_HASH` | The owner login (make the hash with `node backend/scripts/admin-password.mjs "password"`) |
 | `AUTH_SECRET` | 32+ random characters; signs the dashboard login |
 | `BACKEND_API_KEY` | 24+ random characters; the secret the website sends |
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM_NAME` | Email over SMTP (Gmail: `smtp.gmail.com`, `587`, `false`, and an App Password as `SMTP_PASS`). After a form is sent the visitor gets a welcome email and the team gets a notice. Leave host, user and password empty and no email is sent (the forms still work). Render's free plan blocks SMTP ports, so the live backend needs a paid plan for email |
+| `LEAD_NOTIFY_EMAIL` | Who gets the notice about each new form (one address or several, comma-separated); empty = no notices |
+| `EMAIL_REPLY_TO` | optional: where a visitor's reply to the welcome email goes (default `info@openarmsfostercare.com`) |
 | `LEADS_RATE_LIMIT` | optional: forms one visitor may send per 10 minutes (default 10) |
 
 | Website (`frontend/.env.local`, or Vercel > Environment Variables) | What it is |
