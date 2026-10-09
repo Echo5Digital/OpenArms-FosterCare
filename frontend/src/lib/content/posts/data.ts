@@ -7,6 +7,383 @@ import type { BlogPost } from "./types";
  */
 export const posts: BlogPost[] = [
   {
+    slug: "my-child-is-smart-but-still-struggles-in-school-could-testing-explain-why",
+    title: "My Child Is Smart but Still Struggles in School – Could Testing Explain Why?",
+    metaTitle: "My Child Is Smart but Still Struggles in School – Could Testing Explain Why? - Open Arms Foster Care",
+    metaDescription:
+      "Your child is bright, curious, and clearly capable of understanding complex ideas, but school is still a struggle. Could testing explain why?",
+    datePublished: "2026-10-06",
+    dateModified: "2026-10-06",
+    excerpt:
+      "Your child is bright, curious, and clearly capable of understanding complex ideas. But report cards tell a different story. Homework takes hours, reading feels like…",
+    image: "/kid-is-not-studying-a79970.jpg",
+    tags: [],
+    body: [
+      {
+        type: "p",
+        text: "Your child is bright, curious, and clearly capable of understanding complex ideas. But report cards tell a different story. Homework takes hours, reading feels like a battle, and teachers keep saying the same thing: “They’re not working up to their potential.” This disconnect between intelligence and academic performance is one of the most frustrating experiences a parent or caregiver can face. And it is far more common than most people realize. Learning disability testing can uncover what is really going on beneath the surface, giving families and caregivers the answers they need to help a child succeed. At Open Arms Initiative, we work closely with children and adolescents who have complex emotional, behavioral, and developmental needs. Many of the young people in our therapeutic foster care programs arrive with undiagnosed learning differences that have been misunderstood for years. The right evaluation changes everything.",
+      },
+      {
+        type: "cta",
+        eyebrow: "Open Arms Foster Care",
+        title: "Helping Children and Foster Families Thrive",
+        text: "Open Arms plants seeds of hope, waters them with truth and love, and trusts God to grow them in His time. Our team walks alongside every foster family every step of the way.",
+        label: "Start Your Journey",
+        href: "/contact-us",
+      },
+      { type: "h2", text: "Why a Smart Child Can Still Struggle in School" },
+      {
+        type: "p",
+        text: "Intelligence and academic performance are not the same thing. A child can have a high IQ and still face significant barriers to learning. These barriers often involve how the brain processes, stores, or retrieves information rather than how much the child actually understands.",
+      },
+      {
+        type: "p",
+        text: "For example, a child might grasp a math concept perfectly during a conversation but freeze during a timed test. Another child might have a rich vocabulary but struggle to decode words on a page. These patterns point to specific learning differences, not a lack of effort or ability.",
+      },
+      {
+        type: "p",
+        text: "Without proper evaluation, these children are often mislabeled as lazy, unmotivated, or defiant. That kind of misunderstanding can cause lasting damage to a child’s self-esteem and willingness to engage in school. Open Arms Initiative sees this pattern frequently in the children we serve, which is why we advocate strongly for comprehensive assessment.",
+      },
+      { type: "img", src: "/pexels-photo-3874375.avif", alt: "A young boy in glasses writing in a notebook at a white desk with a tablet and phone beside him" },
+      { type: "h2", text: "What Is Learning Disability Testing?" },
+      {
+        type: "p",
+        text: "Learning disability testing is a structured evaluation process designed to identify specific areas where a child’s brain processes information differently. It goes far beyond a simple classroom observation or a standardized test score.",
+      },
+      {
+        type: "p",
+        text: "A psychoeducational evaluation typically involves several components that work together to build a complete picture of how a child learns.",
+      },
+      { type: "h3", text: "Cognitive Ability Testing" },
+      {
+        type: "p",
+        text: "This measures overall intellectual functioning, including verbal reasoning, visual-spatial skills, working memory, and processing speed. IQ testing for learning disabilities helps determine whether a gap exists between a child’s cognitive potential and their actual academic output.",
+      },
+      { type: "h3", text: "Academic Achievement Testing" },
+      {
+        type: "p",
+        text: "This portion evaluates reading comprehension, written expression, and math skills relative to the child’s age and grade level. A reading comprehension assessment, for instance, can reveal whether a child struggles with decoding, fluency, or understanding what they have read.",
+      },
+      { type: "h3", text: "Processing and Memory Assessments" },
+      {
+        type: "p",
+        text: "A processing speed evaluation and working memory assessment help identify bottlenecks in how quickly and efficiently a child takes in and uses information. These cognitive functions play a major role in classroom performance, even when a child is intellectually gifted.",
+      },
+      { type: "h3", text: "Behavioral and Emotional Screening" },
+      {
+        type: "p",
+        text: "Many children with learning differences also experience anxiety, frustration, or attention difficulties. ADHD testing and emotional screening are often included to rule out or identify co-occurring conditions that affect learning.",
+      },
+      { type: "h2", text: "Signs That a Learning Evaluation for Children May Be Needed" },
+      {
+        type: "p",
+        text: "Not every academic struggle requires formal testing. But certain patterns should raise a red flag, especially when they persist despite consistent support at home and school.",
+      },
+      {
+        type: "quote",
+        text: "But certain patterns should raise a red flag, especially when they persist despite consistent support at home and school.",
+      },
+      {
+        type: "p",
+        text: "Consider pursuing a learning evaluation for children if you notice any of the following:",
+      },
+      {
+        type: "ul",
+        items: [
+          "The child avoids reading, writing, or homework with unusual intensity",
+          "Academic performance is significantly lower than what the child demonstrates in conversation",
+          "The child takes much longer than peers to complete assignments",
+          "Teachers report inconsistent performance or difficulty following multi-step directions",
+          "The child frequently loses track of materials, instructions, or routines",
+          "Frustration, anxiety, or behavioral issues spike around school-related tasks",
+          "The child has been held back, placed in intervention groups, or referred for extra help without meaningful improvement",
+        ],
+      },
+      {
+        type: "p",
+        text: "At Open Arms Initiative, our therapeutic foster parents are trained to recognize these signs early. Because many of the children in our care have experienced trauma, it can be difficult to separate trauma responses from learning differences. That is exactly why formal diagnostic testing for students matters so much.",
+      },
+      { type: "h2", text: "How Psychoeducational Testing Leads to Real Solutions" },
+      {
+        type: "p",
+        text: "A psychoeducational evaluation does more than put a label on a child’s difficulties. It creates a roadmap. Once evaluators identify the specific nature of a child’s learning difference, whether it is dyslexia, a math-based learning disorder, ADHD, or a processing deficit, targeted support becomes possible.",
+      },
+      {
+        type: "p",
+        text: "The results of an educational assessment can lead to:",
+      },
+      {
+        type: "ul",
+        items: [
+          "An Individualized Education Program (IEP) or 504 Plan with legally protected accommodations",
+          "Specialized tutoring or reading intervention programs tailored to the child’s profile",
+          "Classroom modifications such as extended time, preferential seating, or alternative testing formats",
+          "Therapy or coaching to address the emotional toll of years of struggling without support",
+          "Clearer communication between caregivers, schools, and mental health providers",
+        ],
+      },
+      {
+        type: "p",
+        text: "For children in the foster care system, these supports are especially critical. Open Arms Initiative ensures that children in our therapeutic foster care programs receive the comprehensive psychological evaluations they need. When foster parents understand a child’s learning profile, they can provide the right kind of structured, trauma-informed support at home.",
+      },
+      { type: "h2", text: "What to Expect During the Learning Disorder Evaluation Process" },
+      {
+        type: "p",
+        text: "If you have never been through a learning disorder evaluation process before, knowing what to expect can ease a lot of anxiety for both the caregiver and the child.",
+      },
+      { type: "h3", text: "Initial Intake and History Review" },
+      {
+        type: "p",
+        text: "The evaluator will gather background information including developmental history, school records, prior report cards, and any behavioral observations from teachers or caregivers. For children in foster care, Open Arms Initiative works to compile as much history as possible to give evaluators a thorough starting point.",
+      },
+      { type: "h3", text: "Testing Sessions" },
+      {
+        type: "p",
+        text: "The actual testing usually takes place over one to three sessions, depending on the child’s age and the scope of the evaluation. A developmental learning assessment for a younger child may be shorter, while a comprehensive neuropsychological testing battery for a teenager could span several hours across multiple days.",
+      },
+      { type: "h3", text: "Results and Recommendations" },
+      {
+        type: "p",
+        text: "After testing, the evaluator prepares a detailed report outlining the child’s cognitive strengths, areas of difficulty, and specific diagnoses if applicable. This report includes actionable recommendations for school, home, and therapeutic settings. Open Arms Initiative uses these findings to tailor each child’s care plan within our foster homes.",
+      },
+      { type: "h2", text: "Why Early Learning Disability Testing Matters for Children in Foster Care" },
+      {
+        type: "p",
+        text: "Children in the foster care system face unique challenges when it comes to education. Frequent school changes, gaps in records, and the effects of early trauma can all mask or mimic learning disabilities. A child who struggles to focus after experiencing neglect may actually have ADHD, a processing disorder, or both. Without proper educational diagnostic testing, these children fall further behind with each passing year.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Initiative was built to address exactly this kind of complexity. Our therapeutic foster care model pairs high-needs children and adolescents with specially trained foster parents who understand trauma-informed care. When a child in our program shows signs of a learning difference, we connect them with qualified professionals for a thorough learning ability assessment.",
+      },
+      {
+        type: "p",
+        text: "Early identification means early intervention. And early intervention can mean the difference between a child who gives up on school and a child who discovers they are capable of far more than anyone expected.",
+      },
+      { type: "h2", text: "Who Should Request a Special Education Evaluation?" },
+      {
+        type: "p",
+        text: "Anyone who plays a caregiving or educational role in a child’s life can initiate the process of requesting a special education evaluation through the school district. This includes biological parents, foster parents, guardians, teachers, school counselors, and caseworkers.",
+      },
+      {
+        type: "p",
+        text: "If the school district declines a request or if a more comprehensive assessment is needed, private psychoeducational testing through a licensed educational psychologist or neuropsychologist is another option. Open Arms Initiative regularly collaborates with schools and evaluators to advocate for the children in our care.",
+      },
+      {
+        type: "p",
+        text: "You do not need to wait for a formal referral to start asking questions. If your instinct tells you something is not adding up with a child’s school performance, trust that instinct. A learning differences screening can be the first step toward clarity.",
+      },
+      {
+        type: "p",
+        text: "A child who is smart but struggling in school is not a contradiction. It is a signal that something deeper deserves attention. Learning disability testing provides the answers that guesswork never can, revealing the specific ways a child’s brain works and what kind of support will actually make a difference.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Initiative believes every child deserves to be understood, not just managed. Through our therapeutic foster care programs, we ensure that children with complex needs receive the evaluations, accommodations, and individualized care plans that set them up for real progress.",
+      },
+      {
+        type: "p",
+        text: "If you are a foster parent, caseworker, or family member concerned about a child’s academic struggles, reach out to Open Arms Initiative. We can help connect you with the right resources and guide you through the evaluation process so that no child’s potential goes unrecognized.",
+      },
+    ],
+    faqTitle: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "What does learning disability testing involve?",
+        answer: "Learning disability testing typically includes cognitive ability tests, academic achievement assessments, processing speed and memory evaluations, and behavioral screenings to identify specific learning differences.",
+      },
+      {
+        question: "Can a child have a high IQ and still have a learning disability?",
+        answer: "Yes, a child can be intellectually gifted and still have a learning disability such as dyslexia or a processing disorder that affects their academic performance.",
+      },
+      {
+        question: "How do I get my child tested for a learning disability?",
+        answer: "You can request a free evaluation through your child’s school district or schedule a private psychoeducational evaluation with a licensed psychologist.",
+      },
+    ],
+  },
+  {
+    slug: "how-foster-parents-can-help-a-child-feel-safe-during-their-first-week",
+    title: "How Foster Parents Can Help a Child Feel Safe During Their First Week",
+    metaTitle: "How Foster Parents Can Help a Child Feel Safe During Their First Week - Open Arms Foster Care",
+    metaDescription:
+      "The first week in a new foster home is one of the most overwhelming experiences a child can go through. Learn how foster parents can help a child feel safe from day one.",
+    datePublished: "2026-10-06",
+    dateModified: "2026-10-06",
+    excerpt:
+      "The first week in a new foster home is one of the most overwhelming experiences a child can go through. Everything is unfamiliar. The faces,…",
+    image: "/kids-and-parents-f6995f.jpg",
+    tags: [],
+    body: [
+      {
+        type: "p",
+        text: "The first week in a new foster home is one of the most overwhelming experiences a child can go through. Everything is unfamiliar. The faces, the smells, the sounds, the rules. For children who have already experienced trauma, neglect, or multiple placements, that unfamiliarity can feel genuinely threatening. As a foster parent, your single most important job during those early days is to help a foster child feel safe. Not entertained, not educated, not corrected. Safe. Emotional security is the foundation everything else gets built on, and without it, trust, attachment, and healing simply cannot begin. Open Arms Foster Care specializes in therapeutic foster care for children and adolescents with complex emotional and behavioral needs. The families who foster through Open Arms receive specialized, trauma-informed training designed to equip them for exactly these moments. This guidance is built from that same philosophy: practical, compassionate strategies rooted in what actually works during a child’s first week in care.",
+      },
+      {
+        type: "cta",
+        eyebrow: "Open Arms Foster Care",
+        title: "Helping Children and Foster Families Thrive",
+        text: "Open Arms plants seeds of hope, waters them with truth and love, and trusts God to grow them in His time. Our team walks alongside every foster family every step of the way.",
+        label: "Start Your Journey",
+        href: "/contact-us",
+      },
+      { type: "h2", text: "Why the First Week Matters So Much for a Foster Child’s Emotional Security" },
+      {
+        type: "p",
+        text: "Children entering foster care are in survival mode. Their nervous systems are on high alert, scanning every interaction for signs of danger. This is not defiance or manipulation. It is a trauma response. Their brains have learned that adults can be unpredictable, and their bodies respond accordingly.",
+      },
+      {
+        type: "p",
+        text: "During the first week, a child is gathering data. They are watching how you react when they spill something. They are listening to the tone of your voice when you are tired. They are testing whether your kindness is real or temporary.",
+      },
+      {
+        type: "p",
+        text: "This is why the first week carries so much weight. The signals you send during these early days either confirm the child’s fear that they are not safe, or they begin to challenge it. You are not going to undo years of trauma in seven days, but you can plant the first seeds of trust.",
+      },
+      { type: "img", src: "/pexels-photo-7985566.avif", alt: "A curly-haired toddler looking calmly at the camera while two smiling foster parents sit behind them" },
+      { type: "h2", text: "Keep Expectations Low and Patience High" },
+      {
+        type: "p",
+        text: "One of the most common mistakes new foster parents make is expecting too much, too soon. It is tempting to introduce house rules, set up a school routine, and get the child involved in activities right away. That instinct comes from a good place, but it can overwhelm a child who is still trying to figure out if they are physically safe in your home.",
+      },
+      {
+        type: "quote",
+        text: "It is tempting to introduce house rules, set up a school routine, and get the child involved in activities right away.",
+      },
+      {
+        type: "p",
+        text: "During the first week, your main goal is to reduce stress, not add structure. Let the child take things at their own pace. If they want to stay in their room, let them. If they do not want to eat dinner at the table, that is okay for now.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Foster Care trains its therapeutic foster parents to understand the difference between a child being defiant and a child being overwhelmed. Recognizing that distinction changes everything about how you respond.",
+      },
+      { type: "h2", text: "How to Help a Foster Child Feel Safe Through Predictability" },
+      {
+        type: "p",
+        text: "Predictability is one of the most powerful tools you have. Children who have experienced chaos and instability feel calmer when they know what to expect. You do not need a rigid schedule posted on the wall. You just need consistency in the small things.",
+      },
+      { type: "h3", text: "Use Simple Daily Routines" },
+      {
+        type: "p",
+        text: "Meals at roughly the same time. A calm bedtime process. A morning greeting that stays the same. These repetitive patterns send a quiet but powerful message: this place is stable, and you can count on what happens next.",
+      },
+      {
+        type: "p",
+        text: "You might say something like, “Every night before bed, we read a book or listen to music. You can pick whichever you want.” Giving the child a small choice within a predictable framework helps them feel both safe and respected.",
+      },
+      { type: "h3", text: "Narrate What Is Coming Next" },
+      {
+        type: "p",
+        text: "Surprises can feel threatening to a child with trauma. Get in the habit of previewing transitions. “After lunch, we are going to go to the store. We will probably be there about 30 minutes.” This kind of narration reduces anxiety because it removes the unknown.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Foster Care emphasizes these communication techniques in its parent training because they directly support foster child anxiety management without requiring the child to verbalize their fears.",
+      },
+      { type: "h2", text: "Building Trust with Foster Children Through Emotional Availability" },
+      {
+        type: "p",
+        text: "Trust is not built through grand gestures. It is built through hundreds of small, consistent moments where you show up emotionally. During the first week, this means being present without being intrusive.",
+      },
+      {
+        type: "p",
+        text: "Sit near the child while they watch TV, even if you are not talking. Let them see you being calm. Respond to their needs quickly, whether that is a glass of water or a question about what time something happens. Each of those micro-interactions tells the child, “I see you, and I am not going anywhere.”",
+      },
+      {
+        type: "p",
+        text: "Avoid asking too many questions about their past, their feelings, or their previous homes. Let them share on their own timeline. Pushing for emotional connection too early can actually feel invasive to a child who has learned to protect themselves by staying guarded.",
+      },
+      { type: "h2", text: "Practical Comfort Strategies That Support a Child in Foster Care" },
+      {
+        type: "p",
+        text: "Beyond emotional availability, there are concrete things you can do during the first week that help a child begin to settle in.",
+      },
+      { type: "h3", text: "Create a Personal Space That Belongs to Them" },
+      {
+        type: "p",
+        text: "Give the child a space that is clearly theirs. A bedroom, a shelf, a drawer. Let them arrange it however they want. This gives them a sense of ownership and control, two things they have likely had very little of. If they brought belongings with them, no matter how worn or small, treat those items with respect. They may be the only familiar things the child has.",
+      },
+      { type: "h3", text: "Offer Sensory Comfort" },
+      {
+        type: "p",
+        text: "Soft blankets, a nightlight, quiet music, or a stuffed animal can make a significant difference for a child whose nervous system is dysregulated. These are not babyish indulgences. They are grounding tools. Many children supported through Open Arms Foster Care have experienced environments where basic sensory comfort was absent, and providing it communicates care in a way words sometimes cannot.",
+      },
+      { type: "h3", text: "Let Food Be a Source of Safety" },
+      {
+        type: "p",
+        text: "Food insecurity is common among children entering care. Keep simple snacks accessible so the child knows they can eat when they are hungry. Avoid making meals a battleground over manners or preferences during the first week. A child who knows food is available and reliable will gradually relax around mealtimes on their own.",
+      },
+      { type: "h2", text: "Responding to Behavioral Challenges During the First Week" },
+      {
+        type: "p",
+        text: "Some children will be quiet and withdrawn during their first week. Others may act out, test boundaries, or have emotional meltdowns. Both responses are normal. Both are expressions of fear.",
+      },
+      {
+        type: "p",
+        text: "When a child pushes back, they are often asking an unspoken question: “What happens when I am not perfect? Will you send me away?” Your response to that question matters more than any rule you could set.",
+      },
+      {
+        type: "p",
+        text: "Stay calm. Stay present. Avoid punitive responses. A child in their first week of placement is not ready for consequences. They are ready for reassurance. You might say, “I can see you are having a hard time right now. I am going to stay right here.”",
+      },
+      {
+        type: "p",
+        text: "Open Arms Foster Care provides ongoing clinical support and coaching for its therapeutic foster parents, so you are never navigating these moments alone. If a child’s behavioral challenges feel beyond what you can manage, reaching out for guidance is not a failure. It is part of the model.",
+      },
+      { type: "h2", text: "What Open Arms Foster Care Provides to Help Foster Parents Succeed" },
+      {
+        type: "p",
+        text: "Helping a foster child adjust during their first week requires more than good intentions. It requires training, support, and access to professionals who understand childhood trauma.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Foster Care is built specifically for children and teens with complex emotional, behavioral, and developmental needs who cannot thrive in traditional foster care settings. Their therapeutic foster care model includes:",
+      },
+      { type: "h3", text: "Trauma-Informed Parent Training" },
+      {
+        type: "p",
+        text: "Before a child is ever placed in your home, you receive specialized training on trauma responses, attachment strategies, and de-escalation techniques. This training prepares you to respond with confidence and compassion from day one.",
+      },
+      { type: "h3", text: "Ongoing Clinical Support" },
+      {
+        type: "p",
+        text: "Open Arms provides access to mental health professionals who work alongside foster families. This means foster child mental health support is not something you have to seek out on your own. It is woven into the care structure.",
+      },
+      { type: "h3", text: "24/7 Crisis Support" },
+      {
+        type: "p",
+        text: "Difficult moments do not follow a business schedule. Open Arms ensures foster parents have access to support around the clock, so you always have someone to turn to when you need guidance.",
+      },
+      {
+        type: "p",
+        text: "The first week of a foster placement is not about getting everything right. It is about showing up with patience, consistency, and genuine care. When you help a foster child feel safe, you are giving them the foundation they need to begin trusting, healing, and eventually thriving.",
+      },
+      {
+        type: "p",
+        text: "Every calm response, every predictable routine, every moment you sit quietly nearby without demanding anything in return sends the same message: you are safe here, and you matter.",
+      },
+      {
+        type: "p",
+        text: "Open Arms Foster Care exists to support families who are willing to do this meaningful, challenging work. If you are considering becoming a therapeutic foster parent, or if you are already fostering and need additional support, Open Arms provides the training, clinical resources, and community you need to make a real difference in a child’s life. Reach out to Open Arms Foster Care to learn how you can become part of a team that is changing outcomes for children who need it most.",
+      },
+    ],
+    faqTitle: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "How do you help a foster child feel safe in a new home?",
+        answer: "You help a foster child feel safe by keeping routines predictable, staying emotionally available without being intrusive, and responding to difficult behaviors with calm reassurance rather than punishment.",
+      },
+      {
+        question: "What should foster parents expect during a child’s first week?",
+        answer: "Expect a range of responses from withdrawal to acting out, as both are normal trauma responses while the child assesses whether they are safe in your home.",
+      },
+      {
+        question: "What support does Open Arms Foster Care provide to foster parents?",
+        answer: "Open Arms provides trauma-informed parent training, ongoing clinical support from mental health professionals, and 24/7 crisis assistance for therapeutic foster families.",
+      },
+    ],
+  },
+  {
     slug: "what-should-you-have-ready-before-a-foster-child-arrives",
     title: "What Should You Have Ready Before a Foster Child Arrives?",
     metaTitle: "What Should You Have Ready Before a Foster Child Arrives? - Open Arms Foster Care",
@@ -92,6 +469,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "Food insecurity is common among children entering care. Keeping visible, accessible snacks in the kitchen can ease anxiety about when the next meal will come.",
       },
+      { type: "img", src: "/pexels-photo-8385869.avif", alt: "A smiling young child in a bow tie standing in a safe, tidy backyard beside a play tent" },
       { type: "h2", text: "Preparing Your Home for Foster Child Safety" },
       {
         type: "p",
@@ -4365,6 +4743,7 @@ export const posts: BlogPost[] = [
   dateModified: "2025-09-29",
   excerpt:
     "From what a foster care agency actually does to the step-by-step licensing process, here's a practical overview of how foster care works in Oklahoma and why more families are needed now.",
+  image: "/close-up-girl-therapy-session-with-parents-100kb.jpg",
   tags: [
     "Foster Care Agency Oklahoma City",
     "Therapeutic foster care Oklahoma",
@@ -6245,10 +6624,11 @@ export const posts: BlogPost[] = [
     metaTitle: "Foster Parent Requirements in Oklahoma: What You Need to Know",
     metaDescription:
       "Learn the foster parent requirements in Oklahoma, from background checks and home studies to training. See how Open Arms Initiative supports every step.",
-    datePublished: "2025-08-15",
-    dateModified: "2025-08-15",
+    datePublished: "2026-09-08",
+    dateModified: "2026-09-08",
     excerpt:
-      "From background checks to the home study, here's a clear walkthrough of what Oklahoma actually requires of prospective foster parents, and how Open Arms helps you meet every step.",
+      "Becoming a foster parent is one of the most meaningful decisions you can make. For children in Oklahoma who have experienced trauma, abuse, or neglect,…",
+    image: "/foster-parent-requirements-in-oklahoma-5e652b (1).jpg",
     tags: [
       "foster parent requirements OK",
       "How to become a foster parent in Oklahoma",
@@ -6307,6 +6687,7 @@ export const posts: BlogPost[] = [
         type: "p",
         text: "Open Arms Initiative helps prospective foster parents understand what to expect during this process and answers questions about how specific situations may affect eligibility. Transparency early on saves time and helps you move forward with confidence.",
       },
+      { type: "img", src: "/foster-parent-requirements-in-oklahoma-397027.jpg", alt: "A smiling couple taking a selfie outdoors with a young girl with long braids between them" },
       { type: "h2", text: "The Oklahoma Foster Care Home Study Process" },
       {
         type: "p",
